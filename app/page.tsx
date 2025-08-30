@@ -1,37 +1,102 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Hero from "./components/Hero";
+import ProblemGrid from "./components/ProblemGrid";
+import ServicesPreview from "./components/ServicesPreview";
+import ResultsStrip from "./components/ResultsStrip";
+import ProcessSteps from "./components/ProcessSteps";
+import SkillsSection from "./components/SkillsSection";
+import PricingSimple from "./components/PricingSimple";
+import MiniPortfolio from "./components/MiniPortfolio";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import StickyCtaMobile from "./components/StickyCtaMobile";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Vizion Web — Sites & applications web qui convertissent",
+  description:
+    "Sites vitrines, sites web avec fonctionnalités et applications web sur-mesure. Conçus pour convertir, livrés vite, support après lancement. Devis en 24h.",
+  openGraph: {
+    title: "Vizion Web — Sites & applications web qui convertissent",
+    description:
+      "Sites vitrines, sites web avec fonctionnalités et applications web sur-mesure. Objectif : plus de demandes, moins de frictions.",
+    url: "https://vizion-web.com",
+    siteName: "Vizion Web",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vizion Web — Sites & apps web qui convertissent",
+    description:
+      "Des sites et applications qui servent vos objectifs : plus de demandes, moins de frictions.",
+  },
+};
+
+export default function Page() {
   return (
-    <div className="relative overflow-hidden flex flex-col items-center justify-center min-h-screen text-[#252432]">
-      <div className="relative w-fit h-[100px] ">
-        <Image
-          src="/logo.svg"
-          alt="Logo vizion web"
-          width={400}
-          height={100}
-          className="object-cover"
-        />
-      </div>
-      <div className="text-center mt-8">
-        <p className="font-semibold text-3xl">
-          Site en cours de construction...
-        </p>
-        <p className="mt-4 mb-4 text-lg">
-          Pour toute demande, veuillez nous contacter à cette adresse :
-        </p>
-        <p className="text-xl px-6 py-2 rounded-[10px] bg-[#252432] w-fit text-white mx-auto">
-          contact@vizionweb.fr
-        </p>
-      </div>
+    <main>
+      <Hero />
+      <ProblemGrid />
+      <ServicesPreview />
+      <ResultsStrip />
+      <ProcessSteps />
+      <SkillsSection />
+      <PricingSimple />
+      <MiniPortfolio />
+      <Testimonials />
+      <FAQ />
+      <StickyCtaMobile />
 
-      <div className="absolute bottom-0 w-full h-full -z-10">
-        <Image
-          src="/gradient-footer.png"
-          alt="Logo vizion web"
-          fill
-          className="object-cover"
-        />
-      </div>
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Combien de temps pour livrer ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Landing/vitrine : 1–2 semaines. Fonctionnel : 2–4 semaines. App : 4–8 semaines.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Qui s’occupe du contenu ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "On vous guide avec un kit simple. Possibilité de prise en charge (option).",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Qui possède le site / l’app ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Vous. Propriété du code et accès complets.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Y a-t-il un support après lancement ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Oui, 30 jours inclus. Packs de suivi disponibles.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Et le budget ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Fourchettes affichées. Un devis précis sous 24h.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+    </main>
   );
 }
