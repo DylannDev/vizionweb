@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Hero from "./components/Hero";
-import ProblemGrid from "./components/ProblemGrid";
-import ServicesPreview from "./components/ServicesPreview";
-import ResultsStrip from "./components/ResultsStrip";
-import ProcessSteps from "./components/ProcessSteps";
-import SkillsSection from "./components/SkillsSection";
-import PricingSimple from "./components/PricingSimple";
-import MiniPortfolio from "./components/MiniPortfolio";
-import Testimonials from "./components/Testimonials";
-import FAQ from "./components/FAQ";
-import StickyCtaMobile from "./components/StickyCtaMobile";
+import Hero from "../components/hero";
+import ProblemGrid from "../components/problem-grid";
+import ServicesPreview from "../components/services-preview";
+import ResultsStrip from "../components/results-strip";
+import ProcessSteps from "../components/process-steps";
+import PricingSimple from "../components/pricing-simple";
+import MiniPortfolio from "../components/mini-portfolio";
+import Testimonials from "../components/testimonials";
+import FAQ from "../components/faq";
+import StickyCtaMobile from "../components/sticky-cta-mobile";
+import ServicesSection from "@/components/services-section";
 
 export const metadata: Metadata = {
   title: "Vizion Web — Sites & applications web qui convertissent",
@@ -35,14 +35,15 @@ export default function Page() {
   return (
     <main>
       <Hero />
-      <ProblemGrid />
+
+      {/* <ProblemGrid />
       <ServicesPreview />
       <ResultsStrip />
-      <ProcessSteps />
-      <SkillsSection />
-      <PricingSimple />
+      <ProcessSteps /> */}
+      <ServicesSection />
+      {/* <PricingSimple />
       <MiniPortfolio />
-      <Testimonials />
+      <Testimonials /> */}
       <FAQ />
       <StickyCtaMobile />
 
