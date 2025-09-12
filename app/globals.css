@@ -4,19 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --animate-aurora: aurora 60s linear infinite;
-  --color-background: var(----background);
-  @keyframes aurora {
-    from {
-      background-position: 50% 50%, 50% 50%;
-    }
-    to {
-      background-position: 350% 50%, 350% 50%;
-    }
-  }
-}
-
-@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -102,7 +89,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply bg-background text-secondary;
+    @apply text-secondary-dark;
   }
 }
 
@@ -181,8 +168,19 @@
   }
 }
 
-.dark {
-  --background: oklch(0 0 0);
+.font-heading {
+  font-family: var(--font-family-heading);
+}
+
+@layer base {
+  ::selection {
+    background: var(--primary-green);
+    color: var(--primary-dark);
+  }
+  ::-moz-selection {
+    background: var(--primary-green);
+    color: var(--primary-dark);
+  }
 }
 
 @layer base {
@@ -190,6 +188,53 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-secondary-dark;
+  }
+}
+
+/* Default shadow color override */
+@layer utilities {
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    --tw-shadow-color: var(--gray-lighter);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), 0 10px 15px -3px var(--gray-lighter),
+      0 4px 6px -4px var(--gray-lighter);
+  }
+}
+
+.faq-answer {
+  @apply text-base leading-relaxed text-muted-foreground;
+
+  p:not(:first-child) {
+    @apply mt-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  ol {
+    @apply list-decimal pl-6 mb-4 space-y-2;
+  }
+
+  ul {
+    @apply list-disc pl-6 mt-2 space-y-1;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  strong {
+    @apply font-semibold text-foreground;
+  }
+
+  em {
+    @apply italic text-foreground;
   }
 }
