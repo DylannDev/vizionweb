@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import Hero from "../components/hero";
-import ProblemGrid from "../components/problem-grid";
-import ServicesPreview from "../components/services-preview";
-import ResultsStrip from "../components/results-strip";
 import ProcessSteps from "../components/process-steps";
-import PricingSimple from "../components/pricing-simple";
 import MiniPortfolio from "../components/mini-portfolio";
-import Testimonials from "../components/testimonials";
+import { Testimonials } from "../components/testimonials";
 import FAQ from "../components/faq";
 import StickyCtaMobile from "../components/sticky-cta-mobile";
 import ServicesSection from "@/components/services-section";
+import PricingSection from "@/components/pricing-section";
 
 export const metadata: Metadata = {
   title: "Vizion Web — Sites & applications web qui convertissent",
@@ -34,19 +31,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
-      <Hero />
-
-      {/* <ProblemGrid />
-      <ServicesPreview />
-      <ResultsStrip />
-      <ProcessSteps /> */}
-      <ServicesSection />
-      {/* <PricingSimple />
-      <MiniPortfolio />
-      <Testimonials /> */}
-      <FAQ />
+      <div className="max-w-7xl mx-auto w-full">
+        <Hero />
+        <ServicesSection />
+        <MiniPortfolio />
+      </div>
+      <ProcessSteps />
+      <Testimonials />
+      <PricingSection />
+      <div className="max-w-7xl mx-auto w-full">
+        <FAQ />
+      </div>
       <StickyCtaMobile />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

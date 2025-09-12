@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Inter_Tight } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import CtaSection from "@/components/cta-section";
+import Navbar from "@/components/navbar";
+import PricingSection from "@/components/pricing-section";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -56,10 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${geist.variable} ${interTight.variable}`}>
-      <body className={`antialiased max-w-7xl mx-auto w-full`}>
+      <body className={`antialiased`}>
         <Navbar />
         <div>{children}</div>
-
+        <CtaSection />
         <Footer />
       </body>
     </html>
