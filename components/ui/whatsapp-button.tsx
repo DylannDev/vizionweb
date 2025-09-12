@@ -27,8 +27,8 @@ export function WhatsappButton() {
           </Typography>
         </div> */}
 
-        <span className="relative inline-flex bg-radial from-gray-dark from-40% to-secondary-dark to-75% hover:opacity-90 ring-3 ring-offset-1 ring-primary-dark ring-offset-gray-dark rounded-full items-center justify-center w-11 h-11 transition-all duration-200">
-          <RiWhatsappFill className="w-7 h-7 text-primary-green" />
+        <span className="relative inline-flex bg-radial from-gray-dark from-40% to-secondary-dark to-75% hover:opacity-90 ring-3 ring-offset-1 ring-primary-dark ring-offset-gray-dark rounded-full items-center justify-center w-10 h-10 transition-all duration-200">
+          <RiWhatsappFill className="w-6.5 h-6.5 text-primary-green" />
           <span className="absolute flex size-7">
             <span className=" inline-flex h-full w-full rounded-full bg-primary-green opacity-30 animate-[ping_2.5s_linear_infinite]"></span>
           </span>

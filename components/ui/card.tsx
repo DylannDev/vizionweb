@@ -1,8 +1,18 @@
 import * as React from "react";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  radius?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "full";
-  isCardTransparent?: boolean;
+  radius?:
+    | "none"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "full"
+    | "highlighted";
+  bgColor?: string;
 }
 
 function getRadiusClass(radius: CardProps["radius"] = "lg") {
@@ -25,6 +35,8 @@ function getRadiusClass(radius: CardProps["radius"] = "lg") {
       return "rounded-4xl";
     case "full":
       return "rounded-full";
+    case "highlighted":
+      return "rounded-b-3xl";
     default:
       return "rounded-lg";
   }
@@ -33,13 +45,13 @@ function getRadiusClass(radius: CardProps["radius"] = "lg") {
 export function Card({
   className = "",
   radius = "lg",
-  isCardTransparent = true,
+  bgColor = "bg-white",
   ...props
 }: CardProps) {
   return (
     <div
       className={`${getRadiusClass(radius)} border border-white ${
-        isCardTransparent ? "bg-white/60 backdrop-blur-sm" : "bg-white"
+        bgColor ? bgColor : "bg-white"
       } p-4 ${className}`}
       {...props}
     />

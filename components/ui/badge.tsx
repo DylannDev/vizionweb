@@ -3,12 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md px-2 py-1 text-sm font-medium gap-1",
+  "inline-flex items-center justify-center rounded-full px-3 py-1.5 text-sm font-medium gap-1 mb-4 ring-4",
   {
     variants: {
       variant: {
-        white: "border border-white bg-white/60 text-text backdrop-blur-sm",
-        primary: "border border-primary bg-transparent text-primary",
+        white: "bg-white text-text backdrop-blur-sm ring-gray-lighter",
+        dark: "bg-secondary-dark text-white ring-1 ring-gray-dark",
+        green: "bg-primary-green text-white ring-0",
       },
     },
     defaultVariants: {
@@ -19,12 +20,27 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  align?: "left" | "center";
+  uppercase?: boolean;
+}
 
-export function Badge({ className = "", variant, ...props }: BadgeProps) {
+export function Badge({
+  className = "",
+  variant,
+  align = "center",
+  uppercase = true,
+  ...props
+}: BadgeProps) {
+  const alignmentClass = align === "center" ? "block w-fit mx-auto" : "";
   return (
     <span
-      className={twMerge(badgeVariants({ variant }), className)}
+      className={twMerge(
+        badgeVariants({ variant }),
+        alignmentClass,
+        uppercase && "uppercase",
+        className
+      )}
       {...props}
     />
   );
