@@ -1,46 +1,64 @@
-import { CheckCircle2 } from "lucide-react";
+import Typography from "./typography";
+import Badge from "./ui/badge";
+import DiscoveryIllustration from "@/components/code-illustrations/discovery-illustration";
+import PrototypeIllustration from "@/components/code-illustrations/prototype-illustration";
+import DevelopmentIllustration from "@/components/code-illustrations/development-illustration";
+import LaunchIllustration from "@/components/code-illustrations/launch-illustration";
 
 export function ProcessSteps() {
   const steps = [
     {
-      title: "Diagnostic express (30 min)",
-      desc: "on clarifie objectifs et portée.",
+      title: "Découverte & cadrage",
+      desc: "Nous commençons par un appel de 30 minutes pour comprendre vos objectifs, votre activité et les fonctionnalités essentielles à votre projet.",
+      className: "col-span-3 gap-16",
+      illustration: <DiscoveryIllustration />,
     },
     {
-      title: "Prototype cliquable",
-      desc: "vous validez avant production.",
+      title: "UI/UX Design",
+      desc: "Nous créons une maquette sur Figma pour valider l'interface et le parcours utilisateur avant d’écrire une seule ligne de code, les modifications sont illimitées.",
+      className: "col-span-4 gap-6",
+      illustration: <PrototypeIllustration />,
     },
     {
-      title: "Production & branchements",
-      desc: "formulaires, paiement, RDV, espace client.",
+      title: "Développement & intégrations",
+      desc: "Nous développons votre site ou application avec du code sur-mesure, en y intégrant les fonctionnalités clés si besoin.",
+      className: "col-span-4 gap-10",
+      illustration: <DevelopmentIllustration />,
     },
     {
-      title: "Lancement & ajustements",
-      desc: "check-list, suivi 30 jours, micro-améliorations.",
+      title: "Lancement & suivi",
+      desc: "Votre site ou application est mis en ligne avec une check-list complète (performance, sécurité, responsive).",
+      className: "col-span-3 gap-16",
+      illustration: <LaunchIllustration />,
     },
   ];
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8">
-          Notre méthode
-        </h2>
-        <ol className="grid md:grid-cols-2 gap-6">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-4">
+        <Badge>Process</Badge>
+        <Typography
+          align="center"
+          title={
+            <>Chez Vizion Web, un process simple pour des résultats concrets</>
+          }
+          subtitle="Notre méthode éprouvée transforme votre vision en un projet digital efficace et rentable, avec un accompagnement clair et sans perte de temps."
+        />
+        <ul className="grid md:grid-cols-7 gap-6">
           {steps.map((s, i) => (
-            <li key={s.title} className="flex items-start gap-3">
-              <CheckCircle2
-                className="mt-1 h-5 w-5 text-green-500"
-                aria-hidden
-              />
-              <div>
-                <h3 className="font-medium">
+            <li
+              key={s.title}
+              className={`flex flex-col items-start bg-background rounded-4xl p-8 relative ${s.className}`}
+            >
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="font-semibold">
                   {i + 1}. {s.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
+                <p className="text-[15px] text-gray-dark">{s.desc}</p>
               </div>
+              <div className="w-full h-full">{s.illustration}</div>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );

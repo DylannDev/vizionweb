@@ -1,27 +1,32 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import Badge from "./ui/badge";
 import { AnimatedGridPattern } from "./ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import { PiCodeFill, PiPenNibFill } from "react-icons/pi";
 import { IconIllustration } from "@/components/ui/icon-illustration";
+import CallButton from "./call-button";
 
 export function Hero() {
   return (
-    <section className="py-16 md:py-40 relative">
+    <section className="py-16 md:py-40 relative overflow-hidden">
       <AnimatedGridPattern
         maxOpacity={0.3}
         duration={3}
         repeatDelay={1}
         className={cn(
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-80%] h-[200%]"
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-79%] h-[200%] bg-white"
         )}
       />
       <div className="relative mx-auto max-w-6xl px-4">
         <div className="space-y-6 text-center">
-          <div className="space-y-3">
-            <Badge className="space-x-1" variant="white">
+          <div className="space-y-4">
+            <Badge
+              align="left"
+              className="space-x-1 border-gray-lighter"
+              variant="white"
+              uppercase={false}
+            >
               <span className="relative flex size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-green opacity-75"></span>
                 <span className="relative inline-flex size-2 rounded-full bg-primary-green"></span>
@@ -39,21 +44,14 @@ export function Hero() {
               </span>
             </h1>
           </div>
-          <p className="text-lg text-gray-dark">
-            On gère le copywriting, le design, le développement et la mise en
-            ligne. <br />
-            <span className="font-medium">Livraison en 30 jours.</span>
+          <p className="text-lg text-gray-dark font-medium">
+            Copywriting, Design, Développement & Publication : on gère votre
+            projet de A à Z.
+            <br />
+            <span className="font-normal">Livré en 30 jours en moyenne.</span>
           </p>
-          <div className="flex items-center justify-center gap-3">
-            <Button asChild>
-              <Link href="/contact">
-                Réserver un appel{" "}
-                <ArrowRight
-                  strokeWidth={1.75}
-                  className="group-hover:translate-x-1 transition-transform duration-150 ease-in-out"
-                />
-              </Link>
-            </Button>
+          <div className="flex items-center justify-center gap-4">
+            <CallButton />
             <Button variant="white" className="min-w-[174.5px]" asChild>
               <Link href="/realisations">Voir nos réalisations</Link>
             </Button>

@@ -10,6 +10,7 @@ import {
   PiClipboardTextFill,
 } from "react-icons/pi";
 import IconIllustration from "./ui/icon-illustration";
+import Badge from "./ui/badge";
 
 export function ServicesSection() {
   const services = [
@@ -47,17 +48,22 @@ export function ServicesSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
+        <Badge align="center">Services</Badge>
         <Typography
-          title="Nous développons des solutions web sur-mesure rentables"
+          title={
+            <>
+              Nous développons des <br />
+              solutions web sur-mesure
+            </>
+          }
           subtitle="On combine stratégie, design et développement sur-mesure, pour créer des sites et applications au service de vos objectifs."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map(({ icon: Icon, title, desc }) => (
             <Card
               key={title}
-              className="group hover:ring-6 hover:ring-gray-lighter ring-offset-2 ring-offset-background transition-all duration-300"
+              className="group hover:ring-6 ring-gray-lighter transition-all duration-300"
               radius="2xl"
-              isCardTransparent={false}
             >
               <CardHeader className="space-y-8">
                 <IconIllustration icon={Icon} />

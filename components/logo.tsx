@@ -7,6 +7,7 @@ interface LogoProps {
   height?: number;
   className?: string;
   withLink?: boolean;
+  variant?: "dark" | "white";
 }
 
 export function Logo({
@@ -14,10 +15,11 @@ export function Logo({
   height = 28,
   className,
   withLink = true,
+  variant = "dark",
 }: LogoProps) {
   const img = (
     <Image
-      src="/logo.svg"
+      src={variant === "dark" ? "/logo.svg" : "/logo-white.svg"}
       alt="Vizion Web"
       width={width}
       height={height}
@@ -27,11 +29,7 @@ export function Logo({
 
   if (withLink) {
     return (
-      <Link
-        href="/"
-        className={cn(className, "py-3")}
-        aria-label="Accueil Vizion Web"
-      >
+      <Link href="/" className={cn(className)} aria-label="Accueil Vizion Web">
         {img}
       </Link>
     );

@@ -28,15 +28,18 @@ type FontWeight =
   | "semibold"
   | "bold";
 
-interface TypographyProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: string;
-  subtitle?: string;
+interface TypographyProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
+  title?: React.ReactNode;
+  subtitle?: React.ReactNode;
   align?: "left" | "center" | "right";
   as?: TitleTag;
   titleSize?: FontSizeToken;
   titleWeight?: FontWeight;
   subtitleSize?: FontSizeToken;
   subtitleWeight?: FontWeight;
+  titleColor?: string;
+  subtitleColor?: string;
 }
 
 export function Typography({
@@ -48,6 +51,8 @@ export function Typography({
   titleWeight = 600,
   subtitleSize = "base",
   subtitleWeight = 400,
+  titleColor = "text-primary-dark",
+  subtitleColor = "text-gray-dark",
   className = "",
   ...props
 }: TypographyProps) {
@@ -86,7 +91,7 @@ export function Typography({
     >
       {title ? (
         <TitleTag
-          className="font-heading text-primary-dark tracking-tight text-balance"
+          className={cn("font-heading tracking-tight text-balance", titleColor)}
           style={{
             fontFamily: "var(--font-family-heading)",
             fontSize: getFontSizeVar(titleSize),
@@ -99,7 +104,7 @@ export function Typography({
       ) : null}
       {subtitle ? (
         <p
-          className="text-gray-dark text-balance max-w-2xl mx-auto"
+          className={cn("text-balance max-w-2xl mx-auto", subtitleColor)}
           style={{
             fontFamily: "var(--font-family-sans)",
             fontSize: getFontSizeVar(subtitleSize),
