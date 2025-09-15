@@ -15,7 +15,7 @@ export default function DiscoveryIllustration() {
     return () => window.clearInterval(id);
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center relative max-w-[400px]">
+    <div className="flex flex-col items-center justify-center relative max-w-[400px] mx-auto">
       {/* Window */}
       <motion.div
         className="w-full rounded-3xl border border-gray-lighter shadow-md  bg-white p-3 relative z-10"
@@ -26,7 +26,7 @@ export default function DiscoveryIllustration() {
         {/* button bar */}
         <div className="flex items-center gap-2 rounded-t-3xl px-2 pb-4 pt-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500" />
-          <div className="h-2.5 w-2.5 rounded-full bg-gray-light" />
+          <div className="h-2.5 w-2.5 rounded-full bg-gray-lighter" />
           <div className="h-2.5 w-2.5 rounded-full bg-primary-green" />
         </div>
 

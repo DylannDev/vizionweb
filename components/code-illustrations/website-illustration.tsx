@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { Check, Megaphone, Search, Settings, TrendingUp } from "lucide-react";
+import { Check, Search, Settings, TrendingUp } from "lucide-react";
 import { PiMegaphone } from "react-icons/pi";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 const WebsiteIllustration = () => {
@@ -39,7 +42,10 @@ const WebsiteIllustration = () => {
         {/* Header pastilles */}
         <div className="flex items-center gap-2 rounded-t-3xl pb-4 pt-2 px-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500" aria-hidden />
-          <div className="h-2.5 w-2.5 rounded-full bg-gray-light" aria-hidden />
+          <div
+            className="h-2.5 w-2.5 rounded-full bg-gray-lighter"
+            aria-hidden
+          />
           <div
             className="h-2.5 w-2.5 rounded-full bg-primary-green"
             aria-hidden
@@ -59,8 +65,26 @@ const WebsiteIllustration = () => {
 
         {/* Headline */}
         <div className="flex flex-col justify-center gap-2 w-full bg-gray-lighter rounded-xl p-4">
-          <div className="h-2 w-full bg-white rounded-full" aria-hidden />
-          <div className="h-2 w-4/5 bg-white rounded-full" aria-hidden />
+          <motion.div
+            className="h-2 w-full bg-white rounded-full"
+            aria-hidden
+            animate={{ scaleX: [1, 0.98, 1] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="h-2 w-4/5 bg-white rounded-full"
+            aria-hidden
+            animate={{ scaleX: [1, 0.98, 1] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
         </div>
         <div className="grid grid-cols-3 gap-3 my-3">
           {/* 3 images + skeletons */}
@@ -80,13 +104,25 @@ const WebsiteIllustration = () => {
                 />
               </div>
               <div className="space-y-2">
-                <div
+                <motion.div
                   className="h-2 w-full bg-gray-lighter rounded-full"
                   aria-hidden
+                  animate={{ scaleX: [1, 0.95, 1] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
-                <div
+                <motion.div
                   className="h-2 w-4/5 bg-gray-lighter rounded-full"
                   aria-hidden
+                  animate={{ scaleX: [1, 0.95, 1] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
               </div>
             </div>
