@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
 
 let interval: any;
 
@@ -22,11 +22,17 @@ export const CardStack = ({
   const SCALE_FACTOR = scaleFactor || 0.09;
   const [cards, setCards] = useState<Card[]>(items);
 
-  useEffect(() => {
-    startFlipping();
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(containerRef as React.RefObject<Element>, {
+    amount: 0.3,
+    once: true,
+  });
 
+  useEffect(() => {
+    if (!isInView) return;
+    startFlipping();
     return () => clearInterval(interval);
-  }, []);
+  }, [isInView]);
 
   const startFlipping = () => {
     interval = setInterval(() => {
@@ -39,7 +45,7 @@ export const CardStack = ({
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div ref={containerRef} className="relative w-full h-full">
       {cards.map((card, index) => {
         return (
           <motion.div

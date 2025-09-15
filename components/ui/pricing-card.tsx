@@ -54,7 +54,7 @@ const PricingCard = ({ plan }: PricingCardProps) => {
               radius="rounded-xl"
               size={45}
               img={plan.icon}
-              shadow={false}
+              shadow=""
             />
             <h3 className="text-2xl font-semibold text-gray-light">
               {plan.name}

@@ -230,7 +230,10 @@ export const Terminal = ({
       <div className="p-3">
         <div className="flex items-center gap-2 rounded-t-3xl px-2 pb-4 pt-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500" aria-hidden />
-          <div className="h-2.5 w-2.5 rounded-full bg-gray-light" aria-hidden />
+          <div
+            className="h-2.5 w-2.5 rounded-full bg-gray-lighter"
+            aria-hidden
+          />
           <div
             className="h-2.5 w-2.5 rounded-full bg-primary-green"
             aria-hidden

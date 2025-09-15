@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { codeToHtml } from "shiki";
+import { Typewriter } from "./typewriter";
 
 export type CodeBlockProps = {
   children?: React.ReactNode;
