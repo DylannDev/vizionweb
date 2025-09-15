@@ -1,102 +1,103 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Typography from "./typography";
-import { TestimonialsCard } from "./ui/testimonials-card";
+"use client";
+
+import React from "react";
+import { motion } from "motion/react";
 import Badge from "./ui/badge";
+import Typography from "./typography";
+import { Marquee } from "./ui/marquee";
+import { TestimonialCard } from "./ui/testimonial-card";
 
 const testimonials = [
   {
-    name: "Claire Malvaud",
-    job: "CEO agence de communication",
-    body: "Vizion Web a totalement transformé notre présence en ligne. Nous recevons plus de demandes qualifiées qu’avant et nos clients nous perçoivent comme beaucoup plus professionnels.",
-    img: "https://avatar.vercel.sh/claire",
+    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    name: "Briana Patton",
+    role: "Operations Manager",
   },
   {
-    name: "Marc Malvaud",
-    job: "Coach sportif",
-    body: "Un site clair, rapide et facile à utiliser pour mes clients. Mes réservations sont maintenant automatisées, ce qui me fait gagner du temps chaque semaine.",
-    img: "https://avatar.vercel.sh/marc",
+    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
+    name: "Bilal Ahmed",
+    role: "IT Manager",
   },
   {
-    name: "Sophie Malvaud",
-    job: "Créatrice de bijoux",
-    body: "Grâce à leur travail, j’ai enfin un e-commerce simple à gérer et qui reflète ma marque. Les ventes en ligne ont démarré dès la première semaine.",
-    img: "https://avatar.vercel.sh/sophie",
+    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
+    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    name: "Saman Malik",
+    role: "Customer Support Lead",
   },
   {
-    name: "Yohan Malvaud",
-    job: "Consultant fiscal",
-    body: "Mon ancien site ne générait aucune demande. Avec Vizion Web, je reçois régulièrement des prospects via mon nouveau site vitrine. Le retour sur investissement est clair.",
-    img: "https://avatar.vercel.sh/yohan",
+    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    name: "Omar Raza",
+    role: "CEO",
   },
   {
-    name: "Isabelle Malvaud",
-    job: "Gérante d’un salon de beauté",
-    body: "Les clientes peuvent réserver directement en ligne et recevoir des confirmations automatiques. Résultat : mon agenda est rempli sans que je perde du temps au téléphone.",
-    img: "https://avatar.vercel.sh/isabelle",
+    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
+    image: "https://randomuser.me/api/portraits/women/5.jpg",
+    name: "Zainab Hussain",
+    role: "Project Manager",
   },
   {
-    name: "Thomas Malvaud",
-    job: "Fondateur d’une startup SaaS",
-    body: "Ils ont livré notre MVP en quelques semaines seulement. Cela nous a permis de tester le marché rapidement et de signer nos premiers clients sans attendre.",
-    img: "https://avatar.vercel.sh/thomas",
+    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Aliza Khan",
+    role: "Business Analyst",
+  },
+  {
+    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    name: "Farhan Siddiqui",
+    role: "Marketing Director",
+  },
+  {
+    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+    name: "Sana Sheikh",
+    role: "Sales Manager",
+  },
+  {
+    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    name: "Hassan Ali",
+    role: "E-commerce Manager",
   },
 ];
 
-export function Testimonials() {
-  return (
-    <section id="testimonials" className="pt-20 pb-10 md:pt-32 md:pb-16">
-      <div className="container mx-auto px-4">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12">
-            <div>
-              <Badge align="left">Avis</Badge>
-              <Typography
-                title={
-                  <>
-                    Ils nous ont fait confiance <br /> voici leurs retours
-                  </>
-                }
-                align="left"
-                className="mb-0"
-              />
-            </div>
-            <div className="flex items-center justify-center gap-2 mt-12">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </div>
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
-          <CarouselContent className="mb-6 lg:mb-12 mt-3">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem
-                key={index}
-                className="md:basis-1/2 lg:basis-1/3 flex justify-center w-full"
-              >
-                <TestimonialsCard key={testimonial.name} {...testimonial} />
-              </CarouselItem>
+export const Testimonials = () => {
+  return (
+    <section className="bg-background my-20 relative">
+      <div className="container z-10 mx-auto">
+        <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
+          <Badge>Avis</Badge>
+          <Typography
+            title="Des résultats concrets racontés par nos clients"
+            subtitle="Chaque projet est unique, mais tous ont un point commun : la satisfaction de nos clients."
+          />
+        </div>
+
+        <div className="flex justify-center gap-1 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <Marquee pauseOnHover vertical className="[--duration:40s]">
+            {firstColumn.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
             ))}
-          </CarouselContent>
-          {/* 
-          <div className="flex flex-col-reverse min-[500px]:flex-row items-center gap-6 justify-center min-[500px]:justify-between lg:justify-center">
-            <div className="flex lg:hidden justify-center items-center gap-4">
-              <CarouselPrevious className="rounded-2xl bg-primary-dark flex items-center justify-center shadow-lg shadow-primary-dark/50 w-fit" />
-              <CarouselNext className="rounded-2xl bg-primary-dark flex items-center justify-center shadow-lg shadow-primary-dark/50 w-fit" />
-            </div>
-          </div> */}
-        </Carousel>
+          </Marquee>
+          <Marquee reverse pauseOnHover vertical className="[--duration:40s]">
+            {secondColumn.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover vertical className="[--duration:40s]">
+            {thirdColumn.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+        </div>
       </div>
     </section>
   );
-}
+};

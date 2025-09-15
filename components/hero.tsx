@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { PiCodeFill, PiPenNibFill } from "react-icons/pi";
 import { IconIllustration } from "@/components/ui/icon-illustration";
 import CallButton from "./call-button";
+import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banner";
 
 export function Hero() {
   return (
@@ -44,17 +45,22 @@ export function Hero() {
               </span>
             </h1>
           </div>
-          <p className="text-lg text-gray-dark font-medium">
+          <p className="text-lg text-secondary-dark font-normal">
             Copywriting, Design, Développement & Publication : on gère votre
             projet de A à Z.
             <br />
-            <span className="font-normal">Livré en 30 jours en moyenne.</span>
+            <span className="font-semibold text-secondary-dark">
+              Livré en 30 jours en moyenne.
+            </span>
           </p>
           <div className="flex items-center justify-center gap-4">
             <CallButton />
             <Button variant="white" className="min-w-[174.5px]" asChild>
               <Link href="/realisations">Voir nos réalisations</Link>
             </Button>
+          </div>
+          <div className="flex items-center justify-center">
+            <CustomerSatisfactionBanner className="mt-4" stars={5} />
           </div>
         </div>
       </div>
