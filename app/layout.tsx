@@ -19,17 +19,17 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Vizion Web - Agence Web & Développement Digital",
+  title: "Agence Web — Développement Sites & Applications | Vizion Web",
   description:
-    "Création de sites web, applications web et e-commerce performants avec Next.js. Boostez votre présence en ligne avec Vizion Web.",
+    "L'agence Vizion Web est spécialisé dans la création de sites internet, landing pages et applications / SaaS sur-mesure.",
   keywords:
-    "Agence web, Développement web, Next.js, Création site internet, Application web, E-commerce, SEO, Performance",
+    "Agence web, Développement web, Next.js, React, Création site internet, Application web, SaaS, E-commerce, SEO, Performance",
   authors: [{ name: "Vizion Web", url: "https://vizionweb.fr" }],
   openGraph: {
     title: "Vizion Web - Création de Sites & Applications Web",
     description:
-      "Experts en développement de sites web, e-commerce et applications performantes. Développez votre présence digitale avec Next.js et les meilleures technologies.",
-    url: "https://vizion-web.fr",
+      "Experts en développement de sites internet, landing pages et applications / SaaS sur-mesure.",
+    url: "https://vizionweb.fr",
     siteName: "Vizion Web",
     images: [
       {
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vizion Web - Agence Web & Développement Digital",
+    title: "Vizion Web - Création de Sites & Applications Web",
     description:
-      "Développement de sites web et e-commerce performants avec Next.js. Maximisez votre visibilité en ligne.",
+      "Experts en développement de sites internet, landing pages et applications / SaaS sur-mesure.",
     images: ["https://vizionweb.fr/logo.svg"],
   },
 };
@@ -61,7 +61,6 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Navbar />
         <div>{children}</div>
-        <CtaSection />
         <Footer />
       </body>
     </html>
