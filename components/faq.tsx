@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Typography from "./typography";
 import {
   Accordion,
@@ -9,6 +10,7 @@ import Badge from "./ui/badge";
 import Button from "./ui/button";
 import Card from "./ui/card";
 import { RiWhatsappLine } from "react-icons/ri";
+import WhatsappButton from "./ui/whatsapp-button";
 
 export function FAQ() {
   const faqs = [
@@ -156,14 +158,7 @@ export function FAQ() {
                 <br />
                 lancer votre projet, nous sommes là pour vous accompagner.
               </p>
-              <Button
-                variant="dark"
-                size="md"
-                className="w-fit inline-flex items-center justify-center gap-2 mt-3"
-              >
-                Discutons maintenant
-                <RiWhatsappLine className="h-5 w-5 text-primary-green" />
-              </Button>
+              <WhatsappButton />
             </div>
           </Card>
         </div>

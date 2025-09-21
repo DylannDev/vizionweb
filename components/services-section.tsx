@@ -46,7 +46,7 @@ export function ServicesSection() {
     },
   ];
   return (
-    <section className="py-16 md:py-24">
+    <section id="services" className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <Badge align="center">Services</Badge>
         <Typography

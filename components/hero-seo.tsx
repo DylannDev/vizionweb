@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Badge from "./ui/badge";
-import { AnimatedGridPattern } from "./ui/animated-grid-pattern";
+import Badge from "@/components/ui/badge";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
-import { PiCodeFill, PiPenNibFill } from "react-icons/pi";
-import { IconIllustration } from "@/components/ui/icon-illustration";
-import CallButton from "./call-button";
-import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banner";
+import CallButton from "@/components/call-button";
+import CustomerSatisfactionBanner from "./customer-satisfaction-banner";
 import { LogoCarousel } from "./ui/logo-carousel";
 
-export function Hero() {
+interface HeroSEOProps {
+  locationName?: string;
+  preposition?: "à" | "en";
+}
+
+export default function HeroSEO({
+  locationName,
+  preposition = "à",
+}: HeroSEOProps) {
   return (
     <section className="pt-16 md:pt-40 md:pb-4 relative overflow-hidden min-h-screen flex flex-col justify-between gap-16">
       <AnimatedGridPattern
@@ -38,24 +44,18 @@ export function Hero() {
               </p>
             </Badge>
             <h1 className="space-y-1 font-semibold text-balance text-6xl bg-gradient-to-b from-primary-dark from-60% to-secondary-dark/80 to-90% bg-clip-text text-transparent">
-              <span className="flex items-center justify-center gap-4">
-                On crée des sites
-                <IconIllustration icon={PiCodeFill} className="" /> et
-                applications{" "}
-              </span>
-              <span className="flex items-center justify-center gap-4">
-                web modernes sur-mesure <IconIllustration icon={PiPenNibFill} />
-              </span>
+              {locationName
+                ? `Agence de création de sites et applications web ${preposition} ${locationName}`
+                : "Agence de création de sites et applications web"}
             </h1>
           </div>
-          <p className="text-base text-secondary-dark font-normal">
-            Copywriting, Design, Développement & Publication : on gère votre
-            projet de A à Z.
-            <br />
-            <span className="font-semibold text-secondary-dark">
-              Livré en 30 jours en moyenne.
+          <h2 className="text-base text-secondary-dark font-normal font-text tracking-normal">
+            On crée des solutions sur-mesure, conçus pour convertir vos
+            visiteurs et booster votre croissance : <br />
+            <span className="font-semibold">
+              Applications Web, SaaS, Sites Internet & Landing Pages.
             </span>
-          </p>
+          </h2>
           <div className="flex items-center justify-center gap-4">
             <CallButton size="md" />
             <Button
@@ -64,7 +64,7 @@ export function Hero() {
               className="min-w-[174.5px]"
               asChild
             >
-              <Link href="/#realisations">Voir nos réalisations</Link>
+              <Link href="/realisations">Voir nos réalisations</Link>
             </Button>
           </div>
           <div className="flex items-center justify-center">
@@ -81,5 +81,3 @@ export function Hero() {
     </section>
   );
 }
-
-export default Hero;

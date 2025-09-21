@@ -1,62 +1,58 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "./ui/button";
+import Badge from "./ui/badge";
+import Typography from "./typography";
+import PortfolioCard from "@/components/ui/portfolio-card";
 
 export function MiniPortfolio() {
   const items = [
     {
-      title: "Conseil B2B",
-      subtitle: "site vitrine clair",
-      result: "+62% de prises de contact",
-      src: "https://placehold.co/600x400/webp",
+      title: "Amazonia Investing",
+      subtitle:
+        "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
+      badge: ["Landing page", "Blog", "Dashboard / CRM"],
+      src: "/investing.jpg",
+      link: "https://amazonia-investing.com",
     },
     {
-      title: "Studio bien-être",
-      subtitle: "site + RDV en ligne",
-      result: "agenda rempli 3 semaines à l’avance",
-      src: "https://placehold.co/600x400/webp",
+      title: "ChefKit",
+      subtitle:
+        "Application SaaS pour restaurateurs et traiteurs. Gestion des menus, réservations : une solution clé en main pour digitaliser leur activité.",
+      badge: ["SaaS", "App Web", "Landing page"],
+      src: "/chefkit.jpg",
     },
     {
-      title: "SaaS RH",
-      subtitle: "MVP web",
-      result: "1ers clients payants en 30 jours",
-      src: "https://placehold.co/600x400/webp",
+      title: "Zen Lounge",
+      subtitle:
+        "Site web complet pour un salon de bien-être. Espace client, paiement en ligne et réservation intégrée pour une expérience fluide et professionnelle. Dashboard pour la gestion des réservations.",
+      badge: ["Site Web Complet", "Dashboard / CRM"],
+      src: "/zenlounge.jpg",
+      link: "https://zenlounge-guyane.fr",
+    },
+    {
+      title: "Hippokom",
+      subtitle:
+        "Site vitrine élégant et moderne pour une agence de communication. Design inspiré de l’univers marin, pensé pour refléter leur identité et attirer de nouveaux clients.",
+      badge: ["Site Vitrine", "Blog"],
+      src: "/hippokom.jpg",
     },
   ];
   return (
-    <section className="py-16 md:py-24">
+    <section id="realisations" className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8">
-          Mini-portfolio
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <Badge align="center">réalisations</Badge>
+        <Typography
+          title={<>Des projets qui parlent d’eux-mêmes</>}
+          subtitle="Chaque réalisation est pensée pour générer de la valeur concrète."
+        />
+        <div className="grid md:grid-cols-2 gap-6">
           {items.map((it) => (
-            <div
-              key={it.title}
-              className="rounded-xl overflow-hidden border border-border bg-muted/20"
-            >
-              <Image
-                src={it.src}
-                alt={`${it.title} — ${it.subtitle}`}
-                width={600}
-                height={400}
-                loading="lazy"
-                className="w-full h-auto"
-              />
-              <div className="p-4">
-                <h3 className="font-medium">{it.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {it.subtitle} → {it.result}
-                </p>
-              </div>
-            </div>
+            <PortfolioCard key={it.title} {...it} />
           ))}
         </div>
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <Button asChild>
             <Link href="/realisations">Voir toutes les réalisations</Link>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -5,38 +5,32 @@ import {
   RiInstagramFill,
   RiTwitterXFill,
 } from "react-icons/ri";
+import { COUNTRIES, navLinks } from "@/data";
+import { CITIES } from "@/data";
 
 export default function Footer() {
-  const navLinks = [
-    { href: "/services", label: "Services" },
-    { href: "/realisations", label: "Réalisations" },
-    { href: "/process", label: "Process" },
-    { href: "/tarifs", label: "Tarifs" },
-    { href: "/contact", label: "Contact" },
-  ];
   const legalLinks = [
-    { href: "/cgu", label: "CGU" },
     { href: "/mentions-legales", label: "Mentions légales" },
     {
-      href: "/politique-de-confidentialite",
+      href: "/politique-confidentialite",
       label: "Politique de confidentialité",
     },
   ];
   const socialLinks = [
     {
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/in/dylann-xavero-349765a4/",
       label: "LinkedIn",
       Icon: RiLinkedinFill,
     },
-    {
-      href: "https://www.instagram.com/",
-      label: "Instagram",
-      Icon: RiInstagramFill,
-    },
-    { href: "https://x.com/", label: "X (Twitter)", Icon: RiTwitterXFill },
+    // {
+    //   href: "https://www.instagram.com/",
+    //   label: "Instagram",
+    //   Icon: RiInstagramFill,
+    // },
+    // { href: "https://x.com/", label: "X (Twitter)", Icon: RiTwitterXFill },
   ];
   return (
-    <footer className="bg-primary-dark text-white pt-24 pb-5">
+    <footer className="bg-primary-dark text-white pt-24 pb-8">
       <div className="mx-auto max-w-7xl px-4 text-sm text-gray-light">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 items-start">
           <div className="space-y-6">
@@ -90,7 +84,35 @@ export default function Footer() {
             </div>
           </nav>
         </div>
-        <div className="mt-8 text-sm text-gray-light">
+        <hr className="my-8 border-gray-dark" />
+        <div className="">
+          {/* <div className="text-white font-semibold mb-3">Villes desservies</div> */}
+          <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
+              {CITIES.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/${c.slug}`}
+                  className="text-gray-light hover:text-white hover:border-white transition"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {COUNTRIES.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/${c.slug}`}
+                  className="text-gray-light hover:text-white hover:border-white transition"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="mt-8 text-sm text-gray-light text-center">
           © {new Date().getFullYear()} Vizion Web — Tous droits réservés.
         </div>
       </div>

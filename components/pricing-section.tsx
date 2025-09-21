@@ -10,7 +10,8 @@ export default function PricingSection() {
     {
       name: "Vizion Start",
       price: "3 500 €",
-      description: "Landing page / Site vitrine (3-5 pages)",
+      description:
+        "Landing page / site vitrine (3–5 pages) optimisé et prêt à convertir vos visiteurs en clients.",
       features: [
         "UI/UX Design sur-mesure Figma",
         "Copywriting sur-mesure",
@@ -26,7 +27,8 @@ export default function PricingSection() {
     {
       name: "Vizion Pro",
       price: "5 000 € - 15 000 €+",
-      description: "Site Web complet sur-mesure (5-10+ pages)",
+      description:
+        "Site web complet avec fonctionnalités sur-mesure (5–10+ pages), conçu pour développer votre activité.",
       features: [
         "Fonctionnalités sur-mesure",
         "UI/UX Design sur-mesure Figma",
@@ -44,7 +46,8 @@ export default function PricingSection() {
     {
       name: "Vizion Enterprise",
       price: "10 000 € - 30 000 €+",
-      description: "SaaS / Application web sur-mesure",
+      description:
+        "SaaS / Application Web, pensé pour vos utilisateurs et booster la croissance de votre business.",
       features: [
         "Roadmap par étapes (MVP → V2 → V3)",
         "Code sur-mesure (React / Next.js)",
@@ -69,10 +72,10 @@ export default function PricingSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-primary-dark">
+    <section id="offres" className="py-16 md:py-24 bg-primary-dark">
       <div className="mx-auto max-w-7xl px-4">
         <Badge variant="dark" align="center">
-          Pricing
+          Offres
         </Badge>
         <Typography
           titleColor="text-white"
@@ -103,17 +106,6 @@ export default function PricingSection() {
               ))}
             </ul>
           </div>
-        </div>
-
-        <div className="flex justify-center mt-10">
-          <Button
-            variant="white"
-            size="lg"
-            className="w-fit inline-flex items-center justify-center gap-2 mt-3"
-          >
-            Discutons de votre projet
-            <RiWhatsappLine className="h-5 w-5 text-primary-dark" />
-          </Button>
         </div>
       </div>
     </section>

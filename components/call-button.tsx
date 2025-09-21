@@ -6,14 +6,21 @@ import Button from "./ui/button";
 interface CallButtonProps {
   size?: "lg" | "md" | "sm";
   className?: string;
+  variant?: "dark" | "white";
 }
 
-const CallButton = ({ size = "lg", className }: CallButtonProps) => {
+const CallButton = ({
+  size = "lg",
+  className,
+  variant = "dark",
+}: CallButtonProps) => {
   return (
-    <Button className={className} variant="dark" size={size}>
-      <Link href="/contact">Réserver un appel</Link>
-      <PiArrowUpRight className="group-hover:rotate-45 transition-all duration-300 ease-in-out" />
-    </Button>
+    <Link href="/#calendar">
+      <Button className={className} variant={variant} size={size}>
+        Réserver un appel
+        <PiArrowUpRight className="group-hover:rotate-45 transition-all duration-300 ease-in-out" />
+      </Button>
+    </Link>
   );
 };
 
