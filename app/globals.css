@@ -50,19 +50,19 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
@@ -80,7 +80,7 @@
   --gray-light: #98a6aa;
   --gray-dark: #4d5253;
   /* Mapped system tokens */
-  /* --foreground: var(--primary-dark);
+  /* --foreground: var(--primary-dark);j
   --card: var(--white);
   --card-foreground: var(--primary-dark);
   --popover: var(--white);
@@ -163,10 +163,12 @@
   h1 {
     font-size: var(--font-size-5xl);
     line-height: var(--line-height-tight);
+    padding-bottom: 0.5rem;
   }
   h2 {
     font-size: var(--font-size-3xl);
     line-height: var(--line-height-tight);
+    padding-bottom: 0.5rem;
   }
   h3 {
     font-size: var(--font-size-2xl);
@@ -190,6 +192,10 @@
   font-family: var(--font-family-heading);
 }
 
+.font-text {
+  font-family: var(--font-family-sans);
+}
+
 @layer base {
   ::selection {
     background: var(--primary-green);
@@ -207,6 +213,17 @@
   }
   body {
     @apply bg-background text-secondary-dark;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
@@ -263,5 +280,55 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .mdx-content {
+    @apply max-w-3xl mx-auto text-base text-gray-dark py-20 px-5;
+
+    h1 {
+      @apply text-4xl font-semibold text-primary-dark mb-4 mt-2 text-center;
+    }
+    h2 {
+      @apply text-2xl font-semibold text-primary-dark mt-8 mb-3;
+    }
+    h3 {
+      @apply text-xl font-semibold text-primary-dark mt-6 mb-2;
+    }
+    p {
+      @apply my-4;
+    }
+    a {
+      @apply text-secondary-dark font-medium underline underline-offset-8 hover:text-gray-light transition-colors;
+    }
+    ul {
+      @apply list-disc pl-6 my-4 space-y-2;
+    }
+    ol {
+      @apply list-decimal pl-6 my-4 space-y-2;
+    }
+    li {
+      @apply leading-relaxed;
+    }
+    strong {
+      @apply font-semibold text-primary-dark;
+    }
+    em {
+      @apply italic text-gray-dark text-center;
+    }
+
+    hr {
+      @apply my-8 border-gray-lighter;
+    }
+    blockquote {
+      @apply border-l-4 border-gray-lighter pl-4 my-4 text-gray-dark;
+    }
+    code {
+      @apply rounded bg-gray-lighter/50 px-1 py-0.5 text-sm;
+    }
+    h1 + p {
+      @apply mt-2;
+    }
   }
 }
