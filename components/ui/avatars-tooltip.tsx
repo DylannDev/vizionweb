@@ -15,7 +15,7 @@ export const AvatarsTooltip = ({
   items: {
     id: number;
     name: string;
-    designation: string;
+    role: string;
     image: string;
   }[];
 }) => {
@@ -48,7 +48,7 @@ export const AvatarsTooltip = ({
     <>
       {items.map((item, idx) => (
         <div
-          className="group relative -mr-5"
+          className="group relative -mr-3.5"
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -80,7 +80,7 @@ export const AvatarsTooltip = ({
                 <div className="relative z-30 text-base font-bold text-white">
                   {item.name}
                 </div>
-                <div className="text-xs text-white">{item.designation}</div>
+                <div className="text-xs text-white">{item.role}</div>
               </motion.div>
             )}
           </AnimatePresence>

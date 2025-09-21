@@ -48,8 +48,8 @@ const PricingCard = ({ plan }: PricingCardProps) => {
           plan.highlight ? "" : ""
         }`}
       >
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 mb-4">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-2 mb-3">
             <IconIllustration
               radius="rounded-xl"
               size={45}
@@ -60,17 +60,17 @@ const PricingCard = ({ plan }: PricingCardProps) => {
               {plan.name}
             </h3>
           </div>
-          <div className="flex flex-col ">
+          <p className="text-gray-dark text-sm font-normal">
+            {plan.description}
+          </p>
+          <div className="flex flex-col">
             <span className="text-sm text-gray-dark">À partir de</span>
-            <span className="text-3xl font-bold text-secondary-dark font-heading tracking-wider">
+            <span className="text-[28px] font-bold text-secondary-dark font-heading tracking-wider">
               {plan.price}
             </span>
           </div>
-          <p className="mt-2 text-primary-dark text-[15px] font-medium">
-            {plan.description}
-          </p>
         </div>
-        <hr className="border-gray-lighter my-8" />
+        <hr className="border-gray-lighter my-6" />
         <div className="flex flex-col justify-between flex-1">
           <Features items={plan.features} />
           <div className="mt-6">
