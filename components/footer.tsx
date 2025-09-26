@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import {
-  RiLinkedinFill,
-  RiInstagramFill,
-  RiTwitterXFill,
-} from "react-icons/ri";
+import { RiLinkedinFill } from "react-icons/ri";
 import { COUNTRIES, navLinks } from "@/data";
 import { CITIES } from "@/data";
 
@@ -37,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 items-start">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <Logo variant="white" width={200} height={200} />
+              <Logo variant="white" className="w-[200px] h-[44px]" />
               <p className="text-base">
                 Des solutions web qui font grandir votre business.
               </p>
