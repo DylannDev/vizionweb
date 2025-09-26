@@ -17,7 +17,7 @@ export default function Page() {
         {JSON.stringify(faqSchema)}
       </Script>
 
-      <Script
+      {/* <Script
         id="service-jsonld"
         type="application/ld+json"
         strategy="afterInteractive"
@@ -63,7 +63,7 @@ export default function Page() {
             },
           ],
         })}
-      </Script>
+      </Script> */}
     </>
   );
 }

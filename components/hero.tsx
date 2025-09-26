@@ -22,7 +22,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
         duration={3}
         repeatDelay={1}
         className={cn(
-          "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] sm:[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-81%] h-[200%] bg-white"
+          "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] sm:[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-81%] h-[200%] bg-white pointer-events-none will-change-transform transform-gpu"
         )}
       />
       <div className="relative max-w-7xl mx-auto w-full px-4 md:px-8">
@@ -43,7 +43,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
               </p>
             </Badge>
 
-            <h1 className="space-y-1 font-semibold text-balance text-5xl sm:text-6xl bg-gradient-to-b from-primary-dark from-60% to-secondary-dark/80 to-90% bg-clip-text text-transparent">
+            <h1 className="space-y-1 font-semibold text-balance text-5xl sm:text-6xl text-secondary-dark">
               {locationName ? (
                 `Agence de création de sites et applications web ${preposition} ${locationName}`
               ) : (

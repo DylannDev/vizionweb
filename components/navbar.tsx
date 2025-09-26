@@ -9,12 +9,11 @@ import CallButton from "./call-button";
 import { navLinks } from "@/data";
 import { cn } from "@/lib/utils";
 import { PiList, PiX } from "react-icons/pi";
-import FadeIn from "./ui/fade-in";
 
 function NavDesktop({ pathname }: { pathname: string }) {
   return (
     <div className="hidden lg:flex px-5 h-18 items-center justify-between gap-3">
-      <Logo width={180} height={40} className="inline-flex items-center" />
+      <Logo className="inline-flex items-center w-[180px] h-[40px]" />
       <div className="text-gray-dark">
         {navLinks.slice(0, 4).map((l) => (
           <Link
@@ -49,7 +48,7 @@ function NavMobile({
   return (
     <div className="relative lg:hidden">
       <div className="relative z-100 px-4 sm:px-5 h-16 sm:h-18 flex items-center justify-between gap-3">
-        <Logo width={160} height={36} className="inline-flex items-center" />
+        <Logo className="inline-flex items-center w-[160px] h-[36px]" />
         <div className="flex items-center gap-2">
           <button
             type="button"

@@ -60,7 +60,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
     return (
       // Framer Motion component for the column container
       <motion.div
-        className="w-28 h-14 md:w-48 md:h-24 overflow-hidden relative"
+        className="w-28 h-14 md:w-48 md:h-24 overflow-hidden flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }} // Start invisible and below final position
         animate={{ opacity: 1, y: 0 }} // Animate to full opacity and final position
         transition={{
@@ -74,7 +74,9 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
           {/* Framer Motion component for each logo */}
           <motion.div
             key={`${logos[currentIndex].id}-${currentIndex}`}
-            className="absolute inset-0 flex items-center justify-center"
+            className={`w-full h-full relative flex items-center justify-center ${
+              currentLogo.className ? currentLogo.className : "max-h-[25px]"
+            }`}
             // Animation for when the logo enters
             initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
             // Animation for when the logo is displayed
@@ -113,13 +115,9 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
                 <Image
                   src={src}
                   alt={currentLogo.alt}
-                  width={128}
-                  height={64}
-                  className={`w-24 h-24 md:w-32 md:h-32 max-w-[90%] object-contain ${
-                    currentLogo.className
-                      ? currentLogo.className
-                      : "max-h-[30px]"
-                  }`}
+                  fill
+                  priority
+                  className={`object-contain`}
                 />
               );
             })()}
@@ -143,16 +141,21 @@ export function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
         id: 4,
         src: "chefkit.svg",
         alt: "ChefKit SaaS",
-        className: "max-h-[25px]",
+        className: "max-h-[18px]",
       },
       {
         id: 5,
         src: "mrkicks.svg",
         alt: "Mr. Kicks",
-        className: "max-h-[26px] mb-1",
+        className: "max-h-[25px] mb-1",
       },
       { id: 6, src: "investing.svg", alt: "Amazonian Investing" },
-      { id: 7, src: "pygmalion.svg", alt: "Pygmalion Conseil" },
+      {
+        id: 7,
+        src: "pygmalion.svg",
+        alt: "Pygmalion Conseil",
+        className: "max-h-[22px]",
+      },
       { id: 8, src: "zenlounge.svg", alt: "Zen Lounge" },
     ],
     []

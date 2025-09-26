@@ -23,16 +23,17 @@ export function PortfolioCard({
       className="flex group rounded-3xl bg-white p-4 cursor-pointer shadow-lg"
     >
       <div className="flex flex-col">
-        <div className="rounded-2xl overflow-hidden">
+        <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
           <Image
             src={src}
             alt={`${title} — ${subtitle}`}
-            width={600}
-            height={400}
-            quality={100}
-            loading="eager"
-            priority={true}
-            className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover object-top-left rounded-2xl group-hover:scale-102 transition-all duration-300"
+            loading="lazy"
+            decoding="async"
+            quality={80}
+            fetchPriority="low"
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover object-top-left transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </div>
         <div className="pt-4 flex flex-col justify-between gap-3 flex-1">

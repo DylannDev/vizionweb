@@ -3,16 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
-  width?: number;
-  height?: number;
   className?: string;
   withLink?: boolean;
   variant?: "dark" | "white";
 }
 
 export function Logo({
-  width = 28,
-  height = 28,
   className,
   withLink = true,
   variant = "dark",
@@ -21,15 +17,19 @@ export function Logo({
     <Image
       src={variant === "dark" ? "/logo.svg" : "/logo-white.svg"}
       alt="Vizion Web"
-      width={width}
-      height={height}
+      sizes="100%"
+      fill
       priority
     />
   );
 
   if (withLink) {
     return (
-      <Link href="/" className={cn(className)} aria-label="Accueil Vizion Web">
+      <Link
+        href="/"
+        className={cn(className, "relative")}
+        aria-label="Accueil Vizion Web"
+      >
         {img}
       </Link>
     );
