@@ -48,7 +48,7 @@ function CodeBlockCode({
   }, [code, language, theme]);
 
   const classNames = cn(
-    "w-full overflow-x-auto text-[10px] sm:text-[12px]",
+    "w-full overflow-x-auto text-[9px] sm:text-[12px]",
     className
   );
 

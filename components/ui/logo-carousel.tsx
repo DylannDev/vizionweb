@@ -60,7 +60,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
     return (
       // Framer Motion component for the column container
       <motion.div
-        className="w-24 h-14 md:w-48 md:h-24 overflow-hidden relative"
+        className="w-28 h-14 md:w-48 md:h-24 overflow-hidden relative"
         initial={{ opacity: 0, y: 50 }} // Start invisible and below final position
         animate={{ opacity: 1, y: 0 }} // Animate to full opacity and final position
         transition={{
@@ -115,7 +115,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
                   alt={currentLogo.alt}
                   width={128}
                   height={64}
-                  className={`w-20 h-20 md:w-32 md:h-32 max-w-[80%] object-contain ${
+                  className={`w-24 h-24 md:w-32 md:h-32 max-w-[90%] object-contain ${
                     currentLogo.className
                       ? currentLogo.className
                       : "max-h-[30px]"

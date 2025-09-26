@@ -4,6 +4,7 @@ import CallButton from "../call-button";
 import Badge from "./badge";
 import IconIllustration from "./icon-illustration";
 import { PiCheckBold } from "react-icons/pi";
+import { cn } from "@/lib/utils";
 
 interface PricingCardProps {
   plan: {
@@ -36,7 +37,7 @@ function Features({ items }: FeatureProps) {
 
 const PricingCard = ({ plan }: PricingCardProps) => {
   return (
-    <div className="relative">
+    <div className={cn("relative max-w-xl", plan.highlight && "mt-10 lg:mt-0")}>
       {plan.highlight && (
         <div className="absolute inset-x-0 -top-10 w-full bg-primary-green text-secondary-dark h-10 rounded-t-3xl flex items-center justify-center uppercase text-sm font-semibold tracking-widest">
           Most Popular

@@ -13,7 +13,7 @@ export const AccordionTrigger = React.forwardRef<
   <AccordionPrimitive.Header className="m-0">
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={`group cursor-pointer bg-white rounded-xl flex w-full items-center justify-between p-5 text-left text-lg font-medium hover:opacity-90 focus:outline-none ${className}`}
+      className={`group cursor-pointer bg-white rounded-xl flex w-full items-center justify-between p-5 text-left text-base sm:text-lg font-medium hover:opacity-90 focus:outline-none ${className}`}
       {...props}
     >
       {children}

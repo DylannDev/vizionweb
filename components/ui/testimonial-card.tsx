@@ -12,7 +12,7 @@ interface Testimonial {
 
 export const TestimonialCard = ({ text, image, name, role }: Testimonial) => {
   return (
-    <div className="p-8 rounded-3xl bg-white shadow-lg shadow-gray-lighter max-w-xs w-full">
+    <div className="p-8 rounded-3xl bg-white shadow-lg shadow-gray-lighter w-full sm:max-w-xs">
       <p className="text-sm">{text}</p>
       <div className="flex items-center gap-2 mt-5">
         <Image

@@ -32,7 +32,7 @@ export function PortfolioCard({
             quality={100}
             loading="eager"
             priority={true}
-            className="w-full h-[350px] rounded-2xl group-hover:scale-102 transition-all duration-300"
+            className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover object-top-left rounded-2xl group-hover:scale-102 transition-all duration-300"
           />
         </div>
         <div className="pt-4 flex flex-col justify-between gap-3 flex-1">
