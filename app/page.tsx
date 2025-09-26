@@ -1,37 +1,69 @@
-import Image from "next/image";
+import HomeSection from "@/components/home-section";
+import { faqs } from "@/data";
+import { buildFaqJsonLd } from "@/lib/seo/faq";
+import Script from "next/script";
 
-export default function Home() {
+export default function Page() {
+  const faqSchema = buildFaqJsonLd(faqs);
   return (
-    <div className="relative overflow-hidden flex flex-col items-center justify-center min-h-screen text-[#252432]">
-      <div className="relative w-fit h-[100px] ">
-        <Image
-          src="/logo.svg"
-          alt="Logo vizion web"
-          width={400}
-          height={100}
-          className="object-cover"
-        />
-      </div>
-      <div className="text-center mt-8">
-        <p className="font-semibold text-3xl">
-          Site en cours de construction...
-        </p>
-        <p className="mt-4 mb-4 text-lg">
-          Pour toute demande, veuillez nous contacter à cette adresse :
-        </p>
-        <p className="text-xl px-6 py-2 rounded-[10px] bg-[#252432] w-fit text-white mx-auto">
-          contact@vizionweb.fr
-        </p>
-      </div>
+    <>
+      <HomeSection />
 
-      <div className="absolute bottom-0 w-full h-full -z-10">
-        <Image
-          src="/gradient-footer.png"
-          alt="Logo vizion web"
-          fill
-          className="object-cover"
-        />
-      </div>
-    </div>
+      <Script
+        id="faq-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify(faqSchema)}
+      </Script>
+
+      <Script
+        id="service-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Création de sites & applications web",
+          provider: {
+            "@type": "Organization",
+            name: "Vizion Web",
+            url: "https://vizionweb.fr",
+          },
+          areaServed: "FR",
+          serviceType: [
+            "Sites web",
+            "Sites internet",
+            "Site vitrine",
+            "Landing page",
+            "Applications web",
+            "SaaS",
+          ],
+        })}
+      </Script>
+
+      <Script
+        id="org-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Vizion Web",
+          url: "https://vizionweb.fr",
+          logo: "https://vizionweb.fr/logo.svg",
+          sameAs: ["https://www.linkedin.com/company/vizionweb"],
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "contact@vizionweb.fr",
+            },
+          ],
+        })}
+      </Script>
+    </>
   );
 }

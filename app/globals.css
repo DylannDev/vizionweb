@@ -1,1 +1,334 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-primary-green: var(--primary-green);
+  --color-background: var(--background);
+  --color-white: var(--white);
+  --color-gray-lighter: var(--gray-lighter);
+  --color-gray-light: var(--gray-light);
+  --color-gray-dark: var(--gray-dark);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Project palette */
+  --primary-dark: #101213;
+  --secondary-dark: #181c1d;
+  --primary-green: #05f6cc;
+  --background: #edf4f5;
+  --white: #ffffff;
+  --gray-lighter: #dce6e8;
+  --gray-light: #98a6aa;
+  --gray-dark: #4d5253;
+  /* Mapped system tokens */
+  /* --foreground: var(--primary-dark);j
+  --card: var(--white);
+  --card-foreground: var(--primary-dark);
+  --popover: var(--white);
+  --popover-foreground: var(--primary-dark);
+  --primary: var(--primary-dark);
+  --primary-foreground: var(--primary-green);
+  --secondary: var(--secondary-dark);
+  --secondary-foreground: var(--white);
+  --muted: var(--background);
+  --muted-foreground: var(--text-light);
+  --accent: var(--primary-green);
+  --accent-foreground: var(--primary-dark);
+  --border: var(--white);
+  --input: var(--white);
+  --ring: var(--primary-green); */
+}
+
+/* Dark mode removed as per project requirements */
+
+@layer base {
+  body {
+    font-synthesis-weight: none;
+    font-synthesis-style: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply text-secondary-dark;
+  }
+}
+
+/* Typography tokens */
+:root {
+  --font-family-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-heading: var(--font-inter-tight), ui-sans-serif, system-ui,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.5;
+
+  --tracking-tightest: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+}
+
+@layer base {
+  :root {
+    --container-max: 1400px;
+    --content-padding: 1rem;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--tracking-normal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-heading);
+    letter-spacing: var(--tracking-tight);
+  }
+  h1 {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-tight);
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-tight);
+    padding-bottom: 0.5rem;
+  }
+  h3 {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-snug);
+  }
+  h4 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-snug);
+  }
+  h5 {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-normal);
+  }
+  h6 {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+  }
+}
+
+.font-heading {
+  font-family: var(--font-family-heading);
+}
+
+.font-text {
+  font-family: var(--font-family-sans);
+}
+
+@layer base {
+  ::selection {
+    background: var(--primary-green);
+    color: var(--primary-dark);
+  }
+  ::-moz-selection {
+    background: var(--primary-green);
+    color: var(--primary-dark);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-secondary-dark;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Default shadow color override */
+@layer utilities {
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    --tw-shadow-color: var(--gray-lighter);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), 0 10px 15px -3px var(--gray-lighter),
+      0 4px 6px -4px var(--gray-lighter);
+  }
+}
+
+.faq-answer {
+  @apply text-base leading-relaxed text-muted-foreground;
+
+  p:not(:first-child) {
+    @apply mt-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  ol {
+    @apply list-decimal pl-6 mb-4 space-y-2;
+  }
+
+  ul {
+    @apply list-disc pl-6 mt-2 space-y-1;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  strong {
+    @apply font-semibold text-foreground;
+  }
+
+  em {
+    @apply italic text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .mdx-content {
+    @apply max-w-3xl mx-auto text-base text-gray-dark py-20 px-5;
+
+    h1 {
+      @apply text-4xl font-semibold text-primary-dark mb-4 mt-2 text-center;
+    }
+    h2 {
+      @apply text-2xl font-semibold text-primary-dark mt-8 mb-3;
+    }
+    h3 {
+      @apply text-xl font-semibold text-primary-dark mt-6 mb-2;
+    }
+    p {
+      @apply my-4;
+    }
+    a {
+      @apply text-secondary-dark font-medium underline underline-offset-8 hover:text-gray-light transition-colors;
+    }
+    ul {
+      @apply list-disc pl-6 my-4 space-y-2;
+    }
+    ol {
+      @apply list-decimal pl-6 my-4 space-y-2;
+    }
+    li {
+      @apply leading-relaxed;
+    }
+    strong {
+      @apply font-semibold text-primary-dark;
+    }
+    em {
+      @apply italic text-gray-dark text-center;
+    }
+
+    hr {
+      @apply my-8 border-gray-lighter;
+    }
+    blockquote {
+      @apply border-l-4 border-gray-lighter pl-4 my-4 text-gray-dark;
+    }
+    code {
+      @apply rounded bg-gray-lighter/50 px-1 py-0.5 text-sm;
+    }
+    h1 + p {
+      @apply mt-2;
+    }
+  }
+}
