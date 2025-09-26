@@ -30,6 +30,71 @@ export const navLinks = [
   { href: "/#offres", label: "Offres" },
 ];
 
+export const plans = [
+  {
+    name: "Vizion Start",
+    price: "3 500 €",
+    description:
+      "Landing page / site vitrine (3–5 pages) optimisé et prêt à convertir vos visiteurs en clients.",
+    features: [
+      "UI/UX Design sur-mesure Figma",
+      "Copywriting sur-mesure",
+      "Optimisation conversion (CRO)",
+      "Optimisation technique (vitesse, SEO)",
+      "Révisions illimitées",
+      "Livraison en 2-3 semaines",
+      "Support 30 jours",
+    ],
+    highlight: false,
+    icon: "/bars-1.svg",
+  },
+  {
+    name: "Vizion Pro",
+    price: "5 000 € - 15 000 €+",
+    description:
+      "Site web complet avec fonctionnalités sur-mesure (5–10+ pages), conçu pour développer votre activité.",
+    features: [
+      "Fonctionnalités sur-mesure",
+      "UI/UX Design sur-mesure Figma",
+      "Copywriting sur-mesure",
+      "Optimisation technique (vitesse, SEO)",
+      "Code sur-mesure (React / Next.js)",
+      "Architecture claire pour évoluer",
+      "Révisions illimitées",
+      "Livraison en 3–4 semaines",
+      "Support 30 jours",
+    ],
+    highlight: true,
+    icon: "/bars-2.svg",
+  },
+  {
+    name: "Vizion Enterprise",
+    price: "10 000 € - 30 000 €+",
+    description:
+      "SaaS / Application Web, pensé pour vos utilisateurs et booster la croissance de votre business.",
+    features: [
+      "Roadmap par étapes (MVP → V2 → V3)",
+      "Code sur-mesure (React / Next.js)",
+      "Interface claire & efficace",
+      "Gestion utilisateurs & accès",
+      "Paiements & abonnements",
+      "Tests, optimisation et suivi renforcé",
+      "Déploiement (Vercel)",
+      "Livraison en 4-8 semaines",
+      "Support renforcé",
+    ],
+    highlight: false,
+    icon: "/bars-3.svg",
+  },
+];
+
+export const included = [
+  "Propriété totale du code et des accès",
+  "Optimisations techniques dès le lancement",
+  "Formation rapide pour être autonome",
+  "Support 30 jours inclus après mise en ligne",
+];
+
 export const testimonials = [
   {
     text: "Avec Vizion Web, on a enfin une landing page efficace et un dashboard sur-mesure simple à utiliser pour gérer nos investisseurs. Vizion Web a su transformer une idée complexe en outil efficace.",

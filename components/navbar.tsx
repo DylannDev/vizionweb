@@ -147,7 +147,6 @@ export default function Navbar() {
         <nav
           id="mobile-menu"
           aria-label="Navigation mobile"
-          aria-hidden={!menuOpen}
           ref={menuRef}
           className={cn(
             "lg:hidden p-4 overflow-hidden transition-all duration-300 ease-out grid bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg will-change-transform",

@@ -47,7 +47,7 @@ export function FAQ() {
             ))}
           </Accordion>
 
-          <FadeIn key="card" delay={2} className="flex justify-center w-full">
+          <FadeIn key="card" delay={1.8} className="flex justify-center w-full">
             <Card
               radius="xl"
               className="p-8 max-w-2xl w-full relative overflow-hidden"

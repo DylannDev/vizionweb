@@ -65,7 +65,7 @@ export function Typography({
       case "sm":
         return 14;
       case "base":
-        return 14;
+        return 16;
       case "lg":
         return 18;
       case "xl":
@@ -85,7 +85,7 @@ export function Typography({
 
   function getResponsiveFontSize(token: FontSizeToken) {
     const min = getMobileMinPx(token);
-    return `clamp(${min}px, ${min}px, var(--font-size-${token}))`;
+    return `clamp(${min}px, calc(${min}px + 1.2vw), var(--font-size-${token}))`;
   }
 
   function getFontWeightValue(weight: FontWeight) {
