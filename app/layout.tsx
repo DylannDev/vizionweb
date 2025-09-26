@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/footer";
-import CtaSection from "@/components/cta-section";
 import Navbar from "@/components/navbar";
-import PricingSection from "@/components/pricing-section";
 
 const geist = Geist({
   variable: "--font-geist",
