@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { PiStarFill } from "react-icons/pi";
 import { AvatarsTooltip } from "@/components/ui/avatars-tooltip";
-import { testimonials } from "./testimonials";
+import { testimonials } from "@/data";
 
 interface CustomerSatisfactionBannerProps {
   stars?: number; // 0..5
