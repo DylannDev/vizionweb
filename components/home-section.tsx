@@ -1,13 +1,12 @@
-import HeroSEO from "./hero-seo";
 import Hero from "./hero";
 import MiniPortfolio from "../components/mini-portfolio";
 import ServicesSection from "@/components/services-section";
 import ProcessSteps from "../components/process-steps";
 import { Testimonials } from "@/components/testimonials";
 import PricingSection from "@/components/pricing-section";
-import StickyCtaMobile from "../components/sticky-cta-mobile";
 import FAQ from "../components/faq";
 import Calendar from "./calendar";
+import { WhatsappNav } from "./ui/whatsapp-nav";
 
 const HomeSection = ({
   locationName,
@@ -18,12 +17,8 @@ const HomeSection = ({
 }) => {
   return (
     <main>
-      <div className="max-w-7xl mx-auto w-full">
-        {locationName ? (
-          <HeroSEO locationName={locationName} preposition={preposition} />
-        ) : (
-          <Hero />
-        )}
+      <Hero locationName={locationName} preposition={preposition} />
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         <MiniPortfolio />
         <ServicesSection />
       </div>
@@ -32,7 +27,7 @@ const HomeSection = ({
       <PricingSection />
       <FAQ />
       <Calendar />
-      <StickyCtaMobile />
+      <WhatsappNav />
     </main>
   );
 };

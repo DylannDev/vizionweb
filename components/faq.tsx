@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Typography from "./typography";
 import {
   Accordion,
@@ -7,10 +6,9 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Badge from "./ui/badge";
-import Button from "./ui/button";
 import Card from "./ui/card";
-import { RiWhatsappLine } from "react-icons/ri";
 import WhatsappButton from "./ui/whatsapp-button";
+import FadeIn from "./ui/fade-in";
 
 export function FAQ() {
   const faqs = [
@@ -54,7 +52,7 @@ export function FAQ() {
       a: "Oui, les modifications sont illimitées jusqu’à la livraison finale du projet. On ne s’arrête pas tant que vous n’êtes pas satisfait.",
     },
     {
-      q: "Qui possède le site / l’application une fois livré ?",
+      q: "Qui possède le site / l’appli une fois livré ?",
       a: "Vous. Le code, les accès et les fichiers vous appartiennent à 100%. Pas de dépendance, pas d’abonnement caché.",
     },
     {
@@ -114,7 +112,7 @@ export function FAQ() {
 
   return (
     <section className="py-16 md:py-24">
-      <div className=" mx-auto max-w-6xl px-4">
+      <div className=" mx-auto max-w-7xl px-4">
         <Badge align="center">FAQ</Badge>
         <Typography
           align="center"
@@ -133,34 +131,38 @@ export function FAQ() {
             className="flex flex-col gap-2 w-full max-w-2xl"
           >
             {faqs.map((f, idx) => (
-              <AccordionItem key={f.q} value={`faq-${idx}`}>
-                <AccordionTrigger>{f.q}</AccordionTrigger>
-                <AccordionContent>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: f.a }}
-                    className="faq-answer"
-                  ></div>
-                </AccordionContent>
-              </AccordionItem>
+              <FadeIn key={f.q} delay={0.2 * (idx + 1)} className="h-full">
+                <AccordionItem key={f.q} value={`faq-${idx}`}>
+                  <AccordionTrigger>{f.q}</AccordionTrigger>
+                  <AccordionContent>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: f.a }}
+                      className="faq-answer"
+                    ></div>
+                  </AccordionContent>
+                </AccordionItem>
+              </FadeIn>
             ))}
           </Accordion>
 
-          <Card
-            radius="xl"
-            className="p-8 max-w-2xl w-full relative overflow-hidden"
-          >
-            <div className="space-y-3 text-center z-10 relative">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                Vous avez encore des questions ?
-              </h3>
-              <p className="text-gray-dark text-base leading-relaxed">
-                Discutons-en. Que vous soyez au stade de l’idée ou prêt à
-                <br />
-                lancer votre projet, nous sommes là pour vous accompagner.
-              </p>
-              <WhatsappButton />
-            </div>
-          </Card>
+          <FadeIn key="card" delay={2} className="flex justify-center w-full">
+            <Card
+              radius="xl"
+              className="p-8 max-w-2xl w-full relative overflow-hidden"
+            >
+              <div className="space-y-3 text-center z-10 relative">
+                <h3 className="text-xl font-semibold text-primary-dark">
+                  Vous avez encore des questions ?
+                </h3>
+                <p className="text-gray-dark text-sm sm:text-base">
+                  Discutons-en. Que vous soyez au stade de l’idée ou prêt à
+                  <br className="hidden sm:block" />
+                  lancer votre projet, nous sommes là pour vous accompagner.
+                </p>
+                <WhatsappButton />
+              </div>
+            </Card>
+          </FadeIn>
         </div>
       </div>
     </section>

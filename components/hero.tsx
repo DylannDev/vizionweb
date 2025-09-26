@@ -9,19 +9,24 @@ import CallButton from "./call-button";
 import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banner";
 import { LogoCarousel } from "./ui/logo-carousel";
 
-export function Hero() {
+interface HeroSEOProps {
+  locationName?: string;
+  preposition?: "à" | "en";
+}
+
+export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
   return (
-    <section className="pt-16 md:pt-40 md:pb-4 relative overflow-hidden min-h-screen flex flex-col justify-between gap-16">
+    <section className="pt-30 sm:pt-40 md:pb-4 relative min-h-[100dvh] flex flex-col justify-between gap-16">
       <AnimatedGridPattern
         maxOpacity={0.3}
         duration={3}
         repeatDelay={1}
         className={cn(
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -inset-x-2 inset-y-[-81%] h-[200%] bg-white"
+          "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] sm:[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] inset-x-0 inset-y-[-81%] h-[200%] bg-white"
         )}
       />
-      <div className="relative mx-auto max-w-7xl px-4">
-        <div className="space-y-6 text-center">
+      <div className="relative max-w-7xl mx-auto w-full px-4 md:px-8">
+        <div className="flex flex-col gap-6 items-center justify-center text-center">
           <div className="space-y-4">
             <Badge
               align="left"
@@ -37,26 +42,62 @@ export function Hero() {
                 SaaS, Apps Web & Sites Internet
               </p>
             </Badge>
-            <h1 className="space-y-1 font-semibold text-balance text-6xl bg-gradient-to-b from-primary-dark from-60% to-secondary-dark/80 to-90% bg-clip-text text-transparent">
-              <span className="flex items-center justify-center gap-4">
-                On crée des sites
-                <IconIllustration icon={PiCodeFill} className="" /> et
-                applications{" "}
-              </span>
-              <span className="flex items-center justify-center gap-4">
-                web modernes sur-mesure <IconIllustration icon={PiPenNibFill} />
-              </span>
+
+            <h1 className="space-y-1 font-semibold text-balance text-5xl sm:text-6xl bg-gradient-to-b from-primary-dark from-60% to-secondary-dark/80 to-90% bg-clip-text text-transparent">
+              {locationName ? (
+                `Agence de création de sites et applications web ${preposition} ${locationName}`
+              ) : (
+                <>
+                  {/* Mobile */}
+                  <span className="block lg:hidden">
+                    On crée des sites et applications web modernes sur-mesure
+                  </span>
+
+                  {/* Desktop */}
+                  <span className="hidden lg:block">
+                    <span className="flex items-center justify-center gap-4">
+                      On crée des sites
+                      <IconIllustration
+                        aria-hidden
+                        icon={PiCodeFill}
+                        className="hidden sm:flex"
+                      />{" "}
+                      et applications
+                    </span>
+                    <span className="flex items-center justify-center gap-4">
+                      web modernes sur-mesure{" "}
+                      <IconIllustration
+                        aria-hidden
+                        icon={PiPenNibFill}
+                        className="hidden sm:flex"
+                      />
+                    </span>
+                  </span>
+                </>
+              )}
             </h1>
           </div>
-          <p className="text-base text-secondary-dark font-normal">
-            Copywriting, Design, Développement & Publication : on gère votre
-            projet de A à Z.
-            <br />
-            <span className="font-semibold text-secondary-dark">
-              Livré en 30 jours en moyenne.
-            </span>
-          </p>
-          <div className="flex items-center justify-center gap-4">
+
+          {locationName ? (
+            <h2 className="text-sm sm:text-base text-secondary-dark text-balance font-normal font-text tracking-normal -mt-2">
+              On crée des solutions sur-mesure, conçus pour convertir vos
+              visiteurs et booster votre croissance: <br />
+              <span className="font-semibold text-secondary-dark">
+                Sites Internet, Landing Pages, Apps Web & SaaS
+              </span>
+            </h2>
+          ) : (
+            <p className="text-sm sm:text-base text-secondary-dark font-normal -mt-2">
+              Copywriting, Design, Développement & Publication : on gère votre
+              projet de A à Z.
+              <br />
+              <span className="font-semibold text-secondary-dark">
+                Livré en 30 jours en moyenne.
+              </span>
+            </p>
+          )}
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <CallButton size="md" />
             <Button
               size="md"
@@ -67,16 +108,25 @@ export function Hero() {
               <Link href="/#realisations">Voir nos réalisations</Link>
             </Button>
           </div>
+
           <div className="flex items-center justify-center">
-            <CustomerSatisfactionBanner className="mt-4" stars={5} />
+            <CustomerSatisfactionBanner stars={5} />
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto">
-        <p className="text-center text-xs font-semibold text-gray-light uppercase font-heading">
+      <div className="max-w-7xl mx-auto mb-6 overflow-hidden">
+        <p className="text-center text-xs font-semibold text-gray-light uppercase font-heading mb-2">
           ils nous font confiance
         </p>
-        <LogoCarousel columnCount={4} />
+        <div className="hidden lg:block">
+          <LogoCarousel columnCount={4} />
+        </div>
+        <div className="block max-[375px]:hidden lg:hidden">
+          <LogoCarousel columnCount={3} />
+        </div>
+        <div className="block min-[375px]:hidden">
+          <LogoCarousel columnCount={2} />
+        </div>
       </div>
     </section>
   );

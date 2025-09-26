@@ -21,7 +21,7 @@ export const testimonials = [
   },
   {
     text: "Mon site intègre désormais un espace client, la réservation en ligne et les paiements. Tout est fluide et simple, mes clientes adorent. Merci Dylann pour ton écoute et ta réactivité.",
-    image: "https://randomuser.me/api/portraits/women/14.jpg",
+    image: "/clients/jeanne.jpg",
     name: "Jeanne Auguste",
     role: "Dirigeante Zen Lounge",
   },
@@ -33,7 +33,7 @@ export const testimonials = [
   },
   {
     text: "Grâce au nouveau site, mes clients trouvent mes services beaucoup plus facilement. Vizion Web a su rendre le site clair, professionnel et efficace. Un vrai plus pour mon activité.",
-    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    image: "/clients/fezayi.jpg",
     name: "Filiz Fezayi",
     role: "Dirigeant TCS Plomberie",
   },
@@ -50,7 +50,7 @@ export const testimonials = [
     role: "CEO Mr. Kicks",
   },
   {
-    text: "L'application Fork nous fait gagner un temps fou. Je gère mes menus, mes commandes et mes réservations en ligne facilement. C’est devenu un outil indispensable dans mon restaurant.",
+    text: "L'application Chefkit nous fait gagner un temps fou. Je gère mes menus, mes commandes et mes réservations en ligne facilement. C’est devenu un outil indispensable pour mon restaurant.",
     image: "https://randomuser.me/api/portraits/men/18.jpg",
     name: "Karim Haddad",
     role: "Restaurateur",
@@ -66,6 +66,8 @@ export const testimonials = [
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
+const smTwoColA = testimonials.filter((_, i) => i % 2 === 0);
+const smTwoColB = testimonials.filter((_, i) => i % 2 !== 0);
 
 export const Testimonials = () => {
   return (
@@ -79,7 +81,31 @@ export const Testimonials = () => {
           />
         </div>
 
-        <div className="flex justify-center gap-1 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+        {/* Mobile: single column (<sm) */}
+        <div className="sm:hidden w-full mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <Marquee pauseOnHover vertical className="[--duration:80s]">
+            {testimonials.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+        </div>
+
+        {/* sm-only: two columns (sm ≤ width < md) */}
+        <div className="hidden sm:flex lg:hidden justify-center gap-1 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <Marquee pauseOnHover vertical className="[--duration:60s]">
+            {smTwoColA.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover vertical className="[--duration:60s]">
+            {smTwoColB.map((review) => (
+              <TestimonialCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+        </div>
+
+        {/* md and above: three columns */}
+        <div className="hidden lg:flex justify-center gap-1 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <Marquee pauseOnHover vertical className="[--duration:40s]">
             {firstColumn.map((review) => (
               <TestimonialCard key={review.name} {...review} />

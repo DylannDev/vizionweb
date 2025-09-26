@@ -1,6 +1,7 @@
 import Badge from "./ui/badge";
 import Typography from "./typography";
 import PortfolioCard from "@/components/ui/portfolio-card";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function MiniPortfolio() {
   const items = [
@@ -37,22 +38,33 @@ export function MiniPortfolio() {
   ];
   return (
     <section id="realisations" className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <Badge align="center">réalisations</Badge>
-        <Typography
-          title={<>Des projets qui parlent d’eux-mêmes</>}
-          subtitle="Chaque réalisation est pensée pour générer de la valeur concrète."
-        />
-        <div className="grid md:grid-cols-2 gap-6">
-          {items.map((it) => (
-            <PortfolioCard key={it.title} {...it} />
-          ))}
-        </div>
-        {/* <div className="mt-6">
-          <Button asChild>
-            <Link href="/realisations">Voir toutes les réalisations</Link>
-          </Button>
-        </div> */}
+      <Badge align="center">réalisations</Badge>
+
+      <Typography
+        title="Des projets qui parlent d’eux-mêmes"
+        subtitle="Chaque réalisation est pensée pour générer de la valeur concrète."
+      />
+
+      {/* Mobile: below 850px, uniform delay */}
+      <div className="grid gap-6 min-[850px]:hidden">
+        {items.map((it) => (
+          <FadeIn key={it.title} delay={0.2} className="h-full flex">
+            <PortfolioCard {...it} />
+          </FadeIn>
+        ))}
+      </div>
+
+      {/* Desktop: >= 850px, delays grouped by pairs */}
+      <div className="hidden min-[850px]:grid min-[850px]:grid-cols-2 gap-6">
+        {items.map((it, index) => (
+          <FadeIn
+            key={it.title}
+            delay={0.1 * (Math.floor(index / 2) + 1)}
+            className="h-full flex"
+          >
+            <PortfolioCard {...it} />
+          </FadeIn>
+        ))}
       </div>
     </section>
   );

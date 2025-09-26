@@ -11,10 +11,7 @@ const Calendar = () => {
     (async function () {
       const cal = await getCalApi({ namespace: "30min" });
       cal("ui", {
-        cssVarsPerTheme: {
-          light: { "cal-brand": "#181c1d" },
-          dark: { "cal-brand": "#181c1d" },
-        },
+        theme: "light",
         hideEventTypeDetails: false,
         layout: "month_view",
       });

@@ -11,9 +11,12 @@ const WebsiteIllustration = () => {
   const actionButtons = [
     {
       aria: "Visibilité",
-      node: <PiMegaphone className="size-5" />,
+      node: <PiMegaphone className="sm:size-5 size-4" />,
     },
-    { aria: "SEO", node: <Search strokeWidth={1.75} className="size-5" /> },
+    {
+      aria: "SEO",
+      node: <Search strokeWidth={1.75} className="sm:size-5 size-4" />,
+    },
     {
       aria: "Lancement",
       node: (
@@ -23,17 +26,17 @@ const WebsiteIllustration = () => {
           aria-hidden
           width={30}
           height={30}
-          className="absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-20"
+          className="w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-20"
         />
       ),
     },
     {
       aria: "Croissance",
-      node: <TrendingUp strokeWidth={1.75} className="size-5" />,
+      node: <TrendingUp strokeWidth={1.75} className="sm:size-5 size-4" />,
     },
     {
       aria: "Maintenance",
-      node: <Settings strokeWidth={1.75} className="size-5" />,
+      node: <Settings strokeWidth={1.75} className="sm:size-5 size-4" />,
     },
   ];
   return (
@@ -144,15 +147,15 @@ const WebsiteIllustration = () => {
             className={cn(
               "relative inline-flex items-center justify-center size-10 rounded-full text-gray-dark",
               idx === 2
-                ? "size-12 ring-4 ring-primary-green/30"
+                ? "sm:size-12 size-10 ring-4 ring-primary-green/30"
                 : "hover:bg-background"
             )}
           >
             {btn.node}
             {idx === 2 && (
               <>
-                <span className="bg-primary-green size-12 rounded-full absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-10"></span>
-                <span className="bg-primary-dark size-7 rounded-full animate-[ping_1.5s_linear_infinite] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-0"></span>
+                <span className="bg-primary-green sm:size-12 size-10 rounded-full absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-10"></span>
+                <span className="bg-primary-dark sm:size-7 size-6 rounded-full animate-[ping_1.5s_linear_infinite] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-0"></span>
               </>
             )}
           </div>

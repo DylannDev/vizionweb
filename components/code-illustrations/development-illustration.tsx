@@ -37,7 +37,7 @@ export default function DevelopmentIllustration() {
           <span className="text-gray-dark text-sm">counter.tsx</span>
         </div>
         <hr className="border-gray-lighter my-4" />
-        <pre className="font-mono text-[11px] sm:text-[12px] leading-6 whitespace-pre-wrap min-h-[290px]">
+        <pre className="font-mono leading-6 whitespace-pre-wrap min-h-[290px]">
           <CodeBlockCode code={code} />
         </pre>
       </CodeBlock>
@@ -50,7 +50,7 @@ export default function DevelopmentIllustration() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute right-15 top-10 flex flex-col gap-3 rounded-3xl border border-gray-lighter shadow-md bg-white p-3 max-w-[120px] max-h-[150px] w-full h-full"
+        className="absolute right-5 sm:right-15 -top-15 sm:top-10 flex flex-col gap-3 rounded-2xl sm:rounded-3xl border border-gray-lighter shadow-md bg-white p-3 max-w-[120px] max-h-[150px] w-full h-full"
       >
         <div className="bg-gray-lighter rounded-xl h-full flex items-center justify-center">
           <Image

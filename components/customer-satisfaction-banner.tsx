@@ -15,16 +15,13 @@ interface CustomerSatisfactionBannerProps {
 export function CustomerSatisfactionBanner({
   stars = 5,
   className,
-  avatarIndexes = [3, 0, 1, 6],
+  avatarIndexes = [3, 0, 4, 6],
 }: CustomerSatisfactionBannerProps) {
   const clampedStars = Math.max(0, Math.min(5, stars));
 
   return (
     <motion.div
       aria-label="Satisfaction client"
-      initial={{ opacity: 0, y: 6 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
       className={cn(
         "flex flex-col-reverse justify-center items-center gap-3",
         className

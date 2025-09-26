@@ -11,6 +11,7 @@ import {
 } from "react-icons/pi";
 import IconIllustration from "./ui/icon-illustration";
 import Badge from "./ui/badge";
+import FadeIn from "./ui/fade-in";
 
 export function ServicesSection() {
   const services = [
@@ -47,19 +48,24 @@ export function ServicesSection() {
   ];
   return (
     <section id="services" className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <Badge align="center">Services</Badge>
-        <Typography
-          title={
-            <>
-              Nous développons des <br />
-              solutions web sur-mesure
-            </>
-          }
-          subtitle="On combine stratégie, design et développement sur-mesure, pour créer des sites et applications au service de vos objectifs."
-        />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map(({ icon: Icon, title, desc }) => (
+      <Badge align="center">Services</Badge>
+
+      <Typography
+        title={
+          <>
+            Nous développons des <br />
+            solutions web{" "}
+            <span className="text-gray-light whitespace-nowrap">
+              sur-mesure
+            </span>
+          </>
+        }
+        subtitle="On combine stratégie, design et développement sur-mesure, pour créer des sites et applications au service de vos objectifs."
+      />
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {services.map(({ icon: Icon, title, desc }, index) => (
+          <FadeIn key={title} delay={0.2 * (index + 1)} className="h-full flex">
             <Card
               key={title}
               className="group hover:ring-6 ring-gray-lighter transition-all duration-300"
@@ -73,8 +79,8 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent>{desc}</CardContent>
             </Card>
-          ))}
-        </div>
+          </FadeIn>
+        ))}
       </div>
     </section>
   );

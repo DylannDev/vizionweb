@@ -29,11 +29,13 @@ export default function Footer() {
     // },
     // { href: "https://x.com/", label: "X (Twitter)", Icon: RiTwitterXFill },
   ];
+
+  const allLocations = [...CITIES, ...COUNTRIES];
   return (
     <footer className="bg-primary-dark text-white pt-24 pb-8">
-      <div className="mx-auto max-w-7xl px-4 text-sm text-gray-light">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 text-sm text-gray-light">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 items-start">
-          <div className="space-y-6">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <Logo variant="white" width={200} height={200} />
               <p className="text-base">
@@ -86,21 +88,9 @@ export default function Footer() {
         </div>
         <hr className="my-8 border-gray-dark" />
         <div className="">
-          {/* <div className="text-white font-semibold mb-3">Villes desservies</div> */}
-          <div className="flex flex-wrap gap-4 justify-center">
-            <div className="flex flex-wrap gap-4">
-              {CITIES.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/${c.slug}`}
-                  className="text-gray-light hover:text-white hover:border-white transition"
-                >
-                  {c.name}
-                </Link>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-4">
-              {COUNTRIES.map((c) => (
+          <div className="flex flex-wrap gap-4 justify-start">
+            <div className="flex flex-wrap gap-4 justify-between sm:justify-start w-full sm:w-fit">
+              {allLocations.map((c) => (
                 <Link
                   key={c.slug}
                   href={`/${c.slug}`}

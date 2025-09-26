@@ -58,8 +58,34 @@ export function Typography({
 }: TypographyProps) {
   const TitleTag = as as any;
 
-  function getFontSizeVar(token: FontSizeToken) {
-    return `var(--font-size-${token})`;
+  function getMobileMinPx(token: FontSizeToken) {
+    switch (token) {
+      case "xs":
+        return 12;
+      case "sm":
+        return 14;
+      case "base":
+        return 14;
+      case "lg":
+        return 18;
+      case "xl":
+        return 20;
+      case "2xl":
+        return 24;
+      case "3xl":
+        return 28;
+      case "4xl":
+        return 30;
+      case "5xl":
+        return 32; // ex: requested 5xl → 32px on mobile
+      default:
+        return 16;
+    }
+  }
+
+  function getResponsiveFontSize(token: FontSizeToken) {
+    const min = getMobileMinPx(token);
+    return `clamp(${min}px, ${min}px, var(--font-size-${token}))`;
   }
 
   function getFontWeightValue(weight: FontWeight) {
@@ -82,7 +108,7 @@ export function Typography({
   return (
     <div
       className={cn(
-        "space-y-6 mb-12",
+        "space-y-3 sm:space-y-6 mb-8 sm:mb-12",
         align === "center" && "text-center",
         align === "right" && "text-right",
         className
@@ -94,7 +120,7 @@ export function Typography({
           className={cn("font-heading tracking-tight text-balance", titleColor)}
           style={{
             fontFamily: "var(--font-family-heading)",
-            fontSize: getFontSizeVar(titleSize),
+            fontSize: getResponsiveFontSize(titleSize),
             fontWeight: getFontWeightValue(titleWeight),
             lineHeight: "var(--line-height-tight)",
           }}
@@ -107,7 +133,7 @@ export function Typography({
           className={cn("text-balance max-w-2xl mx-auto", subtitleColor)}
           style={{
             fontFamily: "var(--font-family-sans)",
-            fontSize: getFontSizeVar(subtitleSize),
+            fontSize: getResponsiveFontSize(subtitleSize),
             fontWeight: getFontWeightValue(subtitleWeight),
             lineHeight: "var(--line-height-normal)",
           }}
