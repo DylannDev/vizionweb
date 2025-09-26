@@ -15,7 +15,7 @@ const CallButton = ({
   variant = "dark",
 }: CallButtonProps) => {
   return (
-    <Link href="/#calendar">
+    <Link href="https://cal.com/dylann/30min" target="_blank">
       <Button className={className} variant={variant} size={size}>
         Réserver un appel
         <PiArrowUpRight className="group-hover:rotate-45 transition-all duration-300 ease-in-out" />
