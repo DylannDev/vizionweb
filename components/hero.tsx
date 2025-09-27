@@ -50,7 +50,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
                 <>
                   {/* Mobile */}
                   <span className="block lg:hidden">
-                    On crée des sites et applications web modernes sur-mesure
+                    On crée des sites et applications web modernes
                   </span>
 
                   {/* Desktop */}
@@ -87,8 +87,8 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
               </span>
             </h2>
           ) : (
-            <p className="text-sm sm:text-base text-secondary-dark font-normal -mt-2">
-              Copywriting, Design, Développement & Publication : on gère votre
+            <p className="text-sm sm:text-base text-secondary-dark font-normal -mt-2 text-balance">
+              Copywriting, Design, Développement, Publication : on gère votre
               projet de A à Z.
               <br />
               <span className="font-semibold text-secondary-dark">

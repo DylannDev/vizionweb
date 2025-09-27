@@ -75,7 +75,9 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
           <motion.div
             key={`${logos[currentIndex].id}-${currentIndex}`}
             className={`w-full h-full relative flex items-center justify-center ${
-              currentLogo.className ? currentLogo.className : "max-h-[25px]"
+              currentLogo.className
+                ? currentLogo.className
+                : "max-h-[20px] sm:max-h-[25px]"
             }`}
             // Animation for when the logo enters
             initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
@@ -141,20 +143,20 @@ export function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
         id: 4,
         src: "chefkit.svg",
         alt: "ChefKit SaaS",
-        className: "max-h-[18px]",
+        className: "max-h-[13px] sm:max-h-[18px]",
       },
       {
         id: 5,
         src: "mrkicks.svg",
         alt: "Mr. Kicks",
-        className: "max-h-[25px] mb-1",
+        className: "max-h-[18px] sm:max-h-[23px] mb-1",
       },
       { id: 6, src: "investing.svg", alt: "Amazonian Investing" },
       {
         id: 7,
         src: "pygmalion.svg",
         alt: "Pygmalion Conseil",
-        className: "max-h-[22px]",
+        className: "max-h-[17px] sm:max-h-[22px]",
       },
       { id: 8, src: "zenlounge.svg", alt: "Zen Lounge" },
     ],

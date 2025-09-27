@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export default function NotFound() {
   return (
-    <section className="min-h-[60vh] md:min-h-screen flex items-center justify-center px-4">
+    <section className="flex items-center justify-center px-4 py-40 overflow-hidden">
       <AnimatedGridPattern
         maxOpacity={0.3}
         duration={3}
