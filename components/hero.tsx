@@ -50,7 +50,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
                 <>
                   {/* Mobile */}
                   <span className="block lg:hidden">
-                    On crée des sites et applications web modernes
+                    On crée des sites et applications web sur-mesure
                   </span>
 
                   {/* Desktop */}
