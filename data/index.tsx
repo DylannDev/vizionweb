@@ -204,12 +204,14 @@ export const faqs = [
     a: `
     <p>Nos tarifs sont réalistes, ajustés à la complexité et à la valeur générée :</p>
     <ul>
-      <li><strong>Vizion Start</strong> – à partir de 3 500 €
-          <br />Landing Pages ou Sites vitrines (3 - 5 pages).</li>
-      <li><strong>Vizion Pro</strong> – de 5 000 € à +15 000 €
-          <br />Sites web avec fonctionnalités avancées : prise de RDV, paiement, espace client, etc (5 - 10 pages).</li>
+      <li><strong>Vizion Start</strong> – à partir de 2 000 €
+          <br />Landing Page (1-2 pages)</li>
+      <li><strong>Vizion Boost</strong> – à partir de 3 500 €
+          <br />Site vitrine (3-5 pages)</li>
+      <li><strong>Vizion Pro</strong> – à partir de 5 000 €
+          <br />Sites web avec fonctionnalités avancées : prise de RDV, paiement, espace client, etc (6-10+ pages)</li>
       <li><strong>Vizion Enterprise</strong> – 10 000 € à +30 000 €
-          <br />Applications web (SaaS, dashboards, intranet…), découpables en MVP évolutif.</li>
+          <br />Applications web (SaaS, dashboards, intranet…), découpables en MVP évolutif</li>
     </ul>
     <p><strong>Pourquoi ces tarifs ?</strong> Parce que chaque projet Vizion Web inclut :</p>
     <ul>
