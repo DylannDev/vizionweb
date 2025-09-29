@@ -14,6 +14,7 @@ interface PricingCardProps {
     features: string[];
     highlight: boolean;
     icon: string;
+    category: "web" | "saas";
   };
 }
 
@@ -37,10 +38,15 @@ function Features({ items }: FeatureProps) {
 
 const PricingCard = ({ plan }: PricingCardProps) => {
   return (
-    <div className={cn("relative max-w-xl", plan.highlight && "mt-10 lg:mt-0")}>
+    <div
+      className={cn(
+        "relative max-w-lg w-full",
+        plan.highlight && "mt-10 lg:mt-0"
+      )}
+    >
       {plan.highlight && (
         <div className="absolute inset-x-0 -top-10 w-full bg-primary-green text-secondary-dark h-10 rounded-t-3xl flex items-center justify-center uppercase text-sm font-semibold tracking-widest">
-          Most Popular
+          Offre Populaire
         </div>
       )}
       <Card
@@ -54,6 +60,7 @@ const PricingCard = ({ plan }: PricingCardProps) => {
             <IconIllustration
               radius="rounded-xl"
               size={45}
+              imgSize={plan.category === "saas" ? 25 : 20}
               img={plan.icon}
               shadow=""
             />
@@ -61,12 +68,12 @@ const PricingCard = ({ plan }: PricingCardProps) => {
               {plan.name}
             </h3>
           </div>
-          <p className="text-gray-dark text-sm font-normal">
+          <p className="text-primary-dark text-[15px] font-medium">
             {plan.description}
           </p>
           <div className="flex flex-col">
             <span className="text-sm text-gray-dark">À partir de</span>
-            <span className="text-[28px] font-bold text-secondary-dark font-heading tracking-wider">
+            <span className="text-3xl font-bold text-secondary-dark font-heading">
               {plan.price}
             </span>
           </div>
