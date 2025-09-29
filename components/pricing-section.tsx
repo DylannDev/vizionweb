@@ -1,9 +1,9 @@
 import Typography from "@/components/typography";
-import PricingCard from "./ui/pricing-card";
 import { PiCheckBold } from "react-icons/pi";
 import Badge from "./ui/badge";
 import FadeIn from "./ui/fade-in";
 import { included, plans } from "@/data";
+import PricingGrid from "./ui/pricing-grid";
 
 export default function PricingSection() {
   return (
@@ -20,17 +20,7 @@ export default function PricingSection() {
           subtitle="Que vous ayez besoin d’une landing page, d’un site complet ou d’une application sur-mesure, nos formules s’adaptent à vos objectifs et à votre budget."
         />
 
-        <div className="grid max-lg:place-items-center grid-cols-1 lg:grid-cols-3 gap-5 pt-6 sm:pt-16">
-          {plans.map((plan, index) => (
-            <FadeIn
-              key={plan.name}
-              delay={0.2 * (index + 1)}
-              className="flex justify-center"
-            >
-              <PricingCard plan={plan} />
-            </FadeIn>
-          ))}
-        </div>
+        <PricingGrid plans={plans as any} />
 
         {/* Included in all offers */}
         <div className="mt-10 rounded-3xl flex flex-col w-full">
