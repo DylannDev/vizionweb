@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 
 interface MDXContentProps {
   file: string;
@@ -11,7 +12,10 @@ export async function MDXContent({ file }: MDXContentProps) {
   const source = await fs.readFile(filePath, "utf8");
   return (
     <article className="mdx-content">
-      <MDXRemote source={source} />
+      <MDXRemote
+        source={source}
+        options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+      />
     </article>
   );
 }

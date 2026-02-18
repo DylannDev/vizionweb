@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary-dark text-white pt-24 pb-8">
       <div className="mx-auto max-w-7xl px-4 md:px-8 text-sm text-gray-light">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-10 items-start">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <Logo variant="white" className="w-[200px] h-[44px]" />
@@ -68,6 +68,15 @@ export default function Footer() {
                   {l.label}
                 </Link>
               ))}
+            </div>
+          </nav>
+
+          <nav aria-label="Ressources" className="">
+            <div className="flex flex-col gap-2 text-base transition-all duration-150 ease-in-out">
+              <div className="text-white font-semibold mb-2">Ressources</div>
+              <Link className="hover:text-white" href="/blog">
+                Blog
+              </Link>
             </div>
           </nav>
 

@@ -330,5 +330,27 @@
     h1 + p {
       @apply mt-2;
     }
+
+    table {
+      @apply w-full my-6 text-sm border-collapse;
+    }
+    thead {
+      @apply bg-primary-dark text-white;
+    }
+    th {
+      @apply px-4 py-2.5 text-left font-semibold text-sm;
+    }
+    td {
+      @apply px-4 py-2.5 border-b border-gray-lighter;
+    }
+    tbody tr:last-child td {
+      @apply border-b-0;
+    }
+    tbody tr:nth-child(even) {
+      @apply bg-gray-lighter/30;
+    }
+    tbody tr:last-child {
+      @apply font-semibold;
+    }
   }
 }

@@ -15,7 +15,7 @@ function NavDesktop({ pathname }: { pathname: string }) {
     <div className="hidden lg:flex px-5 h-18 items-center justify-between gap-3">
       <Logo className="inline-flex items-center w-[180px] h-[40px]" />
       <div className="text-gray-dark">
-        {navLinks.slice(0, 4).map((l) => (
+        {navLinks.slice(0, 5).map((l) => (
           <Link
             key={l.href}
             href={l.href}

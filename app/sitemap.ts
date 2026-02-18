@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { CITIES, COUNTRIES } from "@/data";
+import { blogPosts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vizionweb.fr";
@@ -14,17 +15,52 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return `/${slug}`;
   });
 
-  const allRoutes = [...staticRoutes, ...dynamicRoutes];
+  const blogRoutes = blogPosts.map((p) => `/blog/${p.slug}`);
+
   const now = new Date();
 
-  return allRoutes.map(function toSitemapEntry(
-    path
-  ): MetadataRoute.Sitemap[number] {
-    return {
+  const entries: MetadataRoute.Sitemap = [];
+
+  // Homepage
+  for (const path of staticRoutes) {
+    entries.push({
       url: `${baseUrl}${path}`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: path === "/" ? 1 : 0.9,
-    };
-  });
+      priority: 1,
+    });
+  }
+
+  // City/country pages
+  for (const path of dynamicRoutes) {
+    entries.push({
+      url: `${baseUrl}${path}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    });
+  }
+
+  // Blog listing
+  if (blogPosts.length > 0) {
+    entries.push({
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+  }
+
+  // Blog posts
+  for (const path of blogRoutes) {
+    const post = blogPosts.find((p) => `/blog/${p.slug}` === path);
+    entries.push({
+      url: `${baseUrl}${path}`,
+      lastModified: post ? new Date(post.date) : now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    });
+  }
+
+  return entries;
 }

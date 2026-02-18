@@ -28,6 +28,7 @@ export const navLinks = [
   { href: "/#services", label: "Services" },
   { href: "/#process", label: "Process" },
   { href: "/#offres", label: "Offres" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export const plans = [
