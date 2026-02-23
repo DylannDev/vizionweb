@@ -9,12 +9,10 @@ interface IconIllustrationProps extends React.HTMLAttributes<HTMLDivElement> {
   string?: string;
   size?: number | string;
   radius?: "rounded-lg" | "rounded-xl" | "rounded-2xl" | "rounded-full";
-  shadow?: string;
 }
 
 export function IconIllustration({
   radius = "rounded-2xl",
-  shadow = "shadow-lg shadow-primary-dark/50",
   icon: Icon,
   img,
   imgSize = 20,
@@ -28,18 +26,18 @@ export function IconIllustration({
   return (
     <div
       className={cn(
-        `${radius} bg-primary-dark flex items-center justify-center ${shadow} w-fit`,
+        `${radius} bg-white flex items-center justify-center shadow-lg shadow-primary-blue w-fit relative z-10`,
         `${className}`
       )}
       style={{ width: dimension, height: dimension }}
       {...props}
     >
       {typeof Icon === "function" && (
-        <Icon aria-hidden className="text-primary-green text-2xl" />
+        <Icon aria-hidden className="text-primary-blue text-2xl" />
       )}
       {typeof Icon === "object" && Icon}
       {img && <Image src={img} alt="" width={imgSize} height={imgSize} />}
-      {string && <span className="text-primary-green text-base">{string}</span>}
+      {string && <span className="text-primary-blue text-base">{string}</span>}
     </div>
   );
 }

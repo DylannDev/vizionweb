@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { BlogPost } from "@/data/blog";
 import { blogCategories } from "@/data/blog";
+import { CalendarDays, Clock } from "lucide-react";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -16,10 +17,13 @@ export function BlogCard({ post }: BlogCardProps) {
     >
       <div className="flex flex-col gap-4 w-full">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-medium text-primary-green bg-primary-dark px-2.5 py-1 rounded-full">
+          <span className="text-xs font-medium text-primary-blue bg-primary-dark px-2.5 py-1 rounded-full">
             {category.label}
           </span>
-          <span className="text-xs text-gray-light">{post.readingTime}</span>
+          <span className="flex items-center gap-1 text-xs text-gray-light">
+            <Clock className="size-3" />
+            {post.readingTime}
+          </span>
         </div>
 
         <div className="space-y-2">
@@ -34,13 +38,16 @@ export function BlogCard({ post }: BlogCardProps) {
         <div className="flex items-center justify-between mt-auto pt-2">
           <time
             dateTime={post.date}
-            className="text-xs text-gray-light"
+            className="flex items-center gap-1 text-xs text-gray-light capitalize"
           >
-            {new Date(post.date).toLocaleDateString("fr-FR", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
+            <CalendarDays className="size-3" />
+            {new Date(post.date)
+              .toLocaleDateString("fr-FR", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })
+              .replace(/[a-zà-ÿ]+\./i, (m) => m.slice(0, 3))}
           </time>
           <span className="text-sm font-medium text-primary-dark group-hover:translate-x-1 transition-transform duration-200">
             Lire &rarr;

@@ -16,6 +16,7 @@ import MDXContent from "@/components/mdx-content";
 import Script from "next/script";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CalendarDays, Clock } from "lucide-react";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -72,47 +73,50 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <main>
-        <div className="pt-24 pb-4">
-          <div className="max-w-3xl mx-auto px-5">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/">Accueil</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/blog">Blog</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="line-clamp-1">
-                    {post.title}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </div>
+      <main className="max-w-[1000px] mx-auto px-5 pt-32 pb-16 md:pb-24">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/">Accueil</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/blog">Blog</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="line-clamp-1">
+                {post.title}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
-        <article className="pb-16 md:pb-24">
-          <header className="max-w-3xl mx-auto px-5 pb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs font-medium text-primary-green bg-primary-dark px-2.5 py-1 rounded-full">
+        <article className="pt-4">
+          <header className="pb-2 text-center">
+            <div className="flex justify-center items-center gap-3 mt-10 sm:mt-16 mb-2">
+              <span className="text-xs font-medium text-primary-blue bg-primary-dark px-2.5 py-1 rounded-full">
                 {category.label}
               </span>
-              <time dateTime={post.date} className="text-sm text-gray-light">
-                {new Date(post.date).toLocaleDateString("fr-FR", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}
+              <time
+                dateTime={post.date}
+                className="flex items-center gap-1.5 text-sm text-gray-light capitalize"
+              >
+                <CalendarDays className="size-3.5" />
+                {new Date(post.date)
+                  .toLocaleDateString("fr-FR", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })
+                  .replace(/[a-zà-ÿ]+\./i, (m) => m.slice(0, 3))}
               </time>
-              <span className="text-sm text-gray-light">
+              <span className="flex items-center gap-1.5 text-sm text-gray-light">
+                <Clock className="size-3.5" />
                 {post.readingTime}
               </span>
             </div>
@@ -120,7 +124,7 @@ export default async function BlogPostPage({
 
           <MDXContent file={`blog/${post.slug}.md`} />
 
-          <footer className="max-w-3xl mx-auto px-5 pt-8 mt-8 border-t border-gray-lighter">
+          <footer className="pt-8 mt-8 border-t border-gray-lighter">
             <Link
               href="/blog"
               className="text-sm font-medium text-secondary-dark hover:text-gray-light transition-colors"

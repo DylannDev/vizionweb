@@ -235,7 +235,7 @@ export const Terminal = ({
             aria-hidden
           />
           <div
-            className="h-2.5 w-2.5 rounded-full bg-primary-green"
+            className="h-2.5 w-2.5 rounded-full bg-primary-blue"
             aria-hidden
           />
         </div>

@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               <Logo variant="white" className="w-[200px] h-[44px]" />
               <p className="text-base">
-                Des solutions web qui font grandir votre business.
+                Applications web et sites sur-mesure pour startups et entreprises.
               </p>
             </div>
             <div className="flex items-center gap-2 pt-1">
@@ -44,7 +44,7 @@ export default function Footer() {
                   key={href}
                   href={href}
                   aria-label={label}
-                  className="bg-secondary-dark p-2 rounded-md border border-gray-dark text-primary-green hover:text-white"
+                  className="bg-secondary-dark p-2 rounded-md border border-gray-dark text-primary-blue hover:text-white"
                 >
                   <Icon className="size-5 " />
                 </Link>

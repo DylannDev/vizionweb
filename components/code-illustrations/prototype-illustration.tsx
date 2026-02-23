@@ -42,7 +42,7 @@ export default function PrototypeIllustration() {
       </h2>
 
       {/* Main window */}
-      <div className="relative z-70 w-full max-w-[400px] h-[230px] rounded-3xl border border-gray-lighter shadow-md bg-white p-4">
+      <div className="relative z-70 w-full max-w-[400px] h-[230px] rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] bg-white p-4">
         {/* 2-column mock layout */}
         <div className="grid grid-cols-2 h-full gap-4">
           {/* Left: Headline + skeletons */}
@@ -58,7 +58,7 @@ export default function PrototypeIllustration() {
                     deleteSpeed={60}
                     loop={true}
                     showCursor={true}
-                    className="text-primary-green text-2xl font-semibold font-heading"
+                    className="text-primary-blue text-2xl font-semibold font-heading"
                   />
                 </div>
               ) : null}
@@ -118,7 +118,7 @@ export default function PrototypeIllustration() {
 
           {/* Right: Image placeholder */}
           <div
-            className="bg-gray-lighter rounded-xl h-full flex items-center justify-center"
+            className="bg-primary-blue rounded-xl h-full flex items-center justify-center"
             role="img"
             aria-label="Placeholder visuel"
           >
@@ -156,7 +156,7 @@ export default function PrototypeIllustration() {
               height={12}
               className="absolute -left-1.5 -top-1.5"
             />
-            <div className="rounded-full bg-primary-green text-primary-dark font-medium px-3 py-2 text-[10px] shadow-sm ">
+            <div className="rounded-full border border-gray-lighter bg-white text-primary-dark font-medium px-3 py-2 text-[10px]">
               Designer
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function PrototypeIllustration() {
 
         {/* Desktop */}
         <motion.div
-          className="absolute -right-[5%] bottom-[15%] hidden sm:flex items-center gap-2"
+          className="absolute -right-[5%] bottom-[15%] hidden sm:flex items-center gap-2 rounded-full"
           animate={{
             x: [0, -165, -165, -165, -230, -230, -230, 0],
             y: [0, 115, 115, 115, -90, -90, -90, 0],
@@ -185,7 +185,7 @@ export default function PrototypeIllustration() {
               height={12}
               className="absolute -left-1.5 -top-1.5"
             />
-            <div className="rounded-full bg-primary-green text-primary-dark font-medium px-3 py-2 text-[12px] shadow-sm ">
+            <div className="rounded-full border border-gray-lighter bg-white text-primary-dark font-medium px-3 py-2 text-[12px]">
               Designer
             </div>
           </div>
@@ -195,13 +195,13 @@ export default function PrototypeIllustration() {
       {/* Horizontal tool rail */}
       <div className="flex items-center sm:gap-3 gap-3 max-w-[330px]">
         {/* Figma */}
-        <div className="sm:rounded-2xl rounded-xl bg-white border border-gray-lighter flex items-center justify-center shadow-md p-3 sm:p-[13px]">
-          <FiFigma className="text-primary-green sm:text-3xl text-2xl" />
+        <div className="sm:rounded-2xl rounded-xl bg-white border border-gray-lighter flex items-center justify-center shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] p-3 sm:p-[13px]">
+          <FiFigma className="text-primary-blue sm:text-3xl text-2xl" />
         </div>
 
         <div
           aria-hidden
-          className="bg-white border border-gray-lighter sm:rounded-2xl rounded-xl p-3 shadow-md flex sm:gap-3 gap-2"
+          className="bg-white border border-gray-lighter sm:rounded-2xl rounded-xl p-3 shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] flex sm:gap-3 gap-2"
         >
           {[PenTool, Type, Brush, VectorSquare].map((Icon, idx) => (
             <div key={idx} className="relative">
@@ -209,7 +209,7 @@ export default function PrototypeIllustration() {
                 (activeTool === "text" && idx === 1)) && (
                 <motion.div
                   layoutId="toolHighlight"
-                  className="absolute inset-0 rounded-sm sm:rounded-lg bg-primary-green"
+                  className="absolute inset-0 rounded-sm sm:rounded-lg bg-primary-blue"
                   transition={{ type: "spring", stiffness: 300, damping: 28 }}
                 />
               )}
@@ -218,7 +218,7 @@ export default function PrototypeIllustration() {
                   "relative inline-flex items-center justify-center sm:size-8 size-6 rounded-lg text-secondary-dark hover:bg-background z-10",
                   (activeTool === "pen" && idx === 0) ||
                     (activeTool === "text" && idx === 1)
-                    ? "text-primary-dark"
+                    ? "text-white"
                     : ""
                 )}
                 aria-hidden
@@ -232,7 +232,7 @@ export default function PrototypeIllustration() {
         {/* Color wheel / palette */}
         <div
           aria-hidden
-          className="flex items-center p-3 bg-white border border-gray-lighter sm:rounded-2xl rounded-xl shadow-md "
+          className="flex items-center p-3 bg-white border border-gray-lighter sm:rounded-2xl rounded-xl shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] "
         >
           <div
             className="relative sm:size-8 size-6 rounded-full"

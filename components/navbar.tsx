@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { WhatsappNav } from "./ui/whatsapp-nav";
 import CallButton from "./call-button";
 import { navLinks } from "@/data";
 import { cn } from "@/lib/utils";
@@ -12,24 +11,24 @@ import { PiList, PiX } from "react-icons/pi";
 
 function NavDesktop({ pathname }: { pathname: string }) {
   return (
-    <div className="hidden lg:flex px-5 h-18 items-center justify-between gap-3">
-      <Logo className="inline-flex items-center w-[180px] h-[40px]" />
-      <div className="text-gray-dark">
+    <div className="hidden lg:flex pl-4 pr-3 h-18 items-center justify-between gap-3">
+      <Logo
+        className="inline-flex items-center w-[180px] h-[40px]"
+        variant="white"
+      />
+      <div className="flex items-center gap-3 text-white text-lg font-semibold">
         {navLinks.slice(0, 5).map((l) => (
           <Link
             key={l.href}
             href={l.href}
             aria-current={pathname === l.href ? "page" : undefined}
-            className={`text-gray-dark hover:text-secondary-dark hover:bg-background py-1 px-2 rounded-md transition-all duration-150 ease-in-out`}
+            className={`hover:bg-background/10 py-1 px-2 rounded-sm transition-all duration-150 ease-in-out`}
           >
             {l.label}
           </Link>
         ))}
       </div>
-      <div className="flex items-center gap-3">
-        <CallButton size="md" />
-        <WhatsappNav isNavbar />
-      </div>
+      <CallButton size="md" variant="white" />
     </div>
   );
 }
@@ -122,8 +121,7 @@ export default function Navbar() {
         <nav
           aria-label="Navigation principale"
           className={cn(
-            "relative mx-auto max-w-7xl bg-white/90 backdrop-blur-sm rounded-full",
-            hidden ? "" : "shadow-sm",
+            "relative mx-auto max-w-7xl bg-gradient-to-b from-primary-dark to-secondary-dark backdrop-blur-xl border border-primary-dark rounded-2xl",
             menuOpen && "shadow-none"
           )}
         >
@@ -149,7 +147,7 @@ export default function Navbar() {
           aria-label="Navigation mobile"
           ref={menuRef}
           className={cn(
-            "lg:hidden p-4 overflow-hidden transition-all duration-300 ease-out grid bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg will-change-transform",
+            "lg:hidden p-4 overflow-hidden transition-all duration-300 ease-out grid bg-white/70 backdrop-blur-xl border border-white/50 rounded-3xl shadow-[0_2px_16px_0] shadow-gray-lighter will-change-transform",
             menuOpen && !hidden
               ? "translate-y-20 opacity-100 pointer-events-auto"
               : "-translate-y-full opacity-0 pointer-events-none"
@@ -162,9 +160,7 @@ export default function Navbar() {
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
                   className={`shrink-0 text-sm ${
-                    pathname === l.href
-                      ? "text-foreground"
-                      : "text-muted-foreground"
+                    pathname === l.href ? "text-white" : "text-white"
                   }`}
                 >
                   {l.label}

@@ -31,7 +31,7 @@ export default function PricingSection() {
             <ul className="mt-4 text-gray-light grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:max-w-2xl lg:max-w-full mx-auto w-fit sm:justify-items-center gap-2">
               {included.map((it) => (
                 <li key={it} className="flex items-center gap-1">
-                  <PiCheckBold className="size-3 text-primary-green" />
+                  <PiCheckBold className="size-3 text-primary-blue" />
                   <span>{it}</span>
                 </li>
               ))}

@@ -2,47 +2,21 @@ import Badge from "./ui/badge";
 import Typography from "./typography";
 import PortfolioCard from "@/components/ui/portfolio-card";
 import { FadeIn } from "@/components/ui/fade-in";
+import { portfolioProjects } from "@/data/projets";
+import Link from "next/link";
+import Button from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function MiniPortfolio() {
-  const items = [
-    {
-      title: "Amazonia Investing",
-      subtitle:
-        "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
-      badge: ["Landing page", "Blog", "Dashboard / CRM"],
-      src: "/investing.jpg",
-      link: "https://amazonia-investing.com",
-    },
-    {
-      title: "ChefKit",
-      subtitle:
-        "Application SaaS pour restaurateurs et traiteurs. Gestion des menus, réservations : une solution clé en main pour digitaliser leur activité.",
-      badge: ["SaaS", "App Web", "Landing page"],
-      src: "/chefkit.jpg",
-    },
-    {
-      title: "Zen Lounge",
-      subtitle:
-        "Site web complet pour un salon de bien-être. Espace client, paiement en ligne et réservation intégrée pour une expérience fluide et professionnelle. Dashboard pour la gestion des réservations.",
-      badge: ["Site Web Complet", "Dashboard / CRM"],
-      src: "/zenlounge.jpg",
-      link: "https://zenlounge-guyane.fr",
-    },
-    {
-      title: "Hippokom",
-      subtitle:
-        "Site vitrine élégant et moderne pour une agence de communication. Design inspiré de l’univers marin, pensé pour refléter leur identité et attirer de nouveaux clients.",
-      badge: ["Site Vitrine", "Blog"],
-      src: "/hippokom.jpg",
-    },
-  ];
+  const items = portfolioProjects.slice(0, 4);
+
   return (
     <section id="realisations" className="py-16 md:py-24">
       <Badge align="center">réalisations</Badge>
 
       <Typography
-        title="Des projets qui parlent d’eux-mêmes"
-        subtitle="Chaque réalisation est pensée pour générer de la valeur concrète."
+        title="Ce qu'on a construit pour nos clients"
+        subtitle="SaaS, outils de gestion, sites vitrines. Voici un aperçu de nos derniers projets livrés."
       />
 
       {/* Mobile: below 850px, uniform delay */}
@@ -66,6 +40,15 @@ export function MiniPortfolio() {
           </FadeIn>
         ))}
       </div>
+
+      <FadeIn delay={0.4} className="flex justify-center mt-10">
+        <Link href="/realisations">
+          <Button variant="black" size="md">
+            Voir toutes les réalisations
+            <ArrowRight className="size-4" strokeWidth={2.5} />
+          </Button>
+        </Link>
+      </FadeIn>
     </section>
   );
 }

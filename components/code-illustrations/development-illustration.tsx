@@ -29,7 +29,7 @@ export default function DevelopmentIllustration() {
         Illustration: Développement
       </h2>
 
-      <CodeBlock className="bg-white border border-gray-lighter shadow-md rounded-3xl p-4 w-full max-w-[400px] mx-auto">
+      <CodeBlock className="bg-white border border-gray-lighter shadow-[0_4px_12px_0_rgba(234,179,8,0.2)] rounded-3xl p-4 w-full max-w-[400px] mx-auto">
         <div className="flex items-center gap-2">
           <div className="bg-green-100 text-green-700 rounded-[6px] px-3 py-1 text-xs font-medium">
             React
@@ -50,9 +50,9 @@ export default function DevelopmentIllustration() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute right-5 sm:right-15 -top-15 sm:top-10 flex flex-col gap-3 rounded-2xl sm:rounded-3xl border border-gray-lighter shadow-md bg-white p-3 max-w-[120px] max-h-[150px] w-full h-full"
+        className="absolute right-5 sm:right-15 -top-15 sm:top-10 flex flex-col gap-3 rounded-2xl sm:rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(234,179,8,0.2)] bg-white p-3 max-w-[120px] max-h-[150px] w-full h-full"
       >
-        <div className="bg-gray-lighter rounded-xl h-full flex items-center justify-center">
+        <div className="bg-amber-400 rounded-xl h-full flex items-center justify-center">
           <Image
             src="/placeholder.svg"
             alt="Image"

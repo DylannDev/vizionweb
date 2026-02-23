@@ -11,12 +11,12 @@ export async function MDXContent({ file }: MDXContentProps) {
   const filePath = path.join(process.cwd(), "content", file);
   const source = await fs.readFile(filePath, "utf8");
   return (
-    <article className="mdx-content">
+    <div className="mdx-content">
       <MDXRemote
         source={source}
         options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
       />
-    </article>
+    </div>
   );
 }
 

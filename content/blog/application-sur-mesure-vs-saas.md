@@ -34,7 +34,7 @@ Quand on lance une activité, on ne sait pas encore exactement de quoi on aura b
 
 ### Le budget initial est limité
 
-Un abonnement SaaS coûte entre 20 et 300 euros par mois selon l'outil et le nombre d'utilisateurs. Un développement sur-mesure commence à 10 000 euros. Si votre trésorerie est serrée et que le besoin est couvert par un outil existant, le choix est vite fait.
+Un abonnement SaaS coûte entre 20 et 300 euros par mois selon l'outil et le nombre d'utilisateurs. Un développement sur-mesure commence à 8 000 euros. Si votre trésorerie est serrée et que le besoin est couvert par un outil existant, le choix est vite fait.
 
 ## Quand le sur-mesure devient nécessaire
 
@@ -58,26 +58,28 @@ C'est le piège classique. On compare le coût mensuel d'un SaaS au devis d'un d
 
 ### SaaS : abonnement cumulé + coûts d'adaptation
 
-| Poste | Coût mensuel | Coût sur 3 ans |
-|-------|-------------|----------------|
-| Abonnement outil principal | 100 euros | 3 600 euros |
-| Outil complémentaire #2 | 50 euros | 1 800 euros |
-| Outil complémentaire #3 | 30 euros | 1 080 euros |
-| Connecteurs / Zapier | 20 euros | 720 euros |
-| **Total** | **200 euros/mois** | **7 200 euros** |
+| Poste                      | Coût mensuel       | Coût sur 3 ans  |
+| -------------------------- | ------------------ | --------------- |
+| Abonnement outil principal | 100 euros          | 3 600 euros     |
+| Outil complémentaire #2    | 50 euros           | 1 800 euros     |
+| Outil complémentaire #3    | 30 euros           | 1 080 euros     |
+| Connecteurs / Zapier       | 20 euros           | 720 euros       |
+| **Total**                  | **200 euros/mois** | **7 200 euros** |
 
 Et ce total ne compte pas le temps perdu à jongler entre les outils, les exports manuels et les données qui ne synchronisent pas.
 
 ### Sur-mesure : investissement initial + maintenance
 
-| Poste | Coût |
-|-------|------|
-| Développement MVP | 12 000 euros |
-| Hébergement (3 ans) | 1 080 euros |
-| Maintenance annuelle | 4 500 euros (1 500 x 3 ans) |
-| **Total sur 3 ans** | **17 580 euros** |
+| Poste                | Coût                      |
+| -------------------- | ------------------------- |
+| Développement MVP    | 8 000 euros               |
+| Hébergement (3 ans)  | 1 080 euros               |
+| Maintenance annuelle | 1 800 euros (600 x 3 ans) |
+| **Total sur 3 ans**  | **10 880 euros**          |
 
-Le sur-mesure coûte plus cher dans cet exemple. Mais si l'outil vous fait gagner une heure par jour (valorisée à 50 euros/h), c'est 12 500 euros de productivité récupérée par an, soit 37 500 euros sur 3 ans. Le calcul change complètement.
+La maintenance est faible parce qu'on ne parle pas de WordPress avec ses 47 plugins à mettre à jour chaque mois. Un site ou une app en Next.js/React nécessite une à deux mises à jour des dépendances et du framework par an, et c'est tout. Pas de failles de sécurité toutes les semaines, pas de thème qui casse à chaque update.
+
+Résultat : le sur-mesure revient à 10 880 euros sur 3 ans contre 7 200 euros pour le SaaS. L'écart est de 3 680 euros. Mais si l'outil vous fait gagner une heure par jour (valorisée à 50 euros/h), c'est 12 500 euros de productivité récupérée par an, soit 37 500 euros sur 3 ans. L'investissement est rentabilisé dès la première année.
 
 ## Les questions à se poser avant de décider
 

@@ -21,7 +21,7 @@ const WebsiteIllustration = () => {
       aria: "Lancement",
       node: (
         <Image
-          src="/rocket.gif"
+          src="/rocket-white.gif"
           alt=""
           aria-hidden
           width={30}
@@ -41,7 +41,7 @@ const WebsiteIllustration = () => {
   ];
   return (
     <div className="flex flex-col items-center gap-3 h-fit">
-      <div className="relative rounded-3xl border border-gray-lighter shadow-md bg-white p-3 w-full">
+      <div className="relative rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(239,68,68,0.15)] bg-white p-3 w-full">
         {/* Header pastilles */}
         <div className="flex items-center gap-2 rounded-t-3xl pb-4 pt-2 px-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500" aria-hidden />
@@ -50,7 +50,7 @@ const WebsiteIllustration = () => {
             aria-hidden
           />
           <div
-            className="h-2.5 w-2.5 rounded-full bg-primary-green"
+            className="h-2.5 w-2.5 rounded-full bg-red-400"
             aria-hidden
           />
         </div>
@@ -60,7 +60,7 @@ const WebsiteIllustration = () => {
         {/* Badges statut */}
         <div className="absolute left-[50%] translate-x-[-50%] top-3 flex gap-2">
           <div className="rounded-md text-gray-dark bg-background text-xs px-5 py-1">
-            www.votresite.com
+            www.votreapp.com
           </div>
         </div>
 
@@ -94,7 +94,7 @@ const WebsiteIllustration = () => {
           {Array.from({ length: 3 }).map((_, i) => (
             <div key={i} className="flex flex-col justify-center gap-3 w-full">
               <div
-                className="bg-gray-lighter rounded-xl h-[80px] w-fulls flex items-center justify-center"
+                className="bg-red-400 rounded-xl h-[80px] w-fulls flex items-center justify-center"
                 role="img"
                 aria-label="Placeholder visuel"
               >
@@ -132,13 +132,13 @@ const WebsiteIllustration = () => {
           ))}
         </div>
 
-        <div className="absolute top-3 right-3 inline-flex items-center justify-center size-6 rounded-full text-white bg-primary-green">
+        <div className="absolute top-3 right-3 inline-flex items-center justify-center size-6 rounded-full text-white bg-red-400">
           <Check strokeWidth={3} className="size-3" />
         </div>
       </div>
 
       {/* Action bar */}
-      <div className="flex items-center justify-center gap-3 bg-white rounded-3xl p-2 border border-gray-lighter shadow-md w-fit">
+      <div className="flex items-center justify-center gap-3 bg-white rounded-3xl p-2 border border-gray-lighter shadow-[0_4px_12px_0_rgba(239,68,68,0.15)] w-fit">
         {actionButtons.map((btn, idx) => (
           <div
             key={btn.aria}
@@ -147,14 +147,14 @@ const WebsiteIllustration = () => {
             className={cn(
               "relative inline-flex items-center justify-center size-10 rounded-full text-gray-dark",
               idx === 2
-                ? "sm:size-12 size-10 ring-4 ring-primary-green/30"
+                ? "sm:size-12 size-10 ring-4 ring-primary-blue/30"
                 : "hover:bg-background"
             )}
           >
             {btn.node}
             {idx === 2 && (
               <>
-                <span className="bg-primary-green sm:size-12 size-10 rounded-full absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-10"></span>
+                <span className="bg-red-400 sm:size-12 size-10 rounded-full absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-10"></span>
                 <span className="bg-primary-dark sm:size-7 size-6 rounded-full animate-[ping_1.5s_linear_infinite] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-0"></span>
               </>
             )}

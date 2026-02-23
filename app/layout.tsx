@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "../components/footer";
 import Navbar from "@/components/navbar";
+import { WhatsappNav } from "@/components/ui/whatsapp-nav";
 
-const geist = Geist({
-  variable: "--font-geist",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: "../public/fonts/Satoshi-Variable.woff2",
+  variable: "--font-satoshi",
   display: "swap",
 });
 
@@ -55,11 +50,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${geist.variable} ${interTight.variable}`}>
-      <body className={`antialiased`}>
+    <html lang="fr">
+      <body className={`${satoshi.className} antialiased`}>
         <Navbar />
         <div>{children}</div>
         <Footer />
+        <WhatsappNav />
       </body>
     </html>
   );

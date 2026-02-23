@@ -1,12 +1,11 @@
 import Hero from "./hero";
+import { ServicesHomeSection } from "@/components/services-home-section";
 import MiniPortfolio from "../components/mini-portfolio";
-import ServicesSection from "@/components/services-section";
+import { WhyVizionWeb } from "@/components/why-vizion-web";
 import ProcessSteps from "../components/process-steps";
 import { Testimonials } from "@/components/testimonials";
-import PricingSection from "@/components/pricing-section";
 import FAQ from "../components/faq";
 import Calendar from "./calendar";
-import { WhatsappNav } from "./ui/whatsapp-nav";
 
 const HomeSection = ({
   locationName,
@@ -19,15 +18,14 @@ const HomeSection = ({
     <main>
       <Hero locationName={locationName} preposition={preposition} />
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
+        <ServicesHomeSection />
         <MiniPortfolio />
-        <ServicesSection />
       </div>
+      <WhyVizionWeb />
       <ProcessSteps />
       <Testimonials />
-      <PricingSection />
       <FAQ />
       <Calendar />
-      <WhatsappNav />
     </main>
   );
 };

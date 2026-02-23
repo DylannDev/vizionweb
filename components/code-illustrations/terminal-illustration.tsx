@@ -64,7 +64,7 @@ const TerminalIllustration = () => {
   return (
     <div
       ref={containerRef}
-      className="bg-white border border-gray-lighter shadow-md  rounded-3xl"
+      className="bg-white border border-gray-lighter shadow-[0_4px_12px_0_rgba(239,68,68,0.15)]  rounded-3xl"
     >
       <Terminal>
         <TypingAnimation className="text-secondary-dark mb-2">
@@ -105,7 +105,7 @@ const TerminalIllustration = () => {
       <div className="px-3 pt-3 pb-5">
         <div className="h-2 w-full rounded-full bg-background overflow-hidden">
           <div
-            className={`h-full rounded-full bg-primary-green ${
+            className={`h-full rounded-full bg-red-400 ${
               noTransition ? "" : "transition-[width]"
             }`}
             style={{ width: `${progress}%` }}

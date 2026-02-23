@@ -23,16 +23,12 @@ const Calendar = () => {
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <Typography
           align="center"
-          title={
-            <>
-              Créons la solution <br /> digitale dont vous rêvez
-            </>
-          }
-          subtitle="Présentez-nous votre projet lors d'un appel de 30 minutes. Pas de blabla, vous repartez avec une vision claire, un devis transparent et des actions concrètes pour avancer."
+          title="Vous avez un projet en tête ?"
+          subtitle="30 minutes, gratuit, sans engagement. On écoute votre besoin, on vous dit si on peut vous aider, et vous repartez avec un plan d'action clair."
         />
 
         <div className="flex justify-center">
-          <CallButton size="md" />
+          <CallButton />
         </div>
       </div>
     </section>

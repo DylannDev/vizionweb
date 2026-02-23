@@ -1,11 +1,10 @@
 import { MetadataRoute } from "next";
 import { CITIES, COUNTRIES } from "@/data";
 import { blogPosts } from "@/data/blog";
+import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vizionweb.fr";
-
-  const staticRoutes = ["/"];
 
   const uniqueSlugs = new Set<string>();
   for (const city of CITIES) uniqueSlugs.add(city.slug);
@@ -22,14 +21,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Homepage
-  for (const path of staticRoutes) {
+  entries.push({
+    url: baseUrl,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 1,
+  });
+
+  // Services hub
+  entries.push({
+    url: `${baseUrl}/services`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  });
+
+  // Service detail pages
+  for (const service of services) {
     entries.push({
-      url: `${baseUrl}${path}`,
+      url: `${baseUrl}/services/${service.slug}`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: "monthly",
+      priority: 0.8,
     });
   }
+
+  // Réalisations
+  entries.push({
+    url: `${baseUrl}/realisations`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  });
+
+  // À propos
+  entries.push({
+    url: `${baseUrl}/a-propos`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  });
 
   // City/country pages
   for (const path of dynamicRoutes) {

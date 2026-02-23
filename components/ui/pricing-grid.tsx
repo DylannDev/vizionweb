@@ -41,7 +41,7 @@ export function PricingGrid({
           className={cn(
             "min-w-[125px] px-4 py-3 bg-white rounded-tl-xl rounded-bl-xl text-primary-dark hover:bg-background cursor-pointer",
             selectedCategory === "web" &&
-              "bg-primary-green hover:bg-primary-green"
+              "bg-primary-blue hover:bg-primary-blue"
           )}
         >
           Sites Web
@@ -54,7 +54,7 @@ export function PricingGrid({
           className={cn(
             "min-w-[125px] px-4 py-3 bg-white rounded-tr-xl rounded-br-xl text-primary-dark hover:bg-background cursor-pointer",
             selectedCategory === "saas" &&
-              "bg-primary-green hover:bg-primary-green"
+              "bg-primary-blue hover:bg-primary-blue"
           )}
         >
           Apps / SaaS

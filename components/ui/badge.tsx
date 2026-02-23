@@ -9,7 +9,7 @@ const badgeVariants = cva(
       variant: {
         white: "bg-white text-secondary-dark ring-gray-lighter",
         dark: "bg-secondary-dark text-white ring-1 ring-gray-dark",
-        green: "bg-primary-green text-white ring-0",
+        green: "bg-primary-blue text-white ring-0",
         hero: "bg-background text-secondary-dark ring-1 ring-white",
       },
     },
