@@ -8,7 +8,7 @@ export function ServiceIncluded({ service }: { service: Service }) {
   return (
     <section className="py-16 md:py-24 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <Badge variant="black" align="center">
+        <Badge variant="blue" align="center">
           Ce qui est inclus
         </Badge>
         <Typography

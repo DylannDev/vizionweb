@@ -49,6 +49,22 @@ import {
   PiLockKeyFill,
   PiWalletFill,
   PiArticleFill,
+  // Target profile icons
+  PiFlaskFill,
+  PiBuildingsFill,
+  PiHandshakeFill,
+  PiChartLineUpFill,
+  PiUserFill,
+  PiFactoryFill,
+  PiClipboardTextFill,
+  PiTreeStructureFill,
+  PiCrosshairFill,
+  PiSuitcaseSimpleFill,
+  PiMapPinFill,
+  PiStethoscopeFill,
+  PiCalendarCheckFill,
+  PiShoppingCartFill,
+  PiUsersThreeFill,
 } from "react-icons/pi";
 
 // ── Types ────────────────────────────────────────────────────────
@@ -68,11 +84,7 @@ export interface ServiceIncludedItem {
 export interface ServiceTargetProfile {
   title: string;
   description: string;
-}
-
-export interface ServiceProcessStep {
-  title: string;
-  description: string;
+  icon: IconType;
 }
 
 export interface Service {
@@ -97,7 +109,6 @@ export interface Service {
   included: ServiceIncludedItem[];
   deliveryTime: string;
   targetProfiles: ServiceTargetProfile[];
-  process: ServiceProcessStep[];
   faqs: ServiceFaqItem[];
   ctaTitle: string;
   ctaDescription: string;
@@ -185,38 +196,19 @@ export const services: Service[] = [
         title: "Startup early-stage",
         description:
           "Vous cherchez à valider un concept avant une levée de fonds ou un premier go-to-market.",
+        icon: PiRocketLaunchFill,
       },
       {
         title: "Porteur de projet",
         description:
           "Vous avez une idée d'application et besoin d'un prototype fonctionnel pour convaincre des partenaires.",
+        icon: PiLightbulbFill,
       },
       {
         title: "Entreprise qui innove",
         description:
           "Vous testez un nouveau service digital en interne ou pour vos clients.",
-      },
-    ],
-    process: [
-      {
-        title: "Découverte & cadrage",
-        description:
-          "Appel de 30 min pour comprendre votre vision, définir le périmètre MVP et prioriser les fonctionnalités.",
-      },
-      {
-        title: "Design UI/UX",
-        description:
-          "Maquettes Figma haute fidélité. Modifications illimitées jusqu'à validation complète.",
-      },
-      {
-        title: "Développement & tests",
-        description:
-          "Implémentation sur-mesure en React/Next.js avec tests continus et points d'avancement réguliers.",
-      },
-      {
-        title: "Lancement & suivi",
-        description:
-          "Déploiement en production, formation rapide, et 30 jours de support inclus.",
+        icon: PiFlaskFill,
       },
     ],
     faqs: [
@@ -326,38 +318,19 @@ export const services: Service[] = [
         title: "Startup avec traction",
         description:
           "Vous avez validé votre marché et besoin d'un produit solide pour vos premiers clients payants.",
+        icon: PiChartLineUpFill,
       },
       {
         title: "Entrepreneur SaaS",
         description:
           "Vous lancez un produit SaaS et cherchez un partenaire technique pour le développer de A à Z.",
+        icon: PiUserFill,
       },
       {
         title: "Entreprise B2B",
         description:
           "Vous souhaitez transformer un service existant en plateforme SaaS commercialisable.",
-      },
-    ],
-    process: [
-      {
-        title: "Découverte & architecture",
-        description:
-          "Compréhension de votre business model, définition de l'architecture technique et de la roadmap produit.",
-      },
-      {
-        title: "Design UI/UX",
-        description:
-          "Conception de l'interface complète sur Figma. Parcours utilisateur, dashboard, onboarding.",
-      },
-      {
-        title: "Développement itératif",
-        description:
-          "Développement par sprints avec démos régulières. Auth, paiements, fonctionnalités métier.",
-      },
-      {
-        title: "Lancement & accompagnement",
-        description:
-          "Déploiement, tests de charge, onboarding premiers utilisateurs. Support 60 jours inclus.",
+        icon: PiBuildingsFill,
       },
     ],
     faqs: [
@@ -462,38 +435,19 @@ export const services: Service[] = [
         title: "PME en croissance",
         description:
           "Vos processus manuels ne tiennent plus la charge et freinent votre développement.",
+        icon: PiFactoryFill,
       },
       {
         title: "Équipe opérationnelle",
         description:
           "Vous gérez des commandes, des plannings ou des stocks avec des outils inadaptés.",
+        icon: PiClipboardTextFill,
       },
       {
         title: "Direction qui veut piloter",
         description:
           "Vous avez besoin de visibilité en temps réel sur l'activité de votre entreprise.",
-      },
-    ],
-    process: [
-      {
-        title: "Audit & cadrage",
-        description:
-          "Analyse de vos processus actuels, identification des gains et définition du périmètre.",
-      },
-      {
-        title: "Design UI/UX",
-        description:
-          "Conception de l'interface sur Figma, optimisée pour l'efficacité de votre équipe.",
-      },
-      {
-        title: "Développement & intégrations",
-        description:
-          "Construction de l'application avec connexion à vos outils existants.",
-      },
-      {
-        title: "Déploiement & formation",
-        description:
-          "Mise en production, formation de votre équipe, et 90 jours de support.",
+        icon: PiTreeStructureFill,
       },
     ],
     faqs: [
@@ -593,38 +547,19 @@ export const services: Service[] = [
         title: "Startup en acquisition",
         description:
           "Vous lancez des campagnes publicitaires et avez besoin d'une page qui maximise chaque clic.",
+        icon: PiCrosshairFill,
       },
       {
         title: "Entreprise qui lance une offre",
         description:
           "Vous avez un nouveau produit ou service et besoin d'une page dédiée pour le promouvoir.",
+        icon: PiMegaphoneFill,
       },
       {
         title: "Entrepreneur ou freelance",
         description:
           "Vous voulez une présence en ligne rapide et efficace pour générer des leads.",
-      },
-    ],
-    process: [
-      {
-        title: "Découverte & stratégie",
-        description:
-          "Compréhension de votre offre, votre cible, et vos objectifs de conversion.",
-      },
-      {
-        title: "Copywriting & design",
-        description:
-          "Rédaction du contenu et création de la maquette Figma en parallèle.",
-      },
-      {
-        title: "Développement",
-        description:
-          "Intégration sur-mesure en React/Next.js avec animations et optimisations.",
-      },
-      {
-        title: "Lancement & optimisation",
-        description:
-          "Mise en ligne, tracking, et 30 jours de support pour affiner les résultats.",
+        icon: PiSuitcaseSimpleFill,
       },
     ],
     faqs: [
@@ -726,38 +661,19 @@ export const services: Service[] = [
         title: "Entreprise établie",
         description:
           "Vous avez une activité qui tourne et besoin d'un site à la hauteur de votre réputation.",
+        icon: PiBuildingsFill,
       },
       {
         title: "Profession libérale",
         description:
           "Vous cherchez un site professionnel qui inspire confiance et génère des prises de contact.",
+        icon: PiStethoscopeFill,
       },
       {
         title: "Artisan ou commerçant",
         description:
           "Vous voulez être visible en ligne et attirer des clients locaux.",
-      },
-    ],
-    process: [
-      {
-        title: "Découverte & cadrage",
-        description:
-          "Compréhension de votre activité, vos objectifs, et votre positionnement marché.",
-      },
-      {
-        title: "Copywriting & design",
-        description:
-          "Rédaction des contenus et conception des maquettes Figma en parallèle.",
-      },
-      {
-        title: "Développement & intégrations",
-        description:
-          "Construction du site avec CMS, formulaires, et optimisations SEO.",
-      },
-      {
-        title: "Lancement & suivi",
-        description:
-          "Mise en ligne, formation CMS, et 60 jours de support post-lancement.",
+        icon: PiMapPinFill,
       },
     ],
     faqs: [
@@ -864,38 +780,19 @@ export const services: Service[] = [
         title: "Entreprise de services",
         description:
           "Vous avez besoin d'un système de réservation ou de prise de rendez-vous intégré à votre site.",
+        icon: PiCalendarCheckFill,
       },
       {
         title: "Commerce ou e-commerce léger",
         description:
           "Vous souhaitez vendre en ligne ou proposer des paiements sans passer par une marketplace.",
+        icon: PiShoppingCartFill,
       },
       {
         title: "Organisation ou association",
         description:
           "Vous gérez des membres, des événements ou du contenu qui nécessite un espace dédié.",
-      },
-    ],
-    process: [
-      {
-        title: "Découverte & spécifications",
-        description:
-          "Analyse de vos besoins fonctionnels, cartographie des parcours utilisateur.",
-      },
-      {
-        title: "Design UI/UX",
-        description:
-          "Conception complète de l'interface, y compris les parcours fonctionnels (réservation, paiement, etc.).",
-      },
-      {
-        title: "Développement & intégrations",
-        description:
-          "Construction du site avec l'ensemble des fonctionnalités et connexions aux services tiers.",
-      },
-      {
-        title: "Lancement & formation",
-        description:
-          "Déploiement, formation complète de votre équipe, et 90 jours de support.",
+        icon: PiUsersThreeFill,
       },
     ],
     faqs: [

@@ -79,7 +79,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
     <motion.nav
       aria-label="Navigation principale"
       animate={{
-        width: visible ? "84.5%" : "100%",
+        width: visible ? "82.5%" : "100%",
         y: visible ? -20 : 0,
       }}
       transition={{

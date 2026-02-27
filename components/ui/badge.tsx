@@ -10,10 +10,10 @@ const badgeVariants = cva(
         white:
           "bg-background border border-white text-secondary-dark shadow-gray-lighter/20",
         black:
-          "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-secondary-dark/20",
-        blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white",
+          "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-secondary-dark/40",
+        blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white shadow-primary-blue/40",
         transparent:
-          "bg-transparent border border-primary-blue text-primary-blue",
+          "bg-transparent border border-gray-light text-gray-dark shadow-none",
       },
     },
     defaultVariants: {

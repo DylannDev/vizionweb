@@ -21,9 +21,8 @@ import { ServiceHero } from "@/components/service-detail/service-hero";
 import { ServiceProblemSolution } from "@/components/service-detail/service-problem-solution";
 import { ServiceIncluded } from "@/components/service-detail/service-included";
 import { ServiceTarget } from "@/components/service-detail/service-target";
-import { ServiceProcess } from "@/components/service-detail/service-process";
 import { ServiceFaq } from "@/components/service-detail/service-faq";
-import { ServiceCta } from "@/components/service-detail/service-cta";
+import ProcessSteps from "@/components/process-steps";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -95,9 +94,10 @@ export default async function ServiceDetailPage({
         <ServiceProblemSolution service={service} />
         <ServiceIncluded service={service} />
         <ServiceTarget service={service} />
-        <ServiceProcess service={service} />
+        <div className="bg-gradient-to-t from-background from-0% to-white to-20%">
+          <ProcessSteps />
+        </div>
         <ServiceFaq service={service} />
-        <ServiceCta title={service.ctaTitle} description={service.ctaDescription} />
       </main>
 
       <Script

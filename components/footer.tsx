@@ -7,25 +7,8 @@ import {
 } from "react-icons/ri";
 import { COUNTRIES, navLinks } from "@/data";
 import { CITIES } from "@/data";
-import { DottedGlowBackground } from "./ui/dotted-glow-background";
-import Typography from "./typography";
-import CallButton from "./call-button";
-import { ProjectMarquee } from "./ui/project-marquee";
-import { LogoCloud } from "./ui/logo-cloud";
-import { portfolioProjects } from "@/data/projets";
-import { cn } from "@/lib/utils";
 import { FooterTopFade } from "./footer-top-fade";
-
-const logos = [
-  { src: "/logos/academy.svg", alt: "Amazonia Academy" },
-  { src: "/logos/geteasy.svg", alt: "Get Easy Location" },
-  { src: "/logos/hippokom.svg", alt: "Hippo'kom Agency" },
-  { src: "/logos/chefkit.svg", alt: "ChefKit SaaS" },
-  { src: "/logos/mrkicks.svg", alt: "Mr. Kicks" },
-  { src: "/logos/investing.svg", alt: "Amazonian Investing" },
-  { src: "/logos/pygmalion.svg", alt: "Pygmalion Conseil" },
-  { src: "/logos/zenlounge.svg", alt: "Zen Lounge" },
-];
+import { FooterCta } from "./footer-cta";
 
 export default function Footer() {
   const legalLinks = [
@@ -60,50 +43,7 @@ export default function Footer() {
       <footer className="bg-background pt-8 pb-4 px-4">
         <div className="max-w-[1536px] mx-auto">
           <div className="px-4 pb-4 bg-white rounded-[40px]">
-            {/* Pre footer CTA */}
-            <section id="calendar" className="relative w-full overflow-hidden">
-              <div className="">
-                <div className="relative w-full py-12 sm:py-16 px-5 overflow-hidden">
-                  <DottedGlowBackground
-                    className={cn(
-                      "pointer-events-none opacity-20 z-0",
-                      "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] sm:[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-                      "inset-x-0 inset-y-[0%] h-[100%] will-change-transform transform-gpu"
-                    )}
-                    opacity={0.3}
-                    gap={12}
-                    radius={4}
-                    colorLightVar="--color-primary-blue"
-                    glowColorLightVar="--color-primary-blue-border"
-                    backgroundOpacity={0}
-                    speedMin={0.3}
-                    speedMax={0.6}
-                    speedScale={1}
-                  />
-                  <div className="relative z-10">
-                    <Typography
-                      align="center"
-                      title="Vous avez un projet en tête ?"
-                      subtitle="30 minutes, gratuit, sans engagement. On écoute votre besoin, on vous dit si on peut vous aider, et vous repartez avec un plan d'action clair."
-                    />
-
-                    <div className="flex justify-center">
-                      <CallButton />
-                    </div>
-                  </div>
-                  <ProjectMarquee
-                    projects={portfolioProjects.map((p) => ({
-                      title: p.title,
-                      src: p.src,
-                    }))}
-                    className="relative z-10 mt-10"
-                  />
-                  <div className="relative z-10 mt-8">
-                    <LogoCloud logos={logos} />
-                  </div>
-                </div>
-              </div>
-            </section>
+            <FooterCta />
 
             {/* Footer */}
             <section className="w-full">

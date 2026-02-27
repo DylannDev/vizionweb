@@ -37,7 +37,7 @@ export function ServiceProblemSolution({ service }: { service: Service }) {
       </section>
 
       {/* Solution */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-20%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <FadeIn delay={0.2}>
             <Typography

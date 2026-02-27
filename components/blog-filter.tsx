@@ -4,6 +4,7 @@ import { useState } from "react";
 import { blogCategories, type BlogCategory, type BlogPost } from "@/data/blog";
 import BlogCard from "@/components/ui/blog-card";
 import FadeIn from "@/components/ui/fade-in";
+import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -21,12 +22,15 @@ interface BlogFilterProps {
 
 const allCategories = Object.entries(blogCategories) as [
   BlogCategory,
-  (typeof blogCategories)[BlogCategory],
+  (typeof blogCategories)[BlogCategory]
 ][];
 
 const POSTS_PER_PAGE = 9;
 
-function getPageNumbers(current: number, total: number): (number | "ellipsis")[] {
+function getPageNumbers(
+  current: number,
+  total: number
+): (number | "ellipsis")[] {
   if (total <= 5) {
     return Array.from({ length: total }, (_, i) => i + 1);
   }
@@ -53,7 +57,10 @@ function getPageNumbers(current: number, total: number): (number | "ellipsis")[]
   return pages;
 }
 
-export default function BlogFilter({ posts, postsPerPage = POSTS_PER_PAGE }: BlogFilterProps) {
+export default function BlogFilter({
+  posts,
+  postsPerPage = POSTS_PER_PAGE,
+}: BlogFilterProps) {
   const [active, setActive] = useState<BlogCategory | "all">("all");
   const [page, setPage] = useState(1);
 
@@ -80,31 +87,27 @@ export default function BlogFilter({ posts, postsPerPage = POSTS_PER_PAGE }: Blo
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-        <button
+        <Button
+          variant={active === "all" ? "blue" : "white"}
+          size="md"
+          className="h-auto py-1.5 px-4 text-sm shadow-none hover:shadow-none"
           onClick={() => handleCategoryChange("all")}
-          className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
-            active === "all"
-              ? "bg-primary-dark text-white"
-              : "bg-white text-gray-dark ring-1 ring-gray-lighter hover:ring-gray-light"
-          }`}
         >
           Tous
-        </button>
+        </Button>
         {allCategories.map(([key, cat]) => {
           const hasArticles = posts.some((p) => p.category === key);
           if (!hasArticles) return null;
           return (
-            <button
+            <Button
               key={key}
+              variant={active === key ? "blue" : "white"}
+              size="md"
+              className="h-auto py-1.5 px-4 text-sm shadow-none hover:shadow-none"
               onClick={() => handleCategoryChange(key)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
-                active === key
-                  ? "bg-primary-dark text-white"
-                  : "bg-white text-gray-dark ring-1 ring-gray-lighter hover:ring-gray-light"
-              }`}
             >
               {cat.label}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -125,7 +128,9 @@ export default function BlogFilter({ posts, postsPerPage = POSTS_PER_PAGE }: Blo
         <FadeIn delay={0.1}>
           <div className="mt-12 flex flex-col items-center gap-4">
             <p className="text-sm text-gray-light">
-              {startIndex + 1}-{Math.min(startIndex + postsPerPage, filtered.length)} sur {filtered.length} article{filtered.length > 1 ? "s" : ""}
+              {startIndex + 1}-
+              {Math.min(startIndex + postsPerPage, filtered.length)} sur{" "}
+              {filtered.length} article{filtered.length > 1 ? "s" : ""}
             </p>
             <Pagination>
               <PaginationContent>

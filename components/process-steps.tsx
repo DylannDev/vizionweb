@@ -38,7 +38,7 @@ export function ProcessSteps() {
     },
   ];
   return (
-    <section id="process" className="py-16 md:py-24 bg-white">
+    <section id="process" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <Badge align="center" className="mb-4">
           Process

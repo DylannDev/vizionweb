@@ -19,6 +19,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Clock } from "lucide-react";
+import Badge from "@/components/ui/badge";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -101,9 +102,9 @@ export default async function BlogPostPage({
 
           <header className="pb-2 text-center">
             <div className="flex justify-center items-center gap-3 mt-10 sm:mt-16 mb-2">
-              <span className="text-xs font-medium text-primary-blue bg-primary-dark px-2.5 py-1 rounded-full">
+              <Badge variant="black" className="m-0 text-xs shadow-none">
                 {category.label}
-              </span>
+              </Badge>
               <time
                 dateTime={post.date}
                 className="flex items-center gap-1.5 text-sm text-gray-dark capitalize"

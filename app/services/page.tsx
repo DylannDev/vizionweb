@@ -62,7 +62,7 @@ export default function ServicesPage() {
         </div>
       </PageHero>
 
-      <div className="bg-gradient-to-b from-background from-0% to-white to-10%">
+      <div className="bg-gradient-to-b from-background from-0% via-white via-50% to-background to-100%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           {categories.map((cat, catIdx) => (
             <ServiceCategorySection

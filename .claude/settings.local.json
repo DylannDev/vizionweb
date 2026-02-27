@@ -14,7 +14,8 @@
       "WebFetch(domain:www.magier.com)",
       "Bash(npx next dev:*)",
       "Bash(kill:*)",
-      "Bash(npx shadcn@latest add:*)"
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(node -e:*)"
     ]
   }
 }

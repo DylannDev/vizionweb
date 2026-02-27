@@ -14,35 +14,32 @@ export function MiniPortfolio() {
       className="py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-10%"
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
-        <Badge align="center">réalisations</Badge>
+        {/* Titre sticky — reste visible derrière les cards */}
+        <div className="sticky z-0" style={{ top: "110px" }}>
+          <Badge align="center">réalisations</Badge>
 
-        <Typography
-          title="Ce qu'on a construit pour nos clients"
-          subtitle="SaaS, outils de gestion, sites vitrines. Voici un aperçu de nos derniers projets livrés."
-        />
-
-        {/* Mobile: below 850px, uniform delay */}
-        <div className="grid gap-6 min-[850px]:hidden">
-          {items.map((it) => (
-            <FadeIn key={it.title} delay={0.2} className="h-full flex">
-              <PortfolioCard {...it} />
-            </FadeIn>
-          ))}
+          <Typography
+            title="Ce qu'on a construit pour nos clients"
+            subtitle="Applications web, outils de gestion, sites web avancés. Voici un aperçu de nos derniers projets livrés."
+            titleMaxWidth="max-4xl"
+            subtitleMaxWidth="max-3xl"
+          />
         </div>
 
-        {/* Desktop: >= 850px, delays grouped by pairs */}
-        <div className="hidden min-[850px]:grid min-[850px]:grid-cols-2 gap-6">
+        {/* Cards — z-10 au-dessus du titre, pb pour le temps d'empilement */}
+        <div className="relative z-10 flex flex-col gap-6">
           {items.map((it, index) => (
-            <FadeIn
-              key={it.title}
-              delay={0.1 * (Math.floor(index / 2) + 1)}
-              className="h-full flex"
-            >
-              <PortfolioCard {...it} />
-            </FadeIn>
+            <div key={it.title} className="sticky top-[300px]">
+              {/* <FadeIn delay={0.1 * (index + 1)}> */}
+              <PortfolioCard {...it} reverse={index % 2 !== 0} />
+              {/* </FadeIn> */}
+            </div>
           ))}
         </div>
+      </div>
 
+      {/* Bouton — z-20 au-dessus de tout */}
+      <div className="relative z-20">
         <FadeIn delay={0.4} className="flex justify-center mt-10">
           <ArrowButton href="/realisations" variant="black">
             Voir toutes les réalisations

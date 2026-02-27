@@ -63,7 +63,7 @@ export default function BlogPage() {
           />
         </PageHero>
 
-        <section className="bg-gradient-to-b from-background from-0% to-white to-10%">
+        <section className="pb-16 md:pb-24 bg-gradient-to-b from-background from-0% via-white via-50% to-background to-100%">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             {<BlogFilter posts={sortedPosts} />}
           </div>

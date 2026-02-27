@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "./button";
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -43,17 +44,11 @@ function PaginationLink({
   ...props
 }: PaginationLinkProps) {
   return (
-    <button
+    <Button
+      variant={isActive ? "black" : "white"}
+      size="md"
       aria-current={isActive ? "page" : undefined}
-      className={cn(
-        "inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-200 cursor-pointer size-10",
-        isActive
-          ? "bg-primary-dark text-white shadow-sm"
-          : "bg-white text-gray-dark ring-1 ring-gray-lighter hover:ring-gray-light hover:bg-gray-lighter/30",
-        props.disabled &&
-          "pointer-events-none opacity-40",
-        className
-      )}
+      className={cn("rounded-full size-10 p-0 text-sm", className)}
       {...props}
     />
   );
