@@ -30,7 +30,7 @@ interface HeroSEOProps {
 export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
   return (
     <section className="bg-background">
-      <div className="pt-4 md:pb-20 px-4 md:px-8 flex flex-col justify-between gap-16 max-w-[1536px] mx-auto w-full">
+      <div className="pt-4 md:pb-20 px-4 flex flex-col justify-between gap-16 max-w-[1536px] mx-auto w-full">
         <div className="relative bg-white w-full rounded-[36px] pb-16 pt-32 px-5">
           <DottedGlowBackground
             className={cn(
