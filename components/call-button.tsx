@@ -1,26 +1,27 @@
-import Link from "next/link";
-import React from "react";
-import { PiArrowUpRight } from "react-icons/pi";
-import Button from "./ui/button";
+import { cn } from "@/lib/utils";
+import { ArrowButton } from "./ui/arrow-button";
 
 interface CallButtonProps {
-  size?: "lg" | "md" | "sm";
+  size?: "lg" | "md";
   className?: string;
-  variant?: "dark" | "white";
+  variant?: "blue" | "black" | "white";
 }
 
 const CallButton = ({
   size = "lg",
   className,
-  variant = "dark",
+  variant = "blue",
 }: CallButtonProps) => {
   return (
-    <Link href="https://cal.com/dylann/30min" target="_blank">
-      <Button className={className} variant={variant} size={size}>
-        Réserver un appel
-        <PiArrowUpRight className="group-hover:rotate-45 transition-all duration-300 ease-in-out" />
-      </Button>
-    </Link>
+    <ArrowButton
+      href="https://cal.com/dylann/30min"
+      target="_blank"
+      variant={variant}
+      size={size}
+      className={className}
+    >
+      Réserver un appel
+    </ArrowButton>
   );
 };
 

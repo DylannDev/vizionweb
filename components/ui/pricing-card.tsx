@@ -27,7 +27,7 @@ function Features({ items }: FeatureProps) {
     <ul className="space-y-2 text-gray-dark text-[15px]">
       {items.map((it) => (
         <li key={it} className="flex items-center gap-2">
-          <PiCheckBold className="size-3 text-primary-green" />
+          <PiCheckBold className="size-3 text-primary-blue" />
 
           <span>{it}</span>
         </li>
@@ -45,7 +45,7 @@ const PricingCard = ({ plan }: PricingCardProps) => {
       )}
     >
       {plan.highlight && (
-        <div className="absolute inset-x-0 -top-10 w-full bg-primary-green text-secondary-dark h-10 rounded-t-3xl flex items-center justify-center uppercase text-sm font-semibold tracking-widest">
+        <div className="absolute inset-x-0 -top-10 w-full bg-primary-blue text-secondary-dark h-10 rounded-t-3xl flex items-center justify-center uppercase text-sm font-semibold tracking-widest">
           Offre Populaire
         </div>
       )}
@@ -62,7 +62,7 @@ const PricingCard = ({ plan }: PricingCardProps) => {
               size={45}
               imgSize={plan.category === "saas" ? 25 : 20}
               img={plan.icon}
-              shadow=""
+              className="shadow-none"
             />
             <h3 className="text-2xl font-semibold text-gray-light">
               {plan.name}

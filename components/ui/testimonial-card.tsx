@@ -10,9 +10,8 @@ interface Testimonial {
 
 export const TestimonialCard = ({ text, image, name, role }: Testimonial) => {
   return (
-    <div className="p-8 rounded-3xl bg-white shadow-lg shadow-gray-lighter w-full sm:max-w-xs">
-      <p className="text-sm">{text}</p>
-      <div className="flex items-center gap-2 mt-5">
+    <div className="p-2 rounded-4xl bg-background w-full sm:max-w-xs">
+      <div className="bg-white p-4 rounded-3xl flex items-center gap-2 mb-3">
         <div className="relative h-10 w-10 overflow-hidden rounded-full shrink-0">
           <Image
             src={`/clients/${image}`}
@@ -32,6 +31,7 @@ export const TestimonialCard = ({ text, image, name, role }: Testimonial) => {
           </div>
         </div>
       </div>
+      <p className="p-4 text-base font-medium text-primary-dark">"{text}"</p>
     </div>
   );
 };

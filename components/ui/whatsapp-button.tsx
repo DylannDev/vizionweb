@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import Button from "./button";
 import { RiWhatsappLine } from "react-icons/ri";
 
@@ -12,12 +11,11 @@ const WhatsappButton = () => {
       aria-label="Contactez-nous sur WhatsApp"
     >
       <Button
-        variant="dark"
-        size="md"
+        variant="blue"
         className="w-fit inline-flex items-center justify-center gap-2 mt-3"
       >
         Discutons maintenant
-        <RiWhatsappLine className="h-5 w-5 text-primary-green" />
+        <RiWhatsappLine className="h-5 w-5" />
       </Button>
     </Link>
   );

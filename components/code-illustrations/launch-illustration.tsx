@@ -17,7 +17,7 @@ export default function LaunchIllustration() {
   return (
     <section
       aria-labelledby="launch-illustration-heading"
-      className="relative max-w-[350px] mx-auto h-[360px]"
+      className="relative max-w-[350px] mx-auto h-[360px] mt-6"
     >
       <h2 id="launch-illustration-heading" className="sr-only">
         Illustration: Lancement

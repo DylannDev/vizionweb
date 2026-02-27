@@ -6,26 +6,23 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-full ring-offset-1 text-sm font-medium transition-all duration-150 ease-in-out group active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-60 disabled:pointer-events-none gap-2 [&>svg]:shrink-0",
+  "inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-lg text-lg font-semibold transition-all duration-200 ease-in-out group active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 disabled:opacity-60 disabled:pointer-events-none gap-2 [&>svg]:shrink-0",
   {
     variants: {
       variant: {
-        dark: "bg-gradient-to-r from-secondary-dark to-gray-dark text-white hover:opacity-95 ring-primary-dark ring-offset-gray-dark",
-        white:
-          "bg-white text-primary-dark hover:bg-background hover:ring-offset-white hover:opacity-90 ring-gray-lighter ring-offset-background",
-        carousel:
-          "rounded-full bg-primary-dark flex items-center justify-center shadow-lg shadow-primary-dark/50 text-primary-green ring-0 ring-offset-0 hover:opacity-90",
+        blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white shadow-[0_4px_16px_0] shadow-primary-blue-border/50 hover:shadow-[0_6px_20px_0] hover:shadow-primary-blue-border/60",
+        black:
+          "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-[0_4px_16px_0] shadow-primary-dark/50 hover:shadow-[0_6px_20px_0] hover:shadow-primary-dark/60",
+        white: "bg-background border border-white text-primary-dark",
       },
       size: {
-        sm: "h-7 px-3 ring-3 [&>svg]:text-sm",
-        md: "h-8.5 px-4 ring-3 [&>svg]:text-base",
-        lg: "h-10 px-5 text-base ring-4 [&>svg]:text-lg",
-        carousel: "h-10 w-10 [&>svg]:size-5",
+        md: "h-12 px-5 text-base [&>svg]:text-base",
+        lg: "h-14.5 px-6 rounded-xl [&>svg]:text-lg",
       },
     },
     defaultVariants: {
-      variant: "dark",
-      size: "md",
+      variant: "blue",
+      size: "lg",
     },
   }
 );

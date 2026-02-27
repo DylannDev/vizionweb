@@ -13,13 +13,13 @@ const smTwoColB = testimonials.filter((_, i) => i % 2 !== 0);
 
 export const Testimonials = () => {
   return (
-    <section className="bg-background my-20 relative">
+    <section className="my-20 relative">
       <div className="container z-10 mx-auto">
         <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
           <Badge>Avis</Badge>
           <Typography
-            title="Des résultats concrets racontés par nos clients"
-            subtitle="Chaque projet est unique, mais tous ont un point commun : la satisfaction de nos clients."
+            title="Nos clients en parlent mieux que nous"
+            subtitle="Startups, dirigeants de PME. Ils nous ont fait confiance, voici ce qu'ils en disent."
           />
         </div>
 

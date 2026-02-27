@@ -18,7 +18,7 @@ export default function DiscoveryIllustration() {
     <div className="flex flex-col items-center justify-center relative max-w-[400px] mx-auto">
       {/* Window */}
       <motion.div
-        className="w-full rounded-3xl border border-gray-lighter shadow-md  bg-white p-3 relative z-10"
+        className="w-full rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(139,92,246,0.15)]  bg-white p-3 relative z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.8, ease: "easeOut" }}
@@ -27,18 +27,18 @@ export default function DiscoveryIllustration() {
         <div className="flex items-center gap-2 rounded-t-3xl px-2 pb-4 pt-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500" />
           <div className="h-2.5 w-2.5 rounded-full bg-gray-lighter" />
-          <div className="h-2.5 w-2.5 rounded-full bg-primary-green" />
+          <div className="h-2.5 w-2.5 rounded-full bg-violet-500" />
         </div>
 
-        <hr className="border-gray-lighter mb-3" />
+        {/* <hr className="border-gray-lighter" /> */}
 
         {/* Grid of participants */}
 
-        <div className="mt-3 grid grid-cols-2 gap-3">
+        <div className="p-3 grid grid-cols-2 gap-3 rounded-xl bg-background">
           {[0, 1, 2, 3].map((i) => (
             <motion.div
               key={i}
-              className="rounded-xl bg-background p-4 flex items-center justify-center"
+              className="rounded-xl bg-white p-4 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -49,10 +49,10 @@ export default function DiscoveryIllustration() {
             >
               <motion.div
                 className={cn(
-                  "flex items-center justify-center size-12 rounded-full bg-gray-lighter text-white",
+                  "flex items-center justify-center size-12 rounded-full bg-violet-500 text-white",
                   `rounded-full ${
                     i === currentSpeaker
-                      ? "ring-2 ring-primary-green ring-offset-2 ring-offset-white"
+                      ? "ring-2 ring-violet-500 ring-offset-2 ring-offset-white"
                       : ""
                   }`
                 )}
@@ -82,7 +82,7 @@ export default function DiscoveryIllustration() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 2.5, ease: "easeOut" }}
-        className="mt-3 flex items-center justify-center gap-3 bg-white rounded-3xl p-2 border border-gray-lighter shadow-md w-fit"
+        className="mt-3 flex items-center justify-center gap-3 bg-white rounded-3xl p-2 border border-gray-lighter shadow-[0_4px_12px_0_rgba(139,92,246,0.15)] w-fit"
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
@@ -98,7 +98,7 @@ export default function DiscoveryIllustration() {
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="inline-flex items-center justify-center size-8 rounded-full bg-primary-green text-white"
+          className="inline-flex items-center justify-center size-8 rounded-full bg-violet-500 text-white"
         >
           <Mic className="size-4" strokeWidth={1.75} />
         </motion.div>
@@ -108,13 +108,13 @@ export default function DiscoveryIllustration() {
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
-        className="absolute -top-5 h-[150px] w-[90%] mx-auto bg-white border border-gray-lighter rounded-2xl shadow-md z-1"
+        className="absolute -top-5 h-[150px] w-[90%] mx-auto bg-white border border-gray-lighter rounded-2xl shadow-[0_4px_12px_0_rgba(139,92,246,0.15)] z-1"
       ></motion.div>
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="absolute -top-9 h-[150px] w-[80%] mx-auto bg-gray-lighter rounded-2xl shadow-md z-0"
+        className="absolute -top-9 h-[150px] w-[80%] mx-auto bg-gray-lighter rounded-2xl shadow-[0_4px_12px_0_rgba(139,92,246,0.15)] z-0"
       ></motion.div>
     </div>
   );

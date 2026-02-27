@@ -30,7 +30,7 @@ export default function NotFound() {
           n’existe pas ou a été déplacée.
         </p>
         <div className="mt-8">
-          <Button size="md" variant="dark" asChild>
+          <Button size="md" asChild>
             <Link href="/">Retourner à l'accueil</Link>
           </Button>
         </div>

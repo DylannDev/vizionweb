@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Plus } from "lucide-react";
 
 export const Accordion = AccordionPrimitive.Root;
 export const AccordionItem = AccordionPrimitive.Item;
@@ -13,15 +12,18 @@ export const AccordionTrigger = React.forwardRef<
   <AccordionPrimitive.Header className="m-0">
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={`group cursor-pointer bg-white rounded-xl flex w-full items-center justify-between p-5 text-left text-base sm:text-lg font-medium hover:opacity-90 focus:outline-none ${className}`}
+      className={`group cursor-pointer bg-white rounded-3xl flex w-full items-center justify-between p-5 text-left text-base sm:text-xl font-semibold text-primary-dark focus:outline-none transition-colors ${className}`}
       {...props}
     >
       {children}
       <span
         aria-hidden
-        className="ml-2 transition-transform group-data-[state=open]:rotate-45 bg-primary-dark rounded-full p-2"
+        className="relative ml-3 flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-b from-primary-blue-dark to-primary-blue-border flex items-center justify-center"
       >
-        <Plus strokeWidth={2.5} className="w-4 h-4 text-primary-green" />
+        {/* Vertical bar: rotates to horizontal then fades when open */}
+        <span className="absolute w-[2px] h-3.5 bg-white transition-all duration-300 ease-in-out group-data-[state=open]:rotate-90 group-data-[state=open]:opacity-0" />
+        {/* Horizontal bar: always visible */}
+        <span className="absolute w-3.5 h-[2px] bg-white" />
       </span>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
@@ -34,7 +36,7 @@ export const AccordionContent = React.forwardRef<
 >(({ className = "", children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className={`bg-white rounded-xl p-5 mt-2 overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down text-gray-dark ${className}`}
+    className={`bg-white rounded-3xl p-5 mt-2 overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down text-gray-dark ${className}`}
     {...props}
   >
     <div className="pt-2 pb-4">{children}</div>
