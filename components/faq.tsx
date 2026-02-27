@@ -6,14 +6,12 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Badge from "./ui/badge";
-import Card from "./ui/card";
-import WhatsappButton from "./ui/whatsapp-button";
 import FadeIn from "./ui/fade-in";
 import { faqs } from "@/data";
 
 export function FAQ() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 z-10 bg-gradient-to-t from-background from-60% to-white">
       <div className=" mx-auto max-w-7xl px-4">
         <Badge align="center">FAQ</Badge>
         <Typography
@@ -47,7 +45,7 @@ export function FAQ() {
             ))}
           </Accordion>
 
-          <FadeIn key="card" delay={1.8} className="flex justify-center w-full">
+          {/* <FadeIn key="card" delay={1.8} className="flex justify-center w-full">
             <Card
               radius="4xl"
               bgColor="bg-background"
@@ -60,12 +58,12 @@ export function FAQ() {
                 <p className="text-gray-dark text-sm sm:text-base">
                   Écrivez-nous directement sur WhatsApp. On répond
                   <br className="hidden sm:block" />
-                  en quelques heures, même pour une question rapide.
+                  rapidement, même pour une question simple.
                 </p>
                 <WhatsappButton />
               </div>
             </Card>
-          </FadeIn>
+          </FadeIn> */}
         </div>
       </div>
     </section>

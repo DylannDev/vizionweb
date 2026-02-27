@@ -1,7 +1,6 @@
 import FadeIn from "@/components/ui/fade-in";
 import Typography from "@/components/typography";
 import Badge from "@/components/ui/badge";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import type { Service } from "@/data/services";
 
 export function ServiceTarget({ service }: { service: Service }) {
@@ -16,17 +15,13 @@ export function ServiceTarget({ service }: { service: Service }) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {service.targetProfiles.map((profile, i) => (
-            <FadeIn key={profile.title} delay={0.2 * (i + 1)} className="h-full flex">
-              <Card radius="2xl" className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-primary-dark">
-                    {profile.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>{profile.description}</p>
-                </CardContent>
-              </Card>
+            <FadeIn key={profile.title} delay={0.2 * (i + 1)} className="h-full flex w-full">
+              <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3 w-full">
+                <div className="h-full rounded-[32px] p-6 flex flex-col gap-4">
+                  <h3 className="font-semibold text-primary-dark text-xl">{profile.title}</h3>
+                  <p className="text-lg text-gray-dark">{profile.description}</p>
+                </div>
+              </div>
             </FadeIn>
           ))}
         </div>

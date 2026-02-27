@@ -294,7 +294,7 @@ export const DottedGlowBackground = ({
     <div
       ref={containerRef}
       className={className}
-      style={{ position: "absolute", inset: 0 }}
+      style={{ position: "absolute" }}
     >
       <canvas
         ref={canvasRef}

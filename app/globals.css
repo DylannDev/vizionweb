@@ -150,7 +150,7 @@
   --font-size-lg: 1.125rem; /* 18px */
   --font-size-xl: 1.25rem; /* 20px */
   --font-size-2xl: 1.5rem; /* 24px */
-  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-3xl: 1.75rem; /* 28px */
   --font-size-4xl: 2.25rem; /* 36px */
   --font-size-5xl: 3rem; /* 48px */
 
@@ -192,6 +192,7 @@
   }
   h2 {
     font-size: var(--font-size-3xl);
+    font-weight: 600;
     line-height: var(--line-height-tight);
     padding-bottom: 0.5rem;
   }

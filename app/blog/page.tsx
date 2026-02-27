@@ -4,7 +4,7 @@ import { buildBlogBreadcrumbSchema } from "@/lib/seo/blog";
 import BlogFilter from "@/components/blog-filter";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
-import FadeIn from "@/components/ui/fade-in";
+import { PageHero } from "@/components/ui/page-hero";
 import Script from "next/script";
 import Link from "next/link";
 import {
@@ -41,46 +41,31 @@ export default function BlogPage() {
   return (
     <>
       <main>
-        <div className="pt-24 pb-4">
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/">Accueil</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Blog</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </div>
+        <PageHero>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Blog</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-        <section className="pb-16 md:pb-24">
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
-            <Badge align="center">Blog</Badge>
-            <Typography
-              title="Ressources pour vos projets web"
-              subtitle="Guides pratiques, retours d'expérience et conseils pour créer des sites et applications qui génèrent des résultats."
-            />
+          <Badge align="center">Blog</Badge>
+          <Typography
+            title="Ressources pour vos projets web"
+            subtitle="Guides pratiques, retours d'expérience et conseils pour créer des sites et applications qui génèrent des résultats."
+          />
+        </PageHero>
 
-            {sortedPosts.length === 0 ? (
-              <FadeIn delay={0.2}>
-                <div className="text-center py-16 bg-white rounded-3xl">
-                  <p className="text-gray-dark text-lg">
-                    Les premiers articles arrivent bientôt.
-                  </p>
-                  <p className="text-gray-light text-sm mt-2">
-                    Revenez vite pour découvrir nos guides et conseils.
-                  </p>
-                </div>
-              </FadeIn>
-            ) : (
-              <BlogFilter posts={sortedPosts} />
-            )}
+        <section className="bg-gradient-to-b from-background from-0% to-white to-10%">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            {<BlogFilter posts={sortedPosts} />}
           </div>
         </section>
       </main>

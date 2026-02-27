@@ -6,6 +6,49 @@ import {
   PiCursorClickFill,
   PiStorefrontFill,
   PiGearFill,
+  // Problem icons
+  PiLightbulbFill,
+  PiCurrencyDollarFill,
+  PiHourglassFill,
+  PiListBulletsFill,
+  PiUsersFill,
+  PiProhibitFill,
+  PiGearSixFill,
+  PiChartLineDownFill,
+  PiClockFill,
+  PiFilesFill,
+  PiPuzzlePieceFill,
+  PiWarningFill,
+  PiMegaphoneFill,
+  PiEyeSlashFill,
+  PiBrowserFill,
+  PiClockCountdownFill,
+  PiSignOutFill,
+  PiMagnifyingGlassFill,
+  PiDeviceMobileFill,
+  PiCalendarXFill,
+  PiUserCircleFill,
+  PiCreditCardFill,
+  // Solution icons
+  PiTargetFill,
+  PiPenNibFill,
+  PiCodeFill,
+  PiShieldCheckFill,
+  PiChartBarFill,
+  PiLinkFill,
+  PiChartPieFill,
+  PiArrowsClockwiseFill,
+  PiPlugsFill,
+  PiPaintBrushFill,
+  PiLightningFill,
+  PiPaletteFill,
+  PiNotePencilFill,
+  PiTrendUpFill,
+  PiDevicesFill,
+  PiWrenchFill,
+  PiLockKeyFill,
+  PiWalletFill,
+  PiArticleFill,
 } from "react-icons/pi";
 
 // ── Types ────────────────────────────────────────────────────────
@@ -38,6 +81,8 @@ export interface Service {
   shortTitle: string;
   category: ServiceCategory;
   icon: IconType;
+  iconSrc: string;
+  iconBg: string;
   shortDescription: string;
   metaTitle: string;
   metaDescription: string;
@@ -45,10 +90,10 @@ export interface Service {
   heroSubtitle: string;
   problemTitle: string;
   problemDescription: string;
-  problemPoints: string[];
+  problemPoints: { text: string; icon: IconType }[];
   solutionTitle: string;
   solutionDescription: string;
-  solutionPoints: string[];
+  solutionPoints: { text: string; icon: IconType }[];
   included: ServiceIncludedItem[];
   deliveryTime: string;
   targetProfiles: ServiceTargetProfile[];
@@ -77,10 +122,11 @@ export const services: Service[] = [
     shortTitle: "MVP & PoC",
     category: "apps",
     icon: PiRocketLaunchFill,
+    iconSrc: "/icons/mvp.svg",
+    iconBg: "bg-violet-500",
     shortDescription:
-      "Validez votre idée avec un produit minimum viable fonctionnel, conçu pour tester le marché avant d'investir massivement.",
-    metaTitle:
-      "Développement MVP & Proof of Concept sur-mesure | Vizion Web",
+      "Validez votre idée rapidement avec un produit fonctionnel. Livré en 4-6 semaines, prêt à tester avec vos premiers utilisateurs.",
+    metaTitle: "Développement MVP & Proof of Concept sur-mesure | Vizion Web",
     metaDescription:
       "Lancez votre produit minimum viable en 4 à 8 semaines. Code sur-mesure React/Next.js, prêt à tester et à scaler.",
     heroTitle: "Validez votre idée avec un MVP fonctionnel",
@@ -88,21 +134,21 @@ export const services: Service[] = [
       "Un produit fonctionnel livré en quelques semaines, prêt à être testé par de vrais utilisateurs. Vous validez votre marché avant d'investir massivement.",
     problemTitle: "Votre idée mérite mieux qu'un PowerPoint",
     problemDescription:
-      "Vous avez une idée prometteuse, mais sans produit concret, impossible de convaincre des utilisateurs, des investisseurs ou même de valider vos hypothèses. Les cycles de développement classiques prennent des mois et coûtent cher. La plupart des startups ne peuvent pas se le permettre.",
+      "Vous avez une idée prometteuse, mais sans produit concret, impossible de convaincre des utilisateurs, des investisseurs ou même de valider vos hypothèses. Les cycles de développement classiques prennent des mois et coûtent cher.",
     problemPoints: [
-      "Vous avez une idée mais aucun produit concret à montrer aux utilisateurs ou investisseurs",
-      "Vous hésitez à investir des dizaines de milliers d'euros sans validation marché",
-      "Les délais de développement classiques sont trop longs pour votre timeline",
-      "Vous ne savez pas quelles fonctionnalités prioriser pour un premier lancement",
+      { text: "Vous avez une idée mais aucun produit concret à montrer aux utilisateurs ou investisseurs", icon: PiLightbulbFill },
+      { text: "Vous hésitez à investir des dizaines de milliers d'euros sans validation marché", icon: PiCurrencyDollarFill },
+      { text: "Les délais de développement classiques sont trop longs pour votre timeline", icon: PiHourglassFill },
+      { text: "Vous ne savez pas quelles fonctionnalités prioriser pour un premier lancement", icon: PiListBulletsFill },
     ],
     solutionTitle: "Un MVP fonctionnel en 4 à 8 semaines",
     solutionDescription:
       "On commence par trier : quelles fonctionnalités sont vraiment nécessaires pour un premier test ? On conçoit l'interface, on développe, et vous avez un produit utilisable. Pas de superflu. Que l'essentiel pour confronter votre idée au terrain et itérer.",
     solutionPoints: [
-      "Cadrage stratégique pour identifier les fonctionnalités prioritaires",
-      "Design UI/UX pensé pour la conversion et l'adoption",
-      "Développement sur-mesure en React/Next.js, pensé pour évoluer",
-      "Déploiement rapide pour collecter des retours utilisateurs concrets",
+      { text: "Cadrage stratégique pour identifier les fonctionnalités prioritaires", icon: PiTargetFill },
+      { text: "Design UI/UX pensé pour la conversion et l'adoption", icon: PiPenNibFill },
+      { text: "Développement sur-mesure en React/Next.js, pensé pour évoluer", icon: PiCodeFill },
+      { text: "Déploiement rapide pour collecter des retours utilisateurs concrets", icon: PiRocketLaunchFill },
     ],
     included: [
       {
@@ -117,8 +163,7 @@ export const services: Service[] = [
       },
       {
         title: "Développement React / Next.js",
-        description:
-          "Code sur-mesure, architecture scalable, TypeScript",
+        description: "Code sur-mesure, architecture scalable, TypeScript",
       },
       {
         title: "Base de données & API",
@@ -127,13 +172,11 @@ export const services: Service[] = [
       },
       {
         title: "Déploiement & mise en production",
-        description:
-          "Hébergement, domaine, SSL, configuration production",
+        description: "Hébergement, domaine, SSL, configuration production",
       },
       {
         title: "Support 30 jours",
-        description:
-          "Ajustements et corrections post-lancement inclus",
+        description: "Ajustements et corrections post-lancement inclus",
       },
     ],
     deliveryTime: "4 à 8 semaines",
@@ -209,8 +252,10 @@ export const services: Service[] = [
     shortTitle: "SaaS sur-mesure",
     category: "apps",
     icon: PiCloudFill,
+    iconSrc: "/icons/saas.svg",
+    iconBg: "bg-blue-500",
     shortDescription:
-      "Votre produit SaaS développé de A à Z : authentification, paiements Stripe, gestion multi-tenant et dashboard d'administration.",
+      "Une application SaaS complète avec gestion utilisateurs, paiements et tableau de bord. De l'architecture à la mise en ligne.",
     metaTitle: "Développement SaaS sur-mesure | Vizion Web",
     metaDescription:
       "Nous développons votre application SaaS complète en 6 à 10 semaines. Auth, paiements Stripe, multi-tenant, dashboard admin. Code sur-mesure React/Next.js.",
@@ -221,19 +266,19 @@ export const services: Service[] = [
     problemDescription:
       "Vous avez validé votre idée, vos premiers utilisateurs sont là, mais monter une équipe technique coûte cher et recruter un CTO prend du temps. Les solutions no-code atteignent vite leurs limites dès que vos besoins se complexifient.",
     problemPoints: [
-      "Recruter un CTO ou une équipe dev coûte cher et prend des mois",
-      "Les solutions no-code ne suivent pas quand vos besoins se complexifient",
-      "L'architecture technique (auth, paiements, multi-tenant) demande une expertise pointue",
-      "Chaque mois de retard, c'est du chiffre d'affaires qui s'envole",
+      { text: "Recruter un CTO ou une équipe dev coûte cher et prend des mois", icon: PiUsersFill },
+      { text: "Les solutions no-code ne suivent pas quand vos besoins se complexifient", icon: PiProhibitFill },
+      { text: "L'architecture technique (auth, paiements, multi-tenant) demande une expertise pointue", icon: PiGearSixFill },
+      { text: "Chaque mois de retard, c'est du chiffre d'affaires qui s'envole", icon: PiChartLineDownFill },
     ],
     solutionTitle: "Votre SaaS complet livré en 6 à 10 semaines",
     solutionDescription:
       "On s'occupe de tout le technique : architecture prévue pour tenir la charge, système de connexion et de rôles, paiements et abonnements via Stripe, dashboard pour piloter votre activité. Vous recevez un produit prêt à accueillir vos premiers clients payants.",
     solutionPoints: [
-      "Architecture SaaS complète : auth, rôles, multi-tenant",
-      "Intégration paiements (Stripe) et gestion des abonnements",
-      "Dashboard d'administration pour piloter votre activité",
-      "API solide et connexion à vos outils tiers (emailing, CRM, analytics)",
+      { text: "Architecture SaaS complète : auth, rôles, multi-tenant", icon: PiShieldCheckFill },
+      { text: "Intégration paiements (Stripe) et gestion des abonnements", icon: PiCreditCardFill },
+      { text: "Dashboard d'administration pour piloter votre activité", icon: PiChartBarFill },
+      { text: "API solide et connexion à vos outils tiers (emailing, CRM, analytics)", icon: PiPlugsFill },
     ],
     included: [
       {
@@ -258,8 +303,7 @@ export const services: Service[] = [
       },
       {
         title: "Développement React / Next.js",
-        description:
-          "Code sur-mesure TypeScript, architecture scalable",
+        description: "Code sur-mesure TypeScript, architecture scalable",
       },
       {
         title: "Intégrations API",
@@ -268,8 +312,7 @@ export const services: Service[] = [
       },
       {
         title: "Déploiement & infrastructure",
-        description:
-          "Mise en production, monitoring, configuration serveur",
+        description: "Mise en production, monitoring, configuration serveur",
       },
       {
         title: "Support 60 jours",
@@ -350,10 +393,11 @@ export const services: Service[] = [
     shortTitle: "Application métier",
     category: "apps",
     icon: PiBriefcaseFill,
+    iconSrc: "/icons/app-metier.svg",
+    iconBg: "bg-amber-400",
     shortDescription:
-      "Automatisez vos processus internes avec un outil de gestion sur-mesure : dashboard, workflows, intégrations.",
-    metaTitle:
-      "Développement d'application métier sur-mesure | Vizion Web",
+      "Automatisez vos processus internes avec un outil de gestion pensé pour votre workflow. Gain de temps et réduction d'erreurs.",
+    metaTitle: "Développement d'application métier sur-mesure | Vizion Web",
     metaDescription:
       "Nous développons des outils de gestion internes sur-mesure pour automatiser vos processus. Dashboard, workflows, intégrations. Livré en 4 à 8 semaines.",
     heroTitle: "Automatisez vos processus avec un outil sur-mesure",
@@ -364,19 +408,19 @@ export const services: Service[] = [
     problemDescription:
       "Votre équipe perd du temps sur des tâches manuelles et répétitives. Les fichiers Excel circulent par email, les données sont éparpillées, et les outils génériques ne correspondent jamais à 100% à vos besoins métier. Résultat : erreurs, lenteurs et frustration.",
     problemPoints: [
-      "Des processus manuels chronophages qui ralentissent votre équipe",
-      "Des données éparpillées entre Excel, emails et outils déconnectés",
-      "Des outils génériques qui ne collent pas à votre façon de travailler",
-      "Des erreurs humaines coûteuses sur les tâches répétitives",
+      { text: "Des processus manuels chronophages qui ralentissent votre équipe", icon: PiClockFill },
+      { text: "Des données éparpillées entre Excel, emails et outils déconnectés", icon: PiFilesFill },
+      { text: "Des outils génériques qui ne collent pas à votre façon de travailler", icon: PiPuzzlePieceFill },
+      { text: "Des erreurs humaines coûteuses sur les tâches répétitives", icon: PiWarningFill },
     ],
     solutionTitle: "Un outil conçu pour votre façon de travailler",
     solutionDescription:
       "On développe une application taillée pour vos processus. Toutes vos données au même endroit, les tâches répétitives automatisées, et une connexion directe avec vos outils actuels. Votre équipe arrête de perdre du temps sur de la saisie manuelle.",
     solutionPoints: [
-      "Dashboard de pilotage avec les indicateurs qui comptent pour vous",
-      "Workflows automatisés adaptés à vos processus réels",
-      "Intégrations avec vos outils existants (CRM, comptabilité, email, etc.)",
-      "Interface intuitive que votre équipe adopte sans formation complexe",
+      { text: "Dashboard de pilotage avec les indicateurs qui comptent pour vous", icon: PiChartPieFill },
+      { text: "Workflows automatisés adaptés à vos processus réels", icon: PiArrowsClockwiseFill },
+      { text: "Intégrations avec vos outils existants (CRM, comptabilité, email, etc.)", icon: PiPlugsFill },
+      { text: "Interface intuitive que votre équipe adopte sans formation complexe", icon: PiCursorClickFill },
     ],
     included: [
       {
@@ -391,13 +435,11 @@ export const services: Service[] = [
       },
       {
         title: "Gestion des rôles & accès",
-        description:
-          "Système de permissions adapté à votre organisation",
+        description: "Système de permissions adapté à votre organisation",
       },
       {
         title: "Workflows automatisés",
-        description:
-          "Automatisation des tâches répétitives et notifications",
+        description: "Automatisation des tâches répétitives et notifications",
       },
       {
         title: "Intégrations tierces",
@@ -406,8 +448,7 @@ export const services: Service[] = [
       },
       {
         title: "Formation & documentation",
-        description:
-          "Formation de votre équipe et documentation utilisateur",
+        description: "Formation de votre équipe et documentation utilisateur",
       },
       {
         title: "Support 90 jours",
@@ -491,33 +532,33 @@ export const services: Service[] = [
     shortTitle: "Landing Page",
     category: "sites",
     icon: PiCursorClickFill,
+    iconSrc: "/icons/landing-page.svg",
+    iconBg: "bg-rose-400",
     shortDescription:
-      "Une page de conversion rapide et optimisée pour transformer vos visiteurs en clients ou en leads qualifiés.",
-    metaTitle:
-      "Création de Landing Page optimisée conversion | Vizion Web",
+      "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 2-3 semaines.",
+    metaTitle: "Création de Landing Page optimisée conversion | Vizion Web",
     metaDescription:
       "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement React/Next.js. Livrée en 2 à 3 semaines.",
     heroTitle: "Une landing page qui convertit, pas juste qui fait joli",
     heroSubtitle:
       "Design sur-mesure, textes écrits pour convaincre, et un seul objectif : que vos visiteurs passent à l'action. Livrée en 2-3 semaines.",
-    problemTitle:
-      "Votre page actuelle ne convertit pas assez",
+    problemTitle: "Votre page actuelle ne convertit pas assez",
     problemDescription:
       "Vous investissez dans la publicité ou le référencement, mais votre page ne transforme pas les visiteurs en clients. Le message est flou, le design ne rassure pas, et les visiteurs quittent la page sans agir. Chaque clic perdu, c'est du budget gaspillé.",
     problemPoints: [
-      "Vos campagnes publicitaires génèrent du trafic mais peu de conversions",
-      "Votre message n'est pas assez clair ou percutant pour convaincre",
-      "Le design actuel ne rassure pas suffisamment vos visiteurs",
-      "Vous n'avez pas de page dédiée pour vos offres ou votre acquisition",
+      { text: "Vos campagnes publicitaires génèrent du trafic mais peu de conversions", icon: PiChartLineDownFill },
+      { text: "Votre message n'est pas assez clair ou percutant pour convaincre", icon: PiMegaphoneFill },
+      { text: "Le design actuel ne rassure pas suffisamment vos visiteurs", icon: PiEyeSlashFill },
+      { text: "Vous n'avez pas de page dédiée pour vos offres ou votre acquisition", icon: PiBrowserFill },
     ],
     solutionTitle: "Une page conçue pour un seul objectif : convertir",
     solutionDescription:
       "On rédige les textes, on conçoit le design, et on développe la page en code sur-mesure. Chaque élément (titre, arguments, preuves sociales, bouton d'action) est là pour une seule raison : pousser le visiteur à agir.",
     solutionPoints: [
-      "Copywriting persuasif adapté à votre cible et votre offre",
-      "Design sur-mesure qui renforce votre crédibilité",
-      "Optimisation technique (vitesse, SEO, responsive)",
-      "Parcours de conversion testé et validé",
+      { text: "Copywriting persuasif adapté à votre cible et votre offre", icon: PiPenNibFill },
+      { text: "Design sur-mesure qui renforce votre crédibilité", icon: PiPaintBrushFill },
+      { text: "Optimisation technique (vitesse, SEO, responsive)", icon: PiLightningFill },
+      { text: "Parcours de conversion testé et validé", icon: PiTargetFill },
     ],
     included: [
       {
@@ -527,28 +568,23 @@ export const services: Service[] = [
       },
       {
         title: "UI/UX Design Figma",
-        description:
-          "Maquette haute fidélité avec modifications illimitées",
+        description: "Maquette haute fidélité avec modifications illimitées",
       },
       {
         title: "Développement React / Next.js",
-        description:
-          "1-2 pages, code sur-mesure, animations fluides",
+        description: "1-2 pages, code sur-mesure, animations fluides",
       },
       {
         title: "Responsive design",
-        description:
-          "Optimisation parfaite sur mobile, tablette et desktop",
+        description: "Optimisation parfaite sur mobile, tablette et desktop",
       },
       {
         title: "SEO technique de base",
-        description:
-          "Balises, structure, performance, Core Web Vitals",
+        description: "Balises, structure, performance, Core Web Vitals",
       },
       {
         title: "Support 30 jours",
-        description:
-          "Ajustements et optimisations post-lancement",
+        description: "Ajustements et optimisations post-lancement",
       },
     ],
     deliveryTime: "2 à 3 semaines",
@@ -620,33 +656,34 @@ export const services: Service[] = [
     shortTitle: "Site Vitrine",
     category: "sites",
     icon: PiStorefrontFill,
+    iconSrc: "/icons/site-vitrine.svg",
+    iconBg: "bg-emerald-500",
     shortDescription:
-      "Un site professionnel qui reflète votre image de marque et inspire confiance à vos prospects dès la première visite.",
-    metaTitle:
-      "Création de Site Vitrine professionnel sur-mesure | Vizion Web",
+      "Un site professionnel qui renforce votre crédibilité. 6-10 pages, SEO optimisé, design sur-mesure.",
+    metaTitle: "Création de Site Vitrine professionnel sur-mesure | Vizion Web",
     metaDescription:
       "Nous créons des sites vitrines professionnels sur-mesure en React/Next.js. Design, copywriting, SEO. 3 à 5 semaines de livraison.",
-    heroTitle:
-      "Un site vitrine qui donne envie de vous contacter",
+    heroTitle: "Un site vitrine qui donne envie de vous contacter",
     heroSubtitle:
       "Un site qui reflète la qualité de votre travail, qui rassure dès la première visite, et qui pousse vos visiteurs à vous contacter. Le tout bien référencé sur Google.",
-    problemTitle: "Votre site actuel ne reflète pas la qualité de votre travail",
+    problemTitle:
+      "Votre site actuel ne reflète pas la qualité de votre travail",
     problemDescription:
       "Quand un prospect cherche vos services en ligne, la première impression se fait en quelques secondes. Un site obsolète, lent ou mal conçu envoie le mauvais signal, même si votre expertise est excellente. Vos concurrents avec un meilleur site captent les clients à votre place.",
     problemPoints: [
-      "Votre site est obsolète et ne reflète plus votre image professionnelle",
-      "Les visiteurs quittent la page sans vous contacter",
-      "Vous n'apparaissez pas (ou mal) dans les résultats de recherche Google",
-      "Votre site n'est pas adapté au mobile ou manque de performance",
+      { text: "Votre site est obsolète et ne reflète plus votre image professionnelle", icon: PiClockCountdownFill },
+      { text: "Les visiteurs quittent la page sans vous contacter", icon: PiSignOutFill },
+      { text: "Vous n'apparaissez pas (ou mal) dans les résultats de recherche Google", icon: PiMagnifyingGlassFill },
+      { text: "Votre site n'est pas adapté au mobile ou manque de performance", icon: PiDeviceMobileFill },
     ],
     solutionTitle: "Un site conçu pour rassurer et convertir",
     solutionDescription:
       "On développe un site vitrine complet qui présente votre activité clairement et donne envie de vous contacter. Textes rédigés par nos soins, design sur-mesure, et un référencement Google soigné pour que vos prospects vous trouvent.",
     solutionPoints: [
-      "Design sur-mesure aligné avec votre identité de marque",
-      "Copywriting professionnel qui valorise votre expertise",
-      "SEO renforcé pour être visible sur les recherches locales et métier",
-      "Performance optimale sur tous les appareils",
+      { text: "Design sur-mesure aligné avec votre identité de marque", icon: PiPaletteFill },
+      { text: "Copywriting professionnel qui valorise votre expertise", icon: PiNotePencilFill },
+      { text: "SEO renforcé pour être visible sur les recherches locales et métier", icon: PiTrendUpFill },
+      { text: "Performance optimale sur tous les appareils", icon: PiDevicesFill },
     ],
     included: [
       {
@@ -656,13 +693,11 @@ export const services: Service[] = [
       },
       {
         title: "UI/UX Design Figma",
-        description:
-          "Maquettes complètes avec modifications illimitées",
+        description: "Maquettes complètes avec modifications illimitées",
       },
       {
         title: "Développement React / Next.js",
-        description:
-          "6-10 pages sur-mesure, animations, responsive",
+        description: "6-10 pages sur-mesure, animations, responsive",
       },
       {
         title: "SEO renforcé",
@@ -758,8 +793,10 @@ export const services: Service[] = [
     shortTitle: "Site Web Avancé",
     category: "sites",
     icon: PiGearFill,
+    iconSrc: "/icons/site-web-complet.svg",
+    iconBg: "bg-cyan-500",
     shortDescription:
-      "Un site web avec fonctionnalités sur-mesure : espace client, réservation en ligne, paiement, espace membre.",
+      "Un site avec fonctionnalités métier spécifiques : espace membre, réservation, intégrations API. Sur-mesure de A à Z.",
     metaTitle:
       "Création de Site Web Avancé avec fonctionnalités sur-mesure | Vizion Web",
     metaDescription:
@@ -773,20 +810,19 @@ export const services: Service[] = [
     problemDescription:
       "Vous avez besoin de plus qu'une vitrine en ligne. Prise de rendez-vous, paiement, espace client, réservations : ces fonctionnalités nécessitent du développement sur-mesure. Et les outils tout faits ne s'adaptent jamais vraiment à votre façon de travailler.",
     problemPoints: [
-      "Vous gérez les réservations ou rendez-vous manuellement (téléphone, email)",
-      "Vos clients n'ont pas d'espace dédié pour suivre leurs commandes ou informations",
-      "Vous n'acceptez pas le paiement en ligne alors que vos clients le demandent",
-      "Les solutions standardisées ne correspondent pas à votre façon de travailler",
+      { text: "Vous gérez les réservations ou rendez-vous manuellement (téléphone, email)", icon: PiCalendarXFill },
+      { text: "Vos clients n'ont pas d'espace dédié pour suivre leurs commandes ou informations", icon: PiUserCircleFill },
+      { text: "Vous n'acceptez pas le paiement en ligne alors que vos clients le demandent", icon: PiCreditCardFill },
+      { text: "Les solutions standardisées ne correspondent pas à votre façon de travailler", icon: PiPuzzlePieceFill },
     ],
-    solutionTitle:
-      "Des fonctionnalités sur-mesure intégrées à votre site",
+    solutionTitle: "Des fonctionnalités sur-mesure intégrées à votre site",
     solutionDescription:
       "On développe votre site avec les fonctionnalités propres à votre activité. Réservation, espace client sécurisé, paiement en ligne, CMS avancé : chaque brique est codée sur-mesure pour coller à vos processus et faciliter la vie de vos clients.",
     solutionPoints: [
-      "Fonctionnalités métier intégrées nativement à votre site",
-      "Espace client sécurisé pour vos utilisateurs",
-      "Paiement en ligne et gestion des transactions",
-      "CMS avancé pour gérer votre contenu en autonomie",
+      { text: "Fonctionnalités métier intégrées nativement à votre site", icon: PiWrenchFill },
+      { text: "Espace client sécurisé pour vos utilisateurs", icon: PiLockKeyFill },
+      { text: "Paiement en ligne et gestion des transactions", icon: PiWalletFill },
+      { text: "CMS avancé pour gérer votre contenu en autonomie", icon: PiArticleFill },
     ],
     included: [
       {
@@ -796,13 +832,11 @@ export const services: Service[] = [
       },
       {
         title: "UI/UX Design Figma",
-        description:
-          "Interface complète incluant les parcours fonctionnels",
+        description: "Interface complète incluant les parcours fonctionnels",
       },
       {
         title: "Développement React / Next.js",
-        description:
-          "Code sur-mesure avec architecture évolutive",
+        description: "Code sur-mesure avec architecture évolutive",
       },
       {
         title: "CMS avancé",
@@ -811,8 +845,7 @@ export const services: Service[] = [
       },
       {
         title: "Intégrations & API",
-        description:
-          "Paiement (Stripe), emailing, calendrier, outils tiers",
+        description: "Paiement (Stripe), emailing, calendrier, outils tiers",
       },
       {
         title: "Formation complète",
@@ -899,9 +932,7 @@ export function getService(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }
 
-export function getServicesByCategory(
-  category: ServiceCategory
-): Service[] {
+export function getServicesByCategory(category: ServiceCategory): Service[] {
   return services.filter((s) => s.category === category);
 }
 

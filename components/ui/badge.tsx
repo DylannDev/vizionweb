@@ -3,14 +3,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-full px-3 py-1.5 text-sm font-medium gap-1 mb-4 ring-4",
+  "inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-semibold gap-1 mb-4 shadow-[0_8px_16px_0]",
   {
     variants: {
       variant: {
-        white: "bg-white text-secondary-dark ring-gray-lighter",
-        dark: "bg-secondary-dark text-white ring-1 ring-gray-dark",
-        green: "bg-primary-blue text-white ring-0",
-        hero: "bg-background text-secondary-dark ring-1 ring-white",
+        white:
+          "bg-background border border-white text-secondary-dark shadow-gray-lighter/20",
+        black:
+          "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-secondary-dark/20",
+        blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white",
+        transparent:
+          "bg-transparent border border-primary-blue text-primary-blue",
       },
     },
     defaultVariants: {
@@ -28,9 +31,9 @@ export interface BadgeProps
 
 export function Badge({
   className = "",
-  variant,
+  variant = "black",
   align = "center",
-  uppercase = true,
+  uppercase = false,
   ...props
 }: BadgeProps) {
   const alignmentClass = align === "center" ? "block w-fit mx-auto" : "";
@@ -39,7 +42,8 @@ export function Badge({
       className={twMerge(
         badgeVariants({ variant }),
         alignmentClass,
-        uppercase && "uppercase",
+        uppercase ? "uppercase" : "capitalize",
+
         className
       )}
       {...props}

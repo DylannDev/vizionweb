@@ -1,76 +1,76 @@
-import Link from "next/link";
-import Typography from "./typography";
 import Badge from "./ui/badge";
+import Typography from "./typography";
 import FadeIn from "./ui/fade-in";
-import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-import IconIllustration from "./ui/icon-illustration";
-import Button from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ContentCard } from "./ui/content-card";
+import { ArrowButton } from "./ui/arrow-button";
 import { services } from "@/data/services";
+import { PiCheckBold } from "react-icons/pi";
 
-const cardDescriptions: Record<string, string> = {
-  "mvp-proof-of-concept":
-    "Validez votre idée rapidement avec un produit fonctionnel. Livré en 4-6 semaines, prêt à tester avec vos premiers utilisateurs.",
-  "saas-sur-mesure":
-    "Une application SaaS complète avec gestion utilisateurs, paiements et tableau de bord. De l'architecture à la mise en ligne.",
-  "application-metier":
-    "Automatisez vos processus internes avec un outil de gestion pensé pour votre workflow. Gain de temps et réduction d'erreurs.",
-  "landing-page":
-    "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 2-3 semaines.",
-  "site-vitrine":
-    "Un site professionnel qui renforce votre crédibilité. 6-10 pages, SEO optimisé, design sur-mesure.",
-  "site-web-avance":
-    "Un site avec fonctionnalités métier spécifiques : espace membre, réservation, intégrations API. Sur-mesure de A à Z.",
-};
+const sellingPoints = [
+  "Livré en quelques semaines",
+  "Chef de projet dédié",
+  "30-90 jours de support inclus",
+];
 
 export function ServicesHomeSection() {
   return (
-    <section id="services" className="py-16 md:py-24">
-      <Badge align="center">Services</Badge>
+    <section
+      id="services"
+      className="pt-8 pb-16 md:pb-24 md:pt-16 bg-gradient-to-b from-background from-0% to-white to-10%"
+    >
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
+        <Badge align="center" className="mb-4 md:mx-0">
+          Services
+        </Badge>
+        <Typography
+          variant="split"
+          title="Les projets que nous réalisons"
+          subtitle="Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."
+        />
 
-      <Typography
-        title="Les projets que nous réalisons"
-        subtitle="Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure en React/Next.js et livré clé en main."
-      />
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {services.map((service, i) => (
-          <FadeIn
-            key={service.slug}
-            delay={0.15 * (i + 1)}
-            className="h-full flex"
-          >
-            <Link
-              href={`/services/${service.slug}`}
-              className="flex h-full w-full"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.map((service, i) => (
+            <FadeIn
+              key={service.slug}
+              delay={0.15 * (i + 1)}
+              className="h-full flex"
             >
-              <Card
-                radius="2xl"
-                className="group hover:ring-6 ring-gray-lighter transition-all duration-300 w-full"
-              >
-                <CardHeader className="space-y-8">
-                  <IconIllustration icon={service.icon} />
-                  <CardTitle className="text-gray-light group-hover:text-primary-dark transition-colors duration-300">
-                    {service.shortTitle}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {cardDescriptions[service.slug] || service.shortDescription}
-                </CardContent>
-              </Card>
-            </Link>
-          </FadeIn>
-        ))}
-      </div>
+              <ContentCard
+                title={service.shortTitle}
+                description={service.shortDescription}
+                iconSrc={service.iconSrc}
+                iconBg={service.iconBg}
+                watermarkVariant={i}
+                href={`/services/${service.slug}`}
+                actionLabel="En savoir plus"
+                centered
+              />
+            </FadeIn>
+          ))}
+        </div>
 
-      <FadeIn delay={0.8} className="flex justify-center mt-10">
-        <Link href="/services">
-          <Button variant="black" size="md">
+        <FadeIn
+          delay={0.7}
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mt-12 mb-10"
+        >
+          {sellingPoints.map((point) => (
+            <div key={point} className="flex items-center gap-1.5 py-2">
+              <div className="rounded-full bg-gradient-to-b from-primary-blue-dark to-primary-blue-border p-1">
+                <PiCheckBold className="size-3 text-white" />
+              </div>
+              <span className="text-base font-medium text-primary-dark">
+                {point}
+              </span>
+            </div>
+          ))}
+        </FadeIn>
+
+        <FadeIn delay={0.8} className="flex justify-center">
+          <ArrowButton href="/services" variant="black">
             Voir tous nos services
-            <ArrowRight className="size-4" strokeWidth={2.5} />
-          </Button>
-        </Link>
-      </FadeIn>
+          </ArrowButton>
+        </FadeIn>
+      </div>
     </section>
   );
 }

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
 import FadeIn from "@/components/ui/fade-in";
-import CallButton from "@/components/call-button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import IconIllustration from "@/components/ui/icon-illustration";
-import { LogoCarousel } from "@/components/ui/logo-carousel";
+import { ImQuotesRight } from "react-icons/im";
 import {
   PiPenNibFill,
   PiCodeFill,
@@ -15,6 +14,7 @@ import {
   PiShieldCheckFill,
   PiLightningFill,
 } from "react-icons/pi";
+import { PageHero } from "@/components/ui/page-hero";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -23,6 +23,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import CallButton from "@/components/call-button";
 
 export const metadata: Metadata = {
   title: "À propos — Notre approche et notre expertise | Vizion Web",
@@ -45,19 +46,19 @@ const pillars = [
     icon: PiPenNibFill,
     title: "Design-driven",
     description:
-      "Chaque projet commence par le design. Nous concevons des interfaces sur Figma, validées avec vous, avant d'écrire une seule ligne de code. Le résultat : un produit intuitif que vos utilisateurs adoptent naturellement.",
+      "Chaque projet commence par le design. Nous concevons des interfaces sur Figma, validées avec vous, avant d'écrire une seule ligne de code. Le résultat : un produit intuitif que vos utilisateurs adoptent sans effort.",
   },
   {
     icon: PiCodeFill,
     title: "Code sur-mesure",
     description:
-      "Pas de templates, pas de WordPress. Nous développons avec React, Next.js et TypeScript — les mêmes technologies utilisées par Netflix, Uber ou Airbnb. Votre projet est plus rapide, plus sécurisé et évolutif.",
+      "Pas de templates, pas de WordPress. Nous développons avec React, Next.js et TypeScript, les mêmes technologies utilisées par Netflix, Uber ou Airbnb. Votre projet est plus rapide, plus sécurisé et évolutif.",
   },
   {
     icon: PiHandshakeFill,
     title: "Accompagnement complet",
     description:
-      "Du premier appel au support post-lancement, nous sommes votre partenaire technique. Copywriting, design, développement, déploiement — vous avez un interlocuteur unique pour tout votre projet.",
+      "Du premier appel au support post-lancement, nous sommes votre partenaire technique. Copywriting, design, développement, déploiement : vous avez un interlocuteur unique pour tout votre projet.",
   },
 ];
 
@@ -100,60 +101,151 @@ const expertise = [
 export default function AProposPage() {
   return (
     <main>
-      <div className="pt-24 pb-4">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/">Accueil</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>À propos</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+      <PageHero>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/">Accueil</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>À propos</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <Badge align="center">À propos</Badge>
+        <Typography
+          as="h1"
+          title="Votre projet mérite notre expertise"
+          subtitle="Nous concevons et développons des applications web et sites sur-mesure pour les entreprises qui veulent un produit à la hauteur de leurs ambitions."
+        />
+        <div className="flex justify-center">
+          <CallButton />
         </div>
-      </div>
+      </PageHero>
 
-      {/* Hero / Mission */}
-      <section className="pb-16 md:pb-24">
+      {/* Notre mission */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-30%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Badge align="center">À propos</Badge>
-          <Typography
-            as="h1"
-            title="Nous transformons vos idées en solutions digitales opérationnelles"
-            subtitle="Vizion Web est une agence de développement web spécialisée dans la création d'applications et de sites sur-mesure pour startups et entreprises."
-          />
-
-          <FadeIn delay={0.3}>
-            <div className="max-w-3xl mx-auto text-center space-y-4 text-gray-dark">
-              <p>
-                Notre mission est simple : vous donner les outils digitaux dont
-                vous avez besoin pour développer votre activité. Pas de solutions
-                génériques, pas de compromis sur la qualité — chaque projet est
-                conçu spécifiquement pour vos objectifs et votre marché.
-              </p>
-              <p>
-                Nous accompagnons nos clients de l'idée au lancement, en prenant
-                en charge l'intégralité du projet : stratégie, design, copywriting,
-                développement et déploiement. Un interlocuteur unique, un processus
-                clair, et un résultat à la hauteur de vos ambitions.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Texte */}
+            <div>
+              <FadeIn>
+                <Badge align="left">Notre mission</Badge>
+                <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
+                  Une agence partenaire, pas un prestataire
+                </h2>
+              </FadeIn>
+              <div className="space-y-4 text-gray-dark text-base sm:text-lg">
+                <FadeIn delay={0.2}>
+                  <p>
+                    Chaque projet est conçu pour vos objectifs et votre marché.
+                    Pas de templates recyclés, pas de compromis. Du code
+                    sur-mesure, pensé pour durer et évoluer avec votre activité.
+                  </p>
+                </FadeIn>
+                <FadeIn delay={0.3}>
+                  <p>
+                    Stratégie, design, copywriting, développement, déploiement :
+                    nous gérons tout. Un interlocuteur unique du début à la fin,
+                    un processus transparent, et un résultat qui génère de la
+                    valeur dès le premier jour.
+                  </p>
+                </FadeIn>
+              </div>
+              <div className="flex justify-center lg:justify-start mt-8">
+                <CallButton size="md" />
+              </div>
             </div>
-          </FadeIn>
+
+            {/* Mockup */}
+            <FadeIn delay={0.3}>
+              <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
+                <Image
+                  src="/mockup-1.jpg"
+                  alt="Exemple de projet livré par Vizion Web"
+                  width={1500}
+                  height={1500}
+                  className="object-cover object-center p-3 bg-white rounded-[40px]"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Fondateur */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 items-center">
+            {/* Photo */}
+            <FadeIn>
+              <div className="relative group">
+                <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
+                  <Image
+                    src="/founder.jpg"
+                    alt="Dylann, fondateur de Vizion Web"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center p-3 bg-white rounded-[40px]"
+                  />
+                </div>
+                <FadeIn delay={0.3}></FadeIn>
+              </div>
+            </FadeIn>
+
+            {/* Texte */}
+            <div className="flex flex-col gap-4 text-gray-dark">
+              <FadeIn delay={0.2}>
+                <Badge align="left">Le fondateur</Badge>
+                <h3 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
+                  Pourquoi j'ai créé Vizion Web ?
+                </h3>
+              </FadeIn>
+
+              <FadeIn delay={0.3}>
+                <p className="text-base sm:text-lg">
+                  Développeur et designer depuis plus de 5 ans, j'ai créé Vizion
+                  Web pour proposer un modèle différent : une agence 100 %
+                  remote, sans structure lourde, qui s'entoure des meilleurs
+                  freelances pour chaque projet.
+                </p>
+              </FadeIn>
+
+              <FadeIn delay={0.4}>
+                <p className="text-base sm:text-lg">
+                  Je pilote chaque mission de A à Z. Quand un projet demande une
+                  expertise pointue (design UI, SEO poussé, dev backend), je
+                  fais appel à des indépendants seniors avec qui je travaille
+                  régulièrement. Vous gardez un seul interlocuteur, avec une
+                  équipe complète derrière.
+                </p>
+              </FadeIn>
+
+              <FadeIn delay={0.5}>
+                <div className="relative px-6 py-10 rounded-3xl mt-2 bg-background">
+                  <ImQuotesRight className="absolute bottom-4 right-4 text-3xl text-primary-blue" />
+                  <p className="text-base sm:text-lg font-semibold text-primary-dark relative z-10">
+                    "Mon objectif : vous donner accès à une équipe solide, sans
+                    la complexité et le coût d'une agence traditionnelle."
+                  </p>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Notre approche — 3 piliers */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-95%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Typography
-            title="Notre approche"
-            subtitle="Trois piliers pour des projets qui livrent des résultats concrets."
-          />
+          <Badge align="center">Notre approche</Badge>
+          <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-8 text-center">
+            Trois piliers pour des projets qui livrent des résultats
+          </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((pillar, i) => (
@@ -162,50 +254,16 @@ export default function AProposPage() {
                 delay={0.2 * (i + 1)}
                 className="h-full flex"
               >
-                <Card radius="2xl" className="h-full">
-                  <CardHeader className="space-y-8">
+                <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
+                  <div className="h-full rounded-[32px] p-6 flex flex-col gap-4">
                     <IconIllustration icon={pillar.icon} />
-                    <CardTitle className="text-primary-dark">
+                    <h3 className="font-semibold text-primary-dark text-xl">
                       {pillar.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>{pillar.description}</CardContent>
-                </Card>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expertise technique */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Typography
-            title="Notre expertise technique"
-            subtitle="Les technologies et compétences que nous mobilisons pour chaque projet."
-          />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {expertise.map((block, i) => (
-              <FadeIn key={block.title} delay={0.2 * (i + 1)}>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <IconIllustration icon={block.icon} size={40} />
-                    <h3 className="font-semibold text-primary-dark text-lg">
-                      {block.title}
                     </h3>
+                    <p className="text-lg text-gray-dark">
+                      {pillar.description}
+                    </p>
                   </div>
-                  <ul className="space-y-2 pl-1">
-                    {block.items.map((item) => (
-                      <li
-                        key={item}
-                        className="text-gray-dark text-sm flex items-center gap-2"
-                      >
-                        <span className="size-1.5 rounded-full bg-primary-blue shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </FadeIn>
             ))}
@@ -213,35 +271,43 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Nos clients */}
+      {/* Expertise technique */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Typography
-            title="Ils nous font confiance"
-            subtitle="Startups, PME et entreprises établies — nous accompagnons des profils variés avec un objectif commun : créer de la valeur."
-          />
+          <Badge align="center">Notre expertise</Badge>
+          <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-8 text-center">
+            Les technologies et compétences derrière chaque projet
+          </h2>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="hidden lg:block">
-              <LogoCarousel columnCount={4} />
-            </div>
-            <div className="block lg:hidden">
-              <LogoCarousel columnCount={3} />
-            </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {expertise.map((block, i) => (
+              <FadeIn
+                key={block.title}
+                delay={0.2 * (i + 1)}
+                className="h-full w-full flex"
+              >
+                <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
+                  <div className="h-full rounded-[32px] p-4 flex flex-col gap-4">
+                    <IconIllustration icon={block.icon} />
+                    <h3 className="font-semibold text-primary-dark text-xl">
+                      {block.title}
+                    </h3>
+                    <ul className="space-y-2 pl-1">
+                      {block.items.map((item) => (
+                        <li
+                          key={item}
+                          className="text-gray-dark text-lg flex items-center gap-2"
+                        >
+                          <span className="size-1.5 rounded-full bg-primary-blue shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <Typography
-            title="Vous avez un projet ? Parlons-en"
-            subtitle="Réservez un appel de 30 minutes. Nous discutons de vos objectifs et vous donnons une vision claire des prochaines étapes."
-          />
-          <FadeIn delay={0.3} className="flex justify-center">
-            <CallButton />
-          </FadeIn>
         </div>
       </section>
     </main>

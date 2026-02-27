@@ -9,7 +9,7 @@ export default function PricingSection() {
   return (
     <section id="offres" className="py-16 md:py-24 bg-primary-dark">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <Badge variant="dark" align="center">
+        <Badge variant="black" align="center">
           Offres
         </Badge>
         <Typography

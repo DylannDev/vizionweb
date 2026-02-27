@@ -33,6 +33,7 @@ interface TypographyProps
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   align?: "left" | "center" | "right";
+  variant?: "stacked" | "split";
   as?: TitleTag;
   titleSize?: FontSizeToken;
   titleWeight?: FontWeight;
@@ -40,19 +41,24 @@ interface TypographyProps
   subtitleWeight?: FontWeight;
   titleColor?: string;
   subtitleColor?: string;
+  titleMaxWidth?: string;
+  subtitleMaxWidth?: string;
 }
 
 export function Typography({
   title,
   subtitle,
   align = "center",
+  variant = "stacked",
   as = "h2",
   titleSize = "5xl",
   titleWeight = 600,
-  subtitleSize = "base",
+  subtitleSize = "lg",
   subtitleWeight = 400,
   titleColor = "text-primary-dark",
   subtitleColor = "text-gray-dark",
+  titleMaxWidth = "max-w-3xl",
+  subtitleMaxWidth = "max-w-2xl",
   className = "",
   ...props
 }: TypographyProps) {
@@ -105,6 +111,57 @@ export function Typography({
     }
   }
 
+  const titleEl = title ? (
+    <TitleTag
+      className={cn(
+        "font-heading tracking-tight text-balance mx-auto",
+        titleMaxWidth,
+        titleColor
+      )}
+      style={{
+        fontFamily: "var(--font-family-heading)",
+        fontSize: getResponsiveFontSize(titleSize),
+        fontWeight: getFontWeightValue(titleWeight),
+        lineHeight: "var(--line-height-tight)",
+      }}
+    >
+      {title}
+    </TitleTag>
+  ) : null;
+
+  const subtitleEl = subtitle ? (
+    <p
+      className={cn(
+        "text-balance",
+        variant === "stacked" && `${subtitleMaxWidth} mx-auto`,
+        variant === "split" && "md:text-right",
+        subtitleColor
+      )}
+      style={{
+        fontFamily: "var(--font-family-sans)",
+        fontSize: getResponsiveFontSize(subtitleSize),
+        fontWeight: getFontWeightValue(subtitleWeight),
+        lineHeight: "var(--line-height-normal)",
+      }}
+    >
+      {subtitle}
+    </p>
+  ) : null;
+
+  if (variant === "split") {
+    return (
+      <div
+        className={cn("mb-8 sm:mb-12 text-center md:text-left", className)}
+        {...props}
+      >
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-start">
+          {titleEl}
+          {subtitleEl}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
@@ -115,32 +172,8 @@ export function Typography({
       )}
       {...props}
     >
-      {title ? (
-        <TitleTag
-          className={cn("font-heading tracking-tight text-balance", titleColor)}
-          style={{
-            fontFamily: "var(--font-family-heading)",
-            fontSize: getResponsiveFontSize(titleSize),
-            fontWeight: getFontWeightValue(titleWeight),
-            lineHeight: "var(--line-height-tight)",
-          }}
-        >
-          {title}
-        </TitleTag>
-      ) : null}
-      {subtitle ? (
-        <p
-          className={cn("text-balance max-w-2xl mx-auto", subtitleColor)}
-          style={{
-            fontFamily: "var(--font-family-sans)",
-            fontSize: getResponsiveFontSize(subtitleSize),
-            fontWeight: getFontWeightValue(subtitleWeight),
-            lineHeight: "var(--line-height-normal)",
-          }}
-        >
-          {subtitle}
-        </p>
-      ) : null}
+      {titleEl}
+      {subtitleEl}
     </div>
   );
 }

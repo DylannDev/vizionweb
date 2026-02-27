@@ -12,7 +12,9 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import Image from "next/image";
 import MDXContent from "@/components/mdx-content";
+import { PageHero } from "@/components/ui/page-hero";
 import Script from "next/script";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -73,30 +75,30 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <main className="max-w-[1000px] mx-auto px-5 pt-32 pb-16 md:pb-24">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/">Accueil</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link href="/blog">Blog</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage className="line-clamp-1">
-                {post.title}
-              </BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+      <main>
+        <PageHero bg="white">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/blog">Blog</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="line-clamp-1">
+                  {post.title}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-        <article className="pt-4">
           <header className="pb-2 text-center">
             <div className="flex justify-center items-center gap-3 mt-10 sm:mt-16 mb-2">
               <span className="text-xs font-medium text-primary-blue bg-primary-dark px-2.5 py-1 rounded-full">
@@ -104,7 +106,7 @@ export default async function BlogPostPage({
               </span>
               <time
                 dateTime={post.date}
-                className="flex items-center gap-1.5 text-sm text-gray-light capitalize"
+                className="flex items-center gap-1.5 text-sm text-gray-dark capitalize"
               >
                 <CalendarDays className="size-3.5" />
                 {new Date(post.date)
@@ -115,19 +117,34 @@ export default async function BlogPostPage({
                   })
                   .replace(/[a-zà-ÿ]+\./i, (m) => m.slice(0, 3))}
               </time>
-              <span className="flex items-center gap-1.5 text-sm text-gray-light">
+              <span className="flex items-center gap-1.5 text-sm text-gray-dark">
                 <Clock className="size-3.5" />
                 {post.readingTime}
               </span>
             </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-dark text-balance max-w-2xl mx-auto">
+              {post.title}
+            </h1>
           </header>
 
-          <MDXContent file={`blog/${post.slug}.md`} />
+          <Image
+            src="/projets/chefkit.jpg"
+            alt={post.title}
+            width={1200}
+            height={630}
+            className="w-full rounded-2xl object-cover aspect-[2/1] mt-6"
+            priority
+          />
+        </PageHero>
+
+        <article className="max-w-[1000px] mx-auto px-5">
+          <MDXContent file={`blog/${post.slug}.md`} stripTitle />
 
           <footer className="pt-8 mt-8 border-t border-gray-lighter">
             <Link
               href="/blog"
-              className="text-sm font-medium text-secondary-dark hover:text-gray-light transition-colors"
+              className="text-sm font-medium text-secondary-dark hover:text-gray-dark transition-colors"
             >
               &larr; Retour au blog
             </Link>

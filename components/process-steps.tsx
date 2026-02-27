@@ -1,5 +1,5 @@
-import Typography from "./typography";
 import Badge from "./ui/badge";
+import Typography from "./typography";
 import DiscoveryIllustration from "@/components/code-illustrations/discovery-illustration";
 import PrototypeIllustration from "@/components/code-illustrations/prototype-illustration";
 import DevelopmentIllustration from "@/components/code-illustrations/development-illustration";
@@ -40,10 +40,11 @@ export function ProcessSteps() {
   return (
     <section id="process" className="py-16 md:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <Badge>Process</Badge>
-
+        <Badge align="center" className="mb-4">
+          Process
+        </Badge>
         <Typography
-          align="center"
+          variant="stacked"
           title="4 étapes, un projet livré"
           subtitle="De l'appel découverte à la mise en ligne, voici comment se déroule chaque projet chez nous."
         />

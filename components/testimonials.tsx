@@ -19,7 +19,7 @@ export const Testimonials = () => {
           <Badge>Avis</Badge>
           <Typography
             title="Nos clients en parlent mieux que nous"
-            subtitle="Startups, artisans, dirigeants de PME. Ils nous ont fait confiance, voici ce qu'ils en disent."
+            subtitle="Startups, dirigeants de PME. Ils nous ont fait confiance, voici ce qu'ils en disent."
           />
         </div>
 

@@ -13,8 +13,7 @@ const buttonVariants = cva(
         blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white shadow-[0_4px_16px_0] shadow-primary-blue-border/50 hover:shadow-[0_6px_20px_0] hover:shadow-primary-blue-border/60",
         black:
           "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-[0_4px_16px_0] shadow-primary-dark/50 hover:shadow-[0_6px_20px_0] hover:shadow-primary-dark/60",
-        white:
-          "bg-white text-primary-dark border border-gray-lighter backdrop-blur-sm",
+        white: "bg-background border border-white text-primary-dark",
       },
       size: {
         md: "h-12 px-5 text-base [&>svg]:text-base",

@@ -16,6 +16,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { PageHero } from "@/components/ui/page-hero";
 import { ServiceHero } from "@/components/service-detail/service-hero";
 import { ServiceProblemSolution } from "@/components/service-detail/service-problem-solution";
 import { ServiceIncluded } from "@/components/service-detail/service-included";
@@ -68,31 +69,29 @@ export default async function ServiceDetailPage({
   return (
     <>
       <main>
-        <div className="pt-24 pb-4">
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/">Accueil</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/services">Services</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>{service.title}</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </div>
+        <PageHero>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/">Accueil</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/services">Services</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{service.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-        <ServiceHero service={service} />
+          <ServiceHero service={service} />
+        </PageHero>
         <ServiceProblemSolution service={service} />
         <ServiceIncluded service={service} />
         <ServiceTarget service={service} />

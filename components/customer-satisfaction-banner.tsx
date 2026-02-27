@@ -22,11 +22,22 @@ export function CustomerSatisfactionBanner({
   return (
     <motion.div
       aria-label="Satisfaction client"
-      className={cn(
-        "flex flex-col-reverse justify-center items-center gap-3",
-        className
-      )}
+      className={cn("flex justify-center items-center gap-3", className)}
     >
+      <div className="flex flex-col items-end gap-1">
+        <div
+          role="img"
+          aria-label={`Note: ${clampedStars} sur 5`}
+          className="flex items-center gap-1"
+        >
+          {Array.from({ length: 5 }).map((_, i) => (
+            <PiStarFill key={i} className="text-primary-dark" aria-hidden />
+          ))}
+        </div>
+        <div className="text-sm font-normal text-gray-dark">
+          100% de satisfaction client
+        </div>
+      </div>
       <div className="shrink-0" aria-label="Photos de clients satisfaits">
         <div className="flex justify-center mr-3.5">
           <AvatarsTooltip
@@ -43,21 +54,6 @@ export function CustomerSatisfactionBanner({
                 };
               })}
           />
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-1">
-        <div
-          role="img"
-          aria-label={`Note: ${clampedStars} sur 5`}
-          className="flex items-center gap-1"
-        >
-          {Array.from({ length: 5 }).map((_, i) => (
-            <PiStarFill key={i} className="text-secondary-dark" aria-hidden />
-          ))}
-        </div>
-        <div className="text-sm font-normal text-secondary-dark">
-          100% de satisfaction client
         </div>
       </div>
     </motion.div>
