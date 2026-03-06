@@ -136,10 +136,10 @@ export const services: Service[] = [
     iconSrc: "/icons/mvp.svg",
     iconBg: "bg-violet-500",
     shortDescription:
-      "Validez votre idée rapidement avec un produit fonctionnel. Livré en 4-6 semaines, prêt à tester avec vos premiers utilisateurs.",
+      "Validez votre idée rapidement avec un produit fonctionnel. Livré en 2-6 semaines, prêt à tester avec vos premiers utilisateurs.",
     metaTitle: "Développement MVP & Proof of Concept sur-mesure | Vizion Web",
     metaDescription:
-      "Lancez votre produit minimum viable en 4 à 8 semaines. Code sur-mesure React/Next.js, prêt à tester et à scaler.",
+      "Lancez votre produit minimum viable en 2 à 6 semaines. Code sur-mesure React/Next.js, prêt à tester et à scaler.",
     heroTitle: "Validez votre idée avec un MVP fonctionnel",
     heroSubtitle:
       "Un produit fonctionnel livré en quelques semaines, prêt à être testé par de vrais utilisateurs. Vous validez votre marché avant d'investir massivement.",
@@ -147,50 +147,77 @@ export const services: Service[] = [
     problemDescription:
       "Vous avez une idée prometteuse, mais sans produit concret, impossible de convaincre des utilisateurs, des investisseurs ou même de valider vos hypothèses. Les cycles de développement classiques prennent des mois et coûtent cher.",
     problemPoints: [
-      { text: "Vous avez une idée mais aucun produit concret à montrer aux utilisateurs ou investisseurs", icon: PiLightbulbFill },
-      { text: "Vous hésitez à investir des dizaines de milliers d'euros sans validation marché", icon: PiCurrencyDollarFill },
-      { text: "Les délais de développement classiques sont trop longs pour votre timeline", icon: PiHourglassFill },
-      { text: "Vous ne savez pas quelles fonctionnalités prioriser pour un premier lancement", icon: PiListBulletsFill },
+      {
+        text: "Vous avez une idée mais aucun produit concret à montrer aux utilisateurs ou investisseurs",
+        icon: PiLightbulbFill,
+      },
+      {
+        text: "Vous hésitez à investir des dizaines de milliers d'euros sans validation marché",
+        icon: PiCurrencyDollarFill,
+      },
+      {
+        text: "Les délais de développement classiques sont trop longs pour votre timeline",
+        icon: PiHourglassFill,
+      },
+      {
+        text: "Vous ne savez pas quelles fonctionnalités prioriser pour un premier lancement",
+        icon: PiListBulletsFill,
+      },
     ],
-    solutionTitle: "Un MVP fonctionnel en 4 à 8 semaines",
+    solutionTitle: "Un MVP fonctionnel en 2 à 6 semaines",
     solutionDescription:
       "On commence par trier : quelles fonctionnalités sont vraiment nécessaires pour un premier test ? On conçoit l'interface, on développe, et vous avez un produit utilisable. Pas de superflu. Que l'essentiel pour confronter votre idée au terrain et itérer.",
     solutionPoints: [
-      { text: "Cadrage stratégique pour identifier les fonctionnalités prioritaires", icon: PiTargetFill },
-      { text: "Design UI/UX pensé pour la conversion et l'adoption", icon: PiPenNibFill },
-      { text: "Développement sur-mesure en React/Next.js, pensé pour évoluer", icon: PiCodeFill },
-      { text: "Déploiement rapide pour collecter des retours utilisateurs concrets", icon: PiRocketLaunchFill },
+      {
+        text: "Cadrage stratégique pour identifier les fonctionnalités prioritaires",
+        icon: PiTargetFill,
+      },
+      {
+        text: "Design UI/UX pensé pour la conversion et l'adoption",
+        icon: PiPenNibFill,
+      },
+      {
+        text: "Développement sur-mesure en React/Next.js, pensé pour évoluer",
+        icon: PiCodeFill,
+      },
+      {
+        text: "Déploiement rapide pour collecter des retours utilisateurs concrets",
+        icon: PiRocketLaunchFill,
+      },
     ],
     included: [
       {
         title: "Cadrage fonctionnel",
         description:
-          "Définition du périmètre MVP, priorisation des fonctionnalités, user stories",
+          "Définition du périmètre, priorisation des fonctionnalités, roadmap claire",
       },
       {
         title: "UI/UX Design sur Figma",
         description:
-          "Maquettes haute fidélité avec modifications illimitées jusqu'à validation",
+          "Maquettes haute fidélité, modifications illimitées jusqu'à validation",
       },
       {
-        title: "Développement React / Next.js",
-        description: "Code sur-mesure, architecture scalable, TypeScript",
-      },
-      {
-        title: "Base de données & API",
+        title: "Développement sur-mesure",
         description:
-          "Architecture data adaptée à vos besoins (PostgreSQL, Prisma, etc.)",
+          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
       },
       {
-        title: "Déploiement & mise en production",
-        description: "Hébergement, domaine, SSL, configuration production",
+        title: "Base de données & hébergement",
+        description:
+          "Stockage sécurisé de vos données, déploiement et mise en production inclus",
       },
       {
-        title: "Support 30 jours",
-        description: "Ajustements et corrections post-lancement inclus",
+        title: "Tests & recette",
+        description:
+          "Vérification complète avant mise en ligne, corrections incluses",
+      },
+      {
+        title: "Support 90 jours",
+        description:
+          "Ajustements post-lancement et accompagnement pendant vos premiers retours utilisateurs",
       },
     ],
-    deliveryTime: "4 à 8 semaines",
+    deliveryTime: "2 à 6 semaines",
     targetProfiles: [
       {
         title: "Startup early-stage",
@@ -226,11 +253,11 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "Entre 4 et 8 semaines selon la complexité. Nous définissons un planning précis dès le cadrage initial.",
+        a: "Entre 2 et 6 semaines selon la complexité. Nous définissons un planning précis dès le cadrage initial.",
       },
       {
         q: "Que se passe-t-il après le lancement du MVP ?",
-        a: "30 jours de support sont inclus. Ensuite, nous pouvons vous accompagner sur l'évolution du produit (ajout de fonctionnalités, optimisations, V2) via un nouveau projet.",
+        a: "90 jours de support sont inclus. Ensuite, nous pouvons vous accompagner sur l'évolution du produit (ajout de fonctionnalités, optimisations, V2) via un nouveau projet.",
       },
     ],
     ctaTitle: "Vous avez une idée ? Parlons-en.",
@@ -250,7 +277,7 @@ export const services: Service[] = [
       "Une application SaaS complète avec gestion utilisateurs, paiements et tableau de bord. De l'architecture à la mise en ligne.",
     metaTitle: "Développement SaaS sur-mesure | Vizion Web",
     metaDescription:
-      "Nous développons votre application SaaS complète en 6 à 10 semaines. Auth, paiements Stripe, multi-tenant, dashboard admin. Code sur-mesure React/Next.js.",
+      "Nous développons votre application SaaS complète en 3 à 8 semaines. Auth, paiements Stripe, multi-tenant, dashboard admin. Code sur-mesure React/Next.js.",
     heroTitle: "Lancez votre SaaS sans équipe technique",
     heroSubtitle:
       "Auth, paiements Stripe, dashboard admin, gestion des abonnements : on prend en charge tout le développement technique pour que vous puissiez vous concentrer sur vos clients.",
@@ -258,19 +285,43 @@ export const services: Service[] = [
     problemDescription:
       "Vous avez validé votre idée, vos premiers utilisateurs sont là, mais monter une équipe technique coûte cher et recruter un CTO prend du temps. Les solutions no-code atteignent vite leurs limites dès que vos besoins se complexifient.",
     problemPoints: [
-      { text: "Recruter un CTO ou une équipe dev coûte cher et prend des mois", icon: PiUsersFill },
-      { text: "Les solutions no-code ne suivent pas quand vos besoins se complexifient", icon: PiProhibitFill },
-      { text: "L'architecture technique (auth, paiements, multi-tenant) demande une expertise pointue", icon: PiGearSixFill },
-      { text: "Chaque mois de retard, c'est du chiffre d'affaires qui s'envole", icon: PiChartLineDownFill },
+      {
+        text: "Recruter un CTO ou une équipe dev coûte cher et prend des mois",
+        icon: PiUsersFill,
+      },
+      {
+        text: "Les solutions no-code ne suivent pas quand vos besoins se complexifient",
+        icon: PiProhibitFill,
+      },
+      {
+        text: "L'architecture technique (auth, paiements, multi-tenant) demande une expertise pointue",
+        icon: PiGearSixFill,
+      },
+      {
+        text: "Chaque mois de retard, c'est du chiffre d'affaires qui s'envole",
+        icon: PiChartLineDownFill,
+      },
     ],
-    solutionTitle: "Votre SaaS complet livré en 6 à 10 semaines",
+    solutionTitle: "Votre SaaS complet livré en 3 à 8 semaines",
     solutionDescription:
       "On s'occupe de tout le technique : architecture prévue pour tenir la charge, système de connexion et de rôles, paiements et abonnements via Stripe, dashboard pour piloter votre activité. Vous recevez un produit prêt à accueillir vos premiers clients payants.",
     solutionPoints: [
-      { text: "Architecture SaaS complète : auth, rôles, multi-tenant", icon: PiShieldCheckFill },
-      { text: "Intégration paiements (Stripe) et gestion des abonnements", icon: PiCreditCardFill },
-      { text: "Dashboard d'administration pour piloter votre activité", icon: PiChartBarFill },
-      { text: "API solide et connexion à vos outils tiers (emailing, CRM, analytics)", icon: PiPlugsFill },
+      {
+        text: "Architecture SaaS complète : auth, rôles, multi-tenant",
+        icon: PiShieldCheckFill,
+      },
+      {
+        text: "Intégration paiements (Stripe) et gestion des abonnements",
+        icon: PiCreditCardFill,
+      },
+      {
+        text: "Dashboard d'administration pour piloter votre activité",
+        icon: PiChartBarFill,
+      },
+      {
+        text: "API solide et connexion à vos outils tiers (emailing, CRM, analytics)",
+        icon: PiPlugsFill,
+      },
     ],
     included: [
       {
@@ -291,11 +342,12 @@ export const services: Service[] = [
       {
         title: "UI/UX Design Figma",
         description:
-          "Interface complète conçue pour l'adoption et la rétention",
+          "Interface complète, modifications illimitées jusqu'à validation",
       },
       {
-        title: "Développement React / Next.js",
-        description: "Code sur-mesure TypeScript, architecture scalable",
+        title: "Développement sur-mesure",
+        description:
+          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
       },
       {
         title: "Intégrations API",
@@ -307,12 +359,12 @@ export const services: Service[] = [
         description: "Mise en production, monitoring, configuration serveur",
       },
       {
-        title: "Support 60 jours",
+        title: "Support 90 jours",
         description:
           "Corrections, ajustements et accompagnement post-lancement",
       },
     ],
-    deliveryTime: "6 à 10 semaines",
+    deliveryTime: "3 à 8 semaines",
     targetProfiles: [
       {
         title: "Startup avec traction",
@@ -344,7 +396,7 @@ export const services: Service[] = [
       },
       {
         q: "Et si j'ai besoin de fonctionnalités supplémentaires après le lancement ?",
-        a: "60 jours de support sont inclus pour les ajustements. Pour de nouvelles fonctionnalités, on établit ensemble une roadmap et un devis pour les phases suivantes. Le code est structuré pour accueillir de nouvelles briques sans tout casser.",
+        a: "90 jours de support sont inclus pour les ajustements. Pour de nouvelles fonctionnalités, on établit ensemble une roadmap et un devis pour les phases suivantes. Le code est structuré pour accueillir de nouvelles briques sans tout casser.",
       },
       {
         q: "Qui est propriétaire du code ?",
@@ -352,7 +404,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "6 à 10 semaines selon la complexité. Nous pouvons aussi découper en phases (MVP → V2 → V3) pour un lancement progressif.",
+        a: "3 à 8 semaines selon la complexité. Nous pouvons aussi découper en phases (MVP → V2 → V3) pour un lancement progressif.",
       },
     ],
     ctaTitle: "Votre SaaS, on en parle ?",
@@ -372,7 +424,7 @@ export const services: Service[] = [
       "Automatisez vos processus internes avec un outil de gestion pensé pour votre workflow. Gain de temps et réduction d'erreurs.",
     metaTitle: "Développement d'application métier sur-mesure | Vizion Web",
     metaDescription:
-      "Nous développons des outils de gestion internes sur-mesure pour automatiser vos processus. Dashboard, workflows, intégrations. Livré en 4 à 8 semaines.",
+      "Nous développons des outils de gestion internes sur-mesure pour automatiser vos processus. Dashboard, workflows, intégrations. Livré en 2 à 8 semaines.",
     heroTitle: "Automatisez vos processus avec un outil sur-mesure",
     heroSubtitle:
       "Fini les fichiers Excel et les outils qui ne collent pas à votre réalité. On développe l'application dont votre équipe a vraiment besoin.",
@@ -381,19 +433,43 @@ export const services: Service[] = [
     problemDescription:
       "Votre équipe perd du temps sur des tâches manuelles et répétitives. Les fichiers Excel circulent par email, les données sont éparpillées, et les outils génériques ne correspondent jamais à 100% à vos besoins métier. Résultat : erreurs, lenteurs et frustration.",
     problemPoints: [
-      { text: "Des processus manuels chronophages qui ralentissent votre équipe", icon: PiClockFill },
-      { text: "Des données éparpillées entre Excel, emails et outils déconnectés", icon: PiFilesFill },
-      { text: "Des outils génériques qui ne collent pas à votre façon de travailler", icon: PiPuzzlePieceFill },
-      { text: "Des erreurs humaines coûteuses sur les tâches répétitives", icon: PiWarningFill },
+      {
+        text: "Des processus manuels chronophages qui ralentissent votre équipe",
+        icon: PiClockFill,
+      },
+      {
+        text: "Des données éparpillées entre Excel, emails et outils déconnectés",
+        icon: PiFilesFill,
+      },
+      {
+        text: "Des outils génériques qui ne collent pas à votre façon de travailler",
+        icon: PiPuzzlePieceFill,
+      },
+      {
+        text: "Des erreurs humaines coûteuses sur les tâches répétitives",
+        icon: PiWarningFill,
+      },
     ],
     solutionTitle: "Un outil conçu pour votre façon de travailler",
     solutionDescription:
       "On développe une application taillée pour vos processus. Toutes vos données au même endroit, les tâches répétitives automatisées, et une connexion directe avec vos outils actuels. Votre équipe arrête de perdre du temps sur de la saisie manuelle.",
     solutionPoints: [
-      { text: "Dashboard de pilotage avec les indicateurs qui comptent pour vous", icon: PiChartPieFill },
-      { text: "Workflows automatisés adaptés à vos processus réels", icon: PiArrowsClockwiseFill },
-      { text: "Intégrations avec vos outils existants (CRM, comptabilité, email, etc.)", icon: PiPlugsFill },
-      { text: "Interface intuitive que votre équipe adopte sans formation complexe", icon: PiCursorClickFill },
+      {
+        text: "Dashboard de pilotage avec les indicateurs qui comptent pour vous",
+        icon: PiChartPieFill,
+      },
+      {
+        text: "Workflows automatisés adaptés à vos processus réels",
+        icon: PiArrowsClockwiseFill,
+      },
+      {
+        text: "Intégrations avec vos outils existants (CRM, comptabilité, email, etc.)",
+        icon: PiPlugsFill,
+      },
+      {
+        text: "Interface intuitive que votre équipe adopte sans formation complexe",
+        icon: PiCursorClickFill,
+      },
     ],
     included: [
       {
@@ -402,22 +478,29 @@ export const services: Service[] = [
           "Analyse de vos workflows actuels pour identifier les gains de productivité",
       },
       {
+        title: "UI/UX Design sur Figma",
+        description:
+          "Interface sur-mesure, modifications illimitées jusqu'à validation",
+      },
+      {
+        title: "Développement sur-mesure",
+        description:
+          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
+      },
+      {
         title: "Dashboard de pilotage",
         description:
           "Interface de gestion centralisée avec vos KPI et données clés",
       },
       {
-        title: "Gestion des rôles & accès",
-        description: "Système de permissions adapté à votre organisation",
-      },
-      {
         title: "Workflows automatisés",
-        description: "Automatisation des tâches répétitives et notifications",
+        description:
+          "Automatisation des tâches répétitives, notifications et gestion des rôles",
       },
       {
         title: "Intégrations tierces",
         description:
-          "Connexion à vos outils existants (API, webhooks, import/export)",
+          "Connexion à vos outils existants (CRM, comptabilité, emailing, etc.)",
       },
       {
         title: "Formation & documentation",
@@ -429,7 +512,7 @@ export const services: Service[] = [
           "Accompagnement post-lancement avec corrections et ajustements",
       },
     ],
-    deliveryTime: "4 à 8 semaines",
+    deliveryTime: "2 à 8 semaines",
     targetProfiles: [
       {
         title: "PME en croissance",
@@ -469,7 +552,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "4 à 8 semaines selon la complexité des workflows et des intégrations. Un planning détaillé est établi dès le cadrage.",
+        a: "2 à 8 semaines selon la complexité des workflows et des intégrations. Un planning détaillé est établi dès le cadrage.",
       },
     ],
     ctaTitle: "Vos processus méritent mieux qu'un tableur.",
@@ -489,29 +572,50 @@ export const services: Service[] = [
     iconSrc: "/icons/landing-page.svg",
     iconBg: "bg-rose-400",
     shortDescription:
-      "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 2-3 semaines.",
+      "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 1-3 semaines.",
     metaTitle: "Création de Landing Page optimisée conversion | Vizion Web",
     metaDescription:
-      "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement React/Next.js. Livrée en 2 à 3 semaines.",
+      "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement React/Next.js. Livrée en 1 à 3 semaines.",
     heroTitle: "Une landing page qui convertit, pas juste qui fait joli",
     heroSubtitle:
-      "Design sur-mesure, textes écrits pour convaincre, et un seul objectif : que vos visiteurs passent à l'action. Livrée en 2-3 semaines.",
+      "Design sur-mesure, textes écrits pour convaincre, et un seul objectif : que vos visiteurs passent à l'action. Livrée en 1-3 semaines.",
     problemTitle: "Votre page actuelle ne convertit pas assez",
     problemDescription:
       "Vous investissez dans la publicité ou le référencement, mais votre page ne transforme pas les visiteurs en clients. Le message est flou, le design ne rassure pas, et les visiteurs quittent la page sans agir. Chaque clic perdu, c'est du budget gaspillé.",
     problemPoints: [
-      { text: "Vos campagnes publicitaires génèrent du trafic mais peu de conversions", icon: PiChartLineDownFill },
-      { text: "Votre message n'est pas assez clair ou percutant pour convaincre", icon: PiMegaphoneFill },
-      { text: "Le design actuel ne rassure pas suffisamment vos visiteurs", icon: PiEyeSlashFill },
-      { text: "Vous n'avez pas de page dédiée pour vos offres ou votre acquisition", icon: PiBrowserFill },
+      {
+        text: "Vos campagnes publicitaires génèrent du trafic mais peu de conversions",
+        icon: PiChartLineDownFill,
+      },
+      {
+        text: "Votre message n'est pas assez clair ou percutant pour convaincre",
+        icon: PiMegaphoneFill,
+      },
+      {
+        text: "Le design actuel ne rassure pas suffisamment vos visiteurs",
+        icon: PiEyeSlashFill,
+      },
+      {
+        text: "Vous n'avez pas de page dédiée pour vos offres ou votre acquisition",
+        icon: PiBrowserFill,
+      },
     ],
     solutionTitle: "Une page conçue pour un seul objectif : convertir",
     solutionDescription:
       "On rédige les textes, on conçoit le design, et on développe la page en code sur-mesure. Chaque élément (titre, arguments, preuves sociales, bouton d'action) est là pour une seule raison : pousser le visiteur à agir.",
     solutionPoints: [
-      { text: "Copywriting persuasif adapté à votre cible et votre offre", icon: PiPenNibFill },
-      { text: "Design sur-mesure qui renforce votre crédibilité", icon: PiPaintBrushFill },
-      { text: "Optimisation technique (vitesse, SEO, responsive)", icon: PiLightningFill },
+      {
+        text: "Copywriting persuasif adapté à votre cible et votre offre",
+        icon: PiPenNibFill,
+      },
+      {
+        text: "Design sur-mesure qui renforce votre crédibilité",
+        icon: PiPaintBrushFill,
+      },
+      {
+        text: "Optimisation technique (vitesse, SEO, responsive)",
+        icon: PiLightningFill,
+      },
       { text: "Parcours de conversion testé et validé", icon: PiTargetFill },
     ],
     included: [
@@ -525,8 +629,9 @@ export const services: Service[] = [
         description: "Maquette haute fidélité avec modifications illimitées",
       },
       {
-        title: "Développement React / Next.js",
-        description: "1-2 pages, code sur-mesure, animations fluides",
+        title: "Développement sur-mesure",
+        description:
+          "1-2 pages, code qui vous appartient à 100%, animations fluides",
       },
       {
         title: "Responsive design",
@@ -541,7 +646,7 @@ export const services: Service[] = [
         description: "Ajustements et optimisations post-lancement",
       },
     ],
-    deliveryTime: "2 à 3 semaines",
+    deliveryTime: "1 à 3 semaines",
     targetProfiles: [
       {
         title: "Startup en acquisition",
@@ -577,7 +682,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "2 à 3 semaines, de la stratégie à la mise en ligne. Un planning précis est défini dès le départ.",
+        a: "1 à 3 semaines, de la stratégie à la mise en ligne. Un planning précis est défini dès le départ.",
       },
     ],
     ctaTitle: "Votre offre mérite une page à la hauteur.",
@@ -597,7 +702,7 @@ export const services: Service[] = [
       "Un site professionnel qui renforce votre crédibilité. 6-10 pages, SEO optimisé, design sur-mesure.",
     metaTitle: "Création de Site Vitrine professionnel sur-mesure | Vizion Web",
     metaDescription:
-      "Nous créons des sites vitrines professionnels sur-mesure en React/Next.js. Design, copywriting, SEO. 3 à 5 semaines de livraison.",
+      "Nous créons des sites vitrines professionnels sur-mesure en React/Next.js. Design, copywriting, SEO. 2 à 4 semaines de livraison.",
     heroTitle: "Un site vitrine qui donne envie de vous contacter",
     heroSubtitle:
       "Un site qui reflète la qualité de votre travail, qui rassure dès la première visite, et qui pousse vos visiteurs à vous contacter. Le tout bien référencé sur Google.",
@@ -606,19 +711,43 @@ export const services: Service[] = [
     problemDescription:
       "Quand un prospect cherche vos services en ligne, la première impression se fait en quelques secondes. Un site obsolète, lent ou mal conçu envoie le mauvais signal, même si votre expertise est excellente. Vos concurrents avec un meilleur site captent les clients à votre place.",
     problemPoints: [
-      { text: "Votre site est obsolète et ne reflète plus votre image professionnelle", icon: PiClockCountdownFill },
-      { text: "Les visiteurs quittent la page sans vous contacter", icon: PiSignOutFill },
-      { text: "Vous n'apparaissez pas (ou mal) dans les résultats de recherche Google", icon: PiMagnifyingGlassFill },
-      { text: "Votre site n'est pas adapté au mobile ou manque de performance", icon: PiDeviceMobileFill },
+      {
+        text: "Votre site est obsolète et ne reflète plus votre image professionnelle",
+        icon: PiClockCountdownFill,
+      },
+      {
+        text: "Les visiteurs quittent la page sans vous contacter",
+        icon: PiSignOutFill,
+      },
+      {
+        text: "Vous n'apparaissez pas (ou mal) dans les résultats de recherche Google",
+        icon: PiMagnifyingGlassFill,
+      },
+      {
+        text: "Votre site n'est pas adapté au mobile ou manque de performance",
+        icon: PiDeviceMobileFill,
+      },
     ],
     solutionTitle: "Un site conçu pour rassurer et convertir",
     solutionDescription:
       "On développe un site vitrine complet qui présente votre activité clairement et donne envie de vous contacter. Textes rédigés par nos soins, design sur-mesure, et un référencement Google soigné pour que vos prospects vous trouvent.",
     solutionPoints: [
-      { text: "Design sur-mesure aligné avec votre identité de marque", icon: PiPaletteFill },
-      { text: "Copywriting professionnel qui valorise votre expertise", icon: PiNotePencilFill },
-      { text: "SEO renforcé pour être visible sur les recherches locales et métier", icon: PiTrendUpFill },
-      { text: "Performance optimale sur tous les appareils", icon: PiDevicesFill },
+      {
+        text: "Design sur-mesure aligné avec votre identité de marque",
+        icon: PiPaletteFill,
+      },
+      {
+        text: "Copywriting professionnel qui valorise votre expertise",
+        icon: PiNotePencilFill,
+      },
+      {
+        text: "SEO renforcé pour être visible sur les recherches locales et métier",
+        icon: PiTrendUpFill,
+      },
+      {
+        text: "Performance optimale sur tous les appareils",
+        icon: PiDevicesFill,
+      },
     ],
     included: [
       {
@@ -631,8 +760,9 @@ export const services: Service[] = [
         description: "Maquettes complètes avec modifications illimitées",
       },
       {
-        title: "Développement React / Next.js",
-        description: "6-10 pages sur-mesure, animations, responsive",
+        title: "Développement sur-mesure",
+        description:
+          "6-10 pages, code qui vous appartient à 100%, animations et responsive",
       },
       {
         title: "SEO renforcé",
@@ -650,12 +780,12 @@ export const services: Service[] = [
           "Formulaires de contact, Google Maps, réseaux sociaux, analytics",
       },
       {
-        title: "Support 60 jours",
+        title: "Support 30 jours",
         description:
           "Corrections, ajustements et accompagnement post-lancement",
       },
     ],
-    deliveryTime: "3 à 5 semaines",
+    deliveryTime: "2 à 4 semaines",
     targetProfiles: [
       {
         title: "Entreprise établie",
@@ -695,7 +825,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "3 à 5 semaines de la conception à la mise en ligne.",
+        a: "2 à 4 semaines de la conception à la mise en ligne.",
       },
     ],
     ctaTitle: "Votre site actuel ne vous ressemble plus ?",
@@ -716,7 +846,7 @@ export const services: Service[] = [
     metaTitle:
       "Création de Site Web Avancé avec fonctionnalités sur-mesure | Vizion Web",
     metaDescription:
-      "Nous développons des sites web avec fonctionnalités avancées : espace client, réservation, paiement en ligne, espace membre. Livré en 4 à 8 semaines.",
+      "Nous développons des sites web avec fonctionnalités avancées : espace client, réservation, paiement en ligne, espace membre. Livré en 3 à 6 semaines.",
     heroTitle:
       "Un site web avec les fonctionnalités dont votre business a besoin",
     heroSubtitle:
@@ -726,19 +856,43 @@ export const services: Service[] = [
     problemDescription:
       "Vous avez besoin de plus qu'une vitrine en ligne. Prise de rendez-vous, paiement, espace client, réservations : ces fonctionnalités nécessitent du développement sur-mesure. Et les outils tout faits ne s'adaptent jamais vraiment à votre façon de travailler.",
     problemPoints: [
-      { text: "Vous gérez les réservations ou rendez-vous manuellement (téléphone, email)", icon: PiCalendarXFill },
-      { text: "Vos clients n'ont pas d'espace dédié pour suivre leurs commandes ou informations", icon: PiUserCircleFill },
-      { text: "Vous n'acceptez pas le paiement en ligne alors que vos clients le demandent", icon: PiCreditCardFill },
-      { text: "Les solutions standardisées ne correspondent pas à votre façon de travailler", icon: PiPuzzlePieceFill },
+      {
+        text: "Vous gérez les réservations ou rendez-vous manuellement (téléphone, email)",
+        icon: PiCalendarXFill,
+      },
+      {
+        text: "Vos clients n'ont pas d'espace dédié pour suivre leurs commandes ou informations",
+        icon: PiUserCircleFill,
+      },
+      {
+        text: "Vous n'acceptez pas le paiement en ligne alors que vos clients le demandent",
+        icon: PiCreditCardFill,
+      },
+      {
+        text: "Les solutions standardisées ne correspondent pas à votre façon de travailler",
+        icon: PiPuzzlePieceFill,
+      },
     ],
     solutionTitle: "Des fonctionnalités sur-mesure intégrées à votre site",
     solutionDescription:
       "On développe votre site avec les fonctionnalités propres à votre activité. Réservation, espace client sécurisé, paiement en ligne, CMS avancé : chaque brique est codée sur-mesure pour coller à vos processus et faciliter la vie de vos clients.",
     solutionPoints: [
-      { text: "Fonctionnalités métier intégrées nativement à votre site", icon: PiWrenchFill },
-      { text: "Espace client sécurisé pour vos utilisateurs", icon: PiLockKeyFill },
-      { text: "Paiement en ligne et gestion des transactions", icon: PiWalletFill },
-      { text: "CMS avancé pour gérer votre contenu en autonomie", icon: PiArticleFill },
+      {
+        text: "Fonctionnalités métier intégrées nativement à votre site",
+        icon: PiWrenchFill,
+      },
+      {
+        text: "Espace client sécurisé pour vos utilisateurs",
+        icon: PiLockKeyFill,
+      },
+      {
+        text: "Paiement en ligne et gestion des transactions",
+        icon: PiWalletFill,
+      },
+      {
+        text: "CMS avancé pour gérer votre contenu en autonomie",
+        icon: PiArticleFill,
+      },
     ],
     included: [
       {
@@ -748,11 +902,13 @@ export const services: Service[] = [
       },
       {
         title: "UI/UX Design Figma",
-        description: "Interface complète incluant les parcours fonctionnels",
+        description:
+          "Interface complète, modifications illimitées jusqu'à validation",
       },
       {
-        title: "Développement React / Next.js",
-        description: "Code sur-mesure avec architecture évolutive",
+        title: "Développement sur-mesure",
+        description:
+          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
       },
       {
         title: "CMS avancé",
@@ -769,12 +925,12 @@ export const services: Service[] = [
           "Formation de votre équipe sur l'utilisation de toutes les fonctionnalités",
       },
       {
-        title: "Support 90 jours",
+        title: "Support 60 jours",
         description:
           "Accompagnement post-lancement, corrections et ajustements",
       },
     ],
-    deliveryTime: "4 à 8 semaines",
+    deliveryTime: "3 à 6 semaines",
     targetProfiles: [
       {
         title: "Entreprise de services",
@@ -814,7 +970,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "4 à 8 semaines selon la complexité des fonctionnalités. Un planning détaillé est défini dès le cadrage.",
+        a: "3 à 6 semaines selon la complexité des fonctionnalités. Un planning détaillé est défini dès le cadrage.",
       },
     ],
     ctaTitle: "Votre site a besoin de plus qu'une vitrine ?",

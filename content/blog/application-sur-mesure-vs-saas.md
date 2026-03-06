@@ -18,7 +18,7 @@ Le revers : vous vous adaptez à l'outil, pas l'inverse. Si votre processus mét
 
 Une application sur-mesure est développée spécifiquement pour votre entreprise. Vos règles métier, votre vocabulaire, votre workflow. Pas de compromis, pas de fonctionnalités inutiles qui encombrent l'interface.
 
-L'investissement initial est plus élevé, et il faut du temps (4 à 8 semaines minimum pour un MVP). Mais vous obtenez un outil qui fait exactement ce que vous voulez, comme vous le voulez.
+L'investissement initial est plus élevé, et il faut du temps (2 à 6 semaines minimum pour un MVP). Mais vous obtenez un outil qui fait exactement ce que vous voulez, comme vous le voulez.
 
 ## Quand le SaaS suffit
 

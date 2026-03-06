@@ -8,6 +8,7 @@ import { ProjectMarquee } from "./ui/project-marquee";
 import { LogoCloud } from "./ui/logo-cloud";
 import { portfolioProjects } from "@/data/projets";
 import { getService } from "@/data/services";
+import { getCity } from "@/data/cities";
 import { cn } from "@/lib/utils";
 
 const logos = [
@@ -62,6 +63,15 @@ function getCtaContent(pathname: string) {
     const service = getService(slug);
     if (service) {
       return { title: service.ctaTitle, description: service.ctaDescription };
+    }
+  }
+
+  // City pages (/<slug>)
+  const citySlug = pathname.replace("/", "");
+  if (citySlug && !citySlug.includes("/")) {
+    const city = getCity(citySlug);
+    if (city) {
+      return { title: city.cta.text, description: city.cta.subtext };
     }
   }
 

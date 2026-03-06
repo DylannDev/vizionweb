@@ -12,11 +12,21 @@ const sellingPoints = [
   "30-90 jours de support inclus",
 ];
 
-export function ServicesHomeSection() {
+interface ServicesHomeSectionProps {
+  titleOverride?: string;
+  subtitleOverride?: string;
+  className?: string;
+}
+
+export function ServicesHomeSection({
+  titleOverride,
+  subtitleOverride,
+  className,
+}: ServicesHomeSectionProps = {}) {
   return (
     <section
       id="services"
-      className="pt-8 pb-16 md:pb-24 md:pt-16 bg-gradient-to-b from-background from-0% to-white to-10%"
+      className={className ?? "pt-8 pb-16 md:pb-24 md:pt-16 bg-gradient-to-b from-background from-0% to-white to-10%"}
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         <Badge align="center" className="mb-4 md:mx-0">
@@ -24,8 +34,8 @@ export function ServicesHomeSection() {
         </Badge>
         <Typography
           variant="split"
-          title="Les projets que nous réalisons"
-          subtitle="Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."
+          title={titleOverride ?? "Les projets que nous réalisons"}
+          subtitle={subtitleOverride ?? "Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -1,3 +1,14 @@
+export const logos = [
+  { src: "/logos/academy.svg", alt: "Amazonia Academy" },
+  { src: "/logos/geteasy.svg", alt: "Get Easy Location" },
+  { src: "/logos/hippokom.svg", alt: "Hippo'kom Agency" },
+  { src: "/logos/chefkit.svg", alt: "ChefKit SaaS" },
+  { src: "/logos/mrkicks.svg", alt: "Mr. Kicks" },
+  { src: "/logos/investing.svg", alt: "Amazonian Investing" },
+  { src: "/logos/pygmalion.svg", alt: "Pygmalion Conseil" },
+  { src: "/logos/zenlounge.svg", alt: "Zen Lounge" },
+];
+
 export const CITIES = [
   { slug: "paris", name: "Paris" },
   { slug: "lyon", name: "Lyon" },
@@ -36,7 +47,7 @@ export const plans = [
     price: "2 000€",
     description: "Landing page rapide et prête à convertir.",
     features: [
-      "Livraison en 2–3 semaines",
+      "Livraison en 1–3 semaines",
       "1–2 pages",
       "UI/UX Design Figma sur-mesure",
       "Développement sur-mesure (React/Next.js)",
@@ -57,7 +68,7 @@ export const plans = [
     price: "3 500€",
     description: "Site vitrine complet qui capte vos clients.",
     features: [
-      "Livraison en 3–4 semaines",
+      "Livraison en 2–4 semaines",
       "3–5 pages",
       "UI/UX Design Figma sur-mesure",
       "Développement sur-mesure (React/Next.js)",
@@ -67,7 +78,7 @@ export const plans = [
       "Responsive Design",
       "Animations complètes",
       "Révisions illimitées avant livraison",
-      "Support 60 jours",
+      "Support 30 jours",
       "Intégrations simples",
     ],
     highlight: false,
@@ -79,7 +90,7 @@ export const plans = [
     price: "5 000€",
     description: "Site web avec fonctionnalités sur-mesure.",
     features: [
-      "Livraison en 4–6 semaines",
+      "Livraison en 3–6 semaines",
       "6–10+ pages",
       "UI/UX Design Figma sur-mesure",
       "Développement sur-mesure (React/Next.js)",
@@ -89,7 +100,7 @@ export const plans = [
       "Responsive Design",
       "Animations avancées",
       "Révisions illimitées avant livraison",
-      "Support 90 jours",
+      "Support 60 jours",
       "Intégrations CMS avancées",
       "Fonctionnalités sur-mesure",
     ],
@@ -103,7 +114,7 @@ export const plans = [
     description:
       "Application web / SaaS sur-mesure pour scaler votre business.",
     features: [
-      "Livraison en 4–8 semaines",
+      "Livraison en 2–8 semaines",
       "Roadmap par étapes (MVP → V2 → V3)",
       "Développement sur-mesure (React/Next.js)",
       "Responsive Design",
@@ -138,19 +149,19 @@ export const testimonials = [
   },
   {
     text: "J’avais besoin d’un site vitrine moderne qui reflète l’identité de mon agence. Dylann a tout de suite compris l’univers que je voulais et le résultat a dépassé mes attentes.",
-    image: "aurelie.jpg",
+    image: "aurelie.webp",
     name: "Aurélie Ciril",
     role: "Fondatrice Hippô’Kom",
   },
   {
     text: "Mon site intègre désormais un espace client, la réservation en ligne et les paiements. Tout est fluide et simple, mes clientes adorent. Merci Dylann pour ton écoute et ta réactivité.",
-    image: "jeanne.jpg",
+    image: "jeanne.webp",
     name: "Jeanne Auguste",
     role: "Dirigeante Zen Lounge",
   },
   {
     text: "Dylann a été d’une aide très précieuse. Il est réactif, rapide et sérieux. Nous avions des délais courts à respecter pour la création de notre application et il a su les tenir.",
-    image: "yohan.jpg",
+    image: "yohan.webp",
     name: "Yohan Beauséjour",
     role: "CEO The Moriarty",
   },
@@ -161,28 +172,28 @@ export const testimonials = [
     role: "Dirigeant TCS Plomberie",
   },
   {
-    text: "L’identité visuelle créée pour ma société de location de voitures correspond parfaitement à ce que je voulais transmettre. Simple, moderne et impactant. Merci Dylann pour ton professionnalisme.",
-    image: "emeraude.jpg",
+    text: "L'application de réservation créée pour Get Easy a tout changé. Mes clients réservent en ligne en quelques clics, je gère mon parc de véhicules depuis le back-office et tout est automatisé. Un gain de temps énorme au quotidien.",
+    image: "emeraude.webp",
     name: "Emeraude Bruant",
     role: "Dirigeante Get Easy",
   },
   {
     text: "Un branding qui reflète parfaitement l’esprit de ma boutique e-commerce. L'agence Vizion Web a trouvé un style qui attire et qui marque les esprits. Je suis très satisfait du résultat.",
-    image: "youri.jpg",
+    image: "youri.webp",
     name: "Youri Petit",
     role: "CEO Mr. Kicks",
+  },
+  {
+    text: "Dylann a créé un site vitrine moderne et professionnel pour Eden Glass. Le résultat est à la hauteur de mes attentes : clair, rapide et bien référencé. Nos clients nous trouvent beaucoup plus facilement depuis la mise en ligne.",
+    image: "jonathan.jpg",
+    name: "Jonathan Wilson",
+    role: "Dirigeant Eden Glass",
   },
   {
     text: "L'application Chefkit nous fait gagner un temps fou. Je gère mes menus, mes commandes et mes réservations en ligne facilement. C’est devenu un outil indispensable pour mon restaurant.",
     image: "karim.jpg",
     name: "Karim Haddad",
     role: "Restaurateur",
-  },
-  {
-    text: "Vizion Web nous a aidés à repenser totalement notre présence en ligne. Plus qu’un site, c’est devenu un vrai levier pour générer des prospects et développer notre activité.",
-    image: "sophie.jpg",
-    name: "Sophie Benoît",
-    role: "CEO GreenPulse",
   },
 ];
 
@@ -196,9 +207,9 @@ export const faqs = [
     a: `
     <p>Cela dépend de la complexité :</p>
     <ul>
-      <li><strong>Landing page :</strong> 2-3 semaines</li>
-      <li><strong>Site vitrine :</strong> 3-5 semaines</li>
-      <li><strong>MVP ou SaaS :</strong> 4-10 semaines</li>
+      <li><strong>Landing page :</strong> 1-3 semaines</li>
+      <li><strong>Site vitrine :</strong> 2-4 semaines</li>
+      <li><strong>MVP ou SaaS :</strong> 2-8 semaines</li>
     </ul>
     <p>Nous vous donnons un planning précis dès le devis.</p>
     `,

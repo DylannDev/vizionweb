@@ -28,7 +28,7 @@ Développer un produit complet d'un coup coûte entre 40 000 et 150 000 euros, p
 
 ### Le risque temporel
 
-6 à 12 mois de développement pour un produit complet. 4 à 8 semaines pour un MVP. Pendant que vous passiez un an à construire votre vision parfaite, un concurrent a lancé un MVP en 6 semaines, récupéré vos futurs clients et itéré trois fois.
+6 à 12 mois de développement pour un produit complet. 2 à 6 semaines pour un MVP. Pendant que vous passiez un an à construire votre vision parfaite, un concurrent a lancé un MVP en quelques semaines, récupéré vos futurs clients et itéré trois fois.
 
 ### Le piège des hypothèses
 
@@ -130,7 +130,7 @@ Votre produit est validé, vos utilisateurs sont satisfaits, vos métriques sont
 
 Ce processus réduit le gaspillage et maximise vos chances de succès. Au lieu de parier 100 000 euros sur une intuition, vous investissez 15 000 euros pour valider, puis 30 000 euros pour améliorer, puis le reste pour grandir. A chaque étape, vous avez des données réelles pour guider vos décisions.
 
-Chez Vizion Web, on construit des MVPs en React et Next.js avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 4 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
+Chez Vizion Web, on construit des MVPs en React et Next.js avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 6 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
 
 ## Questions fréquentes
 
@@ -140,7 +140,7 @@ Le budget dépend de la complexité du projet. Pour un outil interne simple (for
 
 ### Combien de temps faut-il pour développer un MVP ?
 
-Entre 4 et 10 semaines selon le périmètre. Un outil interne simple peut être prêt en 4 à 6 semaines. Un SaaS plus ambitieux demandera 6 à 10 semaines. Si on vous promet un MVP en 2 semaines, posez des questions sur ce qui est réellement inclus. Et si le délai dépasse 12 semaines, vérifiez que le périmètre est bien celui d'un MVP et non d'un produit complet.
+Entre 2 et 8 semaines selon le périmètre. Un outil interne simple peut être prêt en 2 à 6 semaines. Un SaaS plus ambitieux demandera 3 à 8 semaines. Si on vous promet un MVP en 2 semaines, posez des questions sur ce qui est réellement inclus. Et si le délai dépasse 12 semaines, vérifiez que le périmètre est bien celui d'un MVP et non d'un produit complet.
 
 ### Mon MVP peut-il évoluer ou faudra-t-il tout refaire ?
 

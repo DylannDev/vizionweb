@@ -100,7 +100,7 @@ Un espace client développé spécifiquement pour votre activité, intégré dir
 
 **Avantages** : personnalisation totale (fonctionnalités, design, workflows), intégration avec vos outils existants (CRM, facturation, ERP), évolutivité sans plafond, propriété complète des données.
 
-**Limites** : investissement initial plus élevé (entre 5 000 et 20 000 euros selon la complexité), délai de développement (4 à 10 semaines), besoin d'un prestataire technique fiable pour la maintenance.
+**Limites** : investissement initial plus élevé (entre 5 000 et 20 000 euros selon la complexité), délai de développement (2 à 8 semaines), besoin d'un prestataire technique fiable pour la maintenance.
 
 Le sur-mesure prend tout son sens quand votre processus métier est spécifique, quand vous avez déjà une base clients significative (50+ clients actifs), ou quand l'espace client devient un argument commercial fort.
 
@@ -134,8 +134,8 @@ Pour fixer les idées :
 |----------|-------------|-------------|----------------------|
 | SaaS basique (Softr, Portal) | 0 euros | 30-100 euros | 1-3 jours |
 | SaaS avancé (Clinked, Copilot) | 0 euros | 100-300 euros | 1-2 semaines |
-| Sur-mesure simple | 5 000-10 000 euros | 50-150 euros (hébergement + maintenance) | 4-6 semaines |
-| Sur-mesure complet | 10 000-20 000 euros | 100-300 euros (hébergement + maintenance) | 6-10 semaines |
+| Sur-mesure simple | 5 000-10 000 euros | 50-150 euros (hébergement + maintenance) | 3-6 semaines |
+| Sur-mesure complet | 10 000-20 000 euros | 100-300 euros (hébergement + maintenance) | 3-8 semaines |
 
 Sur 3 ans, un SaaS à 150 euros par mois coûte 5 400 euros. Un sur-mesure à 8 000 euros de développement plus 100 euros par mois de maintenance coûte 11 600 euros. La différence se justifie si le sur-mesure vous fait gagner du temps, améliore votre image, et s'intègre parfaitement à votre fonctionnement.
 

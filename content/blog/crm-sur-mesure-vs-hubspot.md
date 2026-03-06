@@ -135,7 +135,7 @@ Chez Vizion Web, on ne pousse pas le sur-mesure par défaut. On commence par com
 Si le sur-mesure est la bonne voie, on procède par étapes :
 
 1. **Audit du processus** : on cartographie votre cycle de vente réel (pas celui que vous imaginez, celui que vos commerciaux vivent au quotidien)
-2. **MVP en 6-8 semaines** : un premier outil avec les fonctions essentielles, testé par votre équipe
+2. **MVP en 4-6 semaines** : un premier outil avec les fonctions essentielles, testé par votre équipe
 3. **Itérations** : on améliore l'outil en fonction des retours terrain, mois après mois
 4. **Formation et adoption** : un outil que personne n'utilise ne sert à rien, peu importe combien il a coûté
 
@@ -153,4 +153,4 @@ Pas si il est bien conçu. Un CRM sur-mesure peut être plus simple qu'un Salesf
 
 ### Combien de temps faut-il pour développer un CRM sur-mesure ?
 
-Un MVP fonctionnel (pipeline, gestion de contacts, tableau de bord basique) prend 6 à 8 semaines de développement. Une V1 complète avec automatisations, intégrations et reporting avancé demande 3 à 5 mois. Le piège classique, c'est de vouloir la V1 d'entrée de jeu sans passer par le MVP. On perd du temps, de l'argent, et on rate les retours terrain qui auraient amélioré le produit.
+Un MVP fonctionnel (pipeline, gestion de contacts, tableau de bord basique) prend 4 à 6 semaines de développement. Une V1 complète avec automatisations, intégrations et reporting avancé demande 3 à 5 mois. Le piège classique, c'est de vouloir la V1 d'entrée de jeu sans passer par le MVP. On perd du temps, de l'argent, et on rate les retours terrain qui auraient amélioré le produit.

@@ -106,8 +106,8 @@ Planifiez des cycles de 2-4 semaines (sprints) pour ajouter des fonctionnalités
 
 | Type de projet | MVP | V1 complète |
 |----------------|-----|-------------|
-| Outil interne simple | 4-6 semaines | 8-12 semaines |
-| Application client (SaaS) | 6-10 semaines | 12-20 semaines |
+| Outil interne simple | 2-6 semaines | 8-12 semaines |
+| Application client (SaaS) | 3-8 semaines | 12-20 semaines |
 | Plateforme marketplace | 10-16 semaines | 20-30 semaines |
 
 Ces délais incluent le design, le développement, les tests et le déploiement. Méfiez-vous des devis qui promettent une application complexe en 3 semaines. C'est soit du no-code, soit un travail bâclé.

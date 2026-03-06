@@ -79,7 +79,7 @@ Voici ce que ces projets partagent :
 
 **Un périmètre clair dès le départ.** Pas de cahier des charges de 50 pages. Un problème, un objectif, des fonctionnalités essentielles. Le reste peut attendre la version 2.
 
-**Un budget compris entre 9 000 et 22 000 euros.** On est loin des projets à 100 000 euros. Un outil métier sur-mesure pour une PME, ça se construit en 4 à 10 semaines, avec un budget que la plupart des entreprises peuvent absorber.
+**Un budget compris entre 9 000 et 22 000 euros.** On est loin des projets à 100 000 euros. Un outil métier sur-mesure pour une PME, ça se construit en 2 à 8 semaines, avec un budget que la plupart des entreprises peuvent absorber.
 
 **Un retour sur investissement rapide.** Dans chaque cas, l'outil s'est rentabilisé en moins d'un an, souvent en quelques mois. Parce qu'on ne construit pas un outil "pour faire joli" mais pour résoudre un problème qui coûte de l'argent chaque jour.
 
@@ -93,7 +93,7 @@ Chez Vizion Web, on accompagne les PME dans la conception et le développement d
 
 ### Combien de temps faut-il pour développer un outil métier sur-mesure ?
 
-Pour un MVP (version minimale utilisable), comptez entre 4 et 10 semaines selon la complexité. Un configurateur de devis simple peut être prêt en un mois. Une plateforme de coordination multi-praticiens prendra plus de deux mois. L'approche itérative permet de livrer une première version rapidement, puis d'ajouter des fonctionnalités en fonction des retours terrain.
+Pour un MVP (version minimale utilisable), comptez entre 2 et 8 semaines selon la complexité. Un configurateur de devis simple peut être prêt en un mois. Une plateforme de coordination multi-praticiens prendra plus de deux mois. L'approche itérative permet de livrer une première version rapidement, puis d'ajouter des fonctionnalités en fonction des retours terrain.
 
 ### Mon entreprise est trop petite pour un outil sur-mesure ?
 

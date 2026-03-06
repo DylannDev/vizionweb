@@ -128,7 +128,7 @@ Si l'utilisateur met plus de 30 secondes à comprendre la situation globale, le 
 
 Les besoins changent. Les indicateurs pertinents aujourd'hui ne seront pas forcément ceux de dans 6 mois. Un dashboard bien conçu permet d'ajouter de nouveaux indicateurs, de connecter de nouvelles sources de données et de modifier les vues sans tout reconstruire.
 
-Chez Vizion Web, on développe des dashboards sur-mesure en React et Next.js qui se connectent à vos outils existants. On commence par identifier vos 5 indicateurs clés avec vous, on construit une première version en 4 à 6 semaines, puis on itère en fonction de votre usage réel. Si vous passez encore vos lundis matin à compiler des données dans Excel, il est peut-être temps d'en parler.
+Chez Vizion Web, on développe des dashboards sur-mesure en React et Next.js qui se connectent à vos outils existants. On commence par identifier vos 5 indicateurs clés avec vous, on construit une première version en 2 à 6 semaines, puis on itère en fonction de votre usage réel. Si vous passez encore vos lundis matin à compiler des données dans Excel, il est peut-être temps d'en parler.
 
 ## Questions fréquentes
 
