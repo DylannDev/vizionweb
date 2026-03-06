@@ -18,7 +18,7 @@ export const portfolioProjects: Project[] = [
     title: "Get Easy",
     subtitle:
       "Système de réservation complet pour agence de location de voitures avec back-office de gestion et tableau de bord.",
-    badge: ["SaaS", "App Web", "Dashboard / CRM"],
+    badge: ["App Web", "Dashboard / CRM"],
     src: "/projets/get-easy.jpg",
     link: "https://geteasylocation.com/",
     testimonial: findTestimonial("Get Easy"),
@@ -27,7 +27,7 @@ export const portfolioProjects: Project[] = [
     title: "Amazonia Investing",
     subtitle:
       "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
-    badge: ["Landing page", "Blog", "Dashboard / CRM"],
+    badge: ["Landing Page", "Blog", "Dashboard / CRM"],
     src: "/projets/investing.jpg",
     link: "https://amazonia-investing.com",
     testimonial: findTestimonial("Amazonia Investing"),
@@ -45,7 +45,7 @@ export const portfolioProjects: Project[] = [
     title: "Zen Lounge",
     subtitle:
       "Site web complet pour un salon de bien-être. Espace client, paiement en ligne et réservation intégrée pour une expérience fluide et professionnelle. Dashboard pour la gestion des réservations.",
-    badge: ["Site Web Complet", "Dashboard / CRM"],
+    badge: ["Site Web Avancé", "Dashboard / CRM"],
     src: "/projets/zenlounge.jpg",
     link: "https://zenlounge-guyane.fr",
     testimonial: findTestimonial("Zen Lounge"),
@@ -57,13 +57,13 @@ export const portfolioProjects: Project[] = [
     badge: ["Site Vitrine", "Blog"],
     src: "/projets/eden-glass.jpg",
     link: "https://edenglass.fr/",
-    testimonial: findTestimonial("GreenPulse"),
+    testimonial: findTestimonial("Eden Glass"),
   },
   {
     title: "TCS Plomberie",
     subtitle:
       "Site vitrine professionnel pour un plombier-chauffagiste avec prise de rendez-vous en ligne et présentation des services.",
-    badge: ["Site Vitrine"],
+    badge: ["Site Vitrine", "Blog"],
     src: "/projets/tcs-plomberie.jpg",
     link: "https://tcs-plomberie-montpellier.fr/",
     testimonial: findTestimonial("TCS Plomberie"),

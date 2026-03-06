@@ -50,6 +50,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-18",
     category: "strategie",
     readingTime: "10 min",
+    image: "/blog/combien-coute-un-site-internet.webp",
   },
   {
     slug: "application-sur-mesure-vs-saas",
@@ -59,6 +60,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-20",
     category: "comparaisons",
     readingTime: "9 min",
+    image: "/blog/application-sur-mesure-vs-saas.webp",
   },
   {
     slug: "cahier-des-charges-site-web",
@@ -68,6 +70,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-22",
     category: "guides",
     readingTime: "12 min",
+    image: "/blog/cahier-des-charges-site-web.webp",
   },
   {
     slug: "landing-page-qui-convertit",
@@ -77,6 +80,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-24",
     category: "guides",
     readingTime: "9 min",
+    image: "/blog/landing-page-qui-convertit.webp",
   },
   {
     slug: "wordpress-vs-webflow-vs-sur-mesure",
@@ -87,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-26",
     category: "comparaisons",
     readingTime: "11 min",
+    image: "/blog/wordpress-vs-webflow-vs-sur-mesure.webp",
   },
   {
     slug: "site-ne-genere-pas-clients",
@@ -97,6 +102,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-28",
     category: "strategie",
     readingTime: "8 min",
+    image: "/blog/pourquoi-votre-site-ne-genere-pas-de-clients.webp",
   },
   {
     slug: "creer-application-web-etapes",
@@ -106,6 +112,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-30",
     category: "guides",
     readingTime: "10 min",
+    image: "/blog/creer-une-application-web.webp",
   },
   {
     slug: "refonte-site-web-quand-pourquoi",
@@ -115,6 +122,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-01",
     category: "strategie",
     readingTime: "8 min",
+    image: "/blog/refonte-site-web.webp",
   },
   {
     slug: "site-vitrine-vs-ecommerce",
@@ -124,6 +132,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-03",
     category: "comparaisons",
     readingTime: "8 min",
+    image: "/blog/site-vitrine-vs-e-commerce.webp",
   },
   {
     slug: "erreurs-conversion-site-web",
@@ -133,6 +142,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-05",
     category: "strategie",
     readingTime: "8 min",
+    image: "/blog/5-erreurs-qui-plombent-la-conversion.webp",
   },
   {
     slug: "choisir-agence-web-criteres",
@@ -142,6 +152,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-07",
     category: "strategie",
     readingTime: "10 min",
+    image: "/blog/choisir-son-agence-web.webp",
   },
   {
     slug: "saas-pme-exemples-outils-metier",
@@ -151,6 +162,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-09",
     category: "cas-usage",
     readingTime: "8 min",
+    image: "/blog/saas-pour-pme.webp",
   },
   {
     slug: "seo-technique-nextjs",
@@ -160,6 +172,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-11",
     category: "guides",
     readingTime: "10 min",
+    image: "/blog/seo-technique-pour-nextjs.webp",
   },
   {
     slug: "budget-site-web-maitriser-cout",
@@ -169,6 +182,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-13",
     category: "strategie",
     readingTime: "9 min",
+    image: "/blog/budget-site-web.webp",
   },
   {
     slug: "reservation-en-ligne-solution",
@@ -179,6 +193,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-15",
     category: "cas-usage",
     readingTime: "8 min",
+    image: "/blog/reservation-en-ligne.webp",
   },
   {
     slug: "quest-ce-quun-mvp",
@@ -188,6 +203,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-17",
     category: "guides",
     readingTime: "9 min",
+    image: "/blog/qu-est-ce-qu-un-mvp.webp",
   },
   {
     slug: "react-vs-vue-vs-angular",
@@ -198,6 +214,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-19",
     category: "comparaisons",
     readingTime: "10 min",
+    image: "/blog/react-vs-vue-vs-angular.webp",
   },
   {
     slug: "dashboard-sur-mesure-cas-concrets",
@@ -207,6 +224,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-21",
     category: "cas-usage",
     readingTime: "9 min",
+    image: "/blog/dashboard-sur-mesure.webp",
   },
   {
     slug: "fixer-prix-saas-strategie",
@@ -216,6 +234,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-23",
     category: "strategie",
     readingTime: "10 min",
+    image: "/blog/fixer-le-prix-d-un-saas.webp",
   },
   {
     slug: "espace-client-site-web",
@@ -226,6 +245,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-25",
     category: "cas-usage",
     readingTime: "9 min",
+    image: "/blog/espace-client-sur-votre-site.webp",
   },
   {
     slug: "hebergement-vercel-netlify-vps",
@@ -235,6 +255,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-27",
     category: "comparaisons",
     readingTime: "10 min",
+    image: "/blog/hebergement-vercel-netlify-ou-vps.webp",
   },
   {
     slug: "paiement-en-ligne-stripe-paypal",
@@ -245,6 +266,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-29",
     category: "comparaisons",
     readingTime: "10 min",
+    image: "/blog/paiement-en-ligne-stripe-paypal.webp",
   },
   {
     slug: "de-idee-a-application-saas",
@@ -254,6 +276,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-31",
     category: "cas-usage",
     readingTime: "10 min",
+    image: "/blog/de-l-idee-a-l-application-saas.webp",
   },
   {
     slug: "performance-web-vitesse-ventes",
@@ -264,6 +287,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-02",
     category: "guides",
     readingTime: "9 min",
+    image: "/blog/performance-web-et-vitesse.webp",
   },
   {
     slug: "crm-sur-mesure-vs-hubspot",
@@ -274,6 +298,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-04",
     category: "comparaisons",
     readingTime: "9 min",
+    image: "/blog/crm-sur-mesure-vs-hubspot.webp",
   },
   {
     slug: "integrer-ia-application-web",
@@ -283,6 +308,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-06",
     category: "tendances",
     readingTime: "10 min",
+    image: "/blog/integrer-l-ia-dans-votre-app.webp",
   },
   {
     slug: "migration-wordpress-nextjs",
@@ -292,6 +318,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-08",
     category: "guides",
     readingTime: "9 min",
+    image: "/blog/migration-wordpress-vers-nextjs.webp",
   },
   {
     slug: "accessibilite-web-obligations",
@@ -301,6 +328,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-11",
     category: "guides",
     readingTime: "10 min",
+    image: "/blog/accessibilite-web.webp",
   },
   {
     slug: "automatiser-business-outils-web",
@@ -310,6 +338,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-14",
     category: "cas-usage",
     readingTime: "10 min",
+    image: "/blog/automatiser-business.webp",
   },
   {
     slug: "tendances-web-design-2026",
@@ -319,6 +348,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-18",
     category: "tendances",
     readingTime: "10 min",
+    image: "/blog/tendances-webdesign.webp",
   },
 ];
 
