@@ -81,7 +81,16 @@
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
-}
+  --animate-orbit: orbit calc(var(--duration)*1s) linear infinite
+;
+  @keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));}
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));}}
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-color-destructive-foreground: var(----color-destructive-foreground);
+  --color-color-color-destructive-foreground: var(----color-color-destructive-foreground)}
 
 :root {
   --radius: 0.625rem;
@@ -120,6 +129,7 @@
   --border: var(--white);
   --input: var(--white);
   --ring: var(--primary-blue); */
+  --destructive-foreground: oklch(1 0 0);
 }
 
 /* Dark mode removed as per project requirements */
@@ -326,7 +336,7 @@
       @apply text-xl font-semibold text-primary-dark mt-6 mb-2;
     }
     p {
-      @apply my-4;
+      @apply my-4 text-base sm:text-lg;
     }
     a {
       @apply text-secondary-dark font-medium underline underline-offset-8 hover:text-gray-light transition-colors;
@@ -338,7 +348,7 @@
       @apply list-decimal pl-6 my-4 space-y-2;
     }
     li {
-      @apply leading-relaxed;
+      @apply leading-relaxed text-base sm:text-lg;
     }
     strong {
       @apply font-semibold text-primary-dark;
@@ -383,3 +393,6 @@
     }
   }
 }
+
+.dark {
+  --destructive-foreground: oklch(1 0 0);}

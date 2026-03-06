@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { portfolioProjects } from "@/data/projets";
 import PortfolioCard from "@/components/ui/portfolio-card";
-import Badge from "@/components/ui/badge";
-import Typography from "@/components/typography";
 import CallButton from "@/components/call-button";
-import FadeIn from "@/components/ui/fade-in";
 import { PageHero } from "@/components/ui/page-hero";
 import Link from "next/link";
 import {
@@ -15,6 +12,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import FAQ from "@/components/faq";
+import Badge from "@/components/ui/badge";
+import Typography from "@/components/typography";
+import { HighlightsSection } from "@/components/highlights-section";
 
 export const metadata: Metadata = {
   title: "Nos Réalisations — Sites & Applications sur-mesure | Vizion Web",
@@ -60,22 +61,20 @@ export default function RealisationsPage() {
         </div>
       </PageHero>
 
-      <section className="pb-16 md:pb-24 bg-gradient-to-b from-background from-0% to-white to-10%">
+      <section className="bg-gradient-to-b from-background from-0% to-white to-10%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="flex flex-col gap-6">
-            {portfolioProjects.map((it, index) => (
-              <div
-                key={it.title}
-                className="sticky"
-                style={{ top: `${100}px` }}
-              >
-                <FadeIn delay={0.1 * (index + 1)}>
-                  <PortfolioCard {...it} reverse={index % 2 !== 0} />
-                </FadeIn>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {portfolioProjects.map((it) => (
+              <PortfolioCard key={it.title} {...it} vertical />
             ))}
           </div>
         </div>
+      </section>
+
+      <HighlightsSection />
+
+      <section>
+        <FAQ />
       </section>
     </main>
   );
