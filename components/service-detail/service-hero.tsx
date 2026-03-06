@@ -1,7 +1,7 @@
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
 import CallButton from "@/components/call-button";
-import FadeIn from "@/components/ui/fade-in";
+
 import type { Service } from "@/data/services";
 
 export function ServiceHero({ service }: { service: Service }) {
@@ -15,9 +15,9 @@ export function ServiceHero({ service }: { service: Service }) {
         title={service.heroTitle}
         subtitle={service.heroSubtitle}
       />
-      <FadeIn delay={0.3} className="flex justify-center">
+      <div className="flex justify-center">
         <CallButton />
-      </FadeIn>
+      </div>
     </div>
   );
 }

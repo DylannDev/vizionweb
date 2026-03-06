@@ -11,7 +11,7 @@ import {
 } from "react-icons/pi";
 import IconIllustration from "./ui/icon-illustration";
 import Badge from "./ui/badge";
-import FadeIn from "./ui/fade-in";
+
 
 export function ServicesSection() {
   const services = [
@@ -65,7 +65,7 @@ export function ServicesSection() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map(({ icon: Icon, title, desc }, index) => (
-          <FadeIn key={title} delay={0.2 * (index + 1)} className="h-full flex">
+          <div key={title} className="h-full flex">
             <Card
               key={title}
               className="group hover:ring-6 ring-gray-lighter transition-all duration-300"
@@ -79,7 +79,7 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent>{desc}</CardContent>
             </Card>
-          </FadeIn>
+          </div>
         ))}
       </div>
     </section>

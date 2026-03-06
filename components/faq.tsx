@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Badge from "./ui/badge";
-import FadeIn from "./ui/fade-in";
+
 import { faqs } from "@/data";
 
 export function FAQ() {
@@ -31,7 +31,7 @@ export function FAQ() {
             className="flex flex-col gap-2 w-full max-w-2xl"
           >
             {faqs.map((f, idx) => (
-              <FadeIn key={f.q} delay={0.2 * (idx + 1)} className="h-full">
+              <div key={f.q} className="h-full">
                 <AccordionItem key={f.q} value={`faq-${idx}`}>
                   <AccordionTrigger>{f.q}</AccordionTrigger>
                   <AccordionContent>
@@ -41,7 +41,7 @@ export function FAQ() {
                     ></div>
                   </AccordionContent>
                 </AccordionItem>
-              </FadeIn>
+              </div>
             ))}
           </Accordion>
 

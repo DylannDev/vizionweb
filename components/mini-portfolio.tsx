@@ -1,7 +1,7 @@
 import Badge from "./ui/badge";
 import Typography from "./typography";
 import PortfolioCard from "@/components/ui/portfolio-card";
-import { FadeIn } from "@/components/ui/fade-in";
+
 import { portfolioProjects } from "@/data/projets";
 import { ArrowButton } from "./ui/arrow-button";
 
@@ -15,12 +15,12 @@ export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
   return (
     <section
       id="realisations"
-      className={className ?? "py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-10%"}
+      className={className ?? "py-16 md:py-24 bg-white"}
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         {/* Titre sticky — reste visible derrière les cards */}
         <div className="sticky z-0" style={{ top: "110px" }}>
-          <Badge align="center">réalisations</Badge>
+          <Badge align="center">Réalisations</Badge>
 
           <Typography
             title="Ce qu'on a construit pour nos clients"
@@ -42,11 +42,11 @@ export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
 
       {/* Bouton — z-20 au-dessus de tout */}
       <div className="relative z-20">
-        <FadeIn delay={0.4} className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10">
           <ArrowButton href="/realisations" variant="black">
             Voir toutes les réalisations
           </ArrowButton>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

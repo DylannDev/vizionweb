@@ -1,4 +1,4 @@
-import FadeIn from "./ui/fade-in";
+
 import { ContentCard } from "./ui/content-card";
 import type { ServiceCategoryGroup } from "@/data/services";
 
@@ -16,9 +16,8 @@ export function ServiceCategorySection({ category, index }: Props) {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {category.services.map((service, i) => (
-          <FadeIn
+          <div
             key={service.slug}
-            delay={0.2 * (i + 1)}
             className="h-full flex"
           >
             <ContentCard
@@ -31,7 +30,7 @@ export function ServiceCategorySection({ category, index }: Props) {
               actionLabel="En savoir plus"
               centered
             />
-          </FadeIn>
+          </div>
         ))}
       </div>
     </section>

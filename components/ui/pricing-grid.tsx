@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import FadeIn from "./fade-in";
+
 import PricingCard from "./pricing-card";
 import { cn } from "@/lib/utils";
 
@@ -65,13 +65,12 @@ export function PricingGrid({
       <div className="grid lg:hidden grid-cols-1 gap-4 pt-6 sm:pt-10">
         {plans.map((plan, index) => {
           return (
-            <FadeIn
+            <div
               key={plan.name}
-              delay={0.2 * (index + 1)}
               className="flex justify-center"
             >
               <PricingCard plan={plan} />
-            </FadeIn>
+            </div>
           );
         })}
       </div>
@@ -86,13 +85,12 @@ export function PricingGrid({
       >
         {filteredPlans.map((plan, index) => {
           return (
-            <FadeIn
+            <div
               key={plan.name}
-              delay={0.2 * (index + 1)}
               className="flex justify-center"
             >
               <PricingCard plan={plan} />
-            </FadeIn>
+            </div>
           );
         })}
       </div>

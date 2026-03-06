@@ -1,4 +1,4 @@
-import FadeIn from "@/components/ui/fade-in";
+
 import Typography from "@/components/typography";
 import Badge from "@/components/ui/badge";
 import { PiCheckBold } from "react-icons/pi";
@@ -20,8 +20,7 @@ export function ServiceIncluded({ service }: { service: Service }) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {service.included.map((item, i) => (
-            <FadeIn key={item.title} delay={0.1 * (i + 1)}>
-              <div className="bg-secondary-dark rounded-4xl p-6 h-full">
+              <div key={item.title} className="bg-secondary-dark rounded-4xl p-6 h-full">
                 <div className="flex items-start gap-3">
                   <PiCheckBold className="size-5 text-primary-blue shrink-0 mt-1" />
                   <div>
@@ -34,7 +33,6 @@ export function ServiceIncluded({ service }: { service: Service }) {
                   </div>
                 </div>
               </div>
-            </FadeIn>
           ))}
         </div>
       </div>

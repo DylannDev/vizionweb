@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { blogCategories, type BlogCategory, type BlogPost } from "@/data/blog";
 import BlogCard from "@/components/ui/blog-card";
-import FadeIn from "@/components/ui/fade-in";
+
 import { Button } from "@/components/ui/button";
 import {
   Pagination,
@@ -114,18 +114,16 @@ export default function BlogFilter({
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedPosts.map((post, index) => (
-          <FadeIn
+          <div
             key={post.slug}
-            delay={0.05 * (index + 1)}
             className="h-full flex"
           >
             <BlogCard post={post} />
-          </FadeIn>
+          </div>
         ))}
       </div>
 
       {totalPages > 1 && (
-        <FadeIn delay={0.1}>
           <div className="mt-12 flex flex-col items-center gap-4">
             <p className="text-sm text-gray-light">
               {startIndex + 1}-
@@ -167,7 +165,6 @@ export default function BlogFilter({
               </PaginationContent>
             </Pagination>
           </div>
-        </FadeIn>
       )}
     </>
   );

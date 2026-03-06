@@ -2,7 +2,7 @@ import type { CitySEO } from "@/data/cities";
 import type { FaqItem } from "@/lib/seo/faq";
 import Typography from "@/components/typography";
 import Badge from "@/components/ui/badge";
-import FadeIn from "@/components/ui/fade-in";
+
 import {
   Accordion,
   AccordionContent,
@@ -39,7 +39,7 @@ export function CityFaq({ city, globalFaqs }: CityFaqProps) {
             className="flex flex-col gap-2 w-full max-w-2xl"
           >
             {allFaqs.map((f, idx) => (
-              <FadeIn key={f.q} delay={0.2 * (idx + 1)} className="h-full">
+              <div key={f.q} className="h-full">
                 <AccordionItem value={`faq-${idx}`}>
                   <AccordionTrigger>{f.q}</AccordionTrigger>
                   <AccordionContent>
@@ -49,7 +49,7 @@ export function CityFaq({ city, globalFaqs }: CityFaqProps) {
                     />
                   </AccordionContent>
                 </AccordionItem>
-              </FadeIn>
+              </div>
             ))}
           </Accordion>
         </div>

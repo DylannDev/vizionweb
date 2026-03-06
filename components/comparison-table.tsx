@@ -5,7 +5,7 @@ import Image from "next/image";
 import Badge from "./ui/badge";
 import { Button } from "./ui/button";
 import Typography from "./typography";
-import FadeIn from "./ui/fade-in";
+
 import { Sparkle } from "./ui/sparkle";
 import { CheckIcon, MinusIcon } from "./ui/status-icons";
 import { cn } from "@/lib/utils";
@@ -200,7 +200,7 @@ export function ComparisonTable() {
   const selectedCol = comparisonColumns.find((c) => c.key === mobileColumn)!;
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-10%">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto w-full px-3 sm:px-5 md:px-8">
         <Badge align="center" className="mb-4">
           {comparisonSection.badge}
@@ -211,7 +211,6 @@ export function ComparisonTable() {
           subtitle={comparisonSection.subtitle}
         />
 
-        <FadeIn delay={0.2}>
           {/* ── Desktop ── */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 lg:gap-4 items-start">
@@ -257,7 +256,6 @@ export function ComparisonTable() {
               <DataColumn col={selectedCol} compact />
             </div>
           </div>
-        </FadeIn>
       </div>
     </section>
   );

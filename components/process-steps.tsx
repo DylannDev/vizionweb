@@ -4,7 +4,7 @@ import DiscoveryIllustration from "@/components/code-illustrations/discovery-ill
 import PrototypeIllustration from "@/components/code-illustrations/prototype-illustration";
 import DevelopmentIllustration from "@/components/code-illustrations/development-illustration";
 import LaunchIllustration from "@/components/code-illustrations/launch-illustration";
-import FadeIn from "./ui/fade-in";
+
 
 export function ProcessSteps() {
   const steps = [
@@ -51,9 +51,8 @@ export function ProcessSteps() {
 
         <div className="grid grid-cols-1 lg:grid-cols-9 sm:gap-6 gap-4">
           {steps.map((s, i) => (
-            <FadeIn
+            <div
               key={s.title}
-              delay={0.2 * (i + 1)}
               className={`bg-white shadow-[0_4px_20px_0] shadow-gray-lighter flex flex-col justify-between rounded-3xl sm:rounded-4xl p-2 relative ${s.className}`}
             >
               <div className="flex flex-col gap-2 p-4">
@@ -67,7 +66,7 @@ export function ProcessSteps() {
               >
                 {s.illustration}
               </div>
-            </FadeIn>
+            </div>
           ))}
         </div>
       </div>

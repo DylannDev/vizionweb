@@ -1,4 +1,4 @@
-import FadeIn from "@/components/ui/fade-in";
+
 import Typography from "@/components/typography";
 import Badge from "@/components/ui/badge";
 import IconIllustration from "@/components/ui/icon-illustration";
@@ -16,9 +16,8 @@ export function ServiceTarget({ service }: { service: Service }) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
           {service.targetProfiles.map((profile, i) => (
-            <FadeIn
+            <div
               key={profile.title}
-              delay={0.2 * (i + 1)}
               className="h-full flex w-full"
             >
               <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3 w-full">
@@ -37,7 +36,7 @@ export function ServiceTarget({ service }: { service: Service }) {
                   </p>
                 </div>
               </div>
-            </FadeIn>
+            </div>
           ))}
         </div>
       </div>

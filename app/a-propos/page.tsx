@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
-import FadeIn from "@/components/ui/fade-in";
+
 import IconIllustration from "@/components/ui/icon-illustration";
 import { ImQuotesRight } from "react-icons/im";
 import {
@@ -133,28 +133,22 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Texte */}
             <div>
-              <FadeIn>
                 <Badge align="left">Notre mission</Badge>
                 <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
                   Une agence partenaire, pas un prestataire
                 </h2>
-              </FadeIn>
               <div className="space-y-4 text-gray-dark text-base sm:text-lg">
-                <FadeIn delay={0.2}>
                   <p>
                     Chaque projet est conçu pour vos objectifs et votre marché.
                     Pas de templates recyclés, pas de compromis. Du code
                     sur-mesure, pensé pour durer et évoluer avec votre activité.
                   </p>
-                </FadeIn>
-                <FadeIn delay={0.3}>
                   <p>
                     Stratégie, design, copywriting, développement, déploiement :
                     nous gérons tout. Un interlocuteur unique du début à la fin,
                     un processus transparent, et un résultat qui génère de la
                     valeur dès le premier jour.
                   </p>
-                </FadeIn>
               </div>
               <div className="flex justify-center lg:justify-start mt-8">
                 <CallButton size="md" />
@@ -162,7 +156,6 @@ export default function AProposPage() {
             </div>
 
             {/* Mockup */}
-            <FadeIn delay={0.3}>
               <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
                 <Image
                   src="/mockup-1.jpg"
@@ -172,7 +165,6 @@ export default function AProposPage() {
                   className="object-cover object-center p-3 bg-white rounded-[40px]"
                 />
               </div>
-            </FadeIn>
           </div>
         </div>
       </section>
@@ -182,7 +174,6 @@ export default function AProposPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 items-center">
             {/* Photo */}
-            <FadeIn>
               <div className="relative group">
                 <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
                   <Image
@@ -193,29 +184,22 @@ export default function AProposPage() {
                     className="object-cover object-center p-3 bg-white rounded-[40px]"
                   />
                 </div>
-                <FadeIn delay={0.3}></FadeIn>
               </div>
-            </FadeIn>
 
             {/* Texte */}
             <div className="flex flex-col gap-4 text-gray-dark">
-              <FadeIn delay={0.2}>
                 <Badge align="left">Le fondateur</Badge>
                 <h3 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
                   Pourquoi j'ai créé Vizion Web ?
                 </h3>
-              </FadeIn>
 
-              <FadeIn delay={0.3}>
                 <p className="text-base sm:text-lg">
                   Développeur et designer depuis plus de 5 ans, j'ai créé Vizion
                   Web pour proposer un modèle différent : une agence 100 %
                   remote, sans structure lourde, qui s'entoure des meilleurs
                   freelances pour chaque projet.
                 </p>
-              </FadeIn>
 
-              <FadeIn delay={0.4}>
                 <p className="text-base sm:text-lg">
                   Je pilote chaque mission de A à Z. Quand un projet demande une
                   expertise pointue (design UI, SEO poussé, dev backend), je
@@ -223,9 +207,7 @@ export default function AProposPage() {
                   régulièrement. Vous gardez un seul interlocuteur, avec une
                   équipe complète derrière.
                 </p>
-              </FadeIn>
 
-              <FadeIn delay={0.5}>
                 <div className="relative px-6 py-10 rounded-3xl mt-2 bg-background">
                   <ImQuotesRight className="absolute bottom-4 right-4 text-3xl text-primary-blue" />
                   <p className="text-base sm:text-lg font-semibold text-primary-dark relative z-10">
@@ -233,7 +215,6 @@ export default function AProposPage() {
                     la complexité et le coût d'une agence traditionnelle."
                   </p>
                 </div>
-              </FadeIn>
             </div>
           </div>
         </div>
@@ -249,9 +230,8 @@ export default function AProposPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((pillar, i) => (
-              <FadeIn
+              <div
                 key={pillar.title}
-                delay={0.2 * (i + 1)}
                 className="h-full flex"
               >
                 <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
@@ -265,7 +245,7 @@ export default function AProposPage() {
                     </p>
                   </div>
                 </div>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>
@@ -281,9 +261,8 @@ export default function AProposPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {expertise.map((block, i) => (
-              <FadeIn
+              <div
                 key={block.title}
-                delay={0.2 * (i + 1)}
                 className="h-full w-full flex"
               >
                 <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
@@ -305,7 +284,7 @@ export default function AProposPage() {
                     </ul>
                   </div>
                 </div>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>

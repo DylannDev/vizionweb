@@ -1,7 +1,7 @@
 import Typography from "@/components/typography";
 import { PiCheckBold } from "react-icons/pi";
 import Badge from "./ui/badge";
-import FadeIn from "./ui/fade-in";
+
 import { included, plans } from "@/data";
 import PricingGrid from "./ui/pricing-grid";
 

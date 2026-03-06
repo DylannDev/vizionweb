@@ -17,7 +17,7 @@ import { portfolioProjects } from "@/data/projets";
 import { testimonials } from "@/data";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
-import FadeIn from "@/components/ui/fade-in";
+
 import { PiCheckCircleFill } from "react-icons/pi";
 import { GoStarFill } from "react-icons/go";
 
@@ -299,9 +299,9 @@ const highlights = [
 
 export function HighlightsSection() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <Badge align="center">Track record</Badge>
+        <Badge align="center">Pourquoi Vizion Web</Badge>
         <Typography
           title="Pourquoi nos clients nous recommandent ?"
           subtitle="Des délais courts, un suivi carré, et un produit final qui tourne dès le jour 1."
@@ -309,9 +309,8 @@ export function HighlightsSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {highlights.map((item, i) => (
-            <FadeIn
+            <div
               key={item.title}
-              delay={0.2 * (i + 1)}
               className="h-full flex"
             >
               <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
@@ -330,7 +329,7 @@ export function HighlightsSection() {
                   </div>
                 </div>
               </div>
-            </FadeIn>
+            </div>
           ))}
         </div>
       </div>

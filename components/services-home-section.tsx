@@ -1,6 +1,6 @@
 import Badge from "./ui/badge";
 import Typography from "./typography";
-import FadeIn from "./ui/fade-in";
+
 import { ContentCard } from "./ui/content-card";
 import { ArrowButton } from "./ui/arrow-button";
 import { services } from "@/data/services";
@@ -40,9 +40,8 @@ export function ServicesHomeSection({
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
-            <FadeIn
+            <div
               key={service.slug}
-              delay={0.15 * (i + 1)}
               className="h-full flex"
             >
               <ContentCard
@@ -55,12 +54,11 @@ export function ServicesHomeSection({
                 actionLabel="En savoir plus"
                 centered
               />
-            </FadeIn>
+            </div>
           ))}
         </div>
 
-        <FadeIn
-          delay={0.7}
+        <div
           className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mt-12 mb-10"
         >
           {sellingPoints.map((point) => (
@@ -73,13 +71,13 @@ export function ServicesHomeSection({
               </span>
             </div>
           ))}
-        </FadeIn>
+        </div>
 
-        <FadeIn delay={0.8} className="flex justify-center">
+        <div className="flex justify-center">
           <ArrowButton href="/services" variant="black">
             Voir tous nos services
           </ArrowButton>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );
