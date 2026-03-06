@@ -23,22 +23,22 @@ export interface CitySEO {
 
   // SEO Metadata
   meta: {
-    title: string;       // Unique par ville, max 60 chars
+    title: string; // Unique par ville, max 60 chars
     description: string; // Unique par ville, max 160 chars
     canonical: string;
   };
 
   // Contenu Hero unique
   hero: {
-    headline: string;    // H1 unique
+    headline: string; // H1 unique
     subheadline: string; // H2 unique
-    badges: string[];    // Spécialités mises en avant
+    badges: string[]; // Spécialités mises en avant
   };
 
   // Accroche locale (section introductive)
   localIntro: {
     title: string;
-    paragraphs: string[];  // 2-3 paragraphes uniques
+    paragraphs: string[]; // 2-3 paragraphes uniques
   };
 
   // Données économiques locales
@@ -115,18 +115,18 @@ Le composant `HomeSection` actuel est remplacé par `CityPageTemplate` pour les 
 
 ### 1.3. Sections partagées vs. uniques
 
-| Section | Partagée | Unique | Stratégie |
-|---------|----------|--------|-----------|
-| Hero (H1, H2) | | X | Titre et accroche réécrits par ville |
-| Intro locale | | X | 2-3 paragraphes sur le tissu économique local |
-| Services | Partiel | Partiel | Cartes identiques, titre de section contextualisé |
-| Contexte local | | X | Quartiers, zones d'activité, spécificités |
-| Portfolio | X | | Réalisations réelles, pas de faux contenu local |
-| Process | Supprimé | | Retiré des pages locales (reste sur homepage) |
-| Témoignages | Supprimé | | Retiré (sauf si testimonial local) |
-| Pricing | Supprimé | | Retiré des pages locales (reste sur homepage) |
-| FAQ | Partiel | Partiel | 2-3 FAQ locales + 3 FAQ générales (sélection) |
-| CTA | | X | Message contextualisé par ville |
+| Section        | Partagée | Unique  | Stratégie                                         |
+| -------------- | -------- | ------- | ------------------------------------------------- |
+| Hero (H1, H2)  |          | X       | Titre et accroche réécrits par ville              |
+| Intro locale   |          | X       | 2-3 paragraphes sur le tissu économique local     |
+| Services       | Partiel  | Partiel | Cartes identiques, titre de section contextualisé |
+| Contexte local |          | X       | Quartiers, zones d'activité, spécificités         |
+| Portfolio      | X        |         | Réalisations réelles, pas de faux contenu local   |
+| Process        | Supprimé |         | Retiré des pages locales (reste sur homepage)     |
+| Témoignages    | Supprimé |         | Retiré (sauf si testimonial local)                |
+| Pricing        | Supprimé |         | Retiré des pages locales (reste sur homepage)     |
+| FAQ            | Partiel  | Partiel | 2-3 FAQ locales + 3 FAQ générales (sélection)     |
+| CTA            |          | X       | Message contextualisé par ville                   |
 
 **Ratio de contenu unique visé : 60-70% par page** (vs. 5% actuellement).
 
@@ -475,10 +475,18 @@ export default async function CityPage({
   return (
     <>
       <CityPageTemplate city={city} />
-      <Script id={`city-schema-${slug}`} type="application/ld+json" strategy="afterInteractive">
+      <Script
+        id={`city-schema-${slug}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
         {JSON.stringify(citySchema)}
       </Script>
-      <Script id={`breadcrumb-schema-${slug}`} type="application/ld+json" strategy="afterInteractive">
+      <Script
+        id={`breadcrumb-schema-${slug}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
         {JSON.stringify(breadcrumbSchema)}
       </Script>
     </>
@@ -606,21 +614,22 @@ export default function CityPageTemplate({ city }: Props) {
 
 ### 4.1. Contenu unique par page
 
-| Critère | Vérification | Seuil minimum |
-|---------|-------------|---------------|
-| H1 unique | Aucun H1 ne doit se répéter entre les pages | 100% unique |
-| Meta title unique | Vérifier via sitemap ou crawl | 100% unique |
-| Meta description unique | Chaque description doit être différente | 100% unique |
-| Intro locale | 2-3 paragraphes propres à la ville | Min. 150 mots uniques |
-| FAQ locales | 2-3 questions spécifiques à la ville | Min. 200 mots uniques |
-| Contexte local | Quartiers, zones, secteurs économiques | Min. 100 mots uniques |
-| CTA local | Texte d'appel à l'action contextualisé | 100% unique |
+| Critère                 | Vérification                                | Seuil minimum         |
+| ----------------------- | ------------------------------------------- | --------------------- |
+| H1 unique               | Aucun H1 ne doit se répéter entre les pages | 100% unique           |
+| Meta title unique       | Vérifier via sitemap ou crawl               | 100% unique           |
+| Meta description unique | Chaque description doit être différente     | 100% unique           |
+| Intro locale            | 2-3 paragraphes propres à la ville          | Min. 150 mots uniques |
+| FAQ locales             | 2-3 questions spécifiques à la ville        | Min. 200 mots uniques |
+| Contexte local          | Quartiers, zones, secteurs économiques      | Min. 100 mots uniques |
+| CTA local               | Texte d'appel à l'action contextualisé      | 100% unique           |
 
 ### 4.2. Ratio de contenu unique
 
 **Objectif : 60-70% de contenu unique par page locale**
 
 Calcul approximatif par page :
+
 - Intro locale : ~200 mots (unique)
 - Contexte local : ~150 mots (unique)
 - FAQ locales : ~300 mots (unique)
@@ -635,15 +644,15 @@ Calcul approximatif par page :
 
 Pour éviter que les sections partagées ne créent des signaux de duplication :
 
-| Section Services | Variation par ville |
-|------------------|---------------------|
-| Titre de section | "Nos services web à [Ville]" au lieu du titre fixe |
-| Sous-titre | Contextualiser : "Nous accompagnons les entreprises [adjectif local] dans..." |
+| Section Services | Variation par ville                                                           |
+| ---------------- | ----------------------------------------------------------------------------- |
+| Titre de section | "Nos services web à [Ville]" au lieu du titre fixe                            |
+| Sous-titre       | Contextualiser : "Nous accompagnons les entreprises [adjectif local] dans..." |
 
-| FAQ globales | Stratégie |
-|-------------|-----------|
-| Sélection | 3 FAQ sur 8 sélectionnées par ville (rotation) |
-| Ordre | Différent selon la ville |
+| FAQ globales       | Stratégie                                       |
+| ------------------ | ----------------------------------------------- |
+| Sélection          | 3 FAQ sur 8 sélectionnées par ville (rotation)  |
+| Ordre              | Différent selon la ville                        |
 | Jamais les mêmes 3 | Chaque ville affiche une combinaison différente |
 
 ### 4.4. Signaux techniques anti-duplication
@@ -657,13 +666,13 @@ Pour éviter que les sections partagées ne créent des signaux de duplication :
 
 ### 4.5. Ce qu'il ne faut PAS faire
 
-| Piège | Pourquoi |
-|-------|----------|
-| Changer juste le nom de ville dans les mêmes phrases | Google détecte les patterns "mad-lib" (remplissage de trous) |
-| Utiliser du contenu généré par IA sans réécriture | Patterns détectables (voir ai-writing-detection.md) |
-| Créer des FAQ "locales" qui ne sont pas vraiment locales | "Quel est le prix d'un site à [Ville] ?" avec la même réponse partout = duplication |
-| Dupliquer les données de contexte local entre villes proches | Toulouse et Montpellier doivent avoir des contenus réellement distincts |
-| Ajouter des villes sans données locales pertinentes | Mieux vaut 10 pages solides que 19 pages moyennes |
+| Piège                                                        | Pourquoi                                                                            |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Changer juste le nom de ville dans les mêmes phrases         | Google détecte les patterns "mad-lib" (remplissage de trous)                        |
+| Utiliser du contenu généré par IA sans réécriture            | Patterns détectables (voir ai-writing-detection.md)                                 |
+| Créer des FAQ "locales" qui ne sont pas vraiment locales     | "Quel est le prix d'un site à [Ville] ?" avec la même réponse partout = duplication |
+| Dupliquer les données de contexte local entre villes proches | Toulouse et Montpellier doivent avoir des contenus réellement distincts             |
+| Ajouter des villes sans données locales pertinentes          | Mieux vaut 10 pages solides que 19 pages moyennes                                   |
 
 ---
 
@@ -710,17 +719,20 @@ investissent de plus en plus dans des solutions web sur-mesure pour
 ## 6. Priorisation de la Mise en Œuvre
 
 ### Phase 1 : Infrastructure (Semaine 1)
+
 1. Créer `data/cities-seo.ts` avec l'interface et les données pour Paris, Toulouse, Fort-de-France
 2. Créer les composants `CityPageTemplate`, `CityHero`, `CityIntro`, `CityContext`, `CityFAQ`, `CityCTA`, `Breadcrumb`
 3. Créer les builders de schema (`city-schema.ts`, `breadcrumb-schema.ts`)
 4. Modifier `app/[slug]/page.tsx` pour utiliser le nouveau template
 
 ### Phase 2 : Contenu (Semaines 2-3)
+
 5. Rédiger les données SEO pour les 16 villes restantes
 6. Valider chaque page avec la checklist anti-duplication
 7. Relire avec les critères ai-writing-detection.md
 
 ### Phase 3 : Validation (Semaine 4)
+
 8. Crawl complet avec Screaming Frog ou équivalent
 9. Vérifier l'indexation via Google Search Console
 10. Tester les schemas avec le Rich Results Test
