@@ -11,6 +11,7 @@ interface PortfolioCardProps {
   link?: string;
   testimonial?: { text: string; image: string; name: string; role: string };
   reverse?: boolean;
+  vertical?: boolean;
 }
 
 export function PortfolioCard({
@@ -21,17 +22,27 @@ export function PortfolioCard({
   link,
   testimonial,
   reverse,
+  vertical,
 }: PortfolioCardProps) {
   return (
     <div
       className={cn(
         "rounded-4xl bg-white p-2 shadow-[0_4px_20px_0] shadow-gray-lighter",
-        "flex flex-col min-[900px]:flex-row min-[900px]:items-stretch",
-        reverse && "lg:flex-row-reverse"
+        vertical
+          ? "flex flex-col"
+          : "flex flex-col min-[900px]:flex-row min-[900px]:items-stretch",
+        !vertical && reverse && "lg:flex-row-reverse"
       )}
     >
       {/* Image */}
-      <div className="relative aspect-[3/2] min-[900px]:aspect-auto min-[900px]:w-1/2 shrink-0 rounded-3xl overflow-hidden">
+      <div
+        className={cn(
+          "relative rounded-3xl overflow-hidden shrink-0",
+          vertical
+            ? "aspect-[3/2]"
+            : "aspect-[3/2] min-[900px]:aspect-auto min-[900px]:w-1/2"
+        )}
+      >
         <Image
           src={src}
           alt={`${title} — ${subtitle}`}
@@ -61,9 +72,9 @@ export function PortfolioCard({
           ))}
         </div>
 
-        <p className="text-base text-gray-dark">{subtitle}</p>
+        <p className="text-base text-gray-dark flex-1">{subtitle}</p>
 
-        {testimonial && (
+        {testimonial && !vertical && (
           <div className="flex flex-col gap-3 rounded-3xl bg-background p-2">
             <div className="flex items-center gap-2 p-1">
               <div className="relative h-10 w-10 overflow-hidden rounded-full shrink-0">
@@ -82,7 +93,7 @@ export function PortfolioCard({
                 <span className="font-medium tracking-tight leading-5">
                   {testimonial.name}
                 </span>
-                <span className="leading-5 opacity-60 tracking-tight text-gray-dark text-sm">
+                <span className="leading-5 opacity-60 tracking-tight text-secondary-dark text-sm">
                   {testimonial.role}
                 </span>
               </div>

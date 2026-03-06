@@ -5,19 +5,21 @@ interface PageHeroProps {
   children: React.ReactNode;
   className?: string;
   bg?: "background" | "white";
+  outerPadding?: string;
 }
 
 export function PageHero({
   children,
   className,
   bg = "background",
+  outerPadding = "pt-4 pb-20 px-4",
 }: PageHeroProps) {
   return (
     <section className={bg === "background" ? "bg-background" : "bg-white"}>
-      <div className="pt-4 pb-20 px-4 max-w-[1536px] mx-auto w-full">
+      <div className={cn(outerPadding, "max-w-[1536px] mx-auto w-full")}>
         <div
           className={cn(
-            "relative bg-white w-full rounded-[36px] overflow-hidden px-5 md:px-8",
+            "relative bg-white w-full rounded-[36px] overflow-hidden px-5",
             className
           )}
         >

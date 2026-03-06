@@ -9,18 +9,8 @@ import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banne
 import { LogoCloud } from "./ui/logo-cloud";
 import { ProjectMarquee } from "./ui/project-marquee";
 import { portfolioProjects } from "@/data/projets";
+import { logos } from "@/data";
 import { cn } from "@/lib/utils";
-
-const logos = [
-  { src: "/logos/academy.svg", alt: "Amazonia Academy" },
-  { src: "/logos/geteasy.svg", alt: "Get Easy Location" },
-  { src: "/logos/hippokom.svg", alt: "Hippo'kom Agency" },
-  { src: "/logos/chefkit.svg", alt: "ChefKit SaaS" },
-  { src: "/logos/mrkicks.svg", alt: "Mr. Kicks" },
-  { src: "/logos/investing.svg", alt: "Amazonian Investing" },
-  { src: "/logos/pygmalion.svg", alt: "Pygmalion Conseil" },
-  { src: "/logos/zenlounge.svg", alt: "Zen Lounge" },
-];
 
 interface HeroSEOProps {
   locationName?: string;
@@ -49,19 +39,6 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
           />
           <div className="relative flex flex-col gap-6 items-center justify-center text-center z-10">
             <div className="space-y-4">
-              {/* <Badge
-              align="left"
-              className="space-x-1 shadow-sm"
-              variant="white"
-              uppercase={false}
-            >
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-blue opacity-75"></span>
-                <span className="relative inline-flex size-2 rounded-full bg-primary-blue"></span>
-              </span>
-              <p className="text-xs font-semibold">2 créneaux disponibles</p>
-            </Badge> */}
-
               <h1 className="space-y-1 font-semibold text-balance text-5xl sm:text-6xl text-primary-dark">
                 {locationName ? (
                   `Agence de création de sites et applications web ${preposition} ${locationName}`

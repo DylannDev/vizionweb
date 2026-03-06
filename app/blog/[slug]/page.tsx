@@ -77,8 +77,8 @@ export default async function BlogPostPage({
   return (
     <>
       <main>
-        <PageHero bg="white">
-          <Breadcrumb>
+        <PageHero bg="white" outerPadding="pt-4">
+          <Breadcrumb className="px-4">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
@@ -124,22 +124,24 @@ export default async function BlogPostPage({
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-dark text-balance max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-dark text-balance max-w-4xl mx-auto">
               {post.title}
             </h1>
           </header>
 
-          <Image
-            src="/projets/chefkit.jpg"
-            alt={post.title}
-            width={1200}
-            height={630}
-            className="w-full rounded-2xl object-cover aspect-[2/1] mt-6"
-            priority
-          />
+          {post.image && (
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1200}
+              height={630}
+              className="w-full rounded-3xl md:rounded-4xl object-cover aspect-[4/3] sm:aspect-video mt-6 max-w-[1100px] mx-auto"
+              priority
+            />
+          )}
         </PageHero>
 
-        <article className="max-w-[1000px] mx-auto px-5">
+        <article className="max-w-[1000px] mx-auto px-5 sm:px-8">
           <MDXContent file={`blog/${post.slug}.md`} stripTitle />
 
           <footer className="pt-8 mt-8 border-t border-gray-lighter">

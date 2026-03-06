@@ -7,12 +7,14 @@ export const Accordion = AccordionPrimitive.Root;
 export const AccordionItem = AccordionPrimitive.Item;
 export const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({ className = "", children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & {
+    bgColor?: string;
+  }
+>(({ className = "", bgColor = "bg-white", children, ...props }, ref) => (
   <AccordionPrimitive.Header className="m-0">
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={`group cursor-pointer bg-white rounded-3xl flex w-full items-center justify-between p-5 text-left text-base sm:text-xl font-semibold text-primary-dark focus:outline-none transition-colors ${className}`}
+      className={`group cursor-pointer ${bgColor} rounded-3xl flex w-full items-center justify-between p-5 text-left text-base sm:text-xl font-semibold text-primary-dark focus:outline-none transition-colors ${className}`}
       {...props}
     >
       {children}
@@ -32,11 +34,13 @@ AccordionTrigger.displayName = "AccordionTrigger";
 
 export const AccordionContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className = "", children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> & {
+    bgColor?: string;
+  }
+>(({ className = "", bgColor = "bg-white", children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className={`bg-white rounded-3xl p-5 mt-2 overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down text-gray-dark ${className}`}
+    className={`${bgColor} rounded-3xl p-5 mt-2 overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down text-gray-dark ${className}`}
     {...props}
   >
     <div className="pt-2 pb-4">{children}</div>

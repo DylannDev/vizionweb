@@ -58,7 +58,7 @@ export default function PrototypeIllustration() {
                     deleteSpeed={60}
                     loop={true}
                     showCursor={true}
-                    className="text-primary-blue text-2xl font-semibold font-heading"
+                    className="text-primary-blue text-2xl font-bold"
                   />
                 </div>
               ) : null}

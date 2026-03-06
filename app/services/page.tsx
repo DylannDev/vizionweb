@@ -14,6 +14,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import FAQ from "@/components/faq";
 
 export const metadata: Metadata = {
   title: "Nos Services — Applications Web & Sites sur-mesure | Vizion Web",
@@ -72,6 +73,7 @@ export default function ServicesPage() {
             />
           ))}
         </div>
+        <FAQ />
       </div>
     </main>
   );

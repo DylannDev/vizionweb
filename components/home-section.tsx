@@ -1,11 +1,11 @@
 import Hero from "./hero";
 import { ServicesHomeSection } from "@/components/services-home-section";
 import MiniPortfolio from "../components/mini-portfolio";
-import { WhyVizionWeb } from "@/components/why-vizion-web";
 import { ComparisonTable } from "@/components/comparison-table";
 import ProcessSteps from "../components/process-steps";
 import { Testimonials } from "@/components/testimonials";
 import FAQ from "../components/faq";
+import { HighlightsSection } from "./highlights-section";
 
 const HomeSection = ({
   locationName,
@@ -19,7 +19,7 @@ const HomeSection = ({
       <Hero locationName={locationName} preposition={preposition} />
       <ServicesHomeSection />
       <MiniPortfolio />
-      <WhyVizionWeb />
+      <HighlightsSection />
       <ComparisonTable />
       <ProcessSteps />
       <Testimonials />

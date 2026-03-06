@@ -5,13 +5,17 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { portfolioProjects } from "@/data/projets";
 import { ArrowButton } from "./ui/arrow-button";
 
-export function MiniPortfolio() {
+interface MiniPortfolioProps {
+  className?: string;
+}
+
+export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
   const items = portfolioProjects.slice(0, 4);
 
   return (
     <section
       id="realisations"
-      className="py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-10%"
+      className={className ?? "py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-10%"}
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         {/* Titre sticky — reste visible derrière les cards */}
@@ -30,9 +34,7 @@ export function MiniPortfolio() {
         <div className="relative z-10 flex flex-col gap-6">
           {items.map((it, index) => (
             <div key={it.title} className="sticky top-[300px]">
-              {/* <FadeIn delay={0.1 * (index + 1)}> */}
               <PortfolioCard {...it} reverse={index % 2 !== 0} />
-              {/* </FadeIn> */}
             </div>
           ))}
         </div>

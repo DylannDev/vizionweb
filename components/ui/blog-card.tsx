@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/data/blog";
 import { blogCategories } from "@/data/blog";
@@ -14,9 +15,20 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="flex group rounded-3xl bg-white p-5 cursor-pointer shadow-lg"
+      className="flex flex-col group rounded-4xl bg-white p-2 cursor-pointer shadow-[0_6px_20px_0] shadow-gray-lighter"
     >
-      <div className="flex flex-col gap-4 w-full">
+      {post.image && (
+        <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
+      )}
+      <div className="flex flex-col flex-1 gap-4 w-full p-3">
         <div className="flex items-center gap-3">
           <Badge variant="black" className="m-0 text-xs shadow-none">
             {category.label}
@@ -31,7 +43,7 @@ export function BlogCard({ post }: BlogCardProps) {
           <h3 className="font-medium text-primary-dark group-hover:text-primary-blue transition-colors duration-200">
             {post.title}
           </h3>
-          <p className="text-sm text-gray-dark line-clamp-2">
+          <p className="text-sm text-gray-dark line-clamp-3">
             {post.description}
           </p>
         </div>

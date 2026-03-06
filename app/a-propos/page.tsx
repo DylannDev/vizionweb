@@ -186,7 +186,7 @@ export default function AProposPage() {
               <div className="relative group">
                 <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
                   <Image
-                    src="/founder.jpg"
+                    src="/founder.webp"
                     alt="Dylann, fondateur de Vizion Web"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
