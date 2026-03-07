@@ -41,98 +41,6 @@ export const navLinks = [
   { href: "/blog", label: "Blog" },
 ];
 
-export const plans = [
-  {
-    name: "Vizion Start",
-    price: "2 000€",
-    description: "Landing page rapide et prête à convertir.",
-    features: [
-      "Livraison en 1–3 semaines",
-      "1–2 pages",
-      "UI/UX Design Figma sur-mesure",
-      "Développement sur-mesure (React/Next.js)",
-      "Copywriting premium",
-      "SEO technique de base",
-      "Optimisation conversion (CRO)",
-      "Responsive Design",
-      "Animations simples",
-      "Révisions illimitées avant livraison",
-      "Support 30 jours",
-    ],
-    highlight: false,
-    icon: "/bars-1.svg",
-    category: "web",
-  },
-  {
-    name: "Vizion Boost",
-    price: "3 500€",
-    description: "Site vitrine complet qui capte vos clients.",
-    features: [
-      "Livraison en 2–4 semaines",
-      "3–5 pages",
-      "UI/UX Design Figma sur-mesure",
-      "Développement sur-mesure (React/Next.js)",
-      "Copywriting premium",
-      "SEO technique renforcé",
-      "Optimisation conversion (CRO)",
-      "Responsive Design",
-      "Animations complètes",
-      "Révisions illimitées avant livraison",
-      "Support 30 jours",
-      "Intégrations simples",
-    ],
-    highlight: false,
-    icon: "/bars-2.svg",
-    category: "web",
-  },
-  {
-    name: "Vizion Pro",
-    price: "5 000€",
-    description: "Site web avec fonctionnalités sur-mesure.",
-    features: [
-      "Livraison en 3–6 semaines",
-      "6–10+ pages",
-      "UI/UX Design Figma sur-mesure",
-      "Développement sur-mesure (React/Next.js)",
-      "Copywriting avancé",
-      "SEO technique avancé",
-      "Optimisation conversion (CRO)",
-      "Responsive Design",
-      "Animations avancées",
-      "Révisions illimitées avant livraison",
-      "Support 60 jours",
-      "Intégrations CMS avancées",
-      "Fonctionnalités sur-mesure",
-    ],
-    highlight: true,
-    icon: "/bars-3.svg",
-    category: "web",
-  },
-  {
-    name: "Vizion Enterprise",
-    price: "10 000€ - 30 000€+",
-    description:
-      "Application web / SaaS sur-mesure pour scaler votre business.",
-    features: [
-      "Livraison en 2–8 semaines",
-      "Roadmap par étapes (MVP → V2 → V3)",
-      "Développement sur-mesure (React/Next.js)",
-      "Responsive Design",
-      "Révisions illimitées avant livraison",
-      "Dashboard administration sur-mesure",
-      "Tests, optimisation renforcées",
-      "Déploiement & hébergement inclus",
-      "Support illimité",
-      "Intégrations sur-mesure",
-      "Fonctionnalités avancées sur-mesure",
-      "Modifications après livraison sur devis",
-    ],
-    highlight: false,
-    icon: "/vizion-enterprise.svg",
-    category: "saas",
-  },
-];
-
 export const included = [
   "Propriété totale du code et des accès",
   "Optimisations techniques dès le lancement",
@@ -200,34 +108,14 @@ export const testimonials = [
 export const faqs = [
   {
     q: "Combien coûte un projet chez Vizion Web ?",
-    a: "Chaque projet est unique. Nous établissons un devis sur-mesure après un appel découverte gratuit où nous analysons vos besoins précis. Nos projets démarrent à partir de 1 800 € pour une landing page et peuvent aller jusqu'à 30 000 €+ pour des SaaS complexes.",
+    a: "Chaque projet est unique et nous établissons un devis sur-mesure après un appel découverte gratuit. Le budget dépend de la complexité : une landing page sera moins coûteuse qu'une application SaaS complète. Nous adaptons notre proposition à vos besoins et à votre enveloppe budgétaire. Réservez un appel pour obtenir un chiffrage précis.",
   },
   {
-    q: "Combien de temps prend un projet ?",
-    a: `
-    <p>Cela dépend de la complexité :</p>
-    <ul>
-      <li><strong>Landing page :</strong> 1-3 semaines</li>
-      <li><strong>Site vitrine :</strong> 2-4 semaines</li>
-      <li><strong>MVP ou SaaS :</strong> 2-8 semaines</li>
-    </ul>
-    <p>Nous vous donnons un planning précis dès le devis.</p>
-    `,
+    q: "Quels sont vos délais de livraison ?",
+    a: "Cela dépend du type de projet. Une landing page : 2-3 semaines. Un site vitrine complet : 2-4 semaines. Une application web ou un MVP : 2-8 semaines. Nous vous donnons un planning précis dès le devis, avec des jalons clairs pour suivre l'avancement.",
   },
   {
-    q: "Est-ce que vous gérez l'hébergement et la maintenance ?",
-    a: "Oui. Nous déployons votre projet sur une infrastructure fiable et incluons un support post-livraison (30 à 90 jours selon le projet). La maintenance continue est disponible sur devis.",
-  },
-  {
-    q: "Travaillez-vous avec des startups sans financement ?",
-    a: "Oui, si le projet a un scope MVP réaliste. Nous aidons les fondateurs à lancer une première version fonctionnelle pour tester leur marché ou pitcher des investisseurs.",
-  },
-  {
-    q: "Pouvez-vous reprendre un projet existant ?",
-    a: "Oui. Nous auditons le code existant, identifions les points de friction, et proposons un plan de refonte ou d'amélioration.",
-  },
-  {
-    q: "Quelle est votre zone géographique ?",
-    a: "Nous travaillons avec des clients partout en France (métropole et DOM-TOM) et à l'international. Tous nos projets se gèrent à distance, avec des points réguliers en visio.",
+    q: "Quelle est votre spécialité technique ?",
+    a: "Nous sommes spécialisés en applications web modernes : MVP, SaaS, outils métier, et sites web avec fonctionnalités avancées. Notre stack technique (React, Next.js, TypeScript) nous permet de livrer des solutions performantes et évolutives. Si vous cherchez du WordPress ou du no-code, ce n'est pas notre coeur de métier, et nous préférons vous recommander d'autres prestataires.",
   },
 ];

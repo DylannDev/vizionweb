@@ -217,7 +217,7 @@ export const services: Service[] = [
           "Ajustements post-lancement et accompagnement pendant vos premiers retours utilisateurs",
       },
     ],
-    deliveryTime: "2 à 6 semaines",
+    deliveryTime: "2 à 8 semaines",
     targetProfiles: [
       {
         title: "Startup early-stage",
@@ -253,7 +253,7 @@ export const services: Service[] = [
       },
       {
         q: "Quel est le délai de livraison ?",
-        a: "Entre 2 et 6 semaines selon la complexité. Nous définissons un planning précis dès le cadrage initial.",
+        a: "Entre 2 et 8 semaines selon la complexité. Nous définissons un planning précis dès le cadrage initial.",
       },
       {
         q: "Que se passe-t-il après le lancement du MVP ?",
@@ -278,48 +278,48 @@ export const services: Service[] = [
     metaTitle: "Développement SaaS sur-mesure | Vizion Web",
     metaDescription:
       "Nous développons votre application SaaS complète en 3 à 8 semaines. Auth, paiements Stripe, multi-tenant, dashboard admin. Code sur-mesure React/Next.js.",
-    heroTitle: "Lancez votre SaaS sans équipe technique",
+    heroTitle: "Transformez votre idée validée en SaaS qui facture",
     heroSubtitle:
-      "Auth, paiements Stripe, dashboard admin, gestion des abonnements : on prend en charge tout le développement technique pour que vous puissiez vous concentrer sur vos clients.",
-    problemTitle: "Construire un SaaS technique sans CTO, c'est un casse-tête",
+      "Vous avez les clients, il vous manque le produit. On construit toute la partie technique et on vous livre un SaaS prêt à encaisser ses premiers paiements.",
+    problemTitle: "Vous avez la demande, mais pas le produit pour y répondre",
     problemDescription:
-      "Vous avez validé votre idée, vos premiers utilisateurs sont là, mais monter une équipe technique coûte cher et recruter un CTO prend du temps. Les solutions no-code atteignent vite leurs limites dès que vos besoins se complexifient.",
+      "Vos premiers utilisateurs sont là, votre offre tient la route. Mais sans produit technique solide, impossible d'aller plus loin. Et les outils no-code vous freinent dès qu'il faut scaler.",
     problemPoints: [
       {
-        text: "Recruter un CTO ou une équipe dev coûte cher et prend des mois",
+        text: "Vos premiers clients attendent, mais vous n'avez rien à leur vendre",
         icon: PiUsersFill,
       },
       {
-        text: "Les solutions no-code ne suivent pas quand vos besoins se complexifient",
+        text: "Recruter un CTO ou monter une équipe prend des mois que vous n'avez pas",
         icon: PiProhibitFill,
       },
       {
-        text: "L'architecture technique (auth, paiements, multi-tenant) demande une expertise pointue",
+        text: "Les outils no-code craquent dès qu'il faut gérer des paiements ou des rôles",
         icon: PiGearSixFill,
       },
       {
-        text: "Chaque mois de retard, c'est du chiffre d'affaires qui s'envole",
+        text: "Chaque mois sans produit, c'est du revenu que vous laissez filer",
         icon: PiChartLineDownFill,
       },
     ],
-    solutionTitle: "Votre SaaS complet livré en 3 à 8 semaines",
+    solutionTitle: "On transforme votre idée en produit prêt à facturer",
     solutionDescription:
-      "On s'occupe de tout le technique : architecture prévue pour tenir la charge, système de connexion et de rôles, paiements et abonnements via Stripe, dashboard pour piloter votre activité. Vous recevez un produit prêt à accueillir vos premiers clients payants.",
+      "En 3 à 8 semaines, on développe votre SaaS complet : inscription, paiements, gestion des comptes et tableau de bord inclus. Vous récupérez un produit fonctionnel, prêt à accueillir vos premiers clients payants.",
     solutionPoints: [
       {
-        text: "Architecture SaaS complète : auth, rôles, multi-tenant",
+        text: "Un système de comptes et de rôles pour gérer vos utilisateurs dès le premier jour",
         icon: PiShieldCheckFill,
       },
       {
-        text: "Intégration paiements (Stripe) et gestion des abonnements",
+        text: "Des paiements et abonnements intégrés via Stripe pour commencer à encaisser",
         icon: PiCreditCardFill,
       },
       {
-        text: "Dashboard d'administration pour piloter votre activité",
+        text: "Un tableau de bord pour suivre votre activité et piloter votre croissance",
         icon: PiChartBarFill,
       },
       {
-        text: "API solide et connexion à vos outils tiers (emailing, CRM, analytics)",
+        text: "Une API connectée à vos outils existants (emailing, CRM, analytics)",
         icon: PiPlugsFill,
       },
     ],
@@ -427,7 +427,7 @@ export const services: Service[] = [
       "Nous développons des outils de gestion internes sur-mesure pour automatiser vos processus. Dashboard, workflows, intégrations. Livré en 2 à 8 semaines.",
     heroTitle: "Automatisez vos processus avec un outil sur-mesure",
     heroSubtitle:
-      "Fini les fichiers Excel et les outils qui ne collent pas à votre réalité. On développe l'application dont votre équipe a vraiment besoin.",
+      "Fini les fichiers Excel et les copier-coller d'outils en outils. On développe l'application dont votre équipe a vraiment besoin.",
     problemTitle:
       "Les tableurs et outils génériques freinent votre productivité",
     problemDescription:
@@ -540,7 +540,7 @@ export const services: Service[] = [
       },
       {
         q: "L'application est-elle accessible en mobilité ?",
-        a: "Oui. Toutes nos applications sont responsive et accessibles depuis un navigateur, sur mobile comme sur desktop. Pas besoin d'installer quoi que ce soit.",
+        a: "Oui. Toutes nos applications sont accessibles depuis un navigateur, sur tablette comme sur ordinateur.",
       },
       {
         q: "Combien d'utilisateurs peuvent utiliser l'application ?",
@@ -575,10 +575,10 @@ export const services: Service[] = [
       "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 1-3 semaines.",
     metaTitle: "Création de Landing Page optimisée conversion | Vizion Web",
     metaDescription:
-      "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement React/Next.js. Livrée en 1 à 3 semaines.",
-    heroTitle: "Une landing page qui convertit, pas juste qui fait joli",
+      "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement. Livrée en 1 à 3 semaines.",
+    heroTitle: "Transformez vos visiteurs en clients dès le premier clic",
     heroSubtitle:
-      "Design sur-mesure, textes écrits pour convaincre, et un seul objectif : que vos visiteurs passent à l'action. Livrée en 1-3 semaines.",
+      "Design sur-mesure, textes écrits pour convaincre, et un seul objectif, que vos visiteurs passent à l'action. Livrée en 1-3 semaines.",
     problemTitle: "Votre page actuelle ne convertit pas assez",
     problemDescription:
       "Vous investissez dans la publicité ou le référencement, mais votre page ne transforme pas les visiteurs en clients. Le message est flou, le design ne rassure pas, et les visiteurs quittent la page sans agir. Chaque clic perdu, c'est du budget gaspillé.",
@@ -602,7 +602,7 @@ export const services: Service[] = [
     ],
     solutionTitle: "Une page conçue pour un seul objectif : convertir",
     solutionDescription:
-      "On rédige les textes, on conçoit le design, et on développe la page en code sur-mesure. Chaque élément (titre, arguments, preuves sociales, bouton d'action) est là pour une seule raison : pousser le visiteur à agir.",
+      "On rédige les textes, on conçoit le design et on développe la page. Chaque élément (titre, arguments, preuves sociales, bouton d'action) est là pour une seule raison : pousser le visiteur à agir.",
     solutionPoints: [
       {
         text: "Copywriting persuasif adapté à votre cible et votre offre",
@@ -631,7 +631,7 @@ export const services: Service[] = [
       {
         title: "Développement sur-mesure",
         description:
-          "1-2 pages, code qui vous appartient à 100%, animations fluides",
+          "1-2 pages, design fidèle à la maquette, animations fluides",
       },
       {
         title: "Responsive design",
@@ -678,7 +678,7 @@ export const services: Service[] = [
       },
       {
         q: "Puis-je modifier le contenu moi-même ensuite ?",
-        a: "Pour des modifications de contenu régulières, nous pouvons intégrer un CMS simple. Pour des ajustements ponctuels, il suffit de nous contacter pendant la période de support.",
+        a: "Oui. Votre page est livrée avec un accès pour modifier les textes, images et contenus vous-même. Pour des ajustements de structure ou de design, il suffit de nous contacter pendant la période de support.",
       },
       {
         q: "Quel est le délai de livraison ?",
@@ -808,12 +808,8 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        q: "Pourquoi du code sur-mesure plutôt que WordPress ?",
-        a: "Un site React/Next.js est plus rapide, plus sécurisé, et mieux référencé qu'un site WordPress. Vous n'avez pas de plugins à maintenir, pas de failles de sécurité récurrentes, et des performances nettement supérieures.",
-      },
-      {
         q: "Puis-je modifier le contenu moi-même ?",
-        a: "Oui. Nous intégrons un CMS simple qui vous permet de modifier textes et images en toute autonomie, sans toucher au code.",
+        a: "Oui. Votre site est livré avec un accès pour modifier les textes, images et contenus vous-même.",
       },
       {
         q: "Le site sera-t-il bien référencé sur Google ?",
@@ -821,7 +817,7 @@ export const services: Service[] = [
       },
       {
         q: "Combien de pages sont incluses ?",
-        a: "Le site vitrine comprend 6 à 10 pages. Le nombre exact est défini lors du cadrage en fonction de vos besoins.",
+        a: "Le site vitrine comprend 2 à 8 pages et plus. Le nombre exact est défini lors du cadrage en fonction de vos besoins.",
       },
       {
         q: "Quel est le délai de livraison ?",
@@ -962,7 +958,7 @@ export const services: Service[] = [
       },
       {
         q: "Puis-je gérer le contenu moi-même ?",
-        a: "Oui. Nous intégrons un CMS avancé adapté à vos besoins. Vous pouvez gérer vos contenus, vos pages, et certaines fonctionnalités en toute autonomie.",
+        a: "Pour les modifications ponctuelles de texte ou d'images, nous restons à votre disposition sans surcoût. Si vous avez besoin de modifications fréquentes, nous pouvons intégrer un système de gestion de contenu (CMS) en option, qui vous rendra totalement autonome sur les contenus textuels et visuels.",
       },
       {
         q: "Le site sera-t-il sécurisé ?",
