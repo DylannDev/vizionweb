@@ -58,7 +58,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       className={cn(
-        "fixed inset-x-0 top-0 z-100 w-full max-w-[1536px] mx-auto pt-8 px-8",
+        "fixed inset-x-0 top-0 z-100 w-full max-w-[1536px] mx-auto pt-4 sm:pt-8 px-4 sm:px-8",
         className
       )}
     >
@@ -79,7 +79,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
     <motion.nav
       aria-label="Navigation principale"
       animate={{
-        width: visible ? "82.5%" : "100%",
+        maxWidth: visible ? "1216px" : "1536px",
         y: visible ? -20 : 0,
       }}
       transition={{
@@ -87,11 +87,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         stiffness: 200,
         damping: 50,
       }}
-      style={{
-        minWidth: "800px",
-      }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-[1536px] flex-row items-center justify-between self-start lg:flex",
+        "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start lg:flex",
         "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark",
         "pl-4 pr-3 h-18 rounded-[22px]",
         className
@@ -106,8 +103,8 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
       animate={{
-        width: visible ? "90%" : "100%",
-        borderRadius: visible ? "12px" : "22px",
+        maxWidth: visible ? "1280px" : "1536px",
+        y: visible ? -10 : 0,
       }}
       transition={{
         type: "spring",
@@ -116,7 +113,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full flex-col items-center justify-between lg:hidden",
-        "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark rounded-[22px]",
+        "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark rounded-[18px] sm:rounded-[22px]",
         className
       )}
     >
@@ -132,7 +129,7 @@ export const MobileNavHeader = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-between px-4 sm:px-5 h-16 sm:h-18",
+        "flex w-full flex-row items-center justify-between pl-2 pr-3 sm:px-5 h-14 sm:h-18",
         className
       )}
     >
@@ -155,8 +152,8 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           className={cn(
-            "absolute inset-x-0 top-[calc(100%+8px)] z-50 flex w-full flex-col items-start justify-start gap-4 rounded-3xl px-4 py-8",
-            "bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_2px_16px_0] shadow-gray-lighter",
+            "absolute inset-x-0 top-[calc(100%+8px)] z-50 flex w-full flex-col items-start justify-start rounded-3xl px-6 py-6",
+            "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark rounded-3xl sm:rounded-4xl",
             className
           )}
         >
@@ -180,7 +177,7 @@ export const MobileNavToggle = ({
       aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
       aria-expanded={isOpen}
       onClick={onClick}
-      className="inline-flex items-center justify-center rounded-md cursor-pointer p-1.5 text-secondary-dark bg-background hover:text-secondary-dark hover:bg-gray-lighter transition-colors"
+      className="inline-flex items-center justify-center rounded-lg cursor-pointer p-1.5 text-primary-dark bg-white"
     >
       {isOpen ? (
         <svg

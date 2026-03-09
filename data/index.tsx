@@ -107,7 +107,7 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "Combien coûte un projet chez Vizion Web ?",
+    q: "Combien coûte un projet web ?",
     a: "Chaque projet est unique et nous établissons un devis sur-mesure après un appel découverte gratuit. Le budget dépend de la complexité : une landing page sera moins coûteuse qu'une application SaaS complète. Nous adaptons notre proposition à vos besoins et à votre enveloppe budgétaire. Réservez un appel pour obtenir un chiffrage précis.",
   },
   {
@@ -116,6 +116,14 @@ export const faqs = [
   },
   {
     q: "Quelle est votre spécialité technique ?",
-    a: "Nous sommes spécialisés en applications web modernes : MVP, SaaS, outils métier, et sites web avec fonctionnalités avancées. Notre stack technique (React, Next.js, TypeScript) nous permet de livrer des solutions performantes et évolutives. Si vous cherchez du WordPress ou du no-code, ce n'est pas notre coeur de métier, et nous préférons vous recommander d'autres prestataires.",
+    a: "Nous sommes spécialisés en applications web modernes : MVP, SaaS, outils métier, et sites web avec fonctionnalités avancées. Notre stack technique (React, Next.js, TypeScript) nous permet de livrer des solutions performantes et évolutives.",
+  },
+  {
+    q: "Que se passe-t-il après la livraison ?",
+    a: "Chaque projet inclut une période de support (30 à 90 jours selon la prestation). Pendant cette période, nous corrigeons les bugs et répondons à vos questions. Au-delà, nous restons disponibles pour faire évoluer votre produit avec de nouvelles fonctionnalités ou des ajustements.",
+  },
+  {
+    q: "Est-ce que je suis propriétaire du projet ?",
+    a: "Oui, à 100 %. Le code source, le design et tous les contenus vous appartiennent. Vous recevez l'accès complet à votre projet dès la livraison. Vous êtes libre de le faire évoluer avec nous ou avec un autre prestataire.",
   },
 ];

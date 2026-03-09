@@ -8,10 +8,12 @@ import {
 import Badge from "./ui/badge";
 
 import { faqs } from "@/data";
+import Card from "./ui/card";
+import WhatsappButton from "./ui/whatsapp-button";
 
 export function FAQ() {
   return (
-    <section className="py-16 md:py-24 z-10 bg-gradient-to-t from-background from-60% to-white">
+    <section className="pt-16 md:pt-24 z-10 bg-gradient-to-t from-background from-60% to-white">
       <div className=" mx-auto max-w-7xl px-4">
         <Badge align="center">FAQ</Badge>
         <Typography
@@ -45,25 +47,24 @@ export function FAQ() {
             ))}
           </Accordion>
 
-          {/* <FadeIn key="card" delay={1.8} className="flex justify-center w-full">
+          <div className="flex justify-center w-full">
             <Card
               radius="4xl"
               bgColor="bg-background"
-              className="p-8 max-w-2xl w-full relative overflow-hidden"
+              className="p-8 max-w-2xl w-full relative overflow-hidden bg-white"
             >
               <div className="space-y-3 text-center z-10 relative">
-                <h3 className="text-xl font-semibold text-primary-dark">
+                <h3 className="text-xl sm:text-2xl font-semibold text-primary-dark">
                   Vous avez encore des questions ?
                 </h3>
-                <p className="text-gray-dark text-sm sm:text-base">
-                  Écrivez-nous directement sur WhatsApp. On répond
-                  <br className="hidden sm:block" />
-                  rapidement, même pour une question simple.
+                <p className="text-gray-dark text-base sm:text-lg text-balance">
+                  Écrivez-nous directement sur WhatsApp. On répond rapidement,
+                  même pour une simple question.
                 </p>
                 <WhatsappButton />
               </div>
             </Card>
-          </FadeIn> */}
+          </div>
         </div>
       </div>
     </section>

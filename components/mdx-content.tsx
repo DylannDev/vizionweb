@@ -3,6 +3,14 @@ import path from "node:path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 
+const mdxComponents = {
+  table: (props: React.ComponentProps<"table">) => (
+    <div className="table-wrapper">
+      <table {...props} />
+    </div>
+  ),
+};
+
 function remarkStripTitle() {
   return (tree: { children: { type: string; depth?: number }[] }) => {
     const idx = tree.children.findIndex(
@@ -27,6 +35,7 @@ export async function MDXContent({ file, stripTitle }: MDXContentProps) {
     <div className="mdx-content">
       <MDXRemote
         source={source}
+        components={mdxComponents}
         options={{ mdxOptions: { remarkPlugins } }}
       />
     </div>

@@ -136,6 +136,8 @@ Chez Vizion Web, on développe des dashboards sur-mesure en React et Next.js qui
 
 Le budget dépend du nombre de sources de données à connecter, de la complexité des calculs et du nombre de vues. Un dashboard simple (2-3 sources, 5-8 indicateurs, 1 vue principale) se situe entre 8 000 et 15 000 euros. Un dashboard complexe (5+ sources, calculs métier avancés, alertes automatiques, plusieurs rôles utilisateurs) monte entre 15 000 et 35 000 euros. L'hébergement et la maintenance représentent ensuite 100 à 300 euros par mois.
 
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
+
 ### Est-ce que mes outils actuels sont compatibles ?
 
 La plupart des outils modernes (Shopify, HubSpot, Salesforce, Stripe, les logiciels de caisse, les outils de timetracking) proposent des APIs qui permettent de récupérer les données automatiquement. Pour les outils plus anciens sans API, on peut souvent travailler avec des exports automatisés ou des connecteurs intermédiaires. Lors du premier échange, on fait un audit rapide de vos outils pour évaluer la faisabilité.

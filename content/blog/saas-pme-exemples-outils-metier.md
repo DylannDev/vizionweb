@@ -81,6 +81,8 @@ Voici ce que ces projets partagent :
 
 **Un budget compris entre 9 000 et 22 000 euros.** On est loin des projets à 100 000 euros. Un outil métier sur-mesure pour une PME, ça se construit en 2 à 8 semaines, avec un budget que la plupart des entreprises peuvent absorber.
 
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
+
 **Un retour sur investissement rapide.** Dans chaque cas, l'outil s'est rentabilisé en moins d'un an, souvent en quelques mois. Parce qu'on ne construit pas un outil "pour faire joli" mais pour résoudre un problème qui coûte de l'argent chaque jour.
 
 **Une adoption immédiate par les équipes.** Quand un outil est conçu autour du workflow réel des utilisateurs, pas besoin de formation de trois jours. Les gens l'utilisent parce qu'il leur simplifie la vie, pas parce qu'on les y oblige.

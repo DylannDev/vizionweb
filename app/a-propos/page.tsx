@@ -119,7 +119,7 @@ export default function AProposPage() {
         <Badge align="center">À propos</Badge>
         <Typography
           as="h1"
-          title="Votre projet mérite notre expertise"
+          title="L'agence web qui conçoit votre produit de A à Z"
           subtitle="Nous concevons et développons des applications web et sites sur-mesure pour les entreprises qui veulent un produit à la hauteur de leurs ambitions."
         />
         <div className="flex justify-center">
@@ -133,38 +133,38 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Texte */}
             <div>
-                <Badge align="left">Notre mission</Badge>
-                <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
-                  Une agence partenaire, pas un prestataire
-                </h2>
+              <Badge align="left">Notre mission</Badge>
+              <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
+                Une agence partenaire, pas un prestataire
+              </h2>
               <div className="space-y-4 text-gray-dark text-base sm:text-lg">
-                  <p>
-                    Chaque projet est conçu pour vos objectifs et votre marché.
-                    Pas de templates recyclés, pas de compromis. Du code
-                    sur-mesure, pensé pour durer et évoluer avec votre activité.
-                  </p>
-                  <p>
-                    Stratégie, design, copywriting, développement, déploiement :
-                    nous gérons tout. Un interlocuteur unique du début à la fin,
-                    un processus transparent, et un résultat qui génère de la
-                    valeur dès le premier jour.
-                  </p>
+                <p>
+                  Chaque projet est conçu pour vos objectifs et votre marché.
+                  Pas de templates recyclés, pas de compromis. Du code
+                  sur-mesure, pensé pour durer et évoluer avec votre activité.
+                </p>
+                <p>
+                  Stratégie, design, copywriting, développement, déploiement :
+                  nous gérons tout. Un interlocuteur unique du début à la fin,
+                  un processus transparent, et un résultat qui génère de la
+                  valeur dès le premier jour.
+                </p>
               </div>
-              <div className="flex justify-center lg:justify-start mt-8">
-                <CallButton size="md" />
+              <div className="flex justify-start mt-8">
+                <CallButton />
               </div>
             </div>
 
             {/* Mockup */}
-              <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
-                <Image
-                  src="/mockup-1.jpg"
-                  alt="Exemple de projet livré par Vizion Web"
-                  width={1500}
-                  height={1500}
-                  className="object-cover object-center p-3 bg-white rounded-[40px]"
-                />
-              </div>
+            <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
+              <Image
+                src="/mockup-1.jpg"
+                alt="Exemple de projet livré par Vizion Web"
+                width={1500}
+                height={1500}
+                className="object-cover object-center p-3 bg-white rounded-[40px]"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -174,47 +174,51 @@ export default function AProposPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 items-center">
             {/* Photo */}
-              <div className="relative group">
-                <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
-                  <Image
-                    src="/founder.webp"
-                    alt="Dylann, fondateur de Vizion Web"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-center p-3 bg-white rounded-[40px]"
-                  />
-                </div>
+            <div className="relative group order-last lg:order-first">
+              <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
+                <Image
+                  src="/founder.webp"
+                  alt="Dylann, fondateur de Vizion Web"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center p-3 bg-white rounded-[40px]"
+                />
               </div>
+            </div>
 
             {/* Texte */}
-            <div className="flex flex-col gap-4 text-gray-dark">
-                <Badge align="left">Le fondateur</Badge>
-                <h3 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
-                  Pourquoi j'ai créé Vizion Web ?
-                </h3>
+            <div className="flex flex-col gap-0 sm:gap-4 text-gray-dark">
+              <Badge align="left" className="w-fit">
+                Le fondateur
+              </Badge>
+              <h3 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
+                Pourquoi j'ai créé Vizion Web ?
+              </h3>
 
-                <p className="text-base sm:text-lg">
+              <div className="text-base sm:text-lg space-y-4">
+                <p>
                   Développeur et designer depuis plus de 5 ans, j'ai créé Vizion
                   Web pour proposer un modèle différent : une agence 100 %
                   remote, sans structure lourde, qui s'entoure des meilleurs
                   freelances pour chaque projet.
                 </p>
 
-                <p className="text-base sm:text-lg">
+                <p>
                   Je pilote chaque mission de A à Z. Quand un projet demande une
                   expertise pointue (design UI, SEO poussé, dev backend), je
                   fais appel à des indépendants seniors avec qui je travaille
                   régulièrement. Vous gardez un seul interlocuteur, avec une
                   équipe complète derrière.
                 </p>
+              </div>
 
-                <div className="relative px-6 py-10 rounded-3xl mt-2 bg-background">
-                  <ImQuotesRight className="absolute bottom-4 right-4 text-3xl text-primary-blue" />
-                  <p className="text-base sm:text-lg font-semibold text-primary-dark relative z-10">
-                    "Mon objectif : vous donner accès à une équipe solide, sans
-                    la complexité et le coût d'une agence traditionnelle."
-                  </p>
-                </div>
+              <div className="relative px-6 py-6 sm:py-10 rounded-3xl mt-6 bg-background">
+                <ImQuotesRight className="absolute bottom-4 right-4 text-2xl sm:text-3xl text-primary-blue" />
+                <p className="text-base sm:text-lg font-semibold text-primary-dark relative z-10">
+                  "Mon objectif : vous donner accès à une équipe solide, sans la
+                  complexité et le coût d'une agence traditionnelle."
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -230,10 +234,7 @@ export default function AProposPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((pillar, i) => (
-              <div
-                key={pillar.title}
-                className="h-full flex"
-              >
+              <div key={pillar.title} className="h-full flex">
                 <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
                   <div className="h-full rounded-[32px] p-6 flex flex-col gap-4">
                     <IconIllustration icon={pillar.icon} />
@@ -261,10 +262,7 @@ export default function AProposPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {expertise.map((block, i) => (
-              <div
-                key={block.title}
-                className="h-full w-full flex"
-              >
+              <div key={block.title} className="h-full w-full flex">
                 <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
                   <div className="h-full rounded-[32px] p-4 flex flex-col gap-4">
                     <IconIllustration icon={block.icon} />

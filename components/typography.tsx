@@ -73,7 +73,7 @@ export function Typography({
       case "base":
         return 16;
       case "lg":
-        return 18;
+        return 16;
       case "xl":
         return 20;
       case "2xl":
@@ -92,6 +92,21 @@ export function Typography({
   function getResponsiveFontSize(token: FontSizeToken) {
     const min = getMobileMinPx(token);
     return `clamp(${min}px, calc(${min}px + 1.2vw), var(--font-size-${token}))`;
+  }
+
+  function getSubtitleSizeClass(token: FontSizeToken) {
+    const mobileMap: Record<FontSizeToken, string> = {
+      xs: "text-xs",
+      sm: "text-sm",
+      base: "text-base",
+      lg: "text-base",
+      xl: "text-lg",
+      "2xl": "text-xl",
+      "3xl": "text-2xl",
+      "4xl": "text-2xl",
+      "5xl": "text-3xl",
+    };
+    return `${mobileMap[token]} sm:text-${token}`;
   }
 
   function getFontWeightValue(weight: FontWeight) {
@@ -133,13 +148,13 @@ export function Typography({
     <p
       className={cn(
         "text-balance",
+        getSubtitleSizeClass(subtitleSize),
         variant === "stacked" && `${subtitleMaxWidth} mx-auto`,
         variant === "split" && "md:text-right",
         subtitleColor
       )}
       style={{
         fontFamily: "var(--font-family-sans)",
-        fontSize: getResponsiveFontSize(subtitleSize),
         fontWeight: getFontWeightValue(subtitleWeight),
         lineHeight: "var(--line-height-normal)",
       }}

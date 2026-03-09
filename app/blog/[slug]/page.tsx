@@ -78,8 +78,8 @@ export default async function BlogPostPage({
     <>
       <main>
         <PageHero bg="white" outerPadding="pt-4">
-          <Breadcrumb className="px-4">
-            <BreadcrumbList>
+          <Breadcrumb className="px-0 sm:px-4">
+            <BreadcrumbList className="flex-nowrap overflow-hidden">
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="/">Accueil</Link>
@@ -93,15 +93,13 @@ export default async function BlogPostPage({
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage className="line-clamp-1">
-                  {post.title}
-                </BreadcrumbPage>
+                <BreadcrumbPage>{post.title}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
           <header className="pb-2 text-center">
-            <div className="flex justify-center items-center gap-3 mt-10 sm:mt-16 mb-2">
+            <div className="flex justify-center items-center gap-3 mt-2 sm:mt-12 mb-4">
               <Badge variant="black" className="m-0 text-xs shadow-none">
                 {category.label}
               </Badge>
@@ -124,7 +122,7 @@ export default async function BlogPostPage({
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-dark text-balance max-w-4xl mx-auto">
+            <h1 className="text-[28px] sm:text-4xl md:text-5xl font-semibold text-primary-dark text-balance max-w-4xl mx-auto">
               {post.title}
             </h1>
           </header>

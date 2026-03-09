@@ -10,24 +10,9 @@ import { portfolioProjects } from "@/data/projets";
 import { getService } from "@/data/services";
 import { getCity } from "@/data/cities";
 import { cn } from "@/lib/utils";
-
-const logos = [
-  { src: "/logos/academy.svg", alt: "Amazonia Academy" },
-  { src: "/logos/geteasy.svg", alt: "Get Easy Location" },
-  { src: "/logos/hippokom.svg", alt: "Hippo'kom Agency" },
-  { src: "/logos/chefkit.svg", alt: "ChefKit SaaS" },
-  { src: "/logos/mrkicks.svg", alt: "Mr. Kicks" },
-  { src: "/logos/investing.svg", alt: "Amazonian Investing" },
-  { src: "/logos/pygmalion.svg", alt: "Pygmalion Conseil" },
-  { src: "/logos/zenlounge.svg", alt: "Zen Lounge" },
-];
+import { logos } from "@/data";
 
 const ctaByPath: Record<string, { title: string; description: string }> = {
-  "/": {
-    title: "Vous avez un projet en tête ?",
-    description:
-      "30 minutes, gratuit, sans engagement. On écoute votre besoin, on vous dit si on peut vous aider, et vous repartez avec un plan d'action clair.",
-  },
   "/services": {
     title: "Vous ne savez pas quelle offre choisir ?",
     description:
@@ -43,17 +28,12 @@ const ctaByPath: Record<string, { title: string; description: string }> = {
     description:
       "Réservez 30 minutes pour discuter de votre projet. On vous explique comment on peut vous accompagner.",
   },
-  "/blog": {
-    title: "Un projet en tête ? Parlons-en.",
-    description:
-      "30 minutes, gratuit, sans engagement. On écoute votre besoin et on vous propose un plan d'action concret.",
-  },
 };
 
 const defaultCta = {
   title: "Vous avez un projet en tête ?",
   description:
-    "30 minutes, gratuit, sans engagement. On écoute votre besoin, on vous dit si on peut vous aider, et vous repartez avec un plan d'action clair.",
+    "Réservez un appel découverte de 30 minutes. C'est gratuit et vous repartez avec une vision claire de votre projet.",
 };
 
 function getCtaContent(pathname: string) {

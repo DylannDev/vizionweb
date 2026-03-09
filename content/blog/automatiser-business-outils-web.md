@@ -122,7 +122,9 @@ La digitalisation, c'est un marathon. Pas un sprint.
 
 ### Combien coûte un outil interne sur-mesure ?
 
-Ça dépend de la complexité du processus. Un outil simple (génération de devis automatisée, formulaire connecté à une base de données) commence autour de 5 000 à 8 000 euros. Un outil plus complet avec plusieurs modules (CRM + facturation + reporting) se situe entre 15 000 et 30 000 euros. Pour donner un ordre d'idée, la plupart de nos projets d'automatisation pour des PME de 5 à 20 personnes se situent entre 10 000 et 20 000 euros, avec un retour sur investissement mesuré entre 3 et 8 mois.
+Ça dépend de la complexité du processus. Un outil simple (génération de devis automatisée, formulaire connecté à une base de données) commence autour de 5 000 à 8 000 euros. Un outil plus complet avec plusieurs modules (CRM + facturation + reporting) se situe entre 15 000 et 30 000 euros. Le retour sur investissement se mesure généralement entre 3 et 8 mois.
+
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
 
 ### Pourquoi ne pas utiliser Zapier ou Make pour automatiser ?
 

@@ -26,7 +26,10 @@ export function ServicesHomeSection({
   return (
     <section
       id="services"
-      className={className ?? "pt-8 pb-16 md:pb-24 md:pt-16 bg-gradient-to-b from-background from-0% to-white to-10%"}
+      className={
+        className ??
+        "pt-8 pb-16 md:pb-24 md:pt-16 bg-gradient-to-b from-background from-0% to-white to-10%"
+      }
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         <Badge align="center" className="mb-4 md:mx-0">
@@ -35,14 +38,17 @@ export function ServicesHomeSection({
         <Typography
           variant="split"
           title={titleOverride ?? "Les projets que nous réalisons"}
-          subtitle={subtitleOverride ?? "Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."}
+          subtitle={
+            subtitleOverride ??
+            "Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."
+          }
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <div
               key={service.slug}
-              className="h-full flex"
+              className="h-full flex max-sm:sticky top-[100px]"
             >
               <ContentCard
                 title={service.shortTitle}
@@ -58,9 +64,7 @@ export function ServicesHomeSection({
           ))}
         </div>
 
-        <div
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mt-12 mb-10"
-        >
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 sm:gap-y-3 mt-8 mb-6 sm:mt-12 sm:mb-10">
           {sellingPoints.map((point) => (
             <div key={point} className="flex items-center gap-1.5 py-2">
               <div className="rounded-full bg-gradient-to-b from-primary-blue-dark to-primary-blue-border p-1">

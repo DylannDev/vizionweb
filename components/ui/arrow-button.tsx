@@ -28,7 +28,7 @@ export function ArrowButton({
       {children}
       <span
         className={cn(
-          size === "lg" ? "size-7" : "size-6",
+          size === "lg" ? "size-6 sm:size-7" : "size-6",
           "flex items-center justify-center rounded-md",
           variant === "white"
             ? "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border"
@@ -38,7 +38,7 @@ export function ArrowButton({
         <ArrowRight
           strokeWidth={2.5}
           className={cn(
-            size === "lg" ? "size-4" : "size-3.5",
+            size === "lg" ? "size-3.5 sm:size-4" : "size-3.5",
             "group-hover:-rotate-45 transition-all duration-300 ease-in-out",
             variant === "white" && "text-white",
             variant === "black" && "text-primary-dark",

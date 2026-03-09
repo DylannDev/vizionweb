@@ -47,14 +47,14 @@ export function CityHero({ city }: CityHeroProps) {
         subtitle={city.hero.subheadline}
       />
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <CallButton />
-        <Button variant="black" className="min-w-[174.5px]" asChild>
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <CallButton className="min-w-[200px]" />
+        <Button variant="black" className="min-w-[200px]" asChild>
           <Link href="/realisations">Voir nos réalisations</Link>
         </Button>
       </div>
 
-      <div className="flex items-center justify-center mt-4">
+      <div className="flex items-center justify-center max-[510px]:hidden mt-4">
         <CustomerSatisfactionBanner stars={5} />
       </div>
 
@@ -64,10 +64,10 @@ export function CityHero({ city }: CityHeroProps) {
             title: p.title,
             src: p.src,
           }))}
-          className="relative z-10 mt-10 mx-4 md:mx-8"
+          className="relative z-10 mt-5 sm:mt-10 mx-4 md:mx-8"
         />
       </div>
-      <div className="w-full relative z-10 mt-8 max-w-7xl mx-auto px-4 md:px-8">
+      <div className="w-full relative z-10 mt-4 sm:mt-8 max-w-7xl mx-auto px-4 md:px-8">
         <LogoCloud logos={logos} />
       </div>
     </PageHero>

@@ -105,8 +105,14 @@ export function PortfolioCard({
         )}
 
         {link && (
-          <div>
-            <ArrowButton href={link} target="_blank" variant="black" size="md">
+          <div className="">
+            <ArrowButton
+              className="w-full"
+              href={link}
+              target="_blank"
+              variant="blue"
+              size="md"
+            >
               Voir le projet
             </ArrowButton>
           </div>

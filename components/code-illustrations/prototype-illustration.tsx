@@ -42,7 +42,7 @@ export default function PrototypeIllustration() {
       </h2>
 
       {/* Main window */}
-      <div className="relative z-70 w-full max-w-[400px] h-[230px] rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] bg-white p-4">
+      <div className="relative z-70 w-full max-w-[400px] h-[230px] rounded-3xl border border-gray-lighter shadow-[0_4px_12px_0_rgba(0,87,250,0.15)] bg-white p-3">
         {/* 2-column mock layout */}
         <div className="grid grid-cols-2 h-full gap-4">
           {/* Left: Headline + skeletons */}

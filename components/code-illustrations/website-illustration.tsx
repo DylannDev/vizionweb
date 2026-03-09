@@ -49,10 +49,7 @@ const WebsiteIllustration = () => {
             className="h-2.5 w-2.5 rounded-full bg-gray-lighter"
             aria-hidden
           />
-          <div
-            className="h-2.5 w-2.5 rounded-full bg-red-400"
-            aria-hidden
-          />
+          <div className="h-2.5 w-2.5 rounded-full bg-red-400" aria-hidden />
         </div>
 
         <hr className="border-gray-lighter mb-5" />
@@ -147,7 +144,7 @@ const WebsiteIllustration = () => {
             className={cn(
               "relative inline-flex items-center justify-center size-10 rounded-full text-gray-dark",
               idx === 2
-                ? "sm:size-12 size-10 ring-4 ring-primary-blue/30"
+                ? "sm:size-12 size-10 ring-4 ring-bg-rose"
                 : "hover:bg-background"
             )}
           >
@@ -155,7 +152,7 @@ const WebsiteIllustration = () => {
             {idx === 2 && (
               <>
                 <span className="bg-red-400 sm:size-12 size-10 rounded-full absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-10"></span>
-                <span className="bg-primary-dark sm:size-7 size-6 rounded-full animate-[ping_1.5s_linear_infinite] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-0"></span>
+                <span className="bg-primary-dark/70 sm:size-7 size-6 rounded-full animate-[ping_1.5s_linear_infinite] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-0"></span>
               </>
             )}
           </div>

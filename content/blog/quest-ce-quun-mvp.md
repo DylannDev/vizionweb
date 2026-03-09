@@ -90,7 +90,7 @@ Résumez votre MVP en une seule phrase. Si vous n'y arrivez pas, c'est qu'il est
 
 ## Les erreurs classiques
 
-Après avoir accompagné des dizaines de projets, on retrouve toujours les mêmes pièges.
+Après avoir accompagné plusieurs projets, on retrouve toujours les mêmes pièges.
 
 ### Mettre trop de fonctionnalités dans le MVP
 
@@ -130,13 +130,15 @@ Votre produit est validé, vos utilisateurs sont satisfaits, vos métriques sont
 
 Ce processus réduit le gaspillage et maximise vos chances de succès. Au lieu de parier 100 000 euros sur une intuition, vous investissez 15 000 euros pour valider, puis 30 000 euros pour améliorer, puis le reste pour grandir. A chaque étape, vous avez des données réelles pour guider vos décisions.
 
-Chez Vizion Web, on construit des MVPs en React et Next.js avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 6 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
+Chez Vizion Web, on construit des MVPs avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
 
 ## Questions fréquentes
 
 ### Combien coûte un MVP ?
 
 Le budget dépend de la complexité du projet. Pour un outil interne simple (formulaires, gestion de données, interface d'administration), comptez entre 8 000 et 15 000 euros. Pour un SaaS avec authentification, paiement et interface client, on se situe plutôt entre 12 000 et 25 000 euros. Une marketplace avec deux types d'utilisateurs commence autour de 20 000 euros. Ces budgets couvrent le design, le développement, les tests et le déploiement.
+
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
 
 ### Combien de temps faut-il pour développer un MVP ?
 

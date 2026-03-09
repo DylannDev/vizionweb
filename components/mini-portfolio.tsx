@@ -19,7 +19,7 @@ export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
     >
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         {/* Titre sticky — reste visible derrière les cards */}
-        <div className="sticky z-0" style={{ top: "110px" }}>
+        <div className="sm:sticky z-0 sm:top-[110px]">
           <Badge align="center">Réalisations</Badge>
 
           <Typography
@@ -33,7 +33,7 @@ export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
         {/* Cards — z-10 au-dessus du titre, pb pour le temps d'empilement */}
         <div className="relative z-10 flex flex-col gap-6">
           {items.map((it, index) => (
-            <div key={it.title} className="sticky top-[300px]">
+            <div key={it.title} className="sm:sticky sm:top-[300px]">
               <PortfolioCard {...it} reverse={index % 2 !== 0} />
             </div>
           ))}
@@ -44,7 +44,7 @@ export function MiniPortfolio({ className }: MiniPortfolioProps = {}) {
       <div className="relative z-20">
         <div className="flex justify-center mt-10">
           <ArrowButton href="/realisations" variant="black">
-            Voir toutes les réalisations
+            Voir toutes nos réalisations
           </ArrowButton>
         </div>
       </div>

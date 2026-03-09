@@ -5,7 +5,6 @@ import PrototypeIllustration from "@/components/code-illustrations/prototype-ill
 import DevelopmentIllustration from "@/components/code-illustrations/development-illustration";
 import LaunchIllustration from "@/components/code-illustrations/launch-illustration";
 
-
 export function ProcessSteps() {
   const steps = [
     {
@@ -19,21 +18,21 @@ export function ProcessSteps() {
       title: "UI/UX Design",
       desc: "Nous créons une maquette sur Figma pour valider l'interface et le parcours utilisateur avant d'écrire une seule ligne de code, les modifications sont illimitées.",
       className: "lg:col-span-5 gap-4",
-      containerClassName: "bg-bg-blue p-8 max-h-[414px]",
+      containerClassName: "bg-bg-blue p-4 max-h-[414px]",
       illustration: <PrototypeIllustration />,
     },
     {
       title: "Développement & intégrations",
       desc: "Votre site ou application prend forme en code React/Next.js. Paiements, espace client, formulaires, intégrations : on construit ce dont vous avez besoin, avec des points d'avancement réguliers.",
       className: "lg:col-span-5 gap-6",
-      containerClassName: "bg-bg-yellow p-8",
+      containerClassName: "bg-bg-yellow p-4",
       illustration: <DevelopmentIllustration />,
     },
     {
       title: "Lancement & suivi",
       desc: "Mise en ligne, vérification performance et sécurité, formation rapide pour que vous soyez autonome. Plus 30 jours de support inclus pour ajuster ce qui doit l'être.",
       className: "lg:col-span-4 gap-6",
-      containerClassName: "bg-bg-rose p-8",
+      containerClassName: "bg-bg-rose p-4",
       illustration: <LaunchIllustration />,
     },
   ];
@@ -53,7 +52,7 @@ export function ProcessSteps() {
           {steps.map((s, i) => (
             <div
               key={s.title}
-              className={`bg-white shadow-[0_4px_20px_0] shadow-gray-lighter flex flex-col justify-between rounded-3xl sm:rounded-4xl p-2 relative ${s.className}`}
+              className={`bg-white shadow-[0_4px_20px_0] shadow-gray-lighter flex flex-col justify-between rounded-4xl sm:rounded-[40px] p-2 relative ${s.className}`}
             >
               <div className="flex flex-col gap-2 p-4">
                 <h3 className="font-semibold">

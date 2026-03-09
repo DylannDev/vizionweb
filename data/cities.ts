@@ -56,13 +56,7 @@ function getLocalFaqs(
     },
   ];
 
-  if (extra?.type === "paris") {
-    faqs.push({
-      question: "Vous travaillez avec des startups parisiennes ?",
-      answer:
-        "Oui, régulièrement. Nous accompagnons des fondateurs en pré-seed pour construire leur MVP, et des startups post-seed pour développer leur produit SaaS. Notre approche : livraison rapide, itérations fréquentes, et code maintenable pour que vous puissiez recruter une équipe tech plus tard sans repartir de zéro.",
-    });
-  } else if (extra?.type === "domtom") {
+  if (extra?.type === "domtom") {
     faqs.push({
       question: `Vous connaissez le marché ${extra.adj} ?`,
       answer: `Oui, nous avons une expérience significative avec des clients en ${extra.territoire}, et nous comprenons les spécificités du marché local : besoins en digitalisation, contraintes budgétaires, et opportunités de niche. Nous sommes sensibles aux particularités culturelles et économiques des territoires d'outre-mer.`,

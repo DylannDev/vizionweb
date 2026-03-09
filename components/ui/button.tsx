@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-lg text-lg font-semibold transition-all duration-200 ease-in-out group active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 disabled:opacity-60 disabled:pointer-events-none gap-2 [&>svg]:shrink-0",
+  "inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-lg text-base sm:text-lg font-semibold transition-all duration-200 ease-in-out group active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 disabled:opacity-60 disabled:pointer-events-none gap-2 [&>svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -16,8 +16,8 @@ const buttonVariants = cva(
         white: "bg-white border border-gray-lighter text-primary-dark",
       },
       size: {
-        md: "h-12 px-5 text-base [&>svg]:text-base",
-        lg: "h-14.5 px-6 rounded-xl [&>svg]:text-lg",
+        md: "h-12 px-5 text-base sm:text-base [&>svg]:text-base",
+        lg: "h-13 sm:h-14.5 px-5 sm:px-6 rounded-xl [&>svg]:text-lg",
       },
     },
     defaultVariants: {

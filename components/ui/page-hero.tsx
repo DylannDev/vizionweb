@@ -12,14 +12,14 @@ export function PageHero({
   children,
   className,
   bg = "background",
-  outerPadding = "pt-4 pb-20 px-4",
+  outerPadding = "pt-2 sm:pt-4 pb-10 sm:pb-20 px-2 sm:px-4",
 }: PageHeroProps) {
   return (
     <section className={bg === "background" ? "bg-background" : "bg-white"}>
       <div className={cn(outerPadding, "max-w-[1536px] mx-auto w-full")}>
         <div
           className={cn(
-            "relative bg-white w-full rounded-[36px] overflow-hidden px-5",
+            "relative bg-white w-full rounded-3xl sm:rounded-[36px] overflow-hidden px-5",
             className
           )}
         >
@@ -38,9 +38,7 @@ export function PageHero({
             speedMax={0.6}
             speedScale={1}
           />
-          <div className="relative z-10 pt-24 sm:pt-36 pb-6 sm:pb-10">
-            {children}
-          </div>
+          <div className="relative z-10 pt-36 pb-10 sm:pb-20">{children}</div>
         </div>
       </div>
     </section>

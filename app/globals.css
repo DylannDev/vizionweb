@@ -370,8 +370,11 @@
       @apply mt-2;
     }
 
+    .table-wrapper {
+      @apply overflow-x-auto my-6 -mx-2 px-2;
+    }
     table {
-      @apply w-full my-6 text-sm border-collapse;
+      @apply w-full text-sm border-collapse min-w-[500px];
     }
     thead {
       @apply bg-primary-dark text-white;

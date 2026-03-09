@@ -121,6 +121,8 @@ Chez Vizion Web, on développe des systèmes de réservation intégrés aux site
 
 Pour un système de réservation simple (choix du créneau, confirmation automatique, rappels), comptez entre 3 000 et 6 000 euros intégré à un site existant. Pour un système avec gestion de plan de salle, paiement en ligne, gestion multi-praticiens et back-office complet, le budget se situe entre 8 000 et 15 000 euros. L'hébergement et la maintenance ajoutent 50 à 150 euros par mois selon le volume de réservations.
 
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
+
 ### Peut-on passer d'un SaaS à du sur-mesure sans perdre ses données ?
 
 Oui, dans la plupart des cas. La majorité des SaaS permettent d'exporter vos données (clients, historique de réservations) en CSV. On intègre ces données dans le nouveau système lors de la migration. Le point d'attention, c'est la communication avec vos clients : prévenez-les du changement, envoyez-leur le nouveau lien de réservation, et gardez l'ancien système actif en parallèle pendant 2 à 4 semaines pour une transition sans accroc.

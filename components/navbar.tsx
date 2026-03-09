@@ -45,7 +45,10 @@ export default function Navbar() {
       {/* Mobile */}
       <MobileNav>
         <MobileNavHeader>
-          <Logo className="inline-flex items-center w-[160px] h-[36px]" />
+          <Logo
+            className="inline-flex items-center w-[160px] h-[32px]"
+            variant="white"
+          />
           <MobileNavToggle
             isOpen={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((v) => !v)}
@@ -56,21 +59,23 @@ export default function Navbar() {
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
         >
-          <ul className="flex flex-col gap-3 w-full">
+          <ul className="flex flex-col gap-2 w-full">
             {navLinks.map((l) => (
               <li key={l.href} className="py-2">
                 <Link
                   href={l.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-sm text-gray-dark"
+                  className="text-base sm:text-lg font-medium text-background"
                 >
                   {l.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <hr className="mt-4 mb-4 border-gray-lighter w-full" />
-          <CallButton size="md" />
+          <hr className="mt-4 mb-6 border-gray-dark w-full" />
+          <div className="w-full">
+            <CallButton variant="white" size="md" className="w-full" />
+          </div>
         </MobileNavMenu>
       </MobileNav>
     </NavbarWrapper>

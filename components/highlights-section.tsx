@@ -309,11 +309,8 @@ export function HighlightsSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {highlights.map((item, i) => (
-            <div
-              key={item.title}
-              className="h-full flex"
-            >
-              <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
+            <div key={item.title} className="h-full flex">
+              <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-2">
                 <div className="h-full rounded-[32px] flex flex-col">
                   {item.visual}
                   <div className="flex flex-col gap-2 p-4 pt-4 mt-2">
