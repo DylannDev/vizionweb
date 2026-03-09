@@ -41,13 +41,6 @@ export const navLinks = [
   { href: "/blog", label: "Blog" },
 ];
 
-export const included = [
-  "Propriété totale du code et des accès",
-  "Optimisations techniques dès le lancement",
-  "Formation rapide pour être autonome",
-  "Support 30 jours minimum dès publication",
-];
-
 export const testimonials = [
   {
     text: "Avec Vizion Web, on a enfin une landing page efficace et un dashboard sur-mesure simple à utiliser pour gérer nos investisseurs. Vizion Web a su transformer une idée complexe en outil efficace.",
