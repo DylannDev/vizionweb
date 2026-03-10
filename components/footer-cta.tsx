@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { DottedGlowBackground } from "./ui/dotted-glow-background";
 import Typography from "./typography";
 import CallButton from "./call-button";
 import { ProjectMarquee } from "./ui/project-marquee";
@@ -9,7 +8,6 @@ import { LogoCloud } from "./ui/logo-cloud";
 import { portfolioProjects } from "@/data/projets";
 import { getService } from "@/data/services";
 import { getCity } from "@/data/cities";
-import { cn } from "@/lib/utils";
 import { logos } from "@/data";
 
 const ctaByPath: Record<string, { title: string; description: string }> = {
@@ -66,22 +64,6 @@ export function FooterCta() {
     <section id="calendar" className="relative w-full overflow-hidden">
       <div className="">
         <div className="relative w-full py-12 sm:py-16 px-5 overflow-hidden">
-          <DottedGlowBackground
-            className={cn(
-              "pointer-events-none opacity-20 z-0",
-              "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] sm:[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-              "inset-x-0 inset-y-[0%] h-[100%] will-change-transform transform-gpu"
-            )}
-            opacity={0.3}
-            gap={12}
-            radius={4}
-            colorLightVar="--color-primary-blue"
-            glowColorLightVar="--color-primary-blue-border"
-            backgroundOpacity={0}
-            speedMin={0.3}
-            speedMax={0.6}
-            speedScale={1}
-          />
           <div className="relative z-10">
             <Typography align="center" title={title} subtitle={description} />
 
