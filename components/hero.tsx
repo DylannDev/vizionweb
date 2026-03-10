@@ -20,7 +20,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
     <PageHero>
       <div className="relative flex flex-col gap-6 -mt-10 sm:m-0 items-center justify-center text-center z-10">
         <div className="">
-          <h1 className="space-y-1 font-semibold text-balance text-5xl min-[820px]:text-6xl text-primary-dark">
+          <h1 className="space-y-1 font-semibold text-balance max-w-5xl mx-auto text-5xl min-[820px]:text-6xl text-primary-dark">
             {locationName ? (
               `Agence de création de sites et applications web ${preposition} ${locationName}`
             ) : (
@@ -61,7 +61,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
           </h1>
         </div>
 
-        <p className="text-base sm:text-xl text-gray-dark font-normal -mt-2 text-balance">
+        <p className="text-base sm:text-xl text-gray-dark font-normal -mt-2 max-w-4xl mx-auto text-balance">
           Site web, application métier ou SaaS à créer ? On le construit pour
           vous, prêt à lancer en quelques semaines.
         </p>
