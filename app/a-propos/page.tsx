@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { getBlurDataURL } from "@/lib/blur";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
 
@@ -158,10 +159,13 @@ export default function AProposPage() {
             {/* Mockup */}
             <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
               <Image
-                src="/mockup-1.jpg"
+                src="/mockup-1.webp"
                 alt="Exemple de projet livré par Vizion Web"
-                width={1500}
-                height={1500}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={getBlurDataURL("/mockup-1.webp")}
                 className="object-cover object-center p-3 bg-white rounded-[40px]"
               />
             </div>
@@ -181,6 +185,9 @@ export default function AProposPage() {
                   alt="Dylann, fondateur de Vizion Web"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getBlurDataURL("/founder.webp")}
                   className="object-cover object-center p-3 bg-white rounded-[40px]"
                 />
               </div>

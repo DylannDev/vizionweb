@@ -241,11 +241,11 @@ const cities: CitySEO[] = [
     },
     images: {
       intro: {
-        src: "/cities/marseille-intro.jpg",
+        src: "/cities/marseille-intro.webp",
         alt: "Vieux-Port de Marseille au coucher du soleil",
       },
       context: {
-        src: "/cities/marseille-context.jpg",
+        src: "/cities/marseille-context.webp",
         alt: "Panorama de Marseille depuis Notre-Dame de la Garde",
       },
     },
@@ -398,7 +398,7 @@ const cities: CitySEO[] = [
         alt: "Architecture moderne de Bordeaux",
       },
       context: {
-        src: "/cities/bordeaux-context.jpg",
+        src: "/cities/bordeaux-context.webp",
         alt: "Architecture de Bordeaux au coucher du soleil",
       },
     },
@@ -471,7 +471,7 @@ const cities: CitySEO[] = [
     images: {
       intro: { src: "/cities/lille-intro.webp", alt: "Grand'Place de Lille" },
       context: {
-        src: "/cities/lille-context.jpg",
+        src: "/cities/lille-context.webp",
         alt: "Rues historiques du Vieux-Lille",
       },
     },
@@ -625,7 +625,7 @@ const cities: CitySEO[] = [
         alt: "Promenade dans les rues de Nice",
       },
       context: {
-        src: "/cities/nice-context.jpg",
+        src: "/cities/nice-context.webp",
         alt: "Vue aérienne de Nice depuis la colline du Château",
       },
     },
@@ -698,11 +698,11 @@ const cities: CitySEO[] = [
     },
     images: {
       intro: {
-        src: "/cities/strasbourg-intro.jpg",
+        src: "/cities/strasbourg-intro.webp",
         alt: "Cathédrale de Strasbourg",
       },
       context: {
-        src: "/cities/strasbourg-context.jpg",
+        src: "/cities/strasbourg-context.webp",
         alt: "Quartier de la Petite France à Strasbourg",
       },
     },
@@ -775,11 +775,11 @@ const cities: CitySEO[] = [
     },
     images: {
       intro: {
-        src: "/cities/rennes-intro.jpg",
+        src: "/cities/rennes-intro.webp",
         alt: "Maisons à colombages du centre historique de Rennes",
       },
       context: {
-        src: "/cities/rennes-context.jpg",
+        src: "/cities/rennes-context.webp",
         alt: "Hôtel de ville de Rennes",
       },
     },
@@ -852,11 +852,11 @@ const cities: CitySEO[] = [
     },
     images: {
       intro: {
-        src: "/cities/montpellier-intro.jpg",
+        src: "/cities/montpellier-intro.webp",
         alt: "Architecture du centre-ville de Montpellier",
       },
       context: {
-        src: "/cities/montpellier-context.jpg",
+        src: "/cities/montpellier-context.webp",
         alt: "Place de la Comédie à Montpellier",
       },
     },

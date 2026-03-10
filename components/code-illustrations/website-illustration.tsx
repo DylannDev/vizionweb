@@ -26,6 +26,8 @@ const WebsiteIllustration = () => {
           aria-hidden
           width={30}
           height={30}
+          sizes="30px"
+          loading="lazy"
           className="w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] absolute top-[50%] right-[50%] translate-x-1/2 -translate-y-1/2 z-20"
         />
       ),
@@ -100,6 +102,8 @@ const WebsiteIllustration = () => {
                   alt="Image"
                   width={100}
                   height={100}
+                  sizes="32px"
+                  loading="lazy"
                   className="size-8"
                 />
               </div>

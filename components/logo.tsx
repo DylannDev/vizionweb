@@ -17,7 +17,7 @@ export function Logo({
     <Image
       src={variant === "dark" ? "/logo.svg" : "/logo-white.svg"}
       alt="Vizion Web"
-      sizes="100%"
+      sizes="180px"
       fill
       priority
     />

@@ -47,6 +47,7 @@ function ProjectMiniCard({ title, badge }: { title: string; badge: string }) {
             alt={title}
             fill
             sizes="50px"
+            loading="lazy"
             className="object-cover"
           />
         </div>
@@ -101,6 +102,7 @@ function ClientsHighlight() {
               alt={c.name}
               fill
               sizes="36px"
+              loading="lazy"
               className="object-cover"
             />
           </div>
@@ -119,6 +121,7 @@ function ClientsHighlight() {
               alt={c.name}
               fill
               sizes="40px"
+              loading="lazy"
               className="object-cover"
             />
           </div>
@@ -207,6 +210,7 @@ function TaskCard({ task, variant }: { task: Task; variant: "todo" | "done" }) {
                   alt={task.assignee}
                   fill
                   sizes="16px"
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>

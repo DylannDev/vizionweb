@@ -127,6 +127,8 @@ export default function PrototypeIllustration() {
               alt="Image"
               width={100}
               height={100}
+              sizes="40px"
+              loading="lazy"
               className="size-10"
             />
           </div>
@@ -154,6 +156,8 @@ export default function PrototypeIllustration() {
               alt="Cursor"
               width={12}
               height={12}
+              sizes="12px"
+              loading="lazy"
               className="absolute -left-1.5 -top-1.5"
             />
             <div className="rounded-full border border-gray-lighter bg-white text-primary-dark font-medium px-3 py-2 text-[10px]">
@@ -183,6 +187,8 @@ export default function PrototypeIllustration() {
               alt="Cursor"
               width={12}
               height={12}
+              sizes="12px"
+              loading="lazy"
               className="absolute -left-1.5 -top-1.5"
             />
             <div className="rounded-full border border-gray-lighter bg-white text-primary-dark font-medium px-3 py-2 text-[12px]">

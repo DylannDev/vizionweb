@@ -72,6 +72,7 @@ function ColumnHeader({
         alt={col.label}
         width={compact ? 100 : 120}
         height={compact ? 20 : 24}
+        sizes={compact ? "90px" : "120px"}
         className={compact ? "h-5 w-auto" : "h-7 w-auto"}
       />
     );
@@ -242,6 +243,7 @@ export function ComparisonTable() {
                       alt={col.label}
                       width={90}
                       height={18}
+                      sizes="90px"
                       className="h-3 w-auto"
                     />
                   ) : (

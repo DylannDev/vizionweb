@@ -17,6 +17,7 @@ export default function Footer() {
       href: "/politique-confidentialite",
       label: "Politique de confidentialité",
     },
+    { href: "/cgv", label: "CGV" },
   ];
   const socialLinks = [
     {
@@ -54,6 +55,8 @@ export default function Footer() {
                   alt=""
                   width={800}
                   height={800}
+                  sizes="700px"
+                  loading="lazy"
                   className="pointer-events-none absolute -right-20 -bottom-32 w-[500px] md:w-[700px] opacity-[0.04] rotate-[-15deg] select-none"
                   aria-hidden
                 />
@@ -67,6 +70,8 @@ export default function Footer() {
                         alt="Vizion Web"
                         width={300}
                         height={40}
+                        sizes="300px"
+                        loading="lazy"
                         className="h-10 md:h-24 w-auto"
                       />
                     </Link>

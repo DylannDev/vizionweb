@@ -67,6 +67,8 @@ export function ContentCard({
         alt=""
         width={1000}
         height={1000}
+        sizes="300px"
+        loading="lazy"
         className={cn(
           "absolute inset-0 w-full h-full object-cover pointer-events-none opacity-20",
           watermarkVariants[watermarkVariant % watermarkVariants.length]
@@ -77,6 +79,8 @@ export function ContentCard({
         alt=""
         width={300}
         height={300}
+        sizes="300px"
+        loading="lazy"
         className={cn(
           "relative z-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] w-full h-full max-h-[50%]"
         )}
@@ -91,7 +95,6 @@ export function ContentCard({
         alt={imageAlt || title}
         loading="lazy"
         decoding="async"
-        quality={100}
         fetchPriority="low"
         fill
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

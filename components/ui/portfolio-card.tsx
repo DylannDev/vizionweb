@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ArrowButton } from "./arrow-button";
 import Badge from "./badge";
+import { getBlurDataURL } from "@/lib/blur";
 
 interface PortfolioCardProps {
   title: string;
@@ -48,10 +49,11 @@ export function PortfolioCard({
           alt={`${title} — ${subtitle}`}
           loading="lazy"
           decoding="async"
-          quality={100}
           fetchPriority="low"
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
+          placeholder="blur"
+          blurDataURL={getBlurDataURL(src)}
           className="object-cover object-top-left min-[900px]:object-center rounded-3xl"
         />
       </div>
@@ -86,6 +88,8 @@ export function PortfolioCard({
                   loading="lazy"
                   decoding="async"
                   fetchPriority="low"
+                  placeholder="blur"
+                  blurDataURL={getBlurDataURL(`/clients/${testimonial.image}`)}
                   className="object-cover"
                 />
               </div>

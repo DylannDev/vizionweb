@@ -46,7 +46,7 @@ export function IconIllustration({
         <Icon aria-hidden className="text-white text-2xl" />
       )}
       {typeof Icon === "object" && Icon}
-      {img && <Image src={img} alt="" width={imgSize} height={imgSize} />}
+      {img && <Image src={img} alt="" width={imgSize} height={imgSize} sizes={`${imgSize}px`} loading="lazy" />}
       {string && <span className="text-primary-blue text-base">{string}</span>}
     </div>
   );

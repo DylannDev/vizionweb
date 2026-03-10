@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CitySEO } from "@/data/cities";
 import Badge from "@/components/ui/badge";
+import { getBlurDataURL } from "@/lib/blur";
 
 import {
   Accordion,
@@ -32,6 +33,9 @@ export function CityContext({ city }: CityContextProps) {
                   alt={city.images.context.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getBlurDataURL(city.images.context.src)}
                   className="object-cover object-center p-3 bg-white rounded-[40px]"
                 />
               </div>

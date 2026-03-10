@@ -44,7 +44,7 @@ export const navLinks = [
 export const testimonials = [
   {
     text: "Avec Vizion Web, on a enfin une landing page efficace et un dashboard sur-mesure simple à utiliser pour gérer nos investisseurs. Vizion Web a su transformer une idée complexe en outil efficace.",
-    image: "lory.jpg",
+    image: "lory.webp",
     name: "Lory Othily",
     role: "CEO Amazonia Investing",
   },
@@ -68,7 +68,7 @@ export const testimonials = [
   },
   {
     text: "Grâce au nouveau site, mes clients trouvent mes services beaucoup plus facilement. Vizion Web a su rendre le site clair, professionnel et efficace. Un vrai plus pour mon activité.",
-    image: "fezayi.jpg",
+    image: "fezayi.webp",
     name: "Filiz Fezayi",
     role: "Dirigeant TCS Plomberie",
   },
@@ -86,13 +86,13 @@ export const testimonials = [
   },
   {
     text: "Dylann a créé un site vitrine moderne et professionnel pour Eden Glass. Le résultat est à la hauteur de mes attentes : clair, rapide et bien référencé. Nos clients nous trouvent beaucoup plus facilement depuis la mise en ligne.",
-    image: "jonathan.jpg",
+    image: "jonathan.webp",
     name: "Jonathan Wilson",
     role: "Dirigeant Eden Glass",
   },
   {
     text: "L'application Chefkit nous fait gagner un temps fou. Je gère mes menus, mes commandes et mes réservations en ligne facilement. C’est devenu un outil indispensable pour mon restaurant.",
-    image: "karim.jpg",
+    image: "karim.webp",
     name: "Karim Haddad",
     role: "Restaurateur",
   },

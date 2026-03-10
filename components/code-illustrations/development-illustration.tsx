@@ -59,6 +59,8 @@ export default function DevelopmentIllustration() {
               alt="Image"
               width={100}
               height={100}
+              sizes="32px"
+              loading="lazy"
               className="size-8"
             />
           </div>

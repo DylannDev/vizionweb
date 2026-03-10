@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CitySEO } from "@/data/cities";
 import Badge from "@/components/ui/badge";
+import { getBlurDataURL } from "@/lib/blur";
 
 
 interface CityIntroProps {
@@ -34,6 +35,9 @@ export function CityIntro({ city }: CityIntroProps) {
                 alt={city.images.intro.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={getBlurDataURL(city.images.intro.src)}
                 className="object-cover object-center p-3 bg-white rounded-[40px]"
               />
             </div>

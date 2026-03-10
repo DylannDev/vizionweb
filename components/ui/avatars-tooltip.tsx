@@ -19,6 +19,8 @@ export const AvatarsTooltip = ({
             width={100}
             src={`/clients/${item.image}`}
             alt={item.name}
+            sizes="44px"
+            loading="lazy"
             className="relative !m-0 h-11 w-11 rounded-full border-1 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
           />
         </div>

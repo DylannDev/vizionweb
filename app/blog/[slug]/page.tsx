@@ -13,6 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Image from "next/image";
+import { getBlurDataURL } from "@/lib/blur";
 import MDXContent from "@/components/mdx-content";
 import { PageHero } from "@/components/ui/page-hero";
 import Script from "next/script";
@@ -133,6 +134,9 @@ export default async function BlogPostPage({
               alt={post.title}
               width={1200}
               height={630}
+              sizes="(min-width: 1100px) 1100px, 100vw"
+              placeholder="blur"
+              blurDataURL={getBlurDataURL(post.image)}
               className="w-full rounded-3xl md:rounded-4xl object-cover aspect-[4/3] sm:aspect-video mt-6 max-w-[1100px] mx-auto"
               priority
             />

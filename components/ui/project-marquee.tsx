@@ -37,6 +37,7 @@ export function ProjectMarquee({
               alt={project.title}
               width={355}
               height={246}
+              sizes="(min-width: 640px) 355px, 220px"
               className="h-[140px] sm:h-[220px] w-auto object-cover pointer-events-none select-none rounded-3xl"
               loading="lazy"
             />

@@ -19,7 +19,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Système de réservation complet pour agence de location de voitures avec back-office de gestion et tableau de bord.",
     badge: ["App Web", "Dashboard / CRM"],
-    src: "/projets/get-easy.jpg",
+    src: "/projets/get-easy.webp",
     link: "https://geteasylocation.com/",
     testimonial: findTestimonial("Get Easy"),
   },
@@ -28,7 +28,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
     badge: ["Landing Page", "Blog", "Dashboard / CRM"],
-    src: "/projets/investing.jpg",
+    src: "/projets/investing.webp",
     link: "https://amazonia-investing.com",
     testimonial: findTestimonial("Amazonia Investing"),
   },
@@ -37,7 +37,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Site vitrine élégant et moderne pour une agence de communication. Design inspiré de l'univers marin, pensé pour refléter leur identité et attirer de nouveaux clients.",
     badge: ["Site Vitrine", "Blog"],
-    src: "/projets/hippokom.jpg",
+    src: "/projets/hippokom.webp",
     link: "https://hippokomagency.fr",
     testimonial: findTestimonial("Hippô’Kom"),
   },
@@ -46,7 +46,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Site web complet pour un salon de bien-être. Espace client, paiement en ligne et réservation intégrée pour une expérience fluide et professionnelle. Dashboard pour la gestion des réservations.",
     badge: ["Site Web Avancé", "Dashboard / CRM"],
-    src: "/projets/zenlounge.jpg",
+    src: "/projets/zenlounge.webp",
     link: "https://zenlounge-guyane.fr",
     testimonial: findTestimonial("Zen Lounge"),
   },
@@ -55,7 +55,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Site vitrine moderne pour un expert en vitrage automobile spécialisé dans le remplacement de pare-brise à Montpellier.",
     badge: ["Site Vitrine", "Blog"],
-    src: "/projets/eden-glass.jpg",
+    src: "/projets/eden-glass.webp",
     link: "https://edenglass.fr/",
     testimonial: findTestimonial("Eden Glass"),
   },
@@ -64,7 +64,7 @@ export const portfolioProjects: Project[] = [
     subtitle:
       "Site vitrine professionnel pour un plombier-chauffagiste avec prise de rendez-vous en ligne et présentation des services.",
     badge: ["Site Vitrine", "Blog"],
-    src: "/projets/tcs-plomberie.jpg",
+    src: "/projets/tcs-plomberie.webp",
     link: "https://tcs-plomberie-montpellier.fr/",
     testimonial: findTestimonial("TCS Plomberie"),
   },
@@ -73,7 +73,7 @@ export const portfolioProjects: Project[] = [
   //   subtitle:
   //     "Application SaaS pour restaurateurs et traiteurs. Gestion des menus, réservations : une solution clé en main pour digitaliser leur activité.",
   //   badge: ["SaaS", "App Web", "Landing page"],
-  //   src: "/projets/chefkit.jpg",
+  //   src: "/projets/chefkit.webp",
   //   testimonial: findTestimonial("Restaurateur"),
   // },
 ];

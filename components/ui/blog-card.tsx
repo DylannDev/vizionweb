@@ -4,6 +4,7 @@ import type { BlogPost } from "@/data/blog";
 import { blogCategories } from "@/data/blog";
 import { ArrowRight, CalendarDays, Clock } from "lucide-react";
 import Badge from "./badge";
+import { getBlurDataURL } from "@/lib/blur";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -23,6 +24,9 @@ export function BlogCard({ post }: BlogCardProps) {
             src={post.image}
             alt={post.title}
             fill
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL={getBlurDataURL(post.image)}
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { getBlurDataURL } from "@/lib/blur";
 
 interface Testimonial {
   text: string;
@@ -21,6 +22,8 @@ export const TestimonialCard = ({ text, image, name, role }: Testimonial) => {
             loading="lazy"
             decoding="async"
             fetchPriority="low"
+            placeholder="blur"
+            blurDataURL={getBlurDataURL(`/clients/${image}`)}
             className="object-cover"
           />
         </div>
