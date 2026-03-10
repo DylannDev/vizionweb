@@ -15,7 +15,13 @@ import {
 import FAQ from "@/components/faq";
 import Badge from "@/components/ui/badge";
 import Typography from "@/components/typography";
-import { HighlightsSection } from "@/components/highlights-section";
+import dynamic from "next/dynamic";
+
+const HighlightsSection = dynamic(() =>
+  import("@/components/highlights-section").then((m) => ({
+    default: m.HighlightsSection,
+  }))
+);
 
 export const metadata: Metadata = {
   title: "Nos Réalisations — Sites & Applications sur-mesure | Vizion Web",

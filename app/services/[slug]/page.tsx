@@ -22,7 +22,9 @@ import { ServiceProblemSolution } from "@/components/service-detail/service-prob
 import { ServiceIncluded } from "@/components/service-detail/service-included";
 import { ServiceTarget } from "@/components/service-detail/service-target";
 import { ServiceFaq } from "@/components/service-detail/service-faq";
-import ProcessSteps from "@/components/process-steps";
+import dynamic from "next/dynamic";
+
+const ProcessSteps = dynamic(() => import("@/components/process-steps"));
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));

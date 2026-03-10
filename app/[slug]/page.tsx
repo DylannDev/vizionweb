@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { CITIES, COUNTRIES, faqs } from "@/data";
 import { getCity } from "@/data/cities";
-import NotFound from "../not-found";
 import { CityHero } from "@/components/city/city-hero";
 import { CityIntro } from "@/components/city/city-intro";
 import { CityContext } from "@/components/city/city-context";
@@ -52,7 +52,7 @@ export default async function CityPage({
   const city = getCity(slug);
 
   if (!city) {
-    return <NotFound />;
+    notFound();
   }
 
   const globalFaqs = city.globalFaqIndices.map((i) => faqs[i]).filter(Boolean);
