@@ -1,17 +1,15 @@
 import Image from "next/image";
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 
 type ProjectMarqueeProps = React.ComponentProps<"div"> & {
   projects: { title: string; src: string }[];
-  speed?: number;
   reverse?: boolean;
 };
 
 export function ProjectMarquee({
   className,
   projects,
-  speed = 50,
   reverse = false,
   ...props
 }: ProjectMarqueeProps) {
@@ -23,7 +21,12 @@ export function ProjectMarquee({
         className
       )}
     >
-      <InfiniteSlider gap={16} speed={speed} reverse={reverse} className="py-6">
+      <Marquee
+        vertical={false}
+        reverse={reverse}
+        pauseOnHover
+        className="py-6 [--duration:60s] [--gap:1rem]"
+      >
         {projects.map((project) => (
           <div
             key={project.title}
@@ -43,7 +46,7 @@ export function ProjectMarquee({
             />
           </div>
         ))}
-      </InfiniteSlider>
+      </Marquee>
     </div>
   );
 }

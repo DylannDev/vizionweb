@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 
 type Logo = {
@@ -20,7 +20,12 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
         className
       )}
     >
-      <InfiniteSlider gap={42} reverse speed={50} speedOnHover={25}>
+      <Marquee
+        vertical={false}
+        reverse
+        pauseOnHover
+        className="[--duration:60s] [--gap:2.5rem]"
+      >
         {logos.map((logo) => (
           <Image
             alt={logo.alt}
@@ -32,7 +37,7 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
             src={logo.src}
           />
         ))}
-      </InfiniteSlider>
+      </Marquee>
     </div>
   );
 }
