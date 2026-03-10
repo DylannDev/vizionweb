@@ -44,7 +44,7 @@ export default function Footer() {
       <footer className="bg-background pt-8 pb-2 sm:pb-4 px-2 sm:px-4">
         <div className="max-w-[1536px] mx-auto">
           <div className="px-2 sm:px-4 pb-2 sm:pb-4 bg-white rounded-4xl sm:rounded-[36px]">
-            {/* <FooterCta /> */}
+            <FooterCta />
 
             {/* Footer */}
             <section className="w-full">
