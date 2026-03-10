@@ -27,9 +27,9 @@ const HomeSection = ({
       <Hero locationName={locationName} preposition={preposition} />
       <ServicesHomeSection />
       <MiniPortfolio />
-      <HighlightsSection />
+      {/* <HighlightsSection /> */}
       <ComparisonTable />
-      <ProcessSteps />
+      {/* <ProcessSteps /> */}
       <Testimonials />
       <FAQ />
     </main>
