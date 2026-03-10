@@ -68,7 +68,7 @@ export function ContentCard({
         width={1000}
         height={1000}
         sizes="300px"
-        loading="lazy"
+        loading="eager"
         className={cn(
           "absolute inset-0 w-full h-full object-cover pointer-events-none opacity-20",
           watermarkVariants[watermarkVariant % watermarkVariants.length]
