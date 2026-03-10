@@ -26,12 +26,12 @@ export default function Footer() {
       Icon: RiLinkedinFill,
     },
     {
-      href: "https://www.instagram.com/vizionweb.fr",
+      href: "https://www.instagram.com/vizionweb",
       label: "Instagram",
       Icon: RiInstagramFill,
     },
     {
-      href: "https://wa.me/33612345678",
+      href: "https://wa.me/33666847402",
       label: "WhatsApp",
       Icon: RiWhatsappFill,
     },

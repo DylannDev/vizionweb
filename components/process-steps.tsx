@@ -16,21 +16,21 @@ export function ProcessSteps() {
     },
     {
       title: "UI/UX Design",
-      desc: "Nous créons une maquette sur Figma pour valider l'interface et le parcours utilisateur avant d'écrire une seule ligne de code, les modifications sont illimitées.",
+      desc: "Vous voyez et testez chaque écran avant qu'une seule ligne de code soit écrite. On ajuste jusqu'à ce que ce soit exactement ce que vous vouliez.",
       className: "lg:col-span-5 gap-4",
       containerClassName: "bg-bg-blue p-4 max-h-[414px]",
       illustration: <PrototypeIllustration />,
     },
     {
       title: "Développement & intégrations",
-      desc: "Votre site ou application prend forme en code React/Next.js. Paiements, espace client, formulaires, intégrations : on construit ce dont vous avez besoin, avec des points d'avancement réguliers.",
+      desc: "Votre site ou appli prend forme, brique par brique. Paiements, espace client, formulaires : vous validez chaque avancée en temps réel, rien n'avance sans votre feu vert. ",
       className: "lg:col-span-5 gap-6",
       containerClassName: "bg-bg-yellow p-4",
       illustration: <DevelopmentIllustration />,
     },
     {
       title: "Lancement & suivi",
-      desc: "Mise en ligne, vérification performance et sécurité, formation rapide pour que vous soyez autonome. Plus 30 jours de support inclus pour ajuster ce qui doit l'être.",
+      desc: "On vérifie la performance, la sécurité, et on vous forme pour que vous soyez autonome. Vous bénéficiez d'un support de 30 à 90 jours si quelque chose doit être ajusté.",
       className: "lg:col-span-4 gap-6",
       containerClassName: "bg-bg-rose p-4",
       illustration: <LaunchIllustration />,
@@ -54,14 +54,14 @@ export function ProcessSteps() {
               key={s.title}
               className={`bg-white shadow-[0_4px_20px_0] shadow-gray-lighter flex flex-col justify-between rounded-4xl sm:rounded-[40px] p-2 relative ${s.className}`}
             >
-              <div className="flex flex-col gap-2 p-4">
+              <div className="flex flex-col gap-2 p-5">
                 <h3 className="font-semibold">
                   {i + 1}. {s.title}
                 </h3>
                 <p className="text-gray-dark">{s.desc}</p>
               </div>
               <div
-                className={`w-full h-full rounded-3xl overflow-hidden ${s.containerClassName}`}
+                className={`w-full h-full rounded-3xl sm:rounded-4xl overflow-hidden ${s.containerClassName}`}
               >
                 {s.illustration}
               </div>
