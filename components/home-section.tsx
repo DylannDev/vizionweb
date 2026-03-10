@@ -1,18 +1,26 @@
-import dynamic from "next/dynamic";
+"use client";
+
 import Hero from "./hero";
 import { ServicesHomeSection } from "@/components/services-home-section";
 import MiniPortfolio from "../components/mini-portfolio";
 import FAQ from "../components/faq";
+import { lazyVisible } from "@/components/ui/lazy-section";
 
-const HighlightsSection = dynamic(() =>
-  import("./highlights-section").then((m) => ({ default: m.HighlightsSection }))
+const HighlightsSection = lazyVisible(
+  () => import("./highlights-section").then((m) => ({ default: m.HighlightsSection })),
+  "600px"
 );
-const ComparisonTable = dynamic(() =>
-  import("./comparison-table").then((m) => ({ default: m.ComparisonTable }))
+const ComparisonTable = lazyVisible(
+  () => import("./comparison-table").then((m) => ({ default: m.ComparisonTable })),
+  "500px"
 );
-const ProcessSteps = dynamic(() => import("./process-steps"));
-const Testimonials = dynamic(() =>
-  import("./testimonials").then((m) => ({ default: m.Testimonials }))
+const ProcessSteps = lazyVisible(
+  () => import("./process-steps"),
+  "600px"
+);
+const Testimonials = lazyVisible(
+  () => import("./testimonials").then((m) => ({ default: m.Testimonials })),
+  "400px"
 );
 
 const HomeSection = ({
