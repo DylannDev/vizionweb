@@ -1,6 +1,6 @@
 # Mentions légales
 
-<p className="text-gray-dark text-center">Mise à jour : 20/09/2025</p>
+<p className="text-gray-dark text-center">Mise à jour : 10/03/2026</p>
 
 ## 1. Éditeur du site
 
@@ -11,9 +11,7 @@ Le site **vizionweb.fr** est édité par :
 Adresse du siège : **1189 Avenue de Maurin, 34070 Montpellier**  
 SIRET : **89881637600021**  
 Représenté par **M. Dylann Xavero**, en qualité de **représentant légal**.
-
-Contact : **contact@vizionweb.fr**  
-Téléphone : **+33 666 84 74 02**
+Contact : **contact@vizionweb.fr**
 
 ## 2. Hébergeur
 
