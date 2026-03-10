@@ -78,7 +78,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      {/* <div className="max-w-7xl mx-auto">
         <ProjectMarquee
           projects={portfolioProjects.map((p) => ({
             title: p.title,
@@ -89,7 +89,7 @@ export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
       </div>
       <div className="w-full relative z-10 mt-4 sm:mt-8 max-w-7xl mx-auto px-4 md:px-8">
         <LogoCloud logos={logos} />
-      </div>
+      </div> */}
     </PageHero>
   );
 }

@@ -30,7 +30,7 @@ const HomeSection = ({
       {/* <HighlightsSection /> */}
       <ComparisonTable />
       {/* <ProcessSteps /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FAQ />
     </main>
   );
