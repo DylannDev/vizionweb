@@ -48,7 +48,7 @@ function CellContent({
       className={cn(
         "leading-snug text-center",
         compact ? "text-sm sm:text-base" : "text-base",
-        vizion ? "font-medium text-white" : "text-gray-dark"
+        vizion ? "font-medium text-white" : "text-secondary-dark opacity-80"
       )}
     >
       {value}
@@ -80,7 +80,7 @@ function ColumnHeader({
   return (
     <span
       className={cn(
-        "font-semibold text-gray-dark leading-5",
+        "font-semibold text-secondary-dark opacity-80 leading-5",
         compact ? "text-sm sm:text-base" : "text-xl"
       )}
     >
@@ -212,52 +212,52 @@ export function ComparisonTable() {
           subtitle={comparisonSection.subtitle}
         />
 
-          {/* ── Desktop ── */}
-          <div className="hidden lg:block">
-            <div className="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 lg:gap-4 items-start">
-              <CriteriaColumn />
-              {comparisonColumns.map((col) => (
-                <DataColumn key={col.key} col={col} />
-              ))}
-            </div>
+        {/* ── Desktop ── */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 lg:gap-4 items-start">
+            <CriteriaColumn />
+            {comparisonColumns.map((col) => (
+              <DataColumn key={col.key} col={col} />
+            ))}
+          </div>
+        </div>
+
+        {/* ── Mobile / Tablet ── */}
+        <div className="lg:hidden">
+          <div className="flex gap-2 mb-5">
+            {comparisonColumns.map((col) => (
+              <Button
+                key={col.key}
+                variant={mobileColumn === col.key ? "blue" : "white"}
+                size="md"
+                onClick={() => setMobileColumn(col.key)}
+                className="flex-1 rounded-2xl text-sm"
+              >
+                {col.logo ? (
+                  <Image
+                    src={
+                      mobileColumn === col.key
+                        ? "/logo-off-white.svg"
+                        : "/logo-off-black.svg"
+                    }
+                    alt={col.label}
+                    width={90}
+                    height={18}
+                    sizes="90px"
+                    className="h-3 w-auto"
+                  />
+                ) : (
+                  col.label
+                )}
+              </Button>
+            ))}
           </div>
 
-          {/* ── Mobile / Tablet ── */}
-          <div className="lg:hidden">
-            <div className="flex gap-2 mb-5">
-              {comparisonColumns.map((col) => (
-                <Button
-                  key={col.key}
-                  variant={mobileColumn === col.key ? "blue" : "white"}
-                  size="md"
-                  onClick={() => setMobileColumn(col.key)}
-                  className="flex-1 rounded-2xl text-sm"
-                >
-                  {col.logo ? (
-                    <Image
-                      src={
-                        mobileColumn === col.key
-                          ? "/logo-off-white.svg"
-                          : "/logo-off-black.svg"
-                      }
-                      alt={col.label}
-                      width={90}
-                      height={18}
-                      sizes="90px"
-                      className="h-3 w-auto"
-                    />
-                  ) : (
-                    col.label
-                  )}
-                </Button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 gap-3 items-start">
-              <CriteriaColumn compact />
-              <DataColumn col={selectedCol} compact />
-            </div>
+          <div className="grid grid-cols-2 gap-3 items-start">
+            <CriteriaColumn compact />
+            <DataColumn col={selectedCol} compact />
           </div>
+        </div>
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ export const TestimonialCard = ({ text, image, name, role }: Testimonial) => {
         </div>
         <div className="flex flex-col">
           <div className="font-medium tracking-tight leading-5">{name}</div>
-          <div className="leading-5 opacity-60 tracking-tight text-gray-dark text-sm">
+          <div className="leading-5 tracking-tight text-secondary-dark opacity-80 text-sm">
             {role}
           </div>
         </div>

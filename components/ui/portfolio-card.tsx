@@ -97,7 +97,7 @@ export function PortfolioCard({
                 <span className="font-medium tracking-tight leading-5">
                   {testimonial.name}
                 </span>
-                <span className="leading-5 opacity-60 tracking-tight text-secondary-dark text-sm">
+                <span className="leading-5 tracking-tight text-secondary-dark opacity-80 text-sm">
                   {testimonial.role}
                 </span>
               </div>
