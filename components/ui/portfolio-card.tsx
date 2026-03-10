@@ -51,7 +51,7 @@ export function PortfolioCard({
           decoding="async"
           fetchPriority="low"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 900px) 50vw, calc(100vw - 2rem)"
           placeholder="blur"
           blurDataURL={getBlurDataURL(src)}
           className="object-cover object-top-left min-[900px]:object-center rounded-3xl"
