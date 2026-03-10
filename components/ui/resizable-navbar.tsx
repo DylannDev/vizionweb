@@ -1,13 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "motion/react";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -40,22 +34,18 @@ interface MobileNavMenuProps {
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
   const [visible, setVisible] = useState<boolean>(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className={cn(
         "fixed inset-x-0 top-0 z-100 w-full max-w-[1536px] mx-auto pt-4 sm:pt-8 px-4 sm:px-8",
@@ -70,22 +60,18 @@ export const Navbar = ({ children, className }: NavbarProps) => {
             )
           : child
       )}
-    </motion.div>
+    </div>
   );
 };
 
 export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
-    <motion.nav
+    <nav
       aria-label="Navigation principale"
-      animate={{
+      style={{
         maxWidth: visible ? "1216px" : "1536px",
-        y: visible ? -20 : 0,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 200,
-        damping: 50,
+        transform: visible ? "translateY(-20px)" : "translateY(0)",
+        transition: "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start lg:flex",
@@ -95,21 +81,17 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       )}
     >
       {children}
-    </motion.nav>
+    </nav>
   );
 };
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
-    <motion.div
-      animate={{
+    <div
+      style={{
         maxWidth: visible ? "1280px" : "1536px",
-        y: visible ? -10 : 0,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 200,
-        damping: 50,
+        transform: visible ? "translateY(-10px)" : "translateY(0)",
+        transition: "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full flex-col items-center justify-between lg:hidden",
@@ -118,7 +100,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       )}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
@@ -145,22 +127,21 @@ export const MobileNavMenu = ({
   onClose,
 }: MobileNavMenuProps) => {
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className={cn(
-            "absolute inset-x-0 top-[calc(100%+8px)] z-50 flex w-full flex-col items-start justify-start rounded-3xl px-6 py-6",
-            "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark rounded-3xl sm:rounded-4xl",
-            className
-          )}
-        >
-          {children}
-        </motion.div>
+    <div
+      style={{
+        opacity: isOpen ? 1 : 0,
+        transform: isOpen ? "translateY(0)" : "translateY(-10px)",
+        transition: "opacity 0.3s ease, transform 0.3s ease",
+        pointerEvents: isOpen ? "auto" : "none",
+      }}
+      className={cn(
+        "absolute inset-x-0 top-[calc(100%+8px)] z-50 flex w-full flex-col items-start justify-start rounded-3xl px-6 py-6",
+        "bg-gradient-to-b from-primary-dark to-secondary-dark border border-primary-dark rounded-3xl sm:rounded-4xl",
+        className
       )}
-    </AnimatePresence>
+    >
+      {children}
+    </div>
   );
 };
 

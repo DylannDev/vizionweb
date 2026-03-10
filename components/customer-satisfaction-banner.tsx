@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
 import { PiStarFill } from "react-icons/pi";
 import { AvatarsTooltip } from "@/components/ui/avatars-tooltip";
 import { testimonials } from "@/data";
@@ -20,7 +19,7 @@ export function CustomerSatisfactionBanner({
   const clampedStars = Math.max(0, Math.min(5, stars));
 
   return (
-    <motion.div
+    <div
       aria-label="Satisfaction client"
       className={cn("flex justify-center items-center gap-3", className)}
     >
@@ -56,7 +55,7 @@ export function CustomerSatisfactionBanner({
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
 import {
   ComponentPropsWithoutRef,
+  useCallback,
   useEffect,
   useId,
   useRef,
@@ -34,54 +34,46 @@ export function AnimatedGridPattern({
   className,
   maxOpacity = 0.9,
   duration = 4,
-  repeatDelay = 0.5,
   ...props
 }: AnimatedGridPatternProps) {
   const id = useId();
-  const containerRef = useRef(null);
+  const containerRef = useRef<SVGSVGElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const [squares, setSquares] = useState<{ id: number; pos: number[] }[]>([]);
 
-  function getPos() {
+  const getPos = useCallback(() => {
     return [
       Math.floor((Math.random() * dimensions.width) / width),
       Math.floor((Math.random() * dimensions.height) / height),
     ];
-  }
+  }, [dimensions.width, dimensions.height, width, height]);
 
-  // Adjust the generateSquares function to return objects with an id, x, and y
-  function generateSquares(count: number) {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      pos: getPos(),
-    }));
-  }
-
-  // Function to update a single square's position
-  const updateSquarePosition = (id: number) => {
-    setSquares((currentSquares) =>
-      currentSquares.map((sq) =>
-        sq.id === id
-          ? {
-              ...sq,
-              pos: getPos(),
-            }
-          : sq
-      )
-    );
-  };
-
-  // Update squares to animate in
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
-      setSquares(generateSquares(numSquares));
+      setSquares(
+        Array.from({ length: numSquares }, (_, i) => ({
+          id: i,
+          pos: getPos(),
+        }))
+      );
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions, numSquares, getPos]);
 
-  // Resize observer to update container dimensions
+  // Reposition square after animation ends
+  const handleAnimationEnd = useCallback(
+    (squareId: number) => {
+      setSquares((current) =>
+        current.map((sq) =>
+          sq.id === squareId ? { ...sq, pos: getPos() } : sq
+        )
+      );
+    },
+    [getPos]
+  );
+
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setDimensions({
           width: entry.contentRect.width,
           height: entry.contentRect.height,
@@ -98,7 +90,7 @@ export function AnimatedGridPattern({
         resizeObserver.unobserve(containerRef.current);
       }
     };
-  }, [containerRef]);
+  }, []);
 
   return (
     <svg
@@ -128,27 +120,29 @@ export function AnimatedGridPattern({
       </defs>
       <rect width="100%" height="100%" fill={`url(#${id})`} />
       <svg x={x} y={y} className="overflow-visible">
-        {squares.map(({ pos: [x, y], id }, index) => (
-          <motion.rect
-            initial={{ opacity: 0 }}
-            animate={{ opacity: maxOpacity }}
-            transition={{
-              duration,
-              repeat: 1,
-              delay: index * 0.1,
-              repeatType: "reverse",
-            }}
-            onAnimationComplete={() => updateSquarePosition(id)}
-            key={`${x}-${y}-${index}`}
+        {squares.map(({ pos: [sx, sy], id: squareId }, index) => (
+          <rect
+            key={`${sx}-${sy}-${index}`}
             width={width - 1}
             height={height - 1}
-            x={x * width + 1}
-            y={y * height + 1}
+            x={sx * width + 1}
+            y={sy * height + 1}
             fill="#0057fa"
             strokeWidth="0"
+            style={{
+              opacity: 0,
+              animation: `gridFade ${duration}s ease ${index * 0.1}s 1 alternate forwards`,
+            }}
+            onAnimationEnd={() => handleAnimationEnd(squareId)}
           />
         ))}
       </svg>
+      <style>{`
+        @keyframes gridFade {
+          from { opacity: 0; }
+          to { opacity: ${maxOpacity}; }
+        }
+      `}</style>
     </svg>
   );
 }
