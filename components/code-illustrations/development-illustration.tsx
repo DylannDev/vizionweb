@@ -1,25 +1,23 @@
 "use client";
 
-import { CodeBlock, CodeBlockCode } from "@/components/ui/code-block";
-import { Typewriter } from "@/components/ui/typewriter";
+import { CodeBlock, CodeBlockStatic } from "@/components/ui/code-block";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { codeToHtml } from "shiki";
+
+const preRenderedHtml = `<pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Counter</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">count</span><span style="color:#24292E">, </span><span style="color:#005CC5">setCount</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">     &#x3C;</span><span style="color:#005CC5">Image</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"/placeholder.svg"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> onClick</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> setCount</span><span style="color:#24292E">(count </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">)}></span></span>
+<span class="line"><span style="color:#24292E">        Ajouter {count}</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>`;
 
 export default function DevelopmentIllustration() {
-  const code = `function Counter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-     <Image src="/placeholder.svg" />
-      <button onClick={() => setCount(count + 1)}>
-        Ajouter {count}
-      </button>
-    </div>
-  );
-}`;
-
   return (
     <section
       aria-labelledby="dev-illustration-heading"
@@ -39,7 +37,7 @@ export default function DevelopmentIllustration() {
           </div>
           <hr className="border-gray-lighter my-4" />
           <pre className="font-mono leading-6 whitespace-pre-wrap min-h-[290px]">
-            <CodeBlockCode code={code} />
+            <CodeBlockStatic html={preRenderedHtml} />
           </pre>
         </CodeBlock>
 

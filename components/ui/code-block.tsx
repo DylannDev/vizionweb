@@ -1,9 +1,5 @@
-"use client";
-
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
-import { codeToHtml } from "shiki";
-import { Typewriter } from "./typewriter";
+import React from "react";
 
 export type CodeBlockProps = {
   children?: React.ReactNode;
@@ -14,56 +10,6 @@ function CodeBlock({ children, className, ...props }: CodeBlockProps) {
   return (
     <div className={cn(className)} {...props}>
       {children}
-    </div>
-  );
-}
-
-export type CodeBlockCodeProps = {
-  code: string;
-  language?: string;
-  theme?: string;
-  className?: string;
-} & React.HTMLProps<HTMLDivElement>;
-
-function CodeBlockCode({
-  code,
-  language = "tsx",
-  theme = "github-light",
-  className,
-  ...props
-}: CodeBlockCodeProps) {
-  const [highlightedHtml, setHighlightedHtml] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function highlight() {
-      if (!code) {
-        setHighlightedHtml("<pre><code></code></pre>");
-        return;
-      }
-
-      const html = await codeToHtml(code, { lang: language, theme });
-      setHighlightedHtml(html);
-    }
-    highlight();
-  }, [code, language, theme]);
-
-  const classNames = cn(
-    "w-full overflow-x-auto text-[9px] sm:text-[12px]",
-    className
-  );
-
-  // SSR fallback: render plain code if not hydrated yet
-  return highlightedHtml ? (
-    <div
-      className={classNames}
-      dangerouslySetInnerHTML={{ __html: highlightedHtml }}
-      {...props}
-    />
-  ) : (
-    <div className={classNames} {...props}>
-      <pre>
-        <code>{code}</code>
-      </pre>
     </div>
   );
 }
@@ -85,4 +31,19 @@ function CodeBlockGroup({
   );
 }
 
-export { CodeBlockGroup, CodeBlockCode, CodeBlock };
+export type CodeBlockStaticProps = {
+  html: string;
+  className?: string;
+} & React.HTMLProps<HTMLDivElement>;
+
+function CodeBlockStatic({ html, className, ...props }: CodeBlockStaticProps) {
+  return (
+    <div
+      className={cn("w-full overflow-x-auto text-[9px] sm:text-[12px]", className)}
+      dangerouslySetInnerHTML={{ __html: html }}
+      {...props}
+    />
+  );
+}
+
+export { CodeBlockGroup, CodeBlock, CodeBlockStatic };
