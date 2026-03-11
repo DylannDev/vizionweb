@@ -228,7 +228,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de sites web à Marseille | Vizion Web",
+      title: "Agence Web à Marseille — Sites & Applications | Vizion Web",
       description:
         "Sites internet, landing pages et applications web pour les entreprises de Marseille. Développement sur-mesure, design et copywriting inclus. Devis gratuit, intervention à distance.",
       canonical: "https://vizionweb.fr/marseille",
@@ -305,7 +305,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Toulouse — Sites et apps sur-mesure | Vizion Web",
+      title: "Agence Web à Toulouse — Sites & Applications | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Toulouse. Design, développement sur-mesure et copywriting inclus. Intervention à distance, devis en 48h.",
       canonical: "https://vizionweb.fr/toulouse",
@@ -381,7 +381,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Bordeaux — Design et code sur-mesure | Vizion Web",
+      title: "Agence Web à Bordeaux — Sites & Applications | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Bordeaux. Développement sur-mesure, design et copywriting inclus. Livraison en 30 jours, intervention à distance.",
       canonical: "https://vizionweb.fr/bordeaux",
@@ -457,7 +457,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Développement web à Lille — Sites et apps | Vizion Web",
+      title: "Création de Sites Web & Applications à Lille | Vizion Web",
       description:
         "Sites internet, landing pages et applications web pour les entreprises lilloises. Développement sur-mesure, design et SEO inclus. Intervention à distance, devis sous 48h.",
       canonical: "https://vizionweb.fr/lille",
@@ -531,7 +531,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Nantes — Création de sites web | Vizion Web",
+      title: "Agence Web à Nantes — Sites & Applications | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Nantes et de sa métropole. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/nantes",
@@ -608,7 +608,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de sites et apps web à Nice | Vizion Web",
+      title: "Création de Sites Web & Applications à Nice | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Nice et de la Côte d'Azur. Développement sur-mesure, design et SEO inclus. Intervention à distance, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/nice",
@@ -685,7 +685,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Strasbourg — Sites sur-mesure | Vizion Web",
+      title: "Agence Web à Strasbourg — Sites & Applications | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Strasbourg et de l'Eurométropole. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/strasbourg",
@@ -762,7 +762,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Développement de sites web à Rennes | Vizion Web",
+      title: "Création de Sites Web & Applications à Rennes | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Rennes et de Bretagne. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/rennes",
@@ -839,7 +839,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites web et apps à Montpellier — Sur-mesure | Vizion Web",
+      title: "Sites Web & Applications Sur-Mesure à Montpellier | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Montpellier. Développement sur-mesure, design et copywriting inclus. Intervention 100% à distance, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/montpellier",
@@ -934,7 +934,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Pointe-à-Pitre — Guadeloupe | Vizion Web",
+      title: "Sites & Applications Web à Pointe-à-Pitre | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Pointe-à-Pitre et de Guadeloupe. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
       canonical: "https://vizionweb.fr/pointe-a-pitre",
@@ -1015,7 +1015,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Fort-de-France — Sites et apps | Vizion Web",
+      title: "Sites & Applications Web à Fort-de-France | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Fort-de-France et de Martinique. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
       canonical: "https://vizionweb.fr/fort-de-france",
@@ -1095,7 +1095,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de sites web à Cayenne, Guyane | Vizion Web",
+      title: "Sites Web & Applications à Cayenne, Guyane | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Cayenne et de Guyane. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
       canonical: "https://vizionweb.fr/cayenne",
@@ -1194,7 +1194,7 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Saint-Denis de La Réunion | Vizion Web",
+      title: "Sites & Applications Web à Saint-Denis, Réunion | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Saint-Denis et de La Réunion. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
       canonical: "https://vizionweb.fr/saint-denis",
@@ -1275,7 +1275,7 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Agence web en Guadeloupe — Sites sur-mesure | Vizion Web",
+      title: "Création de Sites & Applications en Guadeloupe | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Guadeloupe. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/guadeloupe",
@@ -1356,7 +1356,7 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Création de sites web en Martinique | Vizion Web",
+      title: "Création de Sites & Applications Web en Martinique | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Martinique. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/martinique",
@@ -1437,7 +1437,7 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Agence web en Guyane — Sites et apps web | Vizion Web",
+      title: "Agence Web en Guyane — Sites & Applications | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de Guyane. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/guyane",
@@ -1537,7 +1537,7 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "à",
     meta: {
-      title: "Création web à La Réunion — Sites et apps | Vizion Web",
+      title: "Création de Sites & Applications à La Réunion | Vizion Web",
       description:
         "Sites internet et applications web pour les entreprises de La Réunion. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
       canonical: "https://vizionweb.fr/la-reunion",
