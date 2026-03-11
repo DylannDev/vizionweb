@@ -30,10 +30,14 @@ export function CustomerSatisfactionBanner({
           className="flex items-center gap-1"
         >
           {Array.from({ length: 5 }).map((_, i) => (
-            <PiStarFill key={i} className="text-primary-dark" aria-hidden />
+            <PiStarFill
+              key={i}
+              className="text-primary-blue-border"
+              aria-hidden
+            />
           ))}
         </div>
-        <div className="text-sm font-normal text-gray-dark">
+        <div className="text-base font-normal text-gray-dark">
           100% de satisfaction client
         </div>
       </div>
