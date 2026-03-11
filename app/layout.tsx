@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "../components/footer";
 import Navbar from "@/components/navbar";
 import { WhatsappNav } from "@/components/ui/whatsapp-nav";
+import Analytics from "@/components/Analytics";
 
 const satoshi = localFont({
   src: "../public/fonts/Satoshi-Variable.woff2",
@@ -56,6 +57,7 @@ export default function RootLayout({
         <div>{children}</div>
         <Footer />
         <WhatsappNav />
+        <Analytics />
       </body>
     </html>
   );
