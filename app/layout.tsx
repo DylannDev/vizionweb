@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Vizion Web",
     images: [
       {
-        url: "https://vizionweb.fr/logo.svg",
+        url: "https://vizionweb.fr/opengraph-logo.png",
         width: 1200,
         height: 630,
         alt: "Vizion Web - Agence digitale",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Vizion Web - Création de Sites & Applications Web",
     description:
       "Experts en développement de sites internet, landing pages et applications / SaaS sur-mesure.",
-    images: ["https://vizionweb.fr/logo.svg"],
+    images: ["https://vizionweb.fr/opengraph-logo.png"],
   },
 };
 
