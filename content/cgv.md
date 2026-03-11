@@ -200,11 +200,13 @@ En cas de litige, les parties s'engagent à rechercher une solution amiable avan
 Conformément à l'article L612-1 du Code de la consommation, le client peut recourir gratuitement à un médiateur de la consommation en cas de litige.
 
 **Médiateur désigné :**  
-CNPM — Médiation de la Consommation  
-27 avenue de la Libération  
-42400 Saint-Chamond  
+Mediation Consommation Développement  
+Centre d’Affaires Stéphanois  
+Immeuble l’Horizon – Esplanade de France  
+3 rue J. Constant Milleret  
+42000 SAINT-ETIENNE  
 Email : contact@cnpm-mediation-consommation.eu  
-Site web : https://cnpm-mediation-consommation.eu
+Site web : https://www.medconsodev.eu/
 
 ### 15.4 Juridiction compétente
 
