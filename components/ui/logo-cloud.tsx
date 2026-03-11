@@ -33,7 +33,7 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
             height={24}
             width={120}
             key={`logo-${logo.alt}`}
-            loading="lazy"
+            loading="eager"
             src={logo.src}
           />
         ))}
