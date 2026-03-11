@@ -123,17 +123,6 @@ export default function Footer() {
                         </div>
                       </nav>
 
-                      <nav aria-label="Ressources" className="">
-                        <div className="flex flex-col gap-2 text-base transition-all duration-150 ease-in-out">
-                          <div className="text-white font-semibold mb-2">
-                            Ressources
-                          </div>
-                          <Link className="hover:text-white" href="/blog">
-                            Blog
-                          </Link>
-                        </div>
-                      </nav>
-
                       <nav aria-label="Légal" className="">
                         <div className="flex flex-col gap-2 text-base transition-all duration-150 ease-in-out">
                           <div className="text-white font-semibold mb-2">
