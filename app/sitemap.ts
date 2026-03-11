@@ -62,6 +62,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   });
 
+  // Legal pages
+  for (const path of ["/cgv", "/mentions-legales", "/politique-confidentialite"]) {
+    entries.push({
+      url: `${baseUrl}${path}`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    });
+  }
+
   // City/country pages
   for (const path of dynamicRoutes) {
     entries.push({
