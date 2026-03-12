@@ -69,7 +69,7 @@ export const testimonials = [
   {
     text: "Grâce au nouveau site, mes clients trouvent mes services beaucoup plus facilement. Vizion Web a su rendre le site clair, professionnel et efficace. Un vrai plus pour mon activité.",
     image: "fezayi.webp",
-    name: "Filiz Fezayi",
+    name: "Filiz",
     role: "Dirigeant TCS Plomberie",
   },
   {
