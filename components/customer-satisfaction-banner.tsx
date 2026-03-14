@@ -14,7 +14,7 @@ interface CustomerSatisfactionBannerProps {
 export function CustomerSatisfactionBanner({
   stars = 5,
   className,
-  avatarIndexes = [3, 0, 4, 6],
+  avatarIndexes = [3, 0, 7, 1],
 }: CustomerSatisfactionBannerProps) {
   const clampedStars = Math.max(0, Math.min(5, stars));
 
