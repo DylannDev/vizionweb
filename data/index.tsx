@@ -50,7 +50,7 @@ export const testimonials = [
   },
   {
     text: "J’avais besoin d’un site vitrine moderne qui reflète l’identité de mon agence. Dylann a tout de suite compris l’univers que je voulais et le résultat a dépassé mes attentes.",
-    image: "aurelie.webp",
+    image: "aurelie.jpg",
     name: "Aurélie Ciril",
     role: "Fondatrice Hippô’Kom",
   },
