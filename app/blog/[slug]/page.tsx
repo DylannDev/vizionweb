@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { blogPosts, getBlogPost, blogCategories } from "@/data/blog";
+import {
+  blogPosts,
+  getBlogPost,
+  getRelatedPosts,
+  blogCategories,
+} from "@/data/blog";
 import {
   buildBlogPostingSchema,
   buildBlogBreadcrumbSchema,
@@ -21,6 +26,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Clock } from "lucide-react";
 import Badge from "@/components/ui/badge";
+import RelatedArticles from "@/components/related-articles";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -72,6 +78,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const category = blogCategories[post.category];
+  const relatedPosts = getRelatedPosts(slug);
   const postSchema = buildBlogPostingSchema(post);
   const breadcrumbSchema = buildBlogBreadcrumbSchema(post);
 
@@ -146,7 +153,7 @@ export default async function BlogPostPage({
         <article className="max-w-[1000px] mx-auto px-5 sm:px-8">
           <MDXContent file={`blog/${post.slug}.md`} stripTitle />
 
-          <footer className="pt-8 mt-8 border-t border-gray-lighter">
+          <footer className="pt-8 pb-16 mt-8 border-b border-gray-lighter">
             <Link
               href="/blog"
               className="text-sm font-medium text-secondary-dark hover:text-gray-dark transition-colors"
@@ -155,6 +162,8 @@ export default async function BlogPostPage({
             </Link>
           </footer>
         </article>
+
+        <RelatedArticles posts={relatedPosts} />
       </main>
 
       <Script

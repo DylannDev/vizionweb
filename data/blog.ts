@@ -9,35 +9,40 @@ export interface BlogPost {
 }
 
 export type BlogCategory =
-  | "guides"
-  | "cas-usage"
-  | "comparaisons"
-  | "strategie"
+  | "lancer-son-projet"
+  | "applications"
+  | "fonctionnalites"
+  | "sites-et-conversion"
+  | "technique"
   | "tendances";
 
 export const blogCategories: Record<
   BlogCategory,
   { label: string; description: string }
 > = {
-  guides: {
-    label: "Guides",
-    description: "Tutoriels et guides pratiques",
+  "lancer-son-projet": {
+    label: "Lancer son projet",
+    description: "Budget, cahier des charges et premiers pas pour votre projet web",
   },
-  "cas-usage": {
-    label: "Cas d'usage",
-    description: "Exemples concrets et retours d'expérience",
+  applications: {
+    label: "Applications & SaaS",
+    description: "Créer, lancer et faire évoluer une application web ou un SaaS",
   },
-  comparaisons: {
-    label: "Comparaisons",
-    description: "Analyses comparatives d'outils et de solutions",
+  fonctionnalites: {
+    label: "Fonctionnalités web",
+    description: "Réservation, paiement, espace client et outils métier intégrés",
   },
-  strategie: {
-    label: "Stratégie",
-    description: "Conseils pour décider et investir",
+  "sites-et-conversion": {
+    label: "Sites & Conversion",
+    description: "Créer un site qui attire des visiteurs et les transforme en clients",
+  },
+  technique: {
+    label: "Technique & Performance",
+    description: "SEO, performance, frameworks et hébergement",
   },
   tendances: {
-    label: "Tendances",
-    description: "Veille technologique et innovations",
+    label: "Tendances & Innovation",
+    description: "IA, design et nouvelles pratiques du web",
   },
 };
 
@@ -48,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Fourchettes de prix par type de projet, facteurs qui influencent le coût et méthode pour définir votre budget web sans mauvaise surprise.",
     date: "2025-12-18",
-    category: "strategie",
+    category: "lancer-son-projet",
     readingTime: "10 min",
     image: "/blog/combien-coute-un-site-internet.webp",
   },
@@ -58,7 +63,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Cadre de décision pour trancher entre acheter un outil SaaS existant et faire développer votre propre application. Comparaison des coûts sur 3 ans.",
     date: "2025-12-20",
-    category: "comparaisons",
+    category: "applications",
     readingTime: "9 min",
     image: "/blog/application-sur-mesure-vs-saas.webp",
   },
@@ -68,7 +73,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les 7 sections essentielles de votre brief web, avec exemples de bonne et mauvaise formulation. Guide pratique pour obtenir des devis pertinents.",
     date: "2025-12-22",
-    category: "guides",
+    category: "lancer-son-projet",
     readingTime: "12 min",
     image: "/blog/cahier-des-charges-site-web.webp",
   },
@@ -78,7 +83,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les 7 ingrédients qui séparent une landing page qui génère des leads d'une page qui fait fuir les visiteurs. Principes testés et erreurs courantes.",
     date: "2025-12-24",
-    category: "guides",
+    category: "sites-et-conversion",
     readingTime: "9 min",
     image: "/blog/landing-page-qui-convertit.webp",
   },
@@ -89,7 +94,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comparaison honnête de WordPress, Webflow et du développement sur-mesure. Forces, faiblesses, coûts et recommandations selon votre type de projet.",
     date: "2025-12-26",
-    category: "comparaisons",
+    category: "sites-et-conversion",
     readingTime: "11 min",
     image: "/blog/wordpress-vs-webflow-vs-sur-mesure.webp",
   },
@@ -100,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les raisons les plus fréquentes pour lesquelles un site web ne convertit pas, et le plan d'action concret pour transformer vos visiteurs en prospects.",
     date: "2025-12-28",
-    category: "strategie",
+    category: "sites-et-conversion",
     readingTime: "8 min",
     image: "/blog/pourquoi-votre-site-ne-genere-pas-de-clients.webp",
   },
@@ -110,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Du premier échange à la mise en production : les 9 étapes concrètes d'un projet d'application web, avec les décisions clés et les délais réalistes.",
     date: "2025-12-30",
-    category: "guides",
+    category: "applications",
     readingTime: "10 min",
     image: "/blog/creer-une-application-web.webp",
   },
@@ -120,7 +125,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les signaux qui montrent qu'il est temps de refondre votre site, les étapes d'une refonte réussie et les erreurs qui transforment le projet en cauchemar.",
     date: "2026-01-01",
-    category: "strategie",
+    category: "sites-et-conversion",
     readingTime: "8 min",
     image: "/blog/refonte-site-web.webp",
   },
@@ -130,7 +135,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les différences concrètes entre site vitrine et e-commerce, les coûts associés et les critères pour choisir la bonne formule selon votre activité.",
     date: "2026-01-03",
-    category: "comparaisons",
+    category: "sites-et-conversion",
     readingTime: "8 min",
     image: "/blog/site-vitrine-vs-e-commerce.webp",
   },
@@ -140,7 +145,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les 5 erreurs de conception les plus courantes qui empêchent votre site de convertir ses visiteurs en clients, avec les corrections à appliquer.",
     date: "2026-01-05",
-    category: "strategie",
+    category: "sites-et-conversion",
     readingTime: "8 min",
     image: "/blog/5-erreurs-qui-plombent-la-conversion.webp",
   },
@@ -150,7 +155,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les 8 critères concrets pour évaluer une agence web avant de signer. Comment repérer les bons prestataires et éviter les mauvaises surprises.",
     date: "2026-01-07",
-    category: "strategie",
+    category: "lancer-son-projet",
     readingTime: "10 min",
     image: "/blog/choisir-son-agence-web.webp",
   },
@@ -160,7 +165,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "6 exemples d'outils métier sur-mesure qui ont transformé le quotidien de PME. Retours d'expérience concrets et enseignements.",
     date: "2026-01-09",
-    category: "cas-usage",
+    category: "applications",
     readingTime: "8 min",
     image: "/blog/saas-pour-pme.webp",
   },
@@ -170,7 +175,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Guide technique pour optimiser le référencement d'un site Next.js : métadonnées, sitemap, performance, rendu serveur et bonnes pratiques SEO.",
     date: "2026-01-11",
-    category: "guides",
+    category: "technique",
     readingTime: "10 min",
     image: "/blog/seo-technique-pour-nextjs.webp",
   },
@@ -180,7 +185,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les causes fréquentes de dépassement de budget sur un projet web et les méthodes concrètes pour garder le contrôle des coûts.",
     date: "2026-01-13",
-    category: "strategie",
+    category: "lancer-son-projet",
     readingTime: "9 min",
     image: "/blog/budget-site-web.webp",
   },
@@ -191,7 +196,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comparaison des solutions de réservation en ligne pour restaurants, salons et coachs. Critères de choix, coûts et retours d'expérience.",
     date: "2026-01-15",
-    category: "cas-usage",
+    category: "fonctionnalites",
     readingTime: "8 min",
     image: "/blog/reservation-en-ligne.webp",
   },
@@ -201,7 +206,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Ce qu'est un MVP, pourquoi c'est la meilleure façon de lancer un produit digital et comment définir le périmètre de votre version minimale.",
     date: "2026-01-17",
-    category: "guides",
+    category: "lancer-son-projet",
     readingTime: "9 min",
     image: "/blog/qu-est-ce-qu-un-mvp.webp",
   },
@@ -212,7 +217,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comparaison objective de React, Vue et Angular pour vous aider à choisir le bon framework selon votre projet, votre équipe et vos ambitions.",
     date: "2026-01-19",
-    category: "comparaisons",
+    category: "technique",
     readingTime: "10 min",
     image: "/blog/react-vs-vue-vs-angular.webp",
   },
@@ -222,7 +227,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "5 cas concrets où un dashboard sur-mesure a remplacé les tableaux Excel et transformé la prise de décision en entreprise.",
     date: "2026-01-21",
-    category: "cas-usage",
+    category: "fonctionnalites",
     readingTime: "9 min",
     image: "/blog/dashboard-sur-mesure.webp",
   },
@@ -232,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les modèles de tarification SaaS qui fonctionnent, comment fixer votre prix de lancement et les erreurs de pricing à éviter.",
     date: "2026-01-23",
-    category: "strategie",
+    category: "applications",
     readingTime: "10 min",
     image: "/blog/fixer-le-prix-d-un-saas.webp",
   },
@@ -243,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pourquoi intégrer un espace client à votre site web, ce qu'il doit contenir et comment le mettre en place sans exploser le budget.",
     date: "2026-01-25",
-    category: "cas-usage",
+    category: "fonctionnalites",
     readingTime: "9 min",
     image: "/blog/espace-client-sur-votre-site.webp",
   },
@@ -253,7 +258,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comparaison de Vercel, Netlify et d'un VPS classique pour héberger votre site ou application web. Performances, coûts et cas d'usage.",
     date: "2026-01-27",
-    category: "comparaisons",
+    category: "technique",
     readingTime: "10 min",
     image: "/blog/hebergement-vercel-netlify-ou-vps.webp",
   },
@@ -264,7 +269,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comparaison de Stripe, PayPal et des alternatives pour intégrer le paiement en ligne sur votre site. Frais, fonctionnalités et recommandations.",
     date: "2026-01-29",
-    category: "comparaisons",
+    category: "fonctionnalites",
     readingTime: "10 min",
     image: "/blog/paiement-en-ligne-stripe-paypal.webp",
   },
@@ -274,7 +279,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Le parcours complet d'un projet SaaS, de l'idée initiale au lancement : choix techniques, erreurs évitées et leçons apprises en chemin.",
     date: "2026-01-31",
-    category: "cas-usage",
+    category: "applications",
     readingTime: "10 min",
     image: "/blog/de-l-idee-a-l-application-saas.webp",
   },
@@ -285,7 +290,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "L'impact mesurable de la vitesse de chargement sur vos ventes et votre référencement, avec les optimisations concrètes à mettre en place.",
     date: "2026-02-02",
-    category: "guides",
+    category: "technique",
     readingTime: "9 min",
     image: "/blog/performance-web-et-vitesse.webp",
   },
@@ -296,7 +301,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Quand un CRM sur-mesure devient plus rentable que HubSpot ou Salesforce. Critères de décision, coûts comparés et cas concrets.",
     date: "2026-02-04",
-    category: "comparaisons",
+    category: "applications",
     readingTime: "9 min",
     image: "/blog/crm-sur-mesure-vs-hubspot.webp",
   },
@@ -316,7 +321,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Pourquoi et comment migrer de WordPress vers Next.js. Avantages, étapes de migration, pièges à éviter et retour d'expérience.",
     date: "2026-02-08",
-    category: "guides",
+    category: "technique",
     readingTime: "9 min",
     image: "/blog/migration-wordpress-vers-nextjs.webp",
   },
@@ -326,7 +331,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Les obligations légales en matière d'accessibilité web (RGAA, WCAG), les bonnes pratiques techniques et les bénéfices concrets pour votre activité.",
     date: "2026-02-11",
-    category: "guides",
+    category: "tendances",
     readingTime: "10 min",
     image: "/blog/accessibilite-web.webp",
   },
@@ -336,7 +341,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comment des outils web internes sur-mesure peuvent automatiser vos tâches répétitives, réduire les erreurs et libérer du temps pour votre équipe.",
     date: "2026-02-14",
-    category: "cas-usage",
+    category: "fonctionnalites",
     readingTime: "10 min",
     image: "/blog/automatiser-business.webp",
   },
@@ -368,4 +373,13 @@ export function getRecentBlogPosts(count: number): BlogPost[] {
 
 export function getAllBlogSlugs(): string[] {
   return blogPosts.map((p) => p.slug);
+}
+
+export function getRelatedPosts(slug: string, count = 3): BlogPost[] {
+  const post = getBlogPost(slug);
+  if (!post) return [];
+  return blogPosts
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, count);
 }
