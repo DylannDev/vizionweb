@@ -8,7 +8,7 @@ Cet article pose les vrais chiffres, explique ce qui fait varier le prix, et vou
 
 ### Landing page (1-2 pages)
 
-Une landing page, c'est une page unique conçue pour convertir : prise de rendez-vous, demande de devis, inscription. Pas de blog, pas de pages multiples. Un message, un objectif, un bouton d'action.
+Une [landing page](/services/landing-page), c'est une page unique conçue pour convertir : prise de rendez-vous, demande de devis, inscription. Pas de blog, pas de pages multiples. Un message, un objectif, un bouton d'action.
 
 **Fourchette réaliste :**
 - Template personnalisé (WordPress, Webflow) : 500 à 1 500 euros
@@ -18,7 +18,7 @@ Un restaurant qui veut une page avec son menu, ses horaires et un bouton de rés
 
 ### Site vitrine (3-10 pages)
 
-Le site vitrine classique : accueil, services, à propos, contact, et parfois un portfolio ou des témoignages. C'est le format le plus demandé par les PME et les indépendants.
+Le [site vitrine](/services/site-vitrine) classique : accueil, services, à propos, contact, et parfois un portfolio ou des témoignages. C'est le format le plus demandé par les PME et les indépendants.
 
 **Fourchette réaliste :**
 - CMS avec template : 1 500 à 4 000 euros
@@ -44,7 +44,7 @@ On parle ici d'un logiciel accessible via navigateur : dashboard, CRM interne, o
 - MVP (version minimale fonctionnelle) : 10 000 à 25 000 euros
 - Application complète V1 : 20 000 à 60 000 euros et plus
 
-Les applications SaaS se construisent par étapes. On commence par un MVP qui couvre les fonctions essentielles, on le teste avec de vrais utilisateurs, puis on itère. Vouloir tout développer d'un coup est le meilleur moyen de dépasser son budget et de livrer un produit que personne n'utilise.
+Les [applications SaaS](/services/saas-sur-mesure) se construisent par étapes. On commence par un MVP qui couvre les fonctions essentielles, on le teste avec de vrais utilisateurs, puis on itère. Vouloir tout développer d'un coup est le meilleur moyen de dépasser son budget et de livrer un produit que personne n'utilise.
 
 ## Ce qui fait grimper (ou baisser) le prix
 
@@ -108,7 +108,7 @@ Beaucoup de consultants recommandent d'investir entre 1% et 3% de votre chiffre 
 
 ### Pensez retour sur investissement, pas dépense
 
-Un site à 2 000 euros qui ne génère rien coûte plus cher qu'un site à 8 000 euros qui ramène 3 clients par mois. Le prix le plus bas n'est presque jamais la meilleure affaire. Demandez à votre agence de vous expliquer comment le site va contribuer à vos objectifs commerciaux. Si elle ne sait pas répondre, changez d'agence.
+Un site à 2 000 euros qui ne génère rien coûte plus cher qu'un site à 8 000 euros qui ramène 3 clients par mois. Le prix le plus bas n'est presque jamais la meilleure affaire. Demandez à votre agence de vous expliquer comment le site va contribuer à vos objectifs commerciaux. Si elle ne sait pas répondre, changez d'agence. Pour vous aider dans cette démarche, consultez notre guide pour [choisir la bonne agence web](/blog/choisir-agence-web-criteres).
 
 ## Questions fréquentes sur les tarifs
 
@@ -126,4 +126,10 @@ La plupart des agences proposent un paiement en 2 ou 3 fois : un acompte au dém
 
 ### Combien de temps faut-il pour rentabiliser un site web ?
 
-Ça dépend de votre activité et de votre stratégie d'acquisition. Un site bien conçu avec du trafic qualifié peut générer ses premiers prospects dès le premier mois. Le référencement naturel (SEO) prend en général 3 à 6 mois pour produire des résultats mesurables. Le trafic payant (Google Ads) peut apporter des résultats dès la première semaine.
+Ça dépend de votre activité et de votre stratégie d'acquisition. Un site bien conçu avec du trafic qualifié peut générer ses premiers prospects dès le premier mois. Le référencement naturel (SEO) prend en général 3 à 6 mois pour produire des résultats mesurables. Le trafic payant (Google Ads) peut apporter des résultats dès la première semaine. Pour aller plus loin sur ce sujet, découvrez nos conseils pour [maîtriser votre budget web](/blog/budget-site-web-maitriser-cout).
+
+## Besoin d'aide pour estimer le coût de votre site internet ?
+
+Chez Vizion Web, nous concevons des sites web sur-mesure adaptés à votre budget et à vos objectifs. Du site vitrine à l'application web, nous vous accompagnons pour investir au bon endroit et obtenir un vrai retour sur investissement.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

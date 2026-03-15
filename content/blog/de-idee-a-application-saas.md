@@ -28,7 +28,7 @@ Karim vient nous voir avec son idée. Notre premier réflexe n'est pas d'ouvrir 
 
 **Combien seraient-ils prêts à payer ?** Question délicate. Karim pose la question autrement : "Combien de temps tu passes par mois sur ces tâches ?" Les réponses vont de 2 à 5 jours par mois. Valorisé au SMIC, c'est entre 300 et 750 euros de temps perdu. Un abonnement à 99 euros par mois paraît raisonnable.
 
-Ces trois informations suffisent pour décider de passer à l'étape suivante. On ne parle pas de certitude, on parle de signaux suffisants pour investir dans un MVP.
+Ces trois informations suffisent pour décider de passer à l'étape suivante. On ne parle pas de certitude, on parle de signaux suffisants pour investir dans un [MVP](/blog/quest-ce-quun-mvp).
 
 ### Ce qu'on aurait pu faire de mieux
 
@@ -38,7 +38,7 @@ On ne l'a pas fait, et on le regrette un peu. Les gens disent oui en entretien b
 
 ## Mois 2-3 : le MVP
 
-Le MVP (Minimum Viable Product), c'est la version la plus réduite possible du produit qui permet de tester l'hypothèse principale. Pas la version "un peu réduite avec quand même les fonctionnalités sympas". La version minimale. Vraiment minimale.
+Le [MVP (Minimum Viable Product)](/services/mvp-proof-of-concept), c'est la version la plus réduite possible du produit qui permet de tester l'hypothèse principale. Pas la version "un peu réduite avec quand même les fonctionnalités sympas". La version minimale. Vraiment minimale.
 
 ### Définir le périmètre (et couper, encore)
 
@@ -131,7 +131,7 @@ Le MVP n'était pas beau. Le planning en créneaux de 30 minutes était une erre
 
 ### Leçon 3 : le pricing se teste comme le produit
 
-Le passage de 99 euros fixe à une tarification par salon a doublé les conversions. On n'aurait jamais trouvé ce prix en réfléchissant seul. Il a fallu mettre le prix initial, observer les réactions, et ajuster. Fixer le bon prix est un processus itératif, pas une décision ponctuelle.
+Le passage de 99 euros fixe à une tarification par salon a doublé les conversions. On n'aurait jamais trouvé ce prix en réfléchissant seul. Il a fallu mettre le prix initial, observer les réactions, et ajuster. [Fixer le bon prix est un processus itératif](/blog/fixer-prix-saas-strategie), pas une décision ponctuelle.
 
 ### Leçon 4 : le coût réel d'un SaaS
 
@@ -153,7 +153,7 @@ Revenus sur la même période : environ 5 800 euros. On est loin du break-even. 
 
 Karim pensait que le plus dur serait de construire le produit. En réalité, construire le produit, c'est 30% du travail. Les 70% restants : trouver des clients, les convaincre de tester, les accompagner, résoudre leurs problèmes, améliorer le produit, gérer le support, maintenir l'infrastructure.
 
-Lancer un SaaS, c'est lancer une entreprise. Le code est un outil, pas une fin en soi.
+Lancer un SaaS, c'est lancer une entreprise. Le code est un outil, pas une fin en soi. Si vous souhaitez un guide plus technique des différentes phases de développement, consultez notre article sur [les étapes pour créer une application web](/blog/creer-application-web-etapes).
 
 ### Ce qui attend Karim
 
@@ -165,7 +165,7 @@ Est-ce que le projet va réussir ? Les fondamentaux sont là : un vrai problème
 
 ### Combien faut-il investir au minimum pour lancer un SaaS ?
 
-Un MVP fonctionnel coûte entre 10 000 et 25 000 euros selon la complexité. À cela, ajoutez 2 000 à 5 000 euros pour la landing page, le design et les premiers mois d'hébergement/outils. Prévoyez aussi un budget d'acquisition de 500 à 1 500 euros par mois pour tester vos canaux marketing. Au total, comptez entre 15 000 et 35 000 euros pour couvrir les 6 premiers mois. C'est un investissement, pas une dépense. Si le produit répond à un vrai besoin et que le marché est suffisant, le retour se mesure en revenus récurrents qui grandissent chaque mois.
+Un MVP fonctionnel coûte entre 10 000 et 25 000 euros selon la complexité. C'est le type de projet que nous accompagnons au quotidien dans notre offre [SaaS sur-mesure](/services/saas-sur-mesure). À cela, ajoutez 2 000 à 5 000 euros pour la landing page, le design et les premiers mois d'hébergement/outils. Prévoyez aussi un budget d'acquisition de 500 à 1 500 euros par mois pour tester vos canaux marketing. Au total, comptez entre 15 000 et 35 000 euros pour couvrir les 6 premiers mois. C'est un investissement, pas une dépense. Si le produit répond à un vrai besoin et que le marché est suffisant, le retour se mesure en revenus récurrents qui grandissent chaque mois.
 
 ### Faut-il savoir coder pour lancer un SaaS ?
 

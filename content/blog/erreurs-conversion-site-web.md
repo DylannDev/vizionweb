@@ -42,7 +42,7 @@ Taux de clic : 4.2%. Cinq fois plus. Juste en rendant le bouton visible et compr
 
 ### Ce qu'il faut retenir
 
-Chaque page doit avoir un (et un seul) objectif principal. Le bouton qui correspond à cet objectif doit être visible dans les 3 premières secondes, sans scroller. Le texte doit être une action concrète : "Demander mon devis gratuit", "Réserver un créneau", "Télécharger le guide". Pas "Cliquer ici", pas "En savoir plus", pas "Soumettre".
+Chaque page doit avoir un (et un seul) objectif principal. C'est exactement le principe d'une [landing page qui convertit](/blog/landing-page-qui-convertit) : un objectif, un bouton. Le bouton qui correspond à cet objectif doit être visible dans les 3 premières secondes, sans scroller. Le texte doit être une action concrète : "Demander mon devis gratuit", "Réserver un créneau", "Télécharger le guide". Pas "Cliquer ici", pas "En savoir plus", pas "Soumettre".
 
 ## Erreur n°3 : le site ne donne aucune raison de vous faire confiance
 
@@ -84,7 +84,7 @@ Un formulaire de premier contact doit être court. 3 à 5 champs maximum. Chaque
 
 ## Erreur n°5 : le site est lent et l'expérience mobile est pénible
 
-Vous l'avez déjà lu partout : 53% du trafic web vient du mobile. Mais entre le savoir et l'appliquer, il y a un gouffre. Beaucoup de sites sont "techniquement responsive" (ils s'adaptent à l'écran) mais l'expérience reste mauvaise : textes minuscules, boutons trop proches les uns des autres, images qui mettent 6 secondes à charger.
+Vous l'avez déjà lu partout : 53% du trafic web vient du mobile. Mais entre le savoir et l'appliquer, il y a un gouffre. La [performance web impacte directement vos ventes](/blog/performance-web-vitesse-ventes), et beaucoup de sites sont "techniquement responsive" (ils s'adaptent à l'écran) mais l'expérience reste mauvaise : textes minuscules, boutons trop proches les uns des autres, images qui mettent 6 secondes à charger.
 
 ### L'exemple qui fait mal
 
@@ -128,13 +128,13 @@ Ouvrez Google Analytics (ou un outil équivalent). Regardez trois chiffres : le 
 
 Prenez les trois problèmes les plus graves identifiés par cet audit. Corrigez-les dans l'ordre. Un titre clair, un CTA visible, un formulaire court. Ces trois corrections prennent une journée et peuvent doubler votre taux de conversion.
 
-Pas besoin de refaire le site pour obtenir des résultats. Parfois, changer un titre et déplacer un bouton suffit à transformer un site qui décore en un site qui rapporte.
+Pas besoin de refaire le site pour obtenir des résultats. Parfois, changer un titre et déplacer un bouton suffit à transformer un site qui décore en un site qui rapporte. Si malgré ces corrections [votre site ne génère toujours pas de clients](/blog/site-ne-genere-pas-clients), le problème est peut-être plus profond et mérite un audit complet.
 
 ## Questions fréquentes
 
 ### Comment savoir si mon taux de conversion est bon ?
 
-Ça dépend du secteur et du type de site. Un site vitrine B2B avec un formulaire de contact a un taux de conversion moyen entre 1% et 3%. Un e-commerce se situe entre 1.5% et 3.5%. Une landing page bien optimisée peut atteindre 5 à 15%. Si votre taux est en dessous de 1%, il y a des gains rapides à aller chercher. Au-dessus de 3% sur un site vitrine, vous êtes dans la bonne zone.
+Ça dépend du secteur et du type de site. Un [site vitrine](/services/site-vitrine) B2B avec un formulaire de contact a un taux de conversion moyen entre 1% et 3%. Un e-commerce se situe entre 1.5% et 3.5%. Une [landing page](/services/landing-page) bien optimisée peut atteindre 5 à 15%. Si votre taux est en dessous de 1%, il y a des gains rapides à aller chercher. Au-dessus de 3% sur un site vitrine, vous êtes dans la bonne zone.
 
 ### Faut-il refaire le site ou juste corriger les erreurs ?
 
@@ -143,3 +143,9 @@ Si le site est techniquement sain (chargement rapide, responsive, CMS à jour) m
 ### Est-ce que Google Analytics suffit pour suivre les conversions ?
 
 Google Analytics (GA4) est un bon point de départ. Il permet de suivre les soumissions de formulaires, les clics sur les boutons d'appel, et les pages visitées avant la conversion. Pour aller plus loin, des outils comme Hotjar ou Microsoft Clarity (gratuit) enregistrent le comportement des visiteurs en vidéo : où ils cliquent, où ils s'arrêtent, où ils abandonnent. C'est souvent dans ces enregistrements qu'on découvre les vrais blocages.
+
+## Besoin d'aide pour améliorer la conversion de votre site ?
+
+Chez Vizion Web, nous auditons et optimisons des sites web pour les transformer en véritables outils d'acquisition. Que ce soit une refonte ciblée, une landing page haute conversion ou un site vitrine repensé pour vos clients, nous livrons des résultats mesurables.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

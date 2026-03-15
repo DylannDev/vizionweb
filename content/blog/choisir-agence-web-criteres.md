@@ -10,7 +10,7 @@ Votre site web, c'est un investissement de plusieurs milliers d'euros et plusieu
 
 On a vu des entreprises dépenser 8 000 euros avec une première agence, obtenir un site inutilisable, puis investir à nouveau 6 000 euros pour tout recommencer. 14 000 euros et un an de perdus. Ce scénario n'est pas rare. Il est même fréquent chez les TPE et PME qui choisissent leur agence trop vite, souvent sur la base du prix seul.
 
-Prendre le temps de comparer, de poser les bonnes questions et de vérifier les références vous évitera cette situation.
+Prendre le temps de comparer, de poser les bonnes questions et de vérifier les références vous évitera cette situation. Et si vous n'avez pas encore formalisé vos besoins, commencez par [rédiger un cahier des charges solide](/blog/cahier-des-charges-site-web) : c'est le meilleur moyen de comparer des offres sur une base identique.
 
 ## Les 8 critères pour bien choisir
 
@@ -50,7 +50,7 @@ WordPress, Webflow, Shopify, React, Next.js, Laravel. Chaque agence a ses outils
 - Est-ce que la solution proposée est adaptée à vos besoins actuels ET à vos besoins futurs ?
 - Serez-vous propriétaire du code et des données ?
 
-Une agence qui ne travaille qu'avec WordPress et qui vous propose WordPress pour une application avec espace client, paiement en ligne et 50 000 utilisateurs n'a peut-être pas la bonne expertise pour votre projet. L'inverse est vrai aussi : une agence qui vous vend du développement sur-mesure pour un blog de 5 pages surdimensionne la solution.
+Une agence qui ne travaille qu'avec WordPress et qui vous propose WordPress pour une application avec espace client, paiement en ligne et 50 000 utilisateurs n'a peut-être pas la bonne expertise pour votre projet. L'inverse est vrai aussi : une agence qui vous vend du développement [SaaS sur-mesure](/services/saas-sur-mesure) pour un blog de 5 pages surdimensionne la solution. Pour un [site vitrine](/services/site-vitrine), un outil comme Webflow ou un thème WordPress bien configuré peut suffire.
 
 La bonne agence adapte l'outil au projet. Pas l'inverse.
 
@@ -77,7 +77,7 @@ Un devis clair est un devis détaillé. Si le devis tient en une ligne ("Créati
 - Les conditions de paiement (acompte, échéancier)
 - Les conditions de modification après livraison
 
-Comparez les devis poste par poste, pas total contre total. Un devis à 3 000 euros sans contenu, sans SEO et sans maintenance n'est pas comparable à un devis à 6 000 euros tout inclus.
+Comparez les devis poste par poste, pas total contre total. Un devis à 3 000 euros sans contenu, sans SEO et sans maintenance n'est pas comparable à un devis à 6 000 euros tout inclus. Pour aller plus loin sur ce sujet, consultez notre guide complet sur [le coût d'un site internet](/blog/cout-site-internet).
 
 Autre point : demandez le tarif journalier ou horaire (TJM) de l'agence. Ça permet de comprendre le temps alloué à votre projet. Si une agence facture 300 euros/jour et que le devis est à 3 000 euros, c'est 10 jours de travail. Pour un site vitrine de 7 pages avec design, développement et contenu, c'est très serré.
 
@@ -182,4 +182,10 @@ Un bon freelance senior peut livrer un travail de qualité pour un budget infér
 
 ### Comment savoir si le devis est au bon prix ?
 
-Demandez 3 devis comparables (même périmètre, mêmes fonctionnalités). Si deux devis sont à 5 000 et 6 000 euros et que le troisième est à 1 500 euros, le troisième n'inclut probablement pas les mêmes prestations. La fourchette réaliste pour un site vitrine professionnel sur-mesure se situe entre 3 500 et 10 000 euros en 2026. En dessous de 2 500 euros, posez des questions sur ce qui est réellement inclus. Au-dessus de 12 000 euros pour un site vitrine sans fonctionnalité complexe, demandez la justification détaillée.
+Demandez 3 devis comparables (même périmètre, mêmes fonctionnalités). Si deux devis sont à 5 000 et 6 000 euros et que le troisième est à 1 500 euros, le troisième n'inclut probablement pas les mêmes prestations. La fourchette réaliste pour un site vitrine professionnel sur-mesure se situe entre 3 500 et 10 000 euros en 2026. En dessous de 2 500 euros, posez des questions sur ce qui est réellement inclus. Au-dessus de 12 000 euros pour un site vitrine sans fonctionnalité complexe, demandez la justification détaillée. Pour des repères chiffrés selon les types de projets, notre article sur [comment maîtriser son budget web](/blog/budget-site-web-maitriser-cout) détaille les postes de dépense les plus courants.
+
+## Besoin d'aide pour choisir le bon prestataire web ?
+
+Chez Vizion Web, nous concevons des sites vitrines, des applications web et des outils métier sur-mesure pour les PME. Chaque projet commence par un échange transparent sur vos objectifs, votre budget et vos contraintes.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

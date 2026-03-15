@@ -18,7 +18,7 @@ Un cabinet d'architecte, un avocat, un consultant en stratégie, un plombier. To
 
 Le visiteur peut acheter directement sur le site. Il parcourt un catalogue, ajoute des produits au panier, paie par carte bancaire, et reçoit une confirmation de commande. Le site gère les stocks, les prix, les promotions, la livraison et les retours. C'est une boutique ouverte 24h/24, sans vendeur physique.
 
-Derrière cette apparente simplicité, un e-commerce est un projet technique plus lourd. Il faut un système de gestion de catalogue, une passerelle de paiement sécurisée (Stripe, PayPal), un calcul automatique des frais de livraison, une gestion des retours, et souvent un espace client avec historique de commandes.
+Derrière cette apparente simplicité, un e-commerce est un projet technique plus lourd. Il faut un système de gestion de catalogue, une [passerelle de paiement sécurisée comme Stripe ou PayPal](/blog/paiement-en-ligne-stripe-paypal), un calcul automatique des frais de livraison, une gestion des retours, et souvent un espace client avec historique de commandes.
 
 Une marque de vêtements, un torréfacteur qui vend ses cafés, un éditeur qui vend des formations vidéo. Ces activités ont besoin d'un processus d'achat autonome où le client peut acheter sans parler à personne.
 
@@ -30,7 +30,7 @@ Dans beaucoup de cas, un site vitrine est exactement ce qu'il vous faut. Pas bes
 
 **Vos produits sont sur-mesure.** Un menuisier qui fabrique des meubles à la demande, un traiteur qui propose des menus personnalisés. Chaque commande est différente, donc il n'y a pas de "bouton acheter" standardisé. Le site montre vos réalisations et déclenche la prise de contact.
 
-**Vous démarrez et votre budget est limité.** Un site vitrine bien fait coûte entre 2 000 et 6 000 euros. C'est un investissement raisonnable pour valider votre positionnement et commencer à attirer des prospects. Vous pourrez toujours ajouter une couche e-commerce plus tard.
+**Vous démarrez et votre budget est limité.** Un [site vitrine](/services/site-vitrine) bien fait coûte entre 2 000 et 6 000 euros. Pour mieux anticiper ce budget, consultez notre guide sur [le coût d'un site internet](/blog/cout-site-internet). C'est un investissement raisonnable pour valider votre positionnement et commencer à attirer des prospects. Vous pourrez toujours ajouter une couche e-commerce plus tard.
 
 **Votre cycle de vente est long.** Dans le B2B, les décisions d'achat prennent des semaines, voire des mois. Personne ne met "un audit SI à 15 000 euros" dans un panier en ligne. Le site doit éduquer, rassurer et nourrir la relation. Les livres blancs, les études de cas et les formulaires de prise de rendez-vous font mieux le travail qu'un bouton "Ajouter au panier".
 
@@ -114,7 +114,7 @@ Si vous hésitez encore, commencez par le site vitrine. C'est le choix le moins 
 
 ### Peut-on transformer un site vitrine en e-commerce plus tard ?
 
-Oui, à condition que la base technique le permette. Un site développé en React/Next.js ou sur WordPress peut accueillir une couche e-commerce sans tout refaire. Un site créé sur Wix en version gratuite sera plus compliqué à faire évoluer. Prévoyez cette possibilité dès le départ si la vente en ligne fait partie de vos projets à moyen terme.
+Oui, à condition que la base technique le permette. Un [site web avancé](/services/site-web-avance) développé en React/Next.js ou sur WordPress peut accueillir une couche e-commerce sans tout refaire. Un site créé sur Wix en version gratuite sera plus compliqué à faire évoluer. Prévoyez cette possibilité dès le départ si la vente en ligne fait partie de vos projets à moyen terme.
 
 ### Shopify, WooCommerce ou sur-mesure pour le e-commerce ?
 

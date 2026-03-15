@@ -4,7 +4,7 @@ Un de nos clients, gérant d'un cabinet comptable, passait ses lundis matins à 
 
 On lui a mis en place un espace client sur son site. Ses clients se connectent, retrouvent tous leurs documents, et téléchargent ce dont ils ont besoin. Le lundi matin du gérant s'est libéré. Et ses clients trouvent ça plus professionnel.
 
-Voilà ce qu'un portail client peut changer. Pas de la tech pour le plaisir, mais un outil concret qui simplifie votre quotidien et celui de vos clients.
+Voilà ce qu'un portail client peut changer. Pas de la tech pour le plaisir, mais un outil concret qui simplifie votre quotidien et celui de vos clients. C'est le type de fonctionnalité qui distingue un [site web avancé](/services/site-web-avance) d'un simple site vitrine.
 
 ## Pourquoi un espace client change la relation
 
@@ -42,7 +42,7 @@ Un portail client web réussi, c'est celui que vos clients utilisent réellement
 
 **Prestataire de services (formation, coaching, consulting)** : accès aux ressources, calendrier des séances, historique des échanges, facturation. Le client veut un endroit unique où tout est centralisé.
 
-**Artisan ou entreprise du bâtiment** : suivi de chantier avec photos, devis et factures, planning d'intervention. Le maître d'ouvrage veut de la visibilité sur l'avancement.
+**Artisan ou entreprise du bâtiment** : suivi de chantier avec photos, devis et factures, planning d'intervention, voire un système de [réservation en ligne](/blog/reservation-en-ligne-solution) pour les rendez-vous. Le maître d'ouvrage veut de la visibilité sur l'avancement.
 
 **E-commerce ou vente B2B** : historique des commandes, suivi de livraison, gestion des retours, récommande simplifiée. Le client professionnel veut commander vite sans repasser par tout le catalogue.
 
@@ -78,7 +78,7 @@ Pour certains métiers, un simple système de tickets suffit. Pour d'autres, un 
 
 Donner accès aux factures, permettre le téléchargement en PDF, et idéalement proposer le paiement en ligne directement depuis le portail. Un client qui peut payer en deux clics paie plus vite. C'est mécanique.
 
-L'intégration avec Stripe ou GoCardless permet d'automatiser les relances et le suivi des paiements. Moins de relances manuelles, meilleure trésorerie.
+L'intégration avec Stripe ou GoCardless permet d'automatiser les relances et le suivi des paiements. Pour en savoir plus sur les options disponibles, consultez notre guide sur le [paiement en ligne avec Stripe et PayPal](/blog/paiement-en-ligne-stripe-paypal). Moins de relances manuelles, meilleure trésorerie.
 
 ## Solutions techniques : SaaS vs sur-mesure
 
@@ -102,7 +102,7 @@ Un espace client développé spécifiquement pour votre activité, intégré dir
 
 **Limites** : investissement initial plus élevé (entre 5 000 et 20 000 euros selon la complexité), délai de développement (2 à 8 semaines), besoin d'un prestataire technique fiable pour la maintenance.
 
-Le sur-mesure prend tout son sens quand votre processus métier est spécifique, quand vous avez déjà une base clients significative (50+ clients actifs), ou quand l'espace client devient un argument commercial fort.
+Le sur-mesure prend tout son sens quand votre processus métier est spécifique, quand vous avez déjà une base clients significative (50+ clients actifs), ou quand l'espace client devient un argument commercial fort. C'est d'ailleurs ce qui différencie un [site vitrine d'un site e-commerce](/blog/site-vitrine-vs-ecommerce) : le niveau de fonctionnalités interactives dont vos clients ont besoin.
 
 ### Le bon moment pour passer au sur-mesure
 
@@ -124,7 +124,7 @@ Pour ceux que le côté technique intéresse, voici ce qu'on utilise typiquement
 - **Paiement** : Stripe pour la facturation intégrée
 - **Hébergement** : Vercel ou un VPS selon le volume
 
-Cette stack permet de construire un espace client performant, sécurisé, et facile à faire évoluer. Le choix exact dépend de votre contexte, mais c'est une base solide qui a fait ses preuves sur de nombreux projets.
+Cette stack permet de construire un espace client performant, sécurisé, et facile à faire évoluer. Le choix exact dépend de votre contexte, mais c'est une base solide qui a fait ses preuves sur de nombreux projets, notamment dans nos [applications métier](/services/application-metier) et nos [sites web avancés](/services/site-web-avance).
 
 ## Combien ça coûte concrètement ?
 
@@ -152,3 +152,9 @@ Pour la grande majorité des PME, un espace client responsive (qui s'adapte aux 
 ### Comment sécuriser les données de mes clients dans le portail ?
 
 La sécurité repose sur plusieurs couches. Le certificat SSL (HTTPS) est obligatoire, c'est la base. L'authentification doit être solide : mots de passe hachés, option de double authentification, sessions expirantes. Les données doivent être chiffrées au repos et en transit. Les accès doivent être cloisonnés : chaque client ne voit que ses propres données, jamais celles des autres. Et les sauvegardes automatiques protègent contre la perte de données. Si vous travaillez avec un prestataire sérieux, ces éléments sont inclus par défaut. Posez la question en amont, c'est un bon indicateur du niveau de professionnalisme de votre développeur.
+
+## Besoin d'un espace client intégré à votre site ?
+
+Chez Vizion Web, nous concevons des espaces clients sur-mesure intégrés directement à votre [site web avancé](/services/site-web-avance). De l'authentification sécurisée à la gestion documentaire, nous construisons le portail qui simplifie votre relation client et renforce votre image professionnelle.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

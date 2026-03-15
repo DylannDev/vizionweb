@@ -4,7 +4,7 @@ Vous ouvrez Excel chaque matin. Vous copiez des données depuis trois outils dif
 
 Ou alors, vous utilisez un outil SaaS qui génère des rapports. Sauf que les graphiques ne montrent pas ce que vous cherchez, les filtres ne correspondent pas à votre métier, et il manque toujours le croisement de données qui vous intéresse vraiment.
 
-Un dashboard sur-mesure résout ce problème. Pas un outil générique de plus, mais un tableau de bord conçu spécifiquement pour votre activité, avec vos données, vos indicateurs et votre logique métier. Voici cinq situations concrètes où un dashboard personnalisé a fait une vraie différence.
+Un dashboard sur-mesure résout ce problème. Pas un outil générique de plus, mais un tableau de bord conçu spécifiquement pour votre activité, avec vos données, vos indicateurs et votre logique métier. C'est le type de projet que nous réalisons dans le cadre de nos [applications métier](/services/application-metier). Voici cinq situations concrètes où un dashboard personnalisé a fait une vraie différence.
 
 ## Pourquoi un dashboard générique ne suffit pas
 
@@ -12,7 +12,7 @@ Les outils de reporting standard (Google Analytics, Power BI, les dashboards int
 
 Un dashboard générique vous montre des données. Un dashboard sur-mesure vous montre des réponses. La nuance est importante. "Le chiffre d'affaires du mois est de 45 000 euros" est une donnée. "Le CA des clients de plus de 2 ans a baissé de 12% ce mois-ci, concentré sur le segment produit A dans la région Sud" est une réponse actionnable. Vous savez immédiatement quoi investiguer.
 
-L'autre problème des outils standards, c'est la dispersion. Vos données commerciales sont dans votre CRM. Vos données financières dans votre logiciel comptable. Vos données opérationnelles dans un tableur. Un dashboard sur-mesure agrège tout ça en un seul endroit. Plus de copier-coller, plus de fichiers Excel volants.
+L'autre problème des outils standards, c'est la dispersion. Vos données commerciales sont dans votre CRM. Vos données financières dans votre logiciel comptable. Vos données opérationnelles dans un tableur. Un dashboard sur-mesure agrège tout ça en un seul endroit. Plus de copier-coller, plus de fichiers Excel volants. C'est d'ailleurs l'un des leviers les plus puissants pour [automatiser votre business avec les outils web](/blog/automatiser-business-outils-web).
 
 ## Cas 1 : Une agence immobilière qui perdait des mandats
 
@@ -102,7 +102,7 @@ Un dashboard interne affichant un score de santé par client. Ce score combinait
 
 ### Le résultat
 
-L'équipe commerciale a commencé à contacter proactivement les clients "orange" et "rouge". En 4 mois, le churn mensuel est passé de 6% à 3,8%. Sur un MRR de 28 000 euros, chaque point de churn réduit représente environ 3 360 euros de revenu préservé par mois, soit 40 320 euros par an. Le dashboard s'est rentabilisé en moins de 2 mois.
+L'équipe commerciale a commencé à contacter proactivement les clients "orange" et "rouge". En 4 mois, le churn mensuel est passé de 6% à 3,8%. Sur un MRR de 28 000 euros, chaque point de churn réduit représente environ 3 360 euros de revenu préservé par mois, soit 40 320 euros par an. Le dashboard s'est rentabilisé en moins de 2 mois. Si vous êtes éditeur SaaS, découvrez d'autres [exemples d'outils SaaS pour PME](/blog/saas-pme-exemples-outils-metier) qui tirent parti de ce type de tableaux de bord.
 
 ## Les composants clés d'un bon dashboard
 
@@ -110,7 +110,7 @@ Ces cinq cas partagent des caractéristiques communes. Un bon dashboard sur-mesu
 
 ### Des données centralisées
 
-Le dashboard tire ses données de plusieurs sources (CRM, logiciel de caisse, outils de gestion, APIs tierces) et les agrège en un seul endroit. C'est souvent la première valeur perçue par les utilisateurs : ne plus jongler entre les outils.
+Le dashboard tire ses données de plusieurs sources (CRM, logiciel de caisse, outils de gestion, APIs tierces) et les agrège en un seul endroit. C'est souvent la première valeur perçue par les utilisateurs : ne plus jongler entre les outils. Si vous utilisez un CRM, la question de savoir s'il vaut mieux opter pour un [CRM sur-mesure plutôt qu'un outil comme HubSpot](/blog/crm-sur-mesure-vs-hubspot) se pose souvent dans ce contexte.
 
 ### Des indicateurs métier, pas des données brutes
 
@@ -128,7 +128,7 @@ Si l'utilisateur met plus de 30 secondes à comprendre la situation globale, le 
 
 Les besoins changent. Les indicateurs pertinents aujourd'hui ne seront pas forcément ceux de dans 6 mois. Un dashboard bien conçu permet d'ajouter de nouveaux indicateurs, de connecter de nouvelles sources de données et de modifier les vues sans tout reconstruire.
 
-Chez Vizion Web, on développe des dashboards sur-mesure en React et Next.js qui se connectent à vos outils existants. On commence par identifier vos 5 indicateurs clés avec vous, on construit une première version en 2 à 6 semaines, puis on itère en fonction de votre usage réel. Si vous passez encore vos lundis matin à compiler des données dans Excel, il est peut-être temps d'en parler.
+Chez Vizion Web, on développe des dashboards sur-mesure en React et Next.js qui se connectent à vos outils existants, que ce soit dans le cadre d'une [application métier](/services/application-metier) ou d'un [SaaS sur-mesure](/services/saas-sur-mesure). On commence par identifier vos 5 indicateurs clés avec vous, on construit une première version en 2 à 6 semaines, puis on itère en fonction de votre usage réel. Si vous passez encore vos lundis matin à compiler des données dans Excel, il est peut-être temps d'en parler.
 
 ## Questions fréquentes
 
@@ -145,3 +145,9 @@ La plupart des outils modernes (Shopify, HubSpot, Salesforce, Stripe, les logici
 ### Faut-il remplacer nos outils actuels pour avoir un dashboard ?
 
 Non. Le dashboard se connecte à vos outils existants et affiche les données de façon centralisée. Vos équipes continuent d'utiliser les mêmes outils au quotidien. Le dashboard ne remplace rien, il ajoute une couche de vision et de pilotage au-dessus de ce qui existe déjà.
+
+## Besoin d'un dashboard adapté à votre activité ?
+
+Chez Vizion Web, nous concevons des tableaux de bord sur-mesure qui centralisent vos données et vous donnent une vision claire de votre activité. De l'identification de vos indicateurs clés au déploiement en 2 à 6 semaines, nous construisons l'outil de pilotage dont vous avez vraiment besoin.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

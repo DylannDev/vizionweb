@@ -20,9 +20,9 @@ Vercel a été créé par l'équipe qui développe Next.js. Ce n'est pas un dét
 
 **Le déploiement est d'une simplicité déconcertante.** Vous connectez votre dépôt GitHub, et chaque push sur la branche principale déclenche un déploiement automatique. En 30 à 60 secondes, votre site est en ligne avec la nouvelle version. Chaque pull request génère une URL de prévisualisation pour tester avant de valider.
 
-**Les performances sont excellentes.** Vercel utilise un réseau CDN mondial (appelé Edge Network) qui distribue votre site depuis le point le plus proche de chaque visiteur. Le temps de chargement s'en ressent directement. Pour un site vitrine ou une application Next.js classique, les scores PageSpeed sont souvent au-dessus de 90 sans effort particulier.
+**Les performances sont excellentes.** Vercel utilise un réseau CDN mondial (appelé Edge Network) qui distribue votre site depuis le point le plus proche de chaque visiteur. Le [temps de chargement s'en ressent directement sur vos conversions](/blog/performance-web-vitesse-ventes). Pour un site vitrine ou une application Next.js classique, les scores PageSpeed sont souvent au-dessus de 90 sans effort particulier.
 
-**Les fonctionnalités Next.js sont supportées nativement** : Server Components, ISR (Incremental Static Regeneration), middleware, API Routes. Tout fonctionne sans configuration. Sur un VPS, certaines de ces fonctionnalités demandent du paramétrage manuel.
+**Les fonctionnalités Next.js sont supportées nativement** : Server Components, ISR (Incremental Static Regeneration), middleware, API Routes. Tout fonctionne sans configuration, ce qui est un atout majeur pour le [SEO technique de votre site Next.js](/blog/seo-technique-nextjs). Sur un VPS, certaines de ces fonctionnalités demandent du paramétrage manuel.
 
 **L'Analytics intégré** donne des métriques de performance web (Core Web Vitals) sans installer d'outil tiers. Pratique pour suivre l'expérience utilisateur réelle.
 
@@ -118,7 +118,7 @@ Le VPS est 4 à 5 fois moins cher en abonnement. Mais si vous comptez le temps d
 
 ## Quel hébergement pour quel projet
 
-Le choix dépend de trois facteurs : votre stack technique, votre budget, et qui va maintenir le serveur.
+Le choix dépend de trois facteurs : votre stack technique (si vous hésitez entre les frameworks, consultez notre [comparatif React vs Vue vs Angular](/blog/react-vs-vue-vs-angular)), votre budget, et qui va maintenir le serveur.
 
 ### Site vitrine ou landing page
 
@@ -126,7 +126,7 @@ Le choix dépend de trois facteurs : votre stack technique, votre budget, et qui
 
 ### Application Next.js avec fonctionnalités dynamiques
 
-**Choix recommandé : Vercel.** Le support natif de Next.js fait la différence. Server Components, ISR, middleware : tout fonctionne sans configuration. Si votre application utilise ces fonctionnalités, Vercel vous fait gagner des heures de configuration.
+**Choix recommandé : Vercel.** Le support natif de Next.js fait la différence. Server Components, ISR, middleware : tout fonctionne sans configuration. Si votre application utilise ces fonctionnalités, Vercel vous fait gagner des heures de configuration. C'est d'ailleurs ce qu'on recommande pour les projets de [site web avancé](/services/site-web-avance) que nous développons.
 
 ### Application avec base de données lourde et traitements backend
 
@@ -144,7 +144,7 @@ Le choix dépend de trois facteurs : votre stack technique, votre budget, et qui
 
 Ce qu'on fait souvent chez Vizion Web, c'est un mix. Le frontend Next.js hébergé sur Vercel pour profiter du CDN et du déploiement simple. Le backend et la base de données sur un VPS pour le contrôle et le coût. Cloudflare en frontal pour le DNS, le cache, et la protection DDoS.
 
-Cette approche combine les avantages des deux mondes : la simplicité de Vercel pour la partie visible, et la puissance d'un VPS pour tout ce qui tourne en arrière-plan. Le coût total reste raisonnable (20 dollars Vercel + 6 euros VPS + Cloudflare gratuit), et la maintenance se concentre uniquement sur le VPS.
+Cette approche combine les avantages des deux mondes : la simplicité de Vercel pour la partie visible, et la puissance d'un VPS pour tout ce qui tourne en arrière-plan. C'est une architecture que nous utilisons régulièrement pour nos projets de [SaaS sur-mesure](/services/saas-sur-mesure). Le coût total reste raisonnable (20 dollars Vercel + 6 euros VPS + Cloudflare gratuit), et la maintenance se concentre uniquement sur le VPS.
 
 Ce n'est pas la seule façon de faire, mais c'est un bon compromis pour une application web qui a besoin de performance, de flexibilité, et d'un budget maîtrisé.
 

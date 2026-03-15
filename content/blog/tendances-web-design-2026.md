@@ -2,7 +2,7 @@
 
 Chaque année, les articles "Top 10 des tendances web design" fleurissent sur le web. Des gradients pastel, des typographies géantes, des animations 3D, du glassmorphisme. On les lit, on se dit "c'est joli", et on les oublie trois mois plus tard quand la tendance suivante arrive.
 
-Le problème, c'est que ces articles mélangent tout. Des tendances de fond qui vont durer dix ans avec des effets de mode qui tiendront six mois. Un dirigeant de PME qui refait son site ne peut pas se permettre de suivre un effet de mode. Le site doit rester pertinent pendant 3 à 5 ans minimum.
+Le problème, c'est que ces articles mélangent tout. Des tendances de fond qui vont durer dix ans avec des effets de mode qui tiendront six mois. Un dirigeant de PME qui [refait son site](/blog/refonte-site-web-quand-pourquoi) ne peut pas se permettre de suivre un effet de mode. Le site doit rester pertinent pendant 3 à 5 ans minimum.
 
 Cet article fait le tri. On sépare ce qui dure de ce qui passe, ce qui sert vos objectifs business de ce qui sert le portfolio du designer.
 
@@ -30,7 +30,7 @@ Apple le fait depuis 20 ans. Stripe le fait brillamment sur ses pages produit. L
 
 Pourquoi ça dure ? Parce que l'attention des utilisateurs diminue chaque année. En 2025, le temps moyen passé sur une page web est de 54 secondes (source : Contentsquare). Quand vous avez moins d'une minute pour convaincre, chaque élément superflu est un obstacle.
 
-**Quand l'adopter.** Toujours. Quel que soit votre secteur. Un site B2B sobre et clair convertit mieux qu'un site surchargé de sliders et d'animations.
+**Quand l'adopter.** Toujours. Quel que soit votre secteur. Un [site vitrine](/services/site-vitrine) B2B sobre et clair convertit mieux qu'un site surchargé de sliders et d'animations.
 
 **Quand l'ignorer.** Jamais vraiment. Mais attention à ne pas confondre minimalisme et vide. Un site e-commerce a besoin d'informations détaillées sur ses produits. Minimalisme ne veut pas dire cacher l'information, mais la présenter de façon claire et hiérarchisée.
 
@@ -68,7 +68,7 @@ La différence avec les animations lourdes (parallax scroll, transitions de page
 
 ### L'accessibilité comme standard de design
 
-L'accessibilité n'est plus une contrainte technique qu'on gère après le design. En 2026, avec l'entrée en vigueur de l'European Accessibility Act, elle fait partie intégrante du processus de conception.
+L'accessibilité n'est plus une contrainte technique qu'on gère après le design. En 2026, avec l'entrée en vigueur de l'European Accessibility Act, elle fait partie intégrante du processus de conception. Pour comprendre les obligations légales et les bonnes pratiques, consultez notre guide sur [l'accessibilité web et ses obligations](/blog/accessibilite-web-obligations).
 
 Les designers qui travaillent bien intègrent les contrastes WCAG AA dès le choix des couleurs, prévoient des tailles de texte lisibles (16px minimum pour le corps de texte), et conçoivent des parcours navigables au clavier.
 
@@ -140,11 +140,11 @@ En réaction au minimalisme, certains designers poussent un retour au maximalism
 
 Vous refaites votre site cette année. Comment choisir les bonnes tendances à intégrer ?
 
-**Partez de vos objectifs, pas des tendances.** Votre site doit générer des contacts ? Vendre en ligne ? Rassurer des prospects B2B ? La réponse à cette question élimine déjà la moitié des tendances.
+**Partez de vos objectifs, pas des tendances.** Votre site doit générer des contacts ? Créer une [landing page qui convertit](/blog/landing-page-qui-convertit) ? Rassurer des prospects B2B ? La réponse à cette question élimine déjà la moitié des tendances.
 
 **Regardez ce que fait votre secteur, puis faites un cran mieux.** Si vos concurrents ont tous des sites datés de 2019 avec des sliders et du texte en 14px, un site sobre, rapide et bien structuré vous démarquera sans avoir besoin de suivre la dernière tendance Dribbble.
 
-**Investissez dans ce qui dure.** Mobile-first, performance, accessibilité, contenu clair. Ce sont les fondamentaux qui seront encore pertinents dans 5 ans. Les bento grids et la typographie expressive sont des bonus, pas des priorités.
+**Investissez dans ce qui dure.** Mobile-first, performance, accessibilité, contenu clair. Ce sont les fondamentaux qui seront encore pertinents dans 5 ans, que vous construisiez un site vitrine ou une [landing page](/services/landing-page). Les bento grids et la typographie expressive sont des bonus, pas des priorités.
 
 **Testez avant de déployer.** Si vous hésitez sur un choix de design (dark mode ? micro-interactions ? grille bento ?), faites un prototype et montrez-le à 5 vrais utilisateurs. Leurs réactions valent plus que 100 articles de tendances.
 
@@ -163,3 +163,9 @@ Pour un site vitrine B2B classique, le dark mode est un "nice to have", pas une 
 ### Comment savoir si mon site est "daté" visuellement ?
 
 Quelques signaux qui ne trompent pas : un slider (carrousel) en haut de la page d'accueil, des coins très arrondis avec des ombres portées partout, du texte en dessous de 15px, des photos de banque d'images génériques, un temps de chargement supérieur à 4 secondes, et pas de version mobile propre. Si vous cochez trois de ces cases, votre site donne une impression datée à vos visiteurs, même si le contenu est bon. L'apparence d'un site influence la perception de crédibilité : 75% des utilisateurs jugent la fiabilité d'une entreprise sur le design de son site (source : Stanford Web Credibility Research).
+
+## Besoin d'aide pour créer un site au design moderne et durable ?
+
+Chez Vizion Web, nous concevons des sites web qui intègrent les bonnes pratiques de design actuelles sans sacrifier la lisibilité ni la performance. Un site sobre, rapide, accessible et pensé pour convertir vos visiteurs en clients.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

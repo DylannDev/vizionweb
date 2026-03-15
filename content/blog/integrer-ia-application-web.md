@@ -8,7 +8,7 @@ Cet article coupe à travers le bruit. Pas de promesses irréalistes, pas de "l'
 
 L'IA dont on parle ici, ce sont les modèles de langage (GPT-4, Claude, Mistral) et les modèles spécialisés (vision, classification, recommandation). Ce ne sont pas des intelligences qui "pensent". Ce sont des outils statistiques très performants pour traiter du texte, des images et des données structurées.
 
-Pour une PME, l'intérêt n'est pas de créer le prochain ChatGPT. C'est d'automatiser des tâches répétitives, d'améliorer l'expérience client, ou de traiter des volumes de données qu'un humain ne peut pas gérer manuellement.
+Pour une PME, l'intérêt n'est pas de créer le prochain ChatGPT. C'est d'[automatiser des tâches répétitives](/blog/automatiser-business-outils-web), d'améliorer l'expérience client, ou de traiter des volumes de données qu'un humain ne peut pas gérer manuellement.
 
 La bonne question n'est pas "comment intégrer l'IA dans mon entreprise ?". C'est "quelle tâche répétitive me coûte du temps et de l'argent, et est-ce qu'une IA peut la faire à ma place (ou mieux que moi) ?"
 
@@ -106,7 +106,7 @@ La parade : contraindre l'IA à ne répondre qu'à partir de vos données (techn
 
 Votre chatbot tourne sur GPT-4 d'OpenAI. OpenAI décide de doubler ses prix. Ou de modifier son modèle et les réponses changent de qualité. Vous êtes dépendant d'un fournisseur externe pour une fonction critique de votre application.
 
-La mitigation : architecturer votre système pour pouvoir changer de modèle (OpenAI, Anthropic, Mistral, modèles open source) sans tout refaire. Un bon développeur prévoit cette flexibilité dès le départ.
+La mitigation : architecturer votre système pour pouvoir changer de modèle (OpenAI, Anthropic, Mistral, modèles open source) sans tout refaire. Un bon développeur prévoit cette flexibilité dès le départ. C'est d'ailleurs un principe fondamental quand on conçoit une [application métier sur-mesure](/services/application-metier).
 
 ### La confidentialité des données
 
@@ -132,11 +132,11 @@ Combien coûte cette tâche aujourd'hui en temps humain ? Si votre assistant pas
 
 ### Commencez petit, mesurez, itérez
 
-Lancez un pilote sur un périmètre limité. Un chatbot sur les 20 questions les plus fréquentes, pas sur l'intégralité de votre base de connaissances. Mesurez les résultats (taux de réponse correcte, satisfaction client, temps gagné). Élargissez le périmètre si les résultats sont bons.
+Lancez un pilote sur un périmètre limité. Un chatbot sur les 20 questions les plus fréquentes, pas sur l'intégralité de votre base de connaissances. Mesurez les résultats (taux de réponse correcte, satisfaction client, temps gagné). Élargissez le périmètre si les résultats sont bons. C'est exactement la logique du MVP que nous décrivons dans notre guide [de l'idée à l'application SaaS](/blog/de-idee-a-application-saas).
 
 ### Choisissez le bon partenaire technique
 
-L'intégration d'IA dans une application existante demande des compétences en développement web (pour l'interface et les flux de données) et en IA (pour le choix du modèle, la conception des prompts, et l'optimisation). Chez Vizion Web, on combine ces deux expertises. On développe l'application et on intègre l'IA dedans, avec une architecture qui vous laisse la flexibilité de changer de modèle ou d'élargir les fonctions plus tard.
+L'intégration d'IA dans une application existante demande des compétences en développement web (pour l'interface et les flux de données) et en IA (pour le choix du modèle, la conception des prompts, et l'optimisation). Chez Vizion Web, on combine ces deux expertises. Que ce soit dans le cadre d'une [application métier](/services/application-metier) ou d'un [SaaS sur-mesure](/services/saas-sur-mesure), on développe l'application et on intègre l'IA dedans, avec une architecture qui vous laisse la flexibilité de changer de modèle ou d'élargir les fonctions plus tard.
 
 Le plus important : ne pas se précipiter. L'IA est un outil puissant, mais comme tout outil, il faut savoir quand et comment l'utiliser. Un marteau est formidable pour planter un clou. Pour visser une vis, il vaut mieux un tournevis.
 
@@ -152,4 +152,10 @@ Les deux ont du sens selon le contexte. Pour des usages ponctuels (rédiger un e
 
 ### Quels sont les risques légaux de l'IA ?
 
-Le cadre juridique évolue rapidement. L'AI Act européen, entré en vigueur progressivement depuis 2024, impose des obligations selon le niveau de risque de l'usage. Pour les cas d'usage courants en PME (chatbot, analyse de documents, recommandations), les obligations sont modérées : transparence (informer l'utilisateur qu'il parle à une IA), protection des données (RGPD), et supervision humaine pour les décisions impactantes. Consultez un juriste si votre usage touche à des décisions sur des personnes (recrutement, crédit, assurance).
+Le cadre juridique évolue rapidement. L'AI Act européen, entré en vigueur progressivement depuis 2024, impose des obligations selon le niveau de risque de l'usage. Pour les cas d'usage courants en PME (chatbot, analyse de documents, recommandations), les obligations sont modérées : transparence (informer l'utilisateur qu'il parle à une IA), protection des données (RGPD), et supervision humaine pour les décisions impactantes. Consultez un juriste si votre usage touche à des décisions sur des personnes (recrutement, crédit, assurance). L'IA fait d'ailleurs partie des [tendances web design 2026](/blog/tendances-web-design-2026) qui transforment les interfaces utilisateur.
+
+## Besoin d'aide pour intégrer l'IA dans votre application ?
+
+Chez Vizion Web, nous concevons des applications web sur-mesure avec des fonctionnalités IA intégrées, pensées pour les PME. De l'analyse de documents au chatbot intelligent, nous développons des solutions concrètes qui s'intègrent à vos processus existants.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

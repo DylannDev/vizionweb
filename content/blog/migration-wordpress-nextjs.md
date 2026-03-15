@@ -2,7 +2,7 @@
 
 WordPress propulse 43% du web. C'est un outil solide, éprouvé, avec une communauté gigantesque. Et pourtant, de plus en plus d'entreprises le quittent pour passer à Next.js. Nike, Netflix, TikTok, Notion : les sites de ces marques tournent sur des frameworks React. Les PME aussi commencent à faire le saut.
 
-Ce n'est pas un article pour dire que WordPress est mauvais. Ce serait malhonnête. C'est un article pour expliquer dans quels cas la migration vers Next.js vaut le coup, comment ça se passe concrètement, et dans quels cas il vaut mieux rester sur WordPress.
+Ce n'est pas un article pour dire que WordPress est mauvais. Ce serait malhonnête. C'est un article pour expliquer dans quels cas la migration vers Next.js vaut le coup, comment ça se passe concrètement, et dans quels cas il vaut mieux rester sur WordPress. Si vous hésitez encore entre les différentes plateformes, notre comparatif [WordPress vs Webflow vs sur-mesure](/blog/wordpress-vs-webflow-vs-sur-mesure) peut vous aider à y voir plus clair.
 
 ## Pourquoi des entreprises quittent WordPress
 
@@ -10,7 +10,7 @@ Ce n'est pas un article pour dire que WordPress est mauvais. Ce serait malhonnê
 
 Un WordPress avec un thème premium, 12 plugins, WooCommerce et un page builder comme Elementor charge entre 4 et 7 secondes sur mobile. Vous pouvez optimiser : installer WP Rocket, compresser les images, activer le cache. Ça descend à 3 secondes. Peut-être 2,5 si vous êtes méticuleux. Mais vous ne descendrez jamais en dessous d'un certain seuil, parce que la base technique impose ses limites.
 
-Un site Next.js équivalent charge en 0,5 à 1,5 seconde. Pas parce que les développeurs Next.js sont plus malins, mais parce que l'architecture est fondamentalement différente. Next.js génère des pages statiques à l'avance (quand c'est possible) et ne charge que le JavaScript strictement nécessaire. WordPress, lui, reconstruit chaque page à chaque visite en interrogeant sa base de données MySQL.
+Un site Next.js équivalent charge en 0,5 à 1,5 seconde. Pas parce que les développeurs Next.js sont plus malins, mais parce que l'architecture est fondamentalement différente. On a détaillé l'impact concret de la vitesse sur les résultats business dans notre article sur [la performance web et son effet sur les ventes](/blog/performance-web-vitesse-ventes). Next.js génère des pages statiques à l'avance (quand c'est possible) et ne charge que le JavaScript strictement nécessaire. WordPress, lui, reconstruit chaque page à chaque visite en interrogeant sa base de données MySQL.
 
 Pour un blog personnel, la différence est anecdotique. Pour un site e-commerce avec 50 000 visiteurs par mois, chaque seconde de différence se traduit en chiffre d'affaires.
 
@@ -44,7 +44,7 @@ WordPress fait tout en dynamique par défaut. Chaque visite = une requête PHP +
 
 ### SEO technique au top
 
-Next.js offre un contrôle total sur les balises meta, les sitemaps, le balisage Schema.org, le rendu serveur (SSR) pour les moteurs de recherche, et le pre-rendering. Google indexe un site Next.js aussi bien (souvent mieux) qu'un site WordPress, grâce au HTML propre et à la vitesse de chargement.
+Next.js offre un contrôle total sur les balises meta, les sitemaps, le balisage Schema.org, le rendu serveur (SSR) pour les moteurs de recherche, et le pre-rendering. Google indexe un site Next.js aussi bien (souvent mieux) qu'un site WordPress, grâce au HTML propre et à la vitesse de chargement. Pour approfondir ce sujet, consultez notre guide complet sur le [SEO technique avec Next.js](/blog/seo-technique-nextjs).
 
 Le mythe "les sites JavaScript ne sont pas bien indexés par Google" date de 2015. En 2026, Google sait très bien interpréter le JavaScript. Et avec le SSR de Next.js, le contenu est de toute façon servi en HTML classique aux moteurs de recherche.
 
@@ -145,4 +145,10 @@ Oui, c'est ce qu'on appelle l'approche "headless WordPress". WordPress reste vot
 
 ### Combien de temps prend une migration complète ?
 
-Pour un site vitrine de 20 à 50 pages avec un blog, comptez 8 à 12 semaines. Pour un site e-commerce ou une application avec des fonctionnalités spécifiques, 12 à 20 semaines. Ces durées incluent l'audit, le design, le développement, la migration de contenu et les tests. Le facteur le plus variable est souvent le temps de validation côté client : les allers-retours sur le design et le contenu peuvent allonger le planning si les retours tardent.
+Pour un [site vitrine](/services/site-vitrine) de 20 à 50 pages avec un blog, comptez 8 à 12 semaines. Pour un [site web avancé](/services/site-web-avance) avec des fonctionnalités e-commerce ou applicatives, 12 à 20 semaines. Ces durées incluent l'audit, le design, le développement, la migration de contenu et les tests. Le facteur le plus variable est souvent le temps de validation côté client : les allers-retours sur le design et le contenu peuvent allonger le planning si les retours tardent.
+
+## Besoin d'aide pour migrer votre site WordPress vers Next.js ?
+
+Chez Vizion Web, nous accompagnons les PME dans la migration de WordPress vers Next.js, de l'audit initial à la mise en ligne. Nous préservons votre référencement, améliorons vos performances et construisons un site qui vous servira pour les 5 prochaines années.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

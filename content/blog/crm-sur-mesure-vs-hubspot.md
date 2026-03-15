@@ -2,7 +2,7 @@
 
 Un CRM, c'est l'outil qui centralise vos contacts, vos échanges commerciaux et votre pipeline de ventes. Sans CRM, vous gérez vos prospects dans un tableur Excel, vous oubliez de relancer un client, et vous passez à côté d'opportunités parce que personne dans l'équipe ne savait que ce prospect avait déjà été contacté. Avec un CRM, tout est au même endroit.
 
-La vraie question n'est pas "est-ce que j'ai besoin d'un CRM" (la réponse est presque toujours oui). La question, c'est : est-ce que je prends un outil existant ou est-ce que je fais développer le mien ?
+La vraie question n'est pas "est-ce que j'ai besoin d'un CRM" (la réponse est presque toujours oui). La question, c'est : est-ce que je prends un outil existant ou est-ce que je fais développer le mien ? C'est un dilemme classique du [sur-mesure vs SaaS](/blog/application-sur-mesure-vs-saas).
 
 ## Le CRM : ce que ça change pour une PME
 
@@ -14,7 +14,7 @@ Avant de comparer les options, posons le constat. Une PME sans CRM fonctionne so
 - Quand un commercial part, il emporte son carnet d'adresses avec lui
 - Les rapports de vente se font dans Excel, une fois par mois, en retard
 
-Un CRM résout tous ces problèmes. Chaque contact, chaque échange, chaque devis est centralisé. Le dirigeant voit en un coup d'oeil combien de prospects sont en cours, à quelle étape, et pour quel montant. Les relances sont automatisées. Les données appartiennent à l'entreprise, pas au commercial.
+Un CRM résout tous ces problèmes. Chaque contact, chaque échange, chaque devis est centralisé. Le dirigeant voit en un coup d'oeil combien de prospects sont en cours, à quelle étape, et pour quel montant, grâce à des [tableaux de bord sur-mesure](/blog/dashboard-sur-mesure-cas-concrets). Les relances sont automatisées. Les données appartiennent à l'entreprise, pas au commercial.
 
 Pour une PME avec 3 à 20 commerciaux, un CRM bien utilisé peut augmenter le taux de conversion de 20 à 30%. Pas parce que l'outil est magique, mais parce qu'il élimine les oublis et structure le processus de vente.
 
@@ -61,7 +61,7 @@ Un exemple concret : une entreprise de formation professionnelle qui doit gérer
 
 ### Vous avez besoin d'intégrations profondes
 
-Vous voulez que votre CRM communique en temps réel avec votre ERP, votre outil de facturation, votre système de gestion de stock, et votre plateforme de SAV. Les connecteurs Zapier ou Make fonctionnent pour des cas simples, mais quand vous avez besoin d'une synchronisation bidirectionnelle en temps réel avec des règles métier, les limites arrivent vite.
+Vous voulez que votre CRM communique en temps réel avec votre ERP, votre outil de facturation, votre système de gestion de stock, et votre plateforme de SAV. Les connecteurs Zapier ou Make fonctionnent pour des cas simples (on en parle dans notre article sur [l'automatisation de votre business avec les outils web](/blog/automatiser-business-outils-web)), mais quand vous avez besoin d'une synchronisation bidirectionnelle en temps réel avec des règles métier, les limites arrivent vite.
 
 ### Vous facturez par utilisateur et ça devient absurde
 
@@ -135,7 +135,7 @@ Chez Vizion Web, on ne pousse pas le sur-mesure par défaut. On commence par com
 Si le sur-mesure est la bonne voie, on procède par étapes :
 
 1. **Audit du processus** : on cartographie votre cycle de vente réel (pas celui que vous imaginez, celui que vos commerciaux vivent au quotidien)
-2. **MVP en 4-6 semaines** : un premier outil avec les fonctions essentielles, testé par votre équipe
+2. **MVP en 4-6 semaines** : un premier outil avec les fonctions essentielles, testé par votre équipe. C'est le coeur de notre approche [application métier](/services/application-metier).
 3. **Itérations** : on améliore l'outil en fonction des retours terrain, mois après mois
 4. **Formation et adoption** : un outil que personne n'utilise ne sert à rien, peu importe combien il a coûté
 
@@ -153,4 +153,4 @@ Pas si il est bien conçu. Un CRM sur-mesure peut être plus simple qu'un Salesf
 
 ### Combien de temps faut-il pour développer un CRM sur-mesure ?
 
-Un MVP fonctionnel (pipeline, gestion de contacts, tableau de bord basique) prend 4 à 6 semaines de développement. Une V1 complète avec automatisations, intégrations et reporting avancé demande 3 à 5 mois. Le piège classique, c'est de vouloir la V1 d'entrée de jeu sans passer par le MVP. On perd du temps, de l'argent, et on rate les retours terrain qui auraient amélioré le produit.
+Un MVP fonctionnel (pipeline, gestion de contacts, tableau de bord basique) prend 4 à 6 semaines de développement. Une V1 complète avec automatisations, intégrations et reporting avancé demande 3 à 5 mois. Le piège classique, c'est de vouloir la V1 d'entrée de jeu sans passer par le MVP. On perd du temps, de l'argent, et on rate les retours terrain qui auraient amélioré le produit. Si votre CRM a vocation à devenir un produit commercialisé, notre offre [SaaS sur-mesure](/services/saas-sur-mesure) est conçue pour ce type de projet.

@@ -76,7 +76,7 @@ Les frameworks modernes comme React et Next.js (utilisés par Netflix, Airbnb, N
 | Plugins/abonnements (3 ans) | 300 - 1 200 euros | 0 euros | 0 euros |
 | **Total 3 ans** | **3 660 - 11 780 euros** | **2 864 - 7 296 euros** | **5 360 - 19 080 euros** |
 
-Le sur-mesure coûte plus cher. C'est un fait. Mais ce tableau ne chiffre pas la valeur : un site sur-mesure qui convertit 2x mieux qu'un template WordPress génère un retour sur investissement qui dépasse largement la différence de prix.
+Le sur-mesure coûte plus cher. C'est un fait. Mais ce tableau ne chiffre pas la valeur : un site sur-mesure qui convertit 2x mieux qu'un template WordPress génère un retour sur investissement qui dépasse largement la différence de prix. Pour une analyse complète des budgets, consultez notre article sur [le coût d'un site internet](/blog/cout-site-internet).
 
 ## Quel choix pour quel projet ?
 
@@ -90,7 +90,7 @@ Le sur-mesure coûte plus cher. C'est un fait. Mais ce tableau ne chiffre pas la
 
 ### Site avec fonctionnalités métier
 
-**Recommandation : sur-mesure.** Dès qu'on parle de réservation en ligne, d'espace client, de paiement intégré ou de logique métier spécifique, WordPress et Webflow atteignent leurs limites. On peut bricoler avec des plugins et des intégrations tierces, mais le résultat est fragile et la maintenance coûteuse. Le sur-mesure est conçu pour ces cas.
+**Recommandation : sur-mesure.** Dès qu'on parle de réservation en ligne, d'espace client, de paiement intégré ou de logique métier spécifique avec un [site web avancé](/services/site-web-avance), WordPress et Webflow atteignent leurs limites. On peut bricoler avec des plugins et des intégrations tierces, mais le résultat est fragile et la maintenance coûteuse. Le sur-mesure est conçu pour ces cas.
 
 ### Application web ou SaaS
 
@@ -116,7 +116,7 @@ Chez Vizion Web, on développe en React et Next.js. C'est notre spécialité. On
 
 Si vous voulez un blog et que votre budget est limité, prenez WordPress. C'est l'outil le plus adapté, et il y a d'excellents freelances qui peuvent vous aider.
 
-Si vous êtes designer et que vous voulez un portfolio ou un site vitrine avec un contrôle visuel total, Webflow est un très bon choix.
+Si vous êtes designer et que vous voulez un portfolio ou un [site vitrine](/services/site-vitrine) avec un contrôle visuel total, Webflow est un très bon choix.
 
 Si vous avez un projet avec des fonctionnalités spécifiques, si la performance et le SEO sont des enjeux majeurs, ou si vous voulez un site qui ne ressemble à aucun autre, le sur-mesure est le bon investissement. C'est là qu'on intervient, et c'est là qu'on apportons le plus de valeur.
 
@@ -126,7 +126,7 @@ La meilleure technologie, c'est celle qui correspond à votre projet, votre budg
 
 ### Peut-on migrer de WordPress vers du sur-mesure ?
 
-Oui. C'est même assez courant. Le contenu (textes, images) est transférable. La structure et le design sont recréés. La migration prend généralement 4 à 8 semaines selon la taille du site. Le principal enjeu est de maintenir le SEO existant (redirections 301, conservation des URLs si possible).
+Oui. C'est même assez courant. Le contenu (textes, images) est transférable. La structure et le design sont recréés. La migration prend généralement 4 à 8 semaines selon la taille du site. Le principal enjeu est de maintenir le SEO existant (redirections 301, conservation des URLs si possible). Pour en savoir plus, lisez notre guide sur la [migration de WordPress vers Next.js](/blog/migration-wordpress-nextjs).
 
 ### Webflow est-il gratuit ?
 

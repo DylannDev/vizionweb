@@ -6,18 +6,18 @@ Cet article détaille les étapes concrètes d'un projet d'application web, du p
 
 ## Étape 1 : Clarifier le besoin (avant de penser à la solution)
 
-La première erreur est de commencer par la solution. "Je veux une app avec un dashboard et des notifications push" n'est pas un besoin, c'est une liste de fonctionnalités. Le besoin, c'est le problème que l'application résout.
+La première erreur est de commencer par la solution. "Je veux une app avec un dashboard et des notifications push" n'est pas un besoin, c'est une liste de fonctionnalités. Le besoin, c'est le problème que l'application résout. Pour structurer cette réflexion, la rédaction d'un [cahier des charges solide](/blog/cahier-des-charges-site-web) est une étape précieuse.
 
 Posez-vous trois questions :
 - Quel problème concret cette application résout-elle ?
 - Qui va l'utiliser et dans quel contexte ?
 - Comment ces personnes gèrent-elles ce problème aujourd'hui (sans l'application) ?
 
-Un restaurateur qui perd 2h par jour à gérer ses réservations par téléphone a un besoin clair. La solution peut être un module de réservation en ligne, un chatbot WhatsApp, ou un simple formulaire. La forme de l'application découle du besoin, pas l'inverse.
+Un restaurateur qui perd 2h par jour à gérer ses réservations par téléphone a un besoin clair. La solution peut être une [application métier](/services/application-metier) de réservation en ligne, un chatbot WhatsApp, ou un simple formulaire. La forme de l'application découle du besoin, pas l'inverse.
 
 ## Étape 2 : Définir le périmètre du MVP
 
-MVP signifie Minimum Viable Product : la version la plus simple de votre application qui apporte déjà de la valeur. C'est le concept le plus important de tout le processus.
+MVP signifie Minimum Viable Product : la version la plus simple de votre application qui apporte déjà de la valeur. Si ce concept est nouveau pour vous, notre guide complet sur [ce qu'est un MVP et pourquoi c'est essentiel](/blog/quest-ce-quun-mvp) vous donnera toutes les clés. C'est le concept le plus important de tout le processus.
 
 Listez toutes les fonctionnalités que vous imaginez, puis classez-les en trois colonnes :
 - **Indispensable** : sans ça, l'application n'a aucun sens
@@ -38,7 +38,7 @@ Trois options principales :
 
 **Sur-mesure moderne** (React/Next.js + API) : performance maximale, liberté totale, maintenabilité à long terme. Adapté pour des produits ambitieux ou des interfaces complexes.
 
-Le choix dépend de trois facteurs : votre budget, la complexité de l'application et votre ambition à long terme. Un MVP de validation peut commencer en no-code. Un produit que vous comptez commercialiser mérite du sur-mesure dès le départ.
+Le choix dépend de trois facteurs : votre budget, la complexité de l'application et votre ambition à long terme. Un [MVP de validation](/services/mvp-proof-of-concept) peut commencer en no-code. Un produit que vous comptez commercialiser, comme un [SaaS sur-mesure](/services/saas-sur-mesure), mérite du sur-mesure dès le départ.
 
 ## Étape 4 : Concevoir l'interface (UX/UI Design)
 

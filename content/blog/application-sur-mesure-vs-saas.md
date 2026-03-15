@@ -18,7 +18,7 @@ Le revers : vous vous adaptez à l'outil, pas l'inverse. Si votre processus mét
 
 Une application sur-mesure est développée spécifiquement pour votre entreprise. Vos règles métier, votre vocabulaire, votre workflow. Pas de compromis, pas de fonctionnalités inutiles qui encombrent l'interface.
 
-L'investissement initial est plus élevé, et il faut du temps (2 à 6 semaines minimum pour un MVP). Mais vous obtenez un outil qui fait exactement ce que vous voulez, comme vous le voulez.
+L'investissement initial est plus élevé, et il faut du temps (2 à 6 semaines minimum pour [un MVP](/blog/quest-ce-quun-mvp)). Mais vous obtenez un outil qui fait exactement ce que vous voulez, comme vous le voulez.
 
 ## Quand le SaaS suffit
 
@@ -26,7 +26,7 @@ L'investissement initial est plus élevé, et il faut du temps (2 à 6 semaines 
 
 Si votre entreprise utilise un processus courant (suivi de contacts, facturation, envoi d'emails, gestion de projet), un SaaS fera probablement l'affaire. Des milliers d'entreprises ont le même besoin, et les éditeurs ont eu le temps de peaufiner leurs outils.
 
-Un cabinet de conseil qui veut suivre ses prospects et envoyer des devis n'a pas besoin d'un CRM sur-mesure. Hubspot en version gratuite ou Pipedrive à 15 euros par mois couvre 90% du besoin.
+Un cabinet de conseil qui veut suivre ses prospects et envoyer des devis n'a pas besoin d'un CRM sur-mesure. Hubspot en version gratuite ou Pipedrive à 15 euros par mois couvre 90% du besoin. Pour mieux comprendre cette question, consultez notre comparatif [CRM sur-mesure vs HubSpot](/blog/crm-sur-mesure-vs-hubspot).
 
 ### Vous démarrez et testez le marché
 
@@ -42,7 +42,7 @@ Un abonnement SaaS coûte entre 20 et 300 euros par mois selon l'outil et le nom
 
 Un restaurateur qui gère ses menus, ses commandes fournisseurs, ses réservations et son planning d'équipe dans quatre outils différents perd du temps chaque jour. Aucun SaaS ne couvre parfaitement son workflow complet parce que ce workflow est propre à son métier et à sa taille.
 
-C'est là que le sur-mesure prend tout son sens : un seul outil qui réunit tout, conçu autour de vos besoins réels.
+C'est là qu'une [application métier sur-mesure](/services/application-metier) prend tout son sens : un seul outil qui réunit tout, conçu autour de vos besoins réels.
 
 ### Vous perdez du temps à contourner les limites de l'outil
 
@@ -103,4 +103,4 @@ La meilleure stratégie est souvent progressive. Vous commencez avec des outils 
 
 C'est le moment de rédiger un cahier des charges précis pour un outil sur-mesure. Vous ne partez plus d'hypothèses mais d'une expérience concrète. Le développement sera plus rapide, le résultat plus pertinent, et le risque de se tromper beaucoup plus faible.
 
-Chez Vizion Web, c'est l'approche qu'on recommande le plus souvent. On accompagne nos clients depuis la réflexion initiale jusqu'au développement, en passant par la phase de test SaaS quand c'est pertinent. L'objectif n'est pas de vendre du sur-mesure à tout prix, c'est de construire la solution la plus adaptée à votre réalité.
+Chez Vizion Web, c'est l'approche qu'on recommande le plus souvent. On accompagne nos clients depuis la réflexion initiale jusqu'au développement d'un [SaaS sur-mesure](/services/saas-sur-mesure), en passant par la phase de test SaaS quand c'est pertinent. L'objectif n'est pas de vendre du sur-mesure à tout prix, c'est de construire la solution la plus adaptée à votre réalité.

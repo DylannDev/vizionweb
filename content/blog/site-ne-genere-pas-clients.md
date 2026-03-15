@@ -6,7 +6,7 @@ Le problème n'est presque jamais technique. Il est stratégique. Votre site ne 
 
 ## Votre site parle de vous, pas de votre client
 
-C'est l'erreur numéro un. Ouvrez votre page d'accueil et comptez combien de fois vous utilisez "nous", "notre", "nos" par rapport à "vous", "votre", "vos". Si le ratio penche du côté du "nous", votre site est une plaquette d'entreprise, pas un outil de vente.
+C'est l'erreur numéro un, et c'est aussi l'une des [erreurs de conversion les plus fréquentes](/blog/erreurs-conversion-site-web). Ouvrez votre page d'accueil et comptez combien de fois vous utilisez "nous", "notre", "nos" par rapport à "vous", "votre", "vos". Si le ratio penche du côté du "nous", votre site est une plaquette d'entreprise, pas un outil de vente.
 
 Vos visiteurs ne cherchent pas à savoir que vous êtes "passionnés" ou "à l'écoute". Ils cherchent une solution à leur problème. Reformulez chaque phrase en partant du point de vue du client. Au lieu de "Nous proposons des prestations de conseil en RH", écrivez "Vous recrutez et chaque erreur de casting vous coûte 6 mois de salaire. On peut vous aider à éviter ça."
 
@@ -14,7 +14,7 @@ Vos visiteurs ne cherchent pas à savoir que vous êtes "passionnés" ou "à l'�
 
 Un visiteur arrive sur votre site. Il lit, il scroll, et ensuite ? Rien. Pas de bouton visible, pas de formulaire accessible, pas de numéro de téléphone en évidence. Le visiteur doit deviner ce qu'il est censé faire.
 
-Chaque page de votre site doit avoir un objectif unique et un bouton qui y mène. Sur la page d'accueil, c'est probablement "Prendre rendez-vous" ou "Demander un devis". Sur une page de service, c'est "Contactez-nous pour ce service". Le bouton doit être visible sans scroller, répété en bas de page, et formulé de façon concrète.
+Chaque page de votre site doit avoir un objectif unique et un bouton qui y mène. C'est le principe fondamental d'une [landing page qui convertit](/blog/landing-page-qui-convertit). Sur la page d'accueil, c'est probablement "Prendre rendez-vous" ou "Demander un devis". Sur une page de service, c'est "Contactez-nous pour ce service". Le bouton doit être visible sans scroller, répété en bas de page, et formulé de façon concrète.
 
 "En savoir plus" n'est pas un bon appel à l'action. "Recevoir mon devis gratuit en 24h" en est un.
 
@@ -28,7 +28,7 @@ Le SEO ne donne pas de résultats du jour au lendemain. Comptez 3 à 6 mois pour
 
 ## Le site est lent ou mal affiché sur mobile
 
-53% du trafic web mondial vient du mobile. Si votre site met plus de 3 secondes à charger sur un téléphone, vous perdez la moitié de vos visiteurs avant même qu'ils aient lu votre titre.
+53% du trafic web mondial vient du mobile. Si votre site met plus de 3 secondes à charger sur un téléphone, vous perdez la moitié de vos visiteurs avant même qu'ils aient lu votre titre. La [performance web a un impact direct sur vos ventes](/blog/performance-web-vitesse-ventes) : chaque seconde de chargement supplémentaire réduit vos conversions.
 
 Testez votre site sur PageSpeed Insights (gratuit, par Google). Un score en dessous de 50/100 sur mobile est un problème sérieux. Les causes les plus fréquentes : images non compressées, hébergement bon marché, trop de plugins (sur WordPress), polices de caractères mal chargées.
 
@@ -68,7 +68,7 @@ La règle : un visiteur doit pouvoir vous contacter en 2 clics maximum depuis n'
 
 ## Comment corriger : plan d'action en 5 étapes
 
-1. **Réécrire votre page d'accueil** en partant du problème de votre client, pas de votre offre. Titre centré sur le bénéfice, sous-titre qui explique comment, bouton d'action visible.
+1. **Réécrire votre page d'accueil** en partant du problème de votre client, pas de votre offre. Titre centré sur le bénéfice, sous-titre qui explique comment, bouton d'action visible. Si votre page d'accueil doit avant tout générer des leads, envisagez de la structurer comme une [landing page professionnelle](/services/landing-page).
 
 2. **Ajouter un appel à l'action sur chaque page.** Formulaire, bouton, numéro de téléphone. Pas de page sans issue de conversion.
 
@@ -86,8 +86,14 @@ Les corrections techniques (vitesse, mobile, CTA) produisent des résultats en q
 
 ### Faut-il refaire le site ou peut-on corriger l'existant ?
 
-Ça dépend de la base. Si le site est récent, bien construit techniquement et que le problème est surtout le contenu et la stratégie, on peut corriger sans tout refaire. Si le site a 5 ans, utilise un thème WordPress obsolète et charge en 8 secondes, une refonte sera plus efficace.
+Ça dépend de la base. Si le site est récent, bien construit techniquement et que le problème est surtout le contenu et la stratégie, on peut corriger sans tout refaire. Si le site a 5 ans, utilise un thème WordPress obsolète et charge en 8 secondes, une refonte avec un [site vitrine sur-mesure](/services/site-vitrine) sera plus efficace.
 
 ### Est-ce que le SEO suffit ou faut-il aussi de la pub ?
 
 Les deux sont complémentaires. Le SEO construit un trafic gratuit et durable, mais il faut du temps. La publicité (Google Ads) apporte des résultats immédiats, mais s'arrête quand le budget s'arrête. Commencer par de la pub tout en construisant le SEO est souvent la meilleure stratégie.
+
+## Besoin d'aide pour transformer votre site en machine à prospects ?
+
+Chez Vizion Web, nous concevons des sites pensés pour convertir, pas juste pour faire joli. De l'audit de votre site actuel à la création d'un site vitrine ou d'une landing page optimisée, nous vous accompagnons pour générer des clients concrets.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

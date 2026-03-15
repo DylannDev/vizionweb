@@ -10,11 +10,11 @@ Certains signes ne trompent pas. Si vous cochez trois éléments ou plus dans ce
 
 ### Checklist : votre site a-t-il besoin d'une refonte ?
 
-1. **Le design a plus de 4 ans.** Les tendances web évoluent vite. Un site conçu en 2021 paraît souvent daté en 2026. Ce n'est pas qu'une question d'esthétique : un design vieillissant envoie un signal négatif à vos visiteurs. Si votre vitrine physique était défraîchie, vous la repeindriez. Votre site, c'est pareil.
+1. **Le design a plus de 4 ans.** Les tendances web évoluent vite. Un site conçu en 2021 paraît souvent daté en 2026. Pour savoir ce qui a changé, consultez les [tendances web design en 2026](/blog/tendances-web-design-2026). Ce n'est pas qu'une question d'esthétique : un design vieillissant envoie un signal négatif à vos visiteurs. Si votre vitrine physique était défraîchie, vous la repeindriez. Votre site, c'est pareil.
 
 2. **L'affichage mobile est bancal.** Ouvrez votre site sur votre téléphone. Les textes débordent ? Les boutons sont trop petits ? Il faut zoomer pour lire ? En 2026, 60% du trafic web passe par le mobile. Un site mal affiché sur smartphone, c'est plus de la moitié de vos visiteurs qui partent.
 
-3. **Le site charge en plus de 4 secondes.** Allez sur PageSpeed Insights (gratuit, par Google) et testez votre URL. Si le score mobile est en dessous de 50, vous avez un problème. Chaque seconde de chargement supplémentaire fait chuter le taux de conversion de 7%.
+3. **Le site charge en plus de 4 secondes.** Allez sur PageSpeed Insights (gratuit, par Google) et testez votre URL. Si le score mobile est en dessous de 50, vous avez un problème. La [performance web impacte directement vos ventes](/blog/performance-web-vitesse-ventes) : chaque seconde de chargement supplémentaire fait chuter le taux de conversion de 7%.
 
 4. **Vous ne pouvez pas modifier le contenu vous-même.** Chaque petite modification (changer un numéro de téléphone, ajouter une photo) nécessite de passer par un prestataire et d'attendre 48h. Cette dépendance freine votre activité et vous coûte de l'argent.
 
@@ -24,7 +24,7 @@ Certains signes ne trompent pas. Si vous cochez trois éléments ou plus dans ce
 
 7. **Le SEO stagne ou recule.** Vos positions Google baissent depuis 6 mois. Votre trafic organique diminue. Google pénalise les sites lents, mal structurés et qui n'offrent pas une bonne expérience utilisateur.
 
-8. **La technologie est obsolète.** Votre site tourne sur un CMS qui n'est plus maintenu, ou sur une version de WordPress si ancienne que les mises à jour ne passent plus. Les plugins sont incompatibles entre eux. C'est un château de cartes.
+8. **La technologie est obsolète.** Votre site tourne sur un CMS qui n'est plus maintenu, ou sur une version de WordPress si ancienne que les mises à jour ne passent plus. Les plugins sont incompatibles entre eux. C'est un château de cartes. Dans ce cas, une [migration de WordPress vers Next.js](/blog/migration-wordpress-nextjs) peut être la solution la plus pérenne.
 
 9. **Vos concurrents vous ont dépassé.** Allez voir les sites de vos trois principaux concurrents. Si leurs sites sont plus rapides, plus clairs et mieux positionnés que le vôtre, vous perdez des clients chaque jour.
 
@@ -107,12 +107,12 @@ Le prix dépend de trois facteurs : la taille du site, la complexité des foncti
 ### Site vitrine (5-10 pages)
 
 - **Refonte avec template personnalisé** : 2 000 à 5 000 euros
-- **Refonte sur-mesure avec design et copywriting** : 4 000 à 10 000 euros
+- **Refonte sur-mesure avec design et copywriting** : 4 000 à 10 000 euros. Découvrez notre offre de [site vitrine sur-mesure](/services/site-vitrine).
 
 ### Site avec fonctionnalités (réservation, e-commerce, espace client)
 
 - **Refonte avec CMS et plugins** : 4 000 à 10 000 euros
-- **Refonte sur-mesure** : 8 000 à 20 000 euros
+- **Refonte sur-mesure** : 8 000 à 20 000 euros. Pour les projets complexes, notre offre de [site web avancé](/services/site-web-avance) couvre ce périmètre.
 
 ### Ce qui est inclus (normalement)
 

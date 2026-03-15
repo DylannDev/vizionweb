@@ -34,7 +34,7 @@ Un coach sportif, un psychologue ou un consultant en stratégie a un besoin diff
 
 Les besoins typiques : afficher les disponibilités sur un site personnel, permettre la réservation et le paiement en ligne, gérer les séances récurrentes (le client qui vient tous les mardis), et éventuellement proposer des visioconférences pour les séances à distance.
 
-La question du paiement est centrale. Beaucoup de coachs et thérapeutes veulent encaisser au moment de la réservation (ou prendre une empreinte bancaire) pour limiter les annulations de dernière minute.
+La question du paiement est centrale. Beaucoup de coachs et thérapeutes veulent encaisser au moment de la réservation (ou prendre une empreinte bancaire) pour limiter les annulations de dernière minute. Pour bien choisir entre les différentes options de paiement, notre comparatif [Stripe vs PayPal](/blog/paiement-en-ligne-stripe-paypal) passe en revue les solutions les plus courantes.
 
 ## Les solutions existantes par secteur
 
@@ -83,7 +83,7 @@ Un centre de bien-être qui propose des massages, des cours de yoga en groupe et
 
 Avec un SaaS, le client quitte souvent votre site pour réserver (ou voit un widget qui ne ressemble pas à votre design). Un système de réservation intégré à votre site, avec votre identité visuelle, votre parcours de vente et vos conditions, offre une expérience bien plus fluide.
 
-Un restaurant haut de gamme ne veut pas que ses clients passent par TheFork. Il veut un bouton "Réserver" sur son propre site, avec le plan de salle, un choix de menu et une demande d'acompte, le tout dans le style graphique de l'établissement.
+Un restaurant haut de gamme ne veut pas que ses clients passent par TheFork. Il veut un bouton "Réserver" sur son propre site, avec le plan de salle, un choix de menu et une demande d'acompte, le tout dans le style graphique de l'établissement. Combiner un [espace client dédié](/blog/espace-client-site-web) avec un module de réservation offre une expérience vraiment fluide pour les clients récurrents.
 
 ### Les commissions vous coûtent plus cher qu'un développement
 
@@ -93,7 +93,7 @@ Ce raisonnement ne s'applique pas à un restaurant qui fait 10 réservations par
 
 ### Vous avez besoin de fonctionnalités spécifiques
 
-Gestion de bons cadeaux, packages multi-séances avec décompte automatique, réservation de groupe avec paiement partagé, intégration avec votre logiciel de comptabilité ou votre ERP. Dès que le besoin sort du standard, le sur-mesure devient la seule option qui ne vous oblige pas à bidouiller.
+Gestion de bons cadeaux, packages multi-séances avec décompte automatique, réservation de groupe avec paiement partagé, intégration avec votre logiciel de comptabilité ou votre ERP. Dès que le besoin sort du standard, le sur-mesure devient la seule option qui ne vous oblige pas à bidouiller. Plus largement, [automatiser les tâches répétitives de votre business](/blog/automatiser-business-outils-web) (confirmations, rappels, facturation) démultiplie les gains de temps.
 
 ## Comment choisir la bonne solution
 
@@ -113,7 +113,7 @@ Quel que soit le chemin choisi, gardez en tête trois critères non négociables
 2. **La compatibilité mobile.** 75% des réservations se font depuis un smartphone. Si votre système n'est pas impeccable sur mobile, vous perdez des réservations.
 3. **La propriété de vos données.** Quand vous utilisez une marketplace (TheFork, Treatwell), le client est "leur" client autant que le vôtre. Assurez-vous de pouvoir exporter votre base si vous changez de solution.
 
-Chez Vizion Web, on développe des systèmes de réservation intégrés aux sites de nos clients. On part de leur processus réel, de leurs contraintes métier, et on construit une solution qui s'inscrit dans leur parcours client. Le système s'adapte à l'entreprise, pas l'inverse.
+Chez Vizion Web, on développe des systèmes de réservation intégrés aux sites de nos clients, que ce soit dans le cadre d'un [site web avancé](/services/site-web-avance) ou d'une [application métier](/services/application-metier) complète. On part de leur processus réel, de leurs contraintes métier, et on construit une solution qui s'inscrit dans leur parcours client. Le système s'adapte à l'entreprise, pas l'inverse.
 
 ## Questions fréquentes
 

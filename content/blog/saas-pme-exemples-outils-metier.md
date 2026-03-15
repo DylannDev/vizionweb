@@ -10,7 +10,7 @@ Cet article présente 6 cas concrets d'outils métier développés sur-mesure po
 
 Les SaaS du marché sont conçus pour répondre au plus grand nombre. C'est leur force et leur limite. Quand votre processus métier sort un peu du cadre prévu par l'éditeur, vous commencez à bricoler. Un export CSV par ici, un copier-coller par là, un Zapier entre les deux.
 
-Le problème n'est pas qu'un outil isolé fonctionne mal. C'est que l'ensemble ne tient pas. Vous avez cinq outils qui font chacun 70% de ce dont vous avez besoin, mais aucun qui couvre votre réalité quotidienne à 100%.
+Le problème n'est pas qu'un outil isolé fonctionne mal. C'est que l'ensemble ne tient pas. Vous avez cinq outils qui font chacun 70% de ce dont vous avez besoin, mais aucun qui couvre votre réalité quotidienne à 100%. C'est d'ailleurs la question centrale que pose le choix entre [application sur-mesure et SaaS du marché](/blog/application-sur-mesure-vs-saas) : à partir de quel moment le bricolage coûte plus cher que la solution dédiée ?
 
 Quelques signaux qui montrent que vous avez atteint la limite :
 
@@ -35,7 +35,7 @@ Si vous vous reconnaissez, les exemples qui suivent vont vous parler.
 
 **Le problème.** Une agence immobilière de 8 agents recevait entre 40 et 60 demandes par semaine. Le suivi se faisait via un CRM généraliste qui ne gérait pas les spécificités du métier : matching automatique bien/acquéreur, suivi des visites, relances personnalisées selon les critères de recherche. Résultat : des prospects tombaient dans l'oubli, et l'agence perdait des mandats.
 
-**La solution.** Un portail acquéreur connecté au site de l'agence. Chaque prospect accède à un espace personnel où il voit les biens correspondant à ses critères, reçoit des alertes automatiques, et peut demander une visite en deux clics. Côté agent, un tableau de bord centralise les demandes, le scoring des prospects et les relances à faire.
+**La solution.** Un portail acquéreur connecté au site de l'agence. Chaque prospect accède à un espace personnel où il voit les biens correspondant à ses critères, reçoit des alertes automatiques, et peut demander une visite en deux clics. Côté agent, un [tableau de bord sur-mesure](/blog/dashboard-sur-mesure-cas-concrets) centralise les demandes, le scoring des prospects et les relances à faire.
 
 **Le résultat.** Le taux de transformation des contacts en visites est passé de 15% à 32% en quatre mois. Les agents économisent en moyenne 45 minutes par jour de tâches administratives. L'agence a signé 12 ventes supplémentaires sur l'année, directement attribuées à l'outil. Budget du projet : 18 000 euros.
 
@@ -87,9 +87,9 @@ Voici ce que ces projets partagent :
 
 **Une adoption immédiate par les équipes.** Quand un outil est conçu autour du workflow réel des utilisateurs, pas besoin de formation de trois jours. Les gens l'utilisent parce qu'il leur simplifie la vie, pas parce qu'on les y oblige.
 
-Le développement sur-mesure n'est pas réservé aux grandes entreprises avec des DSI et des budgets IT à six chiffres. C'est une solution accessible aux PME qui ont un vrai problème opérationnel à résoudre. La question n'est pas "est-ce que je peux me le permettre" mais "est-ce que je peux me permettre de continuer sans".
+Le développement sur-mesure n'est pas réservé aux grandes entreprises avec des DSI et des budgets IT à six chiffres. C'est une solution accessible aux PME qui ont un vrai problème opérationnel à résoudre. Et souvent, l'outil métier n'est qu'un premier pas : [automatiser les tâches répétitives de votre business](/blog/automatiser-business-outils-web) permet d'aller encore plus loin dans les gains de productivité. La question n'est pas "est-ce que je peux me le permettre" mais "est-ce que je peux me permettre de continuer sans".
 
-Chez Vizion Web, on accompagne les PME dans la conception et le développement de ces outils métier. On part de votre réalité terrain, pas d'un template générique. Et on livre des applications qui tournent, pas des prototypes qui prennent la poussière.
+Chez Vizion Web, on accompagne les PME dans la conception et le développement de ces outils métier, que ce soit un [SaaS sur-mesure](/services/saas-sur-mesure) ou une [application métier](/services/application-metier) dédiée. On part de votre réalité terrain, pas d'un template générique. Et on livre des applications qui tournent, pas des prototypes qui prennent la poussière.
 
 ## Questions fréquentes
 

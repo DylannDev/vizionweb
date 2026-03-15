@@ -2,7 +2,7 @@
 
 Vous avez une idée de produit digital. Une application, une plateforme, un outil SaaS. Vous voyez déjà le résultat final dans votre tête, avec toutes les fonctionnalités, un design soigné et une expérience parfaite. Le problème ? Vouloir construire cette version complète d'un coup est la meilleure façon de perdre 6 mois et 50 000 euros sans savoir si quelqu'un veut réellement de votre produit.
 
-C'est là que le MVP entre en jeu. Trois lettres qui ont sauvé des milliers de projets du naufrage.
+C'est là que le MVP entre en jeu. Trois lettres qui ont sauvé des milliers de projets du naufrage. Et si vous vous demandez comment passer concrètement [de l'idée à une application SaaS](/blog/de-idee-a-application-saas), tout commence par là.
 
 ## Le MVP, c'est quoi exactement ?
 
@@ -76,7 +76,7 @@ Votre MVP, c'est la colonne 1. Point. Si vous avez du mal à être honnête sur 
 
 Votre MVP doit couvrir un parcours utilisateur complet, du début à la fin. Pas quatre parcours, un seul. Le plus important.
 
-Pour un SaaS de facturation : créer un compte, créer une facture, l'envoyer au client, recevoir le paiement. Tout le reste (devis, relances automatiques, exports comptables) viendra après.
+Pour un SaaS de facturation : créer un compte, créer une facture, l'envoyer au client, recevoir le paiement. Tout le reste (devis, relances automatiques, exports comptables) viendra après. Si vous voulez un guide complet sur les étapes de développement, consultez notre article sur [comment créer une application web étape par étape](/blog/creer-application-web-etapes).
 
 Pour une marketplace : s'inscrire en tant que vendeur, publier une annonce, s'inscrire en tant qu'acheteur, passer commande, payer. Les avis clients et le système de messagerie attendront.
 
@@ -128,9 +128,9 @@ Sur la base des retours, vous corrigez ce qui ne fonctionne pas et vous ajoutez 
 
 Votre produit est validé, vos utilisateurs sont satisfaits, vos métriques sont au vert. C'est le moment d'investir dans les fonctionnalités avancées, l'optimisation des performances et la montée en charge. Vous dépensez maintenant en sachant exactement où va l'argent.
 
-Ce processus réduit le gaspillage et maximise vos chances de succès. Au lieu de parier 100 000 euros sur une intuition, vous investissez 15 000 euros pour valider, puis 30 000 euros pour améliorer, puis le reste pour grandir. A chaque étape, vous avez des données réelles pour guider vos décisions.
+Ce processus réduit le gaspillage et maximise vos chances de succès. Au lieu de parier 100 000 euros sur une intuition, vous investissez 15 000 euros pour valider, puis 30 000 euros pour améliorer, puis le reste pour grandir. A chaque étape, vous avez des données réelles pour guider vos décisions. Et quand votre SaaS atteint la phase de croissance, il sera temps de réfléchir à [comment fixer le prix de votre SaaS](/blog/fixer-prix-saas-strategie) pour maximiser votre rentabilité.
 
-Chez Vizion Web, on construit des MVPs avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
+Chez Vizion Web, on construit des MVPs avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. Découvrez notre [service MVP & Proof of Concept](/services/mvp-proof-of-concept) pour en savoir plus sur notre approche. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
 
 ## Questions fréquentes
 
@@ -147,3 +147,9 @@ Entre 2 et 8 semaines selon le périmètre. Un outil interne simple peut être p
 ### Mon MVP peut-il évoluer ou faudra-t-il tout refaire ?
 
 Si le MVP est bien construit techniquement, il sert de fondation pour la suite. Chez Vizion Web, on utilise React et Next.js avec une architecture pensée pour évoluer. Le code du MVP devient le socle de la V1, puis de la V2. Pas besoin de tout jeter et de recommencer. C'est d'ailleurs une question à poser à votre prestataire avant de signer : "Est-ce que le code du MVP sera réutilisable pour les versions suivantes ?" Si la réponse est non, changez de prestataire.
+
+## Besoin d'aide pour construire votre MVP ?
+
+Chez Vizion Web, nous accompagnons les entrepreneurs et startups dans la conception et le développement de leur [MVP](/services/mvp-proof-of-concept). De l'identification des fonctionnalités vitales au lancement en 2 à 8 semaines, nous transformons votre idée en un produit solide prêt à affronter le marché.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

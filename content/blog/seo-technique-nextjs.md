@@ -127,7 +127,7 @@ Pour un blog ou un site vitrine, la combinaison SSG + ISR est idéale. Vos pages
 
 ### Ce que Google préfère
 
-Google ne fait pas de différence entre SSG et SSR tant que le HTML complet arrive rapidement. Ce qui compte, c'est le Time to First Byte (TTFB). Un SSG avec un CDN donne un TTFB de 50 à 100ms. Un SSR sans cache peut monter à 500ms ou plus. Cette différence se ressent dans le classement, surtout sur mobile.
+Google ne fait pas de différence entre SSG et SSR tant que le HTML complet arrive rapidement. Ce qui compte, c'est le Time to First Byte (TTFB). Un SSG avec un CDN donne un TTFB de 50 à 100ms. Un SSR sans cache peut monter à 500ms ou plus. Cette différence se ressent dans le classement, surtout sur mobile. Pour approfondir le lien entre vitesse de chargement et résultats business, consultez notre article sur [la performance web et son impact sur les ventes](/blog/performance-web-vitesse-ventes).
 
 ## Structured data avec JSON-LD
 
@@ -257,15 +257,15 @@ Le composant `Image` de Next.js demande un attribut `alt`, mais rien ne vous emp
 
 ### Ne pas monitorer après le déploiement
 
-Votre site peut avoir un score Lighthouse de 100 en local et des Core Web Vitals catastrophiques en production. La différence ? Le trafic réel, les connexions mobiles lentes, les appareils d'entrée de gamme. Utilisez Google Search Console et le rapport Core Web Vitals pour voir les vrais chiffres de vos vrais utilisateurs.
+Votre site peut avoir un score Lighthouse de 100 en local et des Core Web Vitals catastrophiques en production. La différence ? Le trafic réel, les connexions mobiles lentes, les appareils d'entrée de gamme. Utilisez Google Search Console et le rapport Core Web Vitals pour voir les vrais chiffres de vos vrais utilisateurs. Le choix de l'infrastructure joue aussi un rôle clé : notre comparatif [Vercel, Netlify et VPS](/blog/hebergement-vercel-netlify-vps) vous aide à choisir l'hébergement le plus adapté à Next.js.
 
-Chez Vizion Web, on développe tous nos sites avec Next.js et on intègre le SEO technique dès la première ligne de code. Pas en fin de projet, pas en option. Si vous voulez un site qui performe sur Google autant que pour vos visiteurs, c'est la base sur laquelle on construit.
+Chez Vizion Web, on développe tous nos sites avec Next.js et on intègre le SEO technique dès la première ligne de code. Que ce soit pour un [site vitrine](/services/site-vitrine) ou un [site web avancé](/services/site-web-avance), c'est la base sur laquelle on construit. Pas en fin de projet, pas en option.
 
 ## Questions fréquentes
 
 ### Est-ce que Next.js est meilleur que WordPress pour le SEO ?
 
-Pas "meilleur" dans l'absolu. WordPress avec un bon thème, les bons plugins (Yoast, WP Rocket) et un hébergement performant peut très bien se référencer. Next.js offre plus de contrôle sur la performance et le rendu, ce qui donne un avantage technique, surtout pour les sites avec beaucoup de pages dynamiques. Le vrai facteur différenciant, c'est la vitesse : un site Next.js bien optimisé charge en moyenne 40 à 60% plus vite qu'un site WordPress équivalent, et Google récompense la vitesse.
+Pas "meilleur" dans l'absolu. WordPress avec un bon thème, les bons plugins (Yoast, WP Rocket) et un hébergement performant peut très bien se référencer. Next.js offre plus de contrôle sur la performance et le rendu, ce qui donne un avantage technique, surtout pour les sites avec beaucoup de pages dynamiques. Le vrai facteur différenciant, c'est la vitesse : un site Next.js bien optimisé charge en moyenne 40 à 60% plus vite qu'un site WordPress équivalent, et Google récompense la vitesse. Si vous envisagez de quitter WordPress, notre guide sur la [migration de WordPress vers Next.js](/blog/migration-wordpress-nextjs) détaille les étapes concrètes du processus.
 
 ### Comment vérifier que Google indexe bien mes pages Next.js ?
 

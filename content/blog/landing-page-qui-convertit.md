@@ -2,7 +2,7 @@
 
 80% des visiteurs quittent une page web en moins de 15 secondes. Sur une landing page, cette statistique est encore plus brutale parce que le visiteur arrive avec une intention précise : il a cliqué sur une pub, un lien ou un résultat de recherche. S'il ne trouve pas immédiatement ce qu'il cherche, il part.
 
-La bonne nouvelle, c'est que les landing pages qui convertissent bien partagent les mêmes ingrédients. Pas de formule magique, juste des principes testés et vérifiés par des milliers de campagnes. Voici les sept éléments qui séparent une page qui génère des leads d'une page qui fait fuir les visiteurs.
+La bonne nouvelle, c'est que les landing pages qui convertissent bien partagent les mêmes ingrédients. Pas de formule magique, juste des principes testés et vérifiés par des milliers de campagnes. Voici les sept éléments qui séparent une [landing page](/services/landing-page) qui génère des leads d'une page qui fait fuir les visiteurs.
 
 ## Ce qu'une landing page doit accomplir (en 5 secondes)
 
@@ -98,7 +98,7 @@ L'idée n'est pas de lister toutes les objections possibles. C'est d'identifier 
 
 Le paradoxe du choix est bien documenté : plus on offre d'options, moins les gens décident. Une landing page avec trois formules tarifaires, deux boutons d'action différents et un slider de témoignages auto-défilant génère de la confusion, pas des conversions.
 
-Simplifiez. Si vous avez plusieurs offres, faites une landing page par offre. Ou mettez en avant une seule offre avec un lien discret "voir toutes nos offres" pour ceux qui veulent comparer.
+Simplifiez. Si vous avez plusieurs offres, faites une landing page par offre. Ou mettez en avant une seule offre avec un lien discret "voir toutes nos offres" pour ceux qui veulent comparer. Pour aller plus loin, découvrez les [erreurs de conversion les plus courantes](/blog/erreurs-conversion-site-web) et comment les éviter.
 
 ### Un formulaire trop long
 
@@ -122,7 +122,7 @@ L'urgence doit être vraie. Les compteurs artificiels et les fausses pénuries s
 Trois indicateurs suffisent pour commencer :
 
 - **Taux de conversion** : le pourcentage de visiteurs qui remplissent votre formulaire. Un bon taux se situe entre 3% et 10% selon le secteur. En dessous de 2%, il y a un problème.
-- **Taux de rebond** : le pourcentage de visiteurs qui quittent sans interagir. Au-dessus de 70% sur une landing page, votre accroche ou votre ciblage ne fonctionne pas.
+- **Taux de rebond** : le pourcentage de visiteurs qui quittent sans interagir. Au-dessus de 70% sur une landing page, votre accroche ou votre ciblage ne fonctionne pas. La [performance et la vitesse de chargement](/blog/performance-web-vitesse-ventes) jouent aussi un rôle majeur dans ce taux.
 - **Temps passé sur la page** : si les visiteurs restent moins de 30 secondes, ils ne lisent même pas votre contenu. Le problème est au-dessus de la ligne de flottaison.
 
 Google Analytics (gratuit) permet de suivre ces trois indicateurs. Configurez-le avant de lancer votre page, pas après.
@@ -139,4 +139,10 @@ Si votre prix est un argument (offre accessible, promotion), oui. Si votre prix 
 
 ### Une landing page peut-elle remplacer un site web complet ?
 
-Pour le lancement d'un produit ou d'un service, oui. Une landing page bien conçue peut générer des clients sans avoir besoin de cinq pages supplémentaires. Beaucoup de startups commencent avec une seule landing page pour valider leur marché avant d'investir dans un site complet.
+Pour le lancement d'un produit ou d'un service, oui. Une landing page bien conçue peut générer des clients sans avoir besoin de cinq pages supplémentaires. Beaucoup de startups commencent avec une seule landing page pour valider leur marché avant d'investir dans un site complet. Consultez aussi les [tendances web design en 2026](/blog/tendances-web-design-2026) pour vous assurer que votre page reste moderne et efficace.
+
+## Besoin d'aide pour créer une landing page qui convertit ?
+
+Chez Vizion Web, nous concevons des landing pages sur-mesure, optimisées pour la conversion et la performance. Chaque page est pensée pour un objectif précis et testée pour maximiser vos résultats.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

@@ -17,13 +17,13 @@ Quelques données qui parlent d'elles-mêmes :
 - De 1 à 5 secondes, le taux de rebond explose à **+90%**
 - Les pages qui chargent en 2 secondes ont un taux de conversion moyen de **3,05%**, contre **1,68%** pour celles qui chargent en 4 secondes
 
-Prenons un exemple concret. Votre site e-commerce génère 10 000 visiteurs par mois et convertit à 2% avec un panier moyen de 150 euros. Ça fait 30 000 euros de CA mensuel. Si votre site est lent et que vous perdez 25% de ces visiteurs avant même qu'ils voient vos produits, vous laissez 7 500 euros sur la table chaque mois. 90 000 euros par an.
+Prenons un exemple concret. Votre site e-commerce génère 10 000 visiteurs par mois et convertit à 2% avec un panier moyen de 150 euros. Ça fait 30 000 euros de CA mensuel. Si votre site est lent et que vous perdez 25% de ces visiteurs avant même qu'ils voient vos produits, vous laissez 7 500 euros sur la table chaque mois. 90 000 euros par an. Et la vitesse n'est pas la seule fuite : découvrez les autres [erreurs qui plombent la conversion de votre site](/blog/erreurs-conversion-site-web).
 
 Est-ce que la performance est un luxe ? Pas vraiment.
 
 ## Ce que Google mesure : les Core Web Vitals
 
-Depuis 2021, Google utilise la vitesse de votre site comme critère de classement dans ses résultats de recherche. Pas un critère mineur ou accessoire. Un critère officiel, mesuré, et public. Ces mesures portent un nom : les Core Web Vitals.
+Depuis 2021, Google utilise la vitesse de votre site comme critère de classement dans ses résultats de recherche. Pas un critère mineur ou accessoire. Un critère officiel, mesuré, et public. Ces mesures portent un nom : les Core Web Vitals. Pour aller plus loin sur l'optimisation technique pour Google, lisez notre guide sur le [SEO technique avec Next.js](/blog/seo-technique-nextjs).
 
 Trois métriques. Pas besoin d'un diplôme d'ingénieur pour les comprendre.
 
@@ -69,13 +69,13 @@ La solution est simple : convertir les images en format WebP ou AVIF, les redime
 
 Les sites WordPress avec 15 plugins chargent des dizaines de fichiers JavaScript, dont la moitié ne servent à rien sur la page affichée. Un slider, un chatbot, un outil d'analytics, un pixel Facebook, un script de cookies, un outil de heatmap... Chaque script ajoute du poids et du temps de traitement.
 
-Un site vitrine n'a pas besoin de 2 Mo de JavaScript. Un site bien construit en Next.js charge entre 100 et 300 Ko de JavaScript, et uniquement ce qui est nécessaire pour la page en cours.
+Un [site vitrine](/services/site-vitrine) n'a pas besoin de 2 Mo de JavaScript. Un site bien construit en Next.js charge entre 100 et 300 Ko de JavaScript, et uniquement ce qui est nécessaire pour la page en cours.
 
 ### Un hébergement bas de gamme
 
 Votre hébergement à 3 euros par mois mutualisé chez OVH partage un serveur avec 200 autres sites. Quand le site de votre voisin de serveur fait un pic de trafic, c'est votre site qui ralentit. Le temps de réponse du serveur (TTFB) est souvent le premier goulot d'étranglement.
 
-Passer sur un hébergement dédié ou un service comme Vercel, Netlify ou un VPS correctement configuré peut diviser le temps de réponse par 3 ou 4. Pour 15 à 50 euros par mois au lieu de 3.
+Passer sur un hébergement dédié ou un service comme [Vercel, Netlify ou un VPS correctement configuré](/blog/hebergement-vercel-netlify-vps) peut diviser le temps de réponse par 3 ou 4. Pour 15 à 50 euros par mois au lieu de 3.
 
 ### Pas de mise en cache
 
@@ -133,7 +133,7 @@ Un CDN (Content Delivery Network) copie vos fichiers sur des serveurs répartis 
 
 Parfois, les quick wins ne suffisent pas. Un site construit sur une base technique fragile (WordPress avec 25 plugins, un thème acheté sur ThemeForest en 2019, un hébergement mutualisé) a un plafond de performance. On peut l'optimiser, mais il ne sera jamais rapide. Dans ce cas, la refonte sur une base moderne (Next.js, par exemple) est l'investissement le plus rentable sur le long terme.
 
-Chez Vizion Web, on développe des sites en React et Next.js qui atteignent systématiquement des scores PageSpeed supérieurs à 95. Pas parce qu'on est des magiciens, mais parce que la base technique le permet. Quand on part d'une feuille blanche propre, on ne traîne pas 15 plugins derrière soi.
+Chez Vizion Web, on développe des sites en React et Next.js qui atteignent systématiquement des scores PageSpeed supérieurs à 95, que ce soit pour un site vitrine ou une [landing page optimisée pour la conversion](/services/landing-page). Pas parce qu'on est des magiciens, mais parce que la base technique le permet. Quand on part d'une feuille blanche propre, on ne traîne pas 15 plugins derrière soi.
 
 ## Questions fréquentes
 

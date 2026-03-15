@@ -18,7 +18,7 @@ La réalité, c'est qu'un projet web est vivant. Entre le moment où vous signez
 
 "On veut un site moderne et professionnel." Cette phrase ne veut rien dire. Moderne par rapport à quoi ? Professionnel selon quels critères ? Quand le brief est vague, le prestataire interprète. Et quand le client découvre le résultat, il ne correspond pas à ce qu'il avait en tête.
 
-S'ensuit une série de modifications qui n'étaient pas dans le devis parce qu'elles n'étaient pas dans le brief. Ce n'est la faute de personne en particulier. C'est un défaut de communication au démarrage.
+S'ensuit une série de modifications qui n'étaient pas dans le devis parce qu'elles n'étaient pas dans le brief. Ce n'est la faute de personne en particulier. C'est un défaut de communication au démarrage. Pour éviter cet écueil, [rédiger un cahier des charges structuré](/blog/cahier-des-charges-site-web) avant de contacter une agence fait toute la différence.
 
 Un client nous a raconté avoir payé 3 500 euros de modifications sur un site à 5 000 euros parce que "le design ne correspondait pas à l'image de marque". Le designer n'avait reçu aucune charte graphique, aucune référence visuelle, juste "faites quelque chose de clean".
 
@@ -67,7 +67,7 @@ Ce document cadre les échanges dès le premier rendez-vous. Il réduit les male
 
 ### 2. Exigez un devis détaillé ligne par ligne
 
-Un devis qui dit "Création site web : 6 000 euros" ne vous protège pas. Un devis qui détaille "Maquette page d'accueil : 800 euros / Maquette pages intérieures : 600 euros / Développement front-end : 2 000 euros / Intégration CMS : 1 200 euros / Tests et mise en ligne : 600 euros / Accompagnement post-lancement : 800 euros" vous permet de comprendre où va chaque euro.
+Un devis qui dit "Création site web : 6 000 euros" ne vous protège pas. Un devis qui détaille "Maquette page d'accueil : 800 euros / Maquette pages intérieures : 600 euros / Développement front-end : 2 000 euros / Intégration CMS : 1 200 euros / Tests et mise en ligne : 600 euros / Accompagnement post-lancement : 800 euros" vous permet de comprendre où va chaque euro. Notre article sur [le coût d'un site internet](/blog/cout-site-internet) détaille les fourchettes de prix par type de projet pour vous donner des repères concrets.
 
 Si une ligne semble trop chère ou trop vague, posez la question. Un prestataire sérieux expliquera.
 
@@ -104,11 +104,11 @@ Chaque jalon est un point de contrôle. Si le projet commence à dériver à l'�
 
 Le prestataire le plus dangereux pour votre budget, c'est celui qui dit oui à tout. "Oui on peut ajouter ça", "oui pas de problème", "oui on verra ça en cours de route". Chaque "oui" non chiffré est un dépassement potentiel.
 
-Un bon prestataire vous dit : "C'est possible, voici le coût et l'impact sur le planning. Voulez-vous l'ajouter au projet ou le garder pour la phase 2 ?" Cette transparence, c'est ce qui sépare un projet maîtrisé d'un projet qui dérape.
+Un bon prestataire vous dit : "C'est possible, voici le coût et l'impact sur le planning. Voulez-vous l'ajouter au projet ou le garder pour la phase 2 ?" Cette transparence, c'est ce qui sépare un projet maîtrisé d'un projet qui dérape. Pour savoir repérer les bons prestataires, consultez nos [8 critères pour bien choisir son agence web](/blog/choisir-agence-web-criteres).
 
 ## Un exemple chiffré pour illustrer
 
-Prenons un cas concret. Une entreprise de services veut un site vitrine avec 7 pages, un formulaire de contact avancé, et une intégration à son CRM HubSpot.
+Prenons un cas concret. Une entreprise de services veut un [site vitrine](/services/site-vitrine) avec 7 pages, un formulaire de contact avancé, et une intégration à son CRM HubSpot.
 
 **Le devis initial :**
 
@@ -145,7 +145,7 @@ Demandez une explication détaillée et écrite. Quel poste est concerné ? Pour
 
 ### Vaut-il mieux un prix fixe ou un tarif au temps passé ?
 
-Le prix fixe vous donne de la prévisibilité : vous savez combien vous allez payer. Le tarif au temps passé (régie) offre plus de flexibilité pour les projets dont le périmètre est difficile à définir à l'avance. Pour un site vitrine ou une application dont les fonctionnalités sont claires, le prix fixe est préférable. Pour un projet exploratoire ou un accompagnement continu, la régie peut convenir, à condition de fixer un plafond mensuel.
+Le prix fixe vous donne de la prévisibilité : vous savez combien vous allez payer. Le tarif au temps passé (régie) offre plus de flexibilité pour les projets dont le périmètre est difficile à définir à l'avance. Pour un site vitrine ou une [landing page](/services/landing-page) dont les fonctionnalités sont claires, le prix fixe est préférable. Pour un projet exploratoire ou un accompagnement continu, la régie peut convenir, à condition de fixer un plafond mensuel.
 
 ### Que doit contenir un contrat pour me protéger du dépassement ?
 

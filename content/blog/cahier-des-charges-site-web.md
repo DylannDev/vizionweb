@@ -83,8 +83,8 @@ Même si vous n'êtes pas technique, certaines informations sont utiles pour l'a
 
 **À mentionner :**
 - Avez-vous déjà un nom de domaine et un hébergement ?
-- Utilisez-vous des outils spécifiques à intégrer (CRM, emailing, comptabilité) ?
-- Avez-vous une préférence technologique (WordPress, Webflow, sur-mesure) ?
+- Utilisez-vous des outils spécifiques à intégrer (CRM, emailing, comptabilité) ? Si vos besoins incluent des fonctionnalités métier complexes, une [application métier sur-mesure](/services/application-metier) peut être envisagée.
+- Avez-vous une préférence technologique (WordPress, Webflow, sur-mesure) ? Un [site web avancé](/services/site-web-avance) avec réservation ou paiement n'a pas les mêmes contraintes qu'un [site vitrine](/services/site-vitrine) classique.
 - Y a-t-il des contraintes légales spécifiques à votre secteur ?
 - Qui va mettre à jour le site après livraison ? Vous ou l'agence ?
 
@@ -92,7 +92,7 @@ Si vous ne savez pas répondre à certaines questions, écrivez "à définir ens
 
 ### 7. Le budget et le calendrier
 
-Beaucoup de clients hésitent à donner leur budget, de peur que l'agence ne le consomme entièrement. C'est compréhensible, mais contre-productif. Si vous avez 3 000 euros et que l'agence imagine un projet à 10 000 euros, vous perdez tous les deux du temps.
+Beaucoup de clients hésitent à donner leur budget, de peur que l'agence ne le consomme entièrement. C'est compréhensible, mais contre-productif. Si vous avez 3 000 euros et que l'agence imagine un projet à 10 000 euros, vous perdez tous les deux du temps. Pour avoir une idée des fourchettes de prix, consultez notre article sur [le coût d'un site internet](/blog/cout-site-internet).
 
 Donnez au moins une fourchette : "entre 3 000 et 5 000 euros" ou "maximum 8 000 euros tout inclus". De même pour le calendrier : "site en ligne avant le 15 septembre" est plus utile que "dès que possible".
 
@@ -152,8 +152,14 @@ Oui, même pour une landing page. Un brief d'une page suffit dans ce cas, mais i
 
 ### Dois-je envoyer le même brief à toutes les agences ?
 
-Absolument. C'est la seule façon de comparer les devis de manière équitable. Si chaque agence reçoit un brief différent, les propositions seront incomparables.
+Absolument. C'est la seule façon de comparer les devis de manière équitable. Si chaque agence reçoit un brief différent, les propositions seront incomparables. Pour savoir comment évaluer les prestataires, lisez notre guide pour [choisir la bonne agence web](/blog/choisir-agence-web-criteres).
 
 ### Et si je ne sais pas combien de pages il me faut ?
 
 Décrivez vos objectifs et votre contenu, et demandez à l'agence de vous recommander une structure. C'est son métier. Vous n'avez pas besoin de tout savoir, vous avez besoin de bien formuler ce que vous attendez.
+
+## Besoin d'aide pour rédiger votre cahier des charges ?
+
+Chez Vizion Web, nous accompagnons nos clients dès la phase de réflexion pour cadrer leur projet web. Nous vous aidons à clarifier vos objectifs, structurer votre brief et définir le bon périmètre pour obtenir un site qui génère des résultats.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

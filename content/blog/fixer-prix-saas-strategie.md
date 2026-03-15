@@ -1,6 +1,6 @@
 # Comment fixer le prix d'un SaaS : modèles et stratégie
 
-Vous avez construit votre SaaS. L'application fonctionne, les premiers bêta-testeurs sont satisfaits, le lancement approche. Et là, une question vous bloque : combien facturer ?
+Vous avez construit votre SaaS. Que vous ayez suivi le parcours classique [de l'idée à l'application SaaS](/blog/de-idee-a-application-saas) ou que vous soyez passé par la phase de [MVP](/blog/quest-ce-quun-mvp), l'application fonctionne, les premiers bêta-testeurs sont satisfaits, le lancement approche. Et là, une question vous bloque : combien facturer ?
 
 Trop cher, et personne ne s'inscrit. Trop peu, et vous ne couvrez pas vos coûts. La mauvaise réponse peut tuer un bon produit. Patrick Campbell, fondateur de ProfitWell (racheté par Paddle pour 200 millions de dollars), le résumait bien : les entreprises SaaS passent en moyenne 6 heures sur leur stratégie de pricing. Six heures. Pour la décision qui impacte le plus directement leur revenu.
 
@@ -30,7 +30,7 @@ Le principe : une version gratuite avec des fonctionnalités limitées, et des p
 
 **Inconvénients :** Le taux de conversion gratuit vers payant tourne entre 2% et 5% pour la plupart des SaaS. Ça signifie qu'il faut 1 000 utilisateurs gratuits pour obtenir 20 à 50 clients payants. Le coût de support et d'infrastructure pour les utilisateurs gratuits pèse sur les marges. Et trouver la bonne frontière entre gratuit et payant est un casse-tête permanent : trop généreux, personne ne paye ; trop restrictif, personne ne reste.
 
-**Pour qui :** Les produits à fort effet réseau (plus il y a d'utilisateurs, plus le produit a de valeur), les marchés très concurrentiels où il faut se démarquer par l'adoption, les produits avec un coût marginal par utilisateur très faible.
+**Pour qui :** Les produits à fort effet réseau (plus il y a d'utilisateurs, plus le produit a de valeur), les marchés très concurrentiels où il faut se démarquer par l'adoption, les produits avec un coût marginal par utilisateur très faible. Si vous hésitez encore entre développer votre propre outil ou utiliser une solution existante, notre article sur les [applications sur-mesure vs SaaS](/blog/application-sur-mesure-vs-saas) vous aidera à y voir plus clair.
 
 ### 2. La tarification par utilisateur
 
@@ -140,7 +140,7 @@ Quand vous ajustez vos prix, gardez l'oeil sur le taux de conversion (si le reve
 
 La méthode Van Westendorp est simple et efficace. Posez quatre questions à vos utilisateurs actuels ou potentiels : "A quel prix trouveriez-vous ce produit trop cher pour l'acheter ?", "A quel prix trouveriez-vous ce produit cher mais acceptable ?", "A quel prix trouveriez-vous ce produit bon marché ?", "A quel prix trouveriez-vous ce produit trop bon marché au point de douter de sa qualité ?" Les réponses dessinent une fourchette de prix optimale beaucoup plus fiable que votre intuition.
 
-Chez Vizion Web, on accompagne les créateurs de SaaS depuis la conception technique jusqu'au lancement. Le pricing fait partie des discussions qu'on a avec nos clients, parce qu'il influence l'architecture du produit (gestion des plans, limites par abonnement, facturation à l'usage). Construire un SaaS, c'est autant une question de code que de stratégie business. Si vous êtes dans cette réflexion, on peut en discuter.
+Chez Vizion Web, on accompagne les créateurs de SaaS depuis la conception technique jusqu'au lancement, que ce soit via notre service de [SaaS sur-mesure](/services/saas-sur-mesure) ou en commençant par un [MVP](/services/mvp-proof-of-concept) pour valider le marché. Le pricing fait partie des discussions qu'on a avec nos clients, parce qu'il influence l'architecture du produit (gestion des plans, limites par abonnement, facturation à l'usage). Construire un SaaS, c'est autant une question de code que de stratégie business. Si vous êtes dans cette réflexion, on peut en discuter.
 
 ## Questions fréquentes
 
@@ -155,3 +155,9 @@ Transformez la discussion sur le prix en discussion sur la valeur. Au lieu de ba
 ### A quel moment revoir sa stratégie de pricing ?
 
 Revoyez vos prix tous les 6 à 12 mois, ou quand un de ces événements se produit : vous ajoutez une fonctionnalité majeure, votre churn augmente sans raison produit évidente, vos concurrents changent leurs tarifs, votre coût d'acquisition augmente, ou votre taux de conversion dépasse les 35% de façon durable. Le pricing est un processus continu, pas une décision ponctuelle.
+
+## Besoin d'aide pour lancer votre SaaS ?
+
+Chez Vizion Web, nous concevons et développons des [SaaS sur-mesure](/services/saas-sur-mesure) avec une architecture pensée pour supporter vos modèles tarifaires. De la gestion des plans d'abonnement à la facturation à l'usage, nous construisons le socle technique qui porte votre stratégie de pricing.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

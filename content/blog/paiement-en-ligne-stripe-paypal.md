@@ -30,7 +30,7 @@ Stripe est né en 2010, fondé par deux frères irlandais qui trouvaient que les
 
 **Les moyens de paiement sont nombreux.** Carte bancaire, Apple Pay, Google Pay, SEPA, iDEAL, Bancontact, virement. Vous activez ceux que vous voulez depuis le dashboard. Pour une entreprise qui vend en Europe, c'est un atout : chaque pays a ses préférences de paiement.
 
-**Les abonnements sont gérés nativement.** Stripe Billing permet de mettre en place des paiements récurrents avec gestion des essais gratuits, des changements de plan, des relances automatiques en cas d'échec de paiement. Si vous vendez un service par abonnement, c'est un gros avantage.
+**Les abonnements sont gérés nativement.** Stripe Billing permet de mettre en place des paiements récurrents avec gestion des essais gratuits, des changements de plan, des relances automatiques en cas d'échec de paiement. Si vous vendez un service par abonnement, c'est un gros avantage. C'est aussi un élément clé à intégrer dans votre [espace client en ligne](/blog/espace-client-site-web).
 
 **Le reporting est clair.** Dashboard complet avec ventes, remboursements, litiges, revenus récurrents. Export CSV, webhooks pour synchroniser avec votre comptabilité. Stripe Revenue Recognition automatise la reconnaissance du revenu pour les abonnements.
 
@@ -126,11 +126,11 @@ Le choix dépend de trois questions.
 
 ### Question 1 : Quel type de paiement ?
 
-**Paiements ponctuels par carte** (vente en ligne, réservation, prestation) : Stripe est le meilleur rapport qualité-intégration-frais.
+**Paiements ponctuels par carte** (vente en ligne, [réservation en ligne](/blog/reservation-en-ligne-solution), prestation) : Stripe est le meilleur rapport qualité-intégration-frais.
 
 **Paiements récurrents (abonnements, prélèvements)** : GoCardless pour le SEPA si les montants sont élevés, Stripe Billing si vous voulez carte + SEPA dans la même interface.
 
-**Petits montants B2C avec clientèle grand public** : PayPal en complément d'une solution carte. Pas en remplacement, en complément.
+**Petits montants B2C avec clientèle grand public** : PayPal en complément d'une solution carte. Pas en remplacement, en complément. Si vous hésitez entre un site vitrine et une boutique en ligne, notre article sur le [site vitrine vs e-commerce](/blog/site-vitrine-vs-ecommerce) peut vous aider à trancher.
 
 ### Question 2 : Quel est votre volume ?
 
@@ -142,7 +142,7 @@ Plus de 500 transactions par mois ? Chaque point de pourcentage compte. Stripe �
 
 **Sans développeur** : PayPal (boutons), Stripe (Payment Links), ou Mollie (pages hébergées). Vous pouvez encaisser en ligne en quelques heures sans toucher une ligne de code.
 
-**Avec un développeur** : Stripe, sans hésitation. L'API est la mieux documentée, l'intégration est la plus propre, et les possibilités sont les plus larges. Formulaire intégré à votre design, webhooks pour automatiser votre back-office, Stripe Connect pour les marketplaces.
+**Avec un développeur** : Stripe, sans hésitation. L'API est la mieux documentée, l'intégration est la plus propre, et les possibilités sont les plus larges. Formulaire intégré à votre design, webhooks pour automatiser votre back-office, Stripe Connect pour les marketplaces. C'est l'approche que nous privilégions dans nos projets de [site web avancé](/services/site-web-avance).
 
 **Avec un CMS (WordPress, Shopify)** : des plugins existent pour toutes les solutions. WooCommerce supporte Stripe, PayPal et Mollie nativement. Shopify a son propre système (Shopify Payments, propulsé par Stripe) avec des frais réduits.
 
@@ -171,3 +171,9 @@ Le paiement en ligne ne vous dispense pas d'émettre des factures conformes. Str
 ### Que se passe-t-il si un client conteste un paiement (chargeback) ?
 
 Un chargeback, c'est quand un client demande à sa banque d'annuler un paiement effectué sur votre site. Chez Stripe, vous recevez une notification et avez 7 à 21 jours pour fournir des preuves (confirmation de commande, preuve de livraison, échanges email). Si la banque tranche en votre faveur, vous récupérez les fonds. Sinon, vous perdez le montant plus des frais de litige (15 euros chez Stripe). Chez PayPal, le processus est similaire mais l'issue est plus souvent favorable à l'acheteur. Pour limiter les chargebacks, trois pratiques : des conditions de vente claires, un service client réactif, et une politique de remboursement transparente. Mieux vaut rembourser directement un client mécontent que de subir un chargeback qui coûte plus cher et nuit à votre réputation auprès des réseaux de cartes.
+
+## Besoin d'aide pour intégrer le paiement en ligne sur votre site ?
+
+Chez Vizion Web, nous intégrons des solutions de paiement sécurisées (Stripe, GoCardless, SEPA) directement dans vos applications web et sites sur-mesure. Un parcours de paiement fluide, intégré à votre design, sans redirection.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

@@ -46,7 +46,7 @@ Voici les catégories directement concernées par l'EAA :
 
 Pour les PME de moins de 10 salariés avec un chiffre d'affaires inférieur à 2 millions d'euros, une exemption existe. Mais attention : cette exemption ne couvre pas tous les cas, et elle ne vous protège pas d'une plainte d'un utilisateur. Un client qui ne peut pas utiliser votre site peut vous attaquer sur la base de la discrimination, indépendamment de la directive EAA.
 
-Et même si vous n'êtes pas légalement obligé aujourd'hui, la tendance est claire. Le périmètre s'élargit à chaque révision des textes. Se mettre en conformité maintenant, c'est anticiper plutôt que subir.
+Et même si vous n'êtes pas légalement obligé aujourd'hui, la tendance est claire. L'accessibilité s'impose comme un standard durable du web design, comme le confirment les [tendances web design 2026](/blog/tendances-web-design-2026). Le périmètre s'élargit à chaque révision des textes. Se mettre en conformité maintenant, c'est anticiper plutôt que subir.
 
 ## Les 10 règles de base de l'accessibilité web
 
@@ -108,11 +108,11 @@ En France, 12 millions de personnes sont en situation de handicap. Parmi elles, 
 
 Google ne sait pas "voir" votre site. Son robot navigue dans le code, comme un lecteur d'écran. Les pratiques d'accessibilité recoupent largement les bonnes pratiques SEO : structure de titres cohérente, alternatives textuelles sur les images, contenu lisible et bien organisé, temps de chargement optimisé.
 
-Une étude de Semrush en 2024 a montré que les sites conformes au WCAG AA se positionnaient en moyenne 12% mieux sur les requêtes concurrentielles que les sites non conformes. Ce n'est pas un hasard.
+Une étude de Semrush en 2024 a montré que les sites conformes au WCAG AA se positionnaient en moyenne 12% mieux sur les requêtes concurrentielles que les sites non conformes. Ce n'est pas un hasard. Pour aller plus loin sur ce sujet, consultez notre article sur le [SEO technique avec Next.js](/blog/seo-technique-nextjs), qui détaille comment la qualité du code influence le référencement.
 
 ### Une meilleure expérience pour tout le monde
 
-Les améliorations d'accessibilité profitent à tous vos utilisateurs, pas seulement à ceux en situation de handicap. Des contrastes suffisants, ça aide aussi la personne qui consulte votre site en plein soleil sur son téléphone. Les sous-titres, c'est utile pour celui qui regarde une vidéo dans le métro sans écouteurs. Les formulaires bien étiquetés réduisent les erreurs de saisie pour tout le monde.
+Les améliorations d'accessibilité profitent à tous vos utilisateurs, pas seulement à ceux en situation de handicap. Des contrastes suffisants, ça aide aussi la personne qui consulte votre site en plein soleil sur son téléphone. Les sous-titres, c'est utile pour celui qui regarde une vidéo dans le métro sans écouteurs. Les formulaires bien étiquetés réduisent les erreurs de saisie pour tout le monde. D'ailleurs, [la performance web a un impact direct sur les ventes](/blog/performance-web-vitesse-ventes), et l'accessibilité y contribue en rendant le parcours plus fluide.
 
 On a eu un client qui vendait des compléments alimentaires en ligne. Après avoir amélioré l'accessibilité de son tunnel de commande (labels de formulaires, contrastes, navigation clavier), son taux de conversion est passé de 2.1% à 2.9%. Pas parce qu'il a touché les personnes handicapées, mais parce que le parcours d'achat est devenu plus clair pour tout le monde.
 
@@ -138,7 +138,7 @@ Testez la navigation au clavier. Essayez de remplir un formulaire sans souris. A
 
 Pour une conformité RGAA complète, un audit professionnel est nécessaire. Un expert teste les 106 critères du RGAA sur un échantillon de pages, rédige un rapport détaillé, et vous donne un taux de conformité. Le coût varie entre 3 000 et 8 000 euros selon la taille du site.
 
-Chez Vizion Web, quand on construit un site, on intègre les critères d'accessibilité dès la conception. C'est beaucoup moins coûteux que de rattraper après coup un site qui n'a pas été pensé pour ça. Un formulaire de contact bien codé dès le départ prend 10 minutes de plus. Reprendre un formulaire existant pour le rendre accessible peut prendre une journée.
+Chez Vizion Web, quand on construit un [site vitrine](/services/site-vitrine) ou un [site web avancé](/services/site-web-avance), on intègre les critères d'accessibilité dès la conception. C'est beaucoup moins coûteux que de rattraper après coup un site qui n'a pas été pensé pour ça. Un formulaire de contact bien codé dès le départ prend 10 minutes de plus. Reprendre un formulaire existant pour le rendre accessible peut prendre une journée.
 
 ## Questions fréquentes
 
@@ -153,3 +153,9 @@ La directive EAA cible principalement les services numériques liés au commerce
 ### Les overlays d'accessibilité (widgets qui s'ajoutent au site) sont-ils une solution ?
 
 Non. Les overlays comme AccessiBe, UserWay ou AudioEye ne rendent pas votre site conforme. Ils ajoutent une couche cosmétique par-dessus un site inaccessible, mais ils ne corrigent pas les problèmes de fond (structure du code, navigation au clavier, labels de formulaires). Pire, certains de ces outils créent de nouveaux problèmes d'accessibilité. La National Federation of the Blind aux États-Unis a d'ailleurs pris position publiquement contre ces solutions. La seule approche efficace, c'est de corriger le code du site lui-même.
+
+## Besoin d'aide pour rendre votre site accessible ?
+
+Chez Vizion Web, nous intégrons les critères d'accessibilité WCAG AA dès la conception de chaque site. Plutôt que de rattraper un site existant, nous construisons des interfaces accessibles, performantes et conformes aux obligations légales.
+
+[Réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte) et discutons de votre projet.

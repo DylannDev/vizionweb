@@ -6,7 +6,7 @@ Lundi matin. Vous ouvrez votre boîte mail. Trois demandes de devis. Vous copiez
 
 Ce scénario, on le voit chez la majorité des PME qu'on accompagne. Des tâches répétitives, faites à la main, qui mangent du temps et génèrent des erreurs. Pas par manque de compétence, mais parce que personne n'a encore pris le temps de mettre en place un outil adapté.
 
-Cet article s'adresse au dirigeant qui sent bien qu'il perd du temps, mais qui ne sait pas par où commencer. On va parler de processus concrets, de temps gagné, et d'outils web internes (pas des SaaS du marché, mais des applications développées pour votre fonctionnement à vous).
+Cet article s'adresse au dirigeant qui sent bien qu'il perd du temps, mais qui ne sait pas par où commencer. On va parler de processus concrets, de temps gagné, et d'outils web internes (pas des [SaaS du marché](/blog/saas-pme-exemples-outils-metier), mais des applications développées pour votre fonctionnement à vous).
 
 ## Le coût caché des tâches manuelles
 
@@ -50,7 +50,7 @@ Combien avez-vous facturé ce mois-ci ? Quel est le taux de conversion de vos de
 
 **Le processus manuel classique.** Chaque vendredi (ou chaque fin de mois, soyons réalistes), quelqu'un compile les chiffres de différentes sources. Il crée un tableau, fait des graphiques, envoie un email. Le rapport est toujours en retard, parfois approximatif, et rarement lu parce qu'il arrive trop tard pour agir.
 
-**Ce que fait un outil interne.** Un tableau de bord en temps réel, accessible depuis un navigateur. Les données se mettent à jour automatiquement. Le dirigeant voit d'un coup d'oeil le chiffre d'affaires du mois, les devis en attente, les projets en cours, les retards de paiement. Pas besoin d'attendre le vendredi.
+**Ce que fait un outil interne.** Un [tableau de bord sur-mesure](/blog/dashboard-sur-mesure-cas-concrets) en temps réel, accessible depuis un navigateur. Les données se mettent à jour automatiquement. Le dirigeant voit d'un coup d'oeil le chiffre d'affaires du mois, les devis en attente, les projets en cours, les retards de paiement. Pas besoin d'attendre le vendredi.
 
 Un client dans le bâtiment nous a dit : "Avant, je découvrais les problèmes à la fin du mois. Maintenant, je les vois en temps réel et je peux réagir." Son taux de recouvrement des factures en retard est passé de 68% à 89% simplement parce qu'il voyait les impayés plus tôt.
 
@@ -100,7 +100,7 @@ Vous êtes convaincu de l'intérêt, mais vous ne savez pas par quel bout prendr
 
 **Mesurez le résultat.** Après 2 mois d'utilisation, comparez le temps passé avant et après. Comptez les erreurs évitées. Calculez le ROI réel. Ces chiffres serviront à justifier les projets suivants auprès de votre équipe (et de votre comptable).
 
-Chez Vizion Web, quand un client nous contacte pour automatiser ses processus, on commence toujours par cet exercice de cartographie. Il arrive qu'on découvre que le processus le plus douloureux n'est pas celui que le client avait identifié. Parfois, le plus gros gain de temps se cache dans une tâche que tout le monde fait sans y penser.
+Chez Vizion Web, quand un client nous contacte pour développer une [application métier](/services/application-metier) ou un [SaaS sur-mesure](/services/saas-sur-mesure), on commence toujours par cet exercice de cartographie. Il arrive qu'on découvre que le processus le plus douloureux n'est pas celui que le client avait identifié. Parfois, le plus gros gain de temps se cache dans une tâche que tout le monde fait sans y penser.
 
 ## L'erreur : vouloir tout automatiser d'un coup
 
@@ -114,7 +114,7 @@ On voit régulièrement des dirigeants enthousiastes qui veulent "tout digitalis
 
 **Les besoins évoluent.** Le processus que vous décrivez aujourd'hui ne sera pas exactement celui dont vous aurez besoin dans six mois. Si vous spécifiez tout d'un bloc, vous risquez de construire un outil rigide qui ne correspond plus à la réalité quand il est livré.
 
-L'approche qui fonctionne, c'est l'itération. Un processus à la fois. On déploie, on mesure, on ajuste. Quand le premier outil est adopté et que le ROI est prouvé, on passe au suivant. Certains de nos clients ont automatisé trois ou quatre processus en 12 mois, en commençant petit et en montant en puissance progressivement.
+L'approche qui fonctionne, c'est l'itération. Un processus à la fois. On déploie, on mesure, on ajuste. Quand le premier outil est adopté et que le ROI est prouvé, on passe au suivant. Certains de nos clients ont automatisé trois ou quatre processus en 12 mois, en commençant petit et en montant en puissance progressivement. Et pour aller encore plus loin dans l'automatisation, vous pouvez aussi [intégrer l'IA dans vos outils internes](/blog/integrer-ia-application-web).
 
 La digitalisation, c'est un marathon. Pas un sprint.
 
@@ -124,7 +124,7 @@ La digitalisation, c'est un marathon. Pas un sprint.
 
 Ça dépend de la complexité du processus. Un outil simple (génération de devis automatisée, formulaire connecté à une base de données) commence autour de 5 000 à 8 000 euros. Un outil plus complet avec plusieurs modules (CRM + facturation + reporting) se situe entre 15 000 et 30 000 euros. Le retour sur investissement se mesure généralement entre 3 et 8 mois.
 
-**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/dylann/30min).
+**Important :** Chaque projet est unique. Ces fourchettes sont données à titre indicatif et peuvent varier selon vos besoins spécifiques, les intégrations nécessaires, et le niveau de personnalisation souhaité. Pour un devis précis adapté à votre projet, [réservez un appel découverte gratuit](https://cal.com/vizionweb/decouverte).
 
 ### Pourquoi ne pas utiliser Zapier ou Make pour automatiser ?
 
