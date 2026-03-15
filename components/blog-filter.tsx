@@ -90,7 +90,7 @@ export default function BlogFilter({
         <Button
           variant={active === "all" ? "blue" : "white"}
           size="md"
-          className="h-auto py-1.5 px-4 text-sm shadow-none hover:shadow-none"
+          className="h-auto py-1.5 px-4 text-xs sm:text-sm shadow-none hover:shadow-none"
           onClick={() => handleCategoryChange("all")}
         >
           Tous
@@ -103,7 +103,7 @@ export default function BlogFilter({
               key={key}
               variant={active === key ? "blue" : "white"}
               size="md"
-              className="h-auto py-1.5 px-4 text-sm shadow-none hover:shadow-none"
+              className="h-auto py-1.5 px-4 text-xs sm:text-sm shadow-none hover:shadow-none"
               onClick={() => handleCategoryChange(key)}
             >
               {cat.label}
@@ -114,57 +114,54 @@ export default function BlogFilter({
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedPosts.map((post, index) => (
-          <div
-            key={post.slug}
-            className="h-full flex"
-          >
+          <div key={post.slug} className="h-full flex">
             <BlogCard post={post} />
           </div>
         ))}
       </div>
 
       {totalPages > 1 && (
-          <div className="mt-12 flex flex-col items-center gap-4">
-            <p className="text-sm text-gray-light">
-              {startIndex + 1}-
-              {Math.min(startIndex + postsPerPage, filtered.length)} sur{" "}
-              {filtered.length} article{filtered.length > 1 ? "s" : ""}
-            </p>
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious
-                    onClick={() => handlePageChange(safeCurrentPage - 1)}
-                    disabled={safeCurrentPage === 1}
-                  />
-                </PaginationItem>
+        <div className="mt-12 flex flex-col items-center gap-4">
+          <p className="text-sm text-gray-light">
+            {startIndex + 1}-
+            {Math.min(startIndex + postsPerPage, filtered.length)} sur{" "}
+            {filtered.length} article{filtered.length > 1 ? "s" : ""}
+          </p>
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  onClick={() => handlePageChange(safeCurrentPage - 1)}
+                  disabled={safeCurrentPage === 1}
+                />
+              </PaginationItem>
 
-                {pageNumbers.map((p, i) =>
-                  p === "ellipsis" ? (
-                    <PaginationItem key={`ellipsis-${i}`}>
-                      <PaginationEllipsis />
-                    </PaginationItem>
-                  ) : (
-                    <PaginationItem key={p}>
-                      <PaginationLink
-                        isActive={p === safeCurrentPage}
-                        onClick={() => handlePageChange(p)}
-                      >
-                        {p}
-                      </PaginationLink>
-                    </PaginationItem>
-                  )
-                )}
+              {pageNumbers.map((p, i) =>
+                p === "ellipsis" ? (
+                  <PaginationItem key={`ellipsis-${i}`}>
+                    <PaginationEllipsis />
+                  </PaginationItem>
+                ) : (
+                  <PaginationItem key={p}>
+                    <PaginationLink
+                      isActive={p === safeCurrentPage}
+                      onClick={() => handlePageChange(p)}
+                    >
+                      {p}
+                    </PaginationLink>
+                  </PaginationItem>
+                )
+              )}
 
-                <PaginationItem>
-                  <PaginationNext
-                    onClick={() => handlePageChange(safeCurrentPage + 1)}
-                    disabled={safeCurrentPage === totalPages}
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
+              <PaginationItem>
+                <PaginationNext
+                  onClick={() => handlePageChange(safeCurrentPage + 1)}
+                  disabled={safeCurrentPage === totalPages}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
       )}
     </>
   );

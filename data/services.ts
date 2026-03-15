@@ -699,7 +699,7 @@ export const services: Service[] = [
     iconSrc: "/icons/site-vitrine.svg",
     iconBg: "bg-emerald-500",
     shortDescription:
-      "Un site professionnel qui renforce votre crédibilité. 6-10 pages, SEO optimisé, design sur-mesure.",
+      "Un site professionnel qui renforce votre crédibilité. 2-10+ pages, SEO optimisé, design sur-mesure.",
     metaTitle: "Création de Site Vitrine professionnel sur-mesure | Vizion Web",
     metaDescription:
       "Nous créons des sites vitrines professionnels sur-mesure en React/Next.js. Design, copywriting, SEO. 2 à 4 semaines de livraison.",
@@ -762,7 +762,7 @@ export const services: Service[] = [
       {
         title: "Développement sur-mesure",
         description:
-          "6-10 pages, code qui vous appartient à 100%, animations et responsive",
+          "2-10+ pages, code qui vous appartient à 100%, animations et responsive",
       },
       {
         title: "SEO renforcé",

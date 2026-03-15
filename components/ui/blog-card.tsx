@@ -16,7 +16,7 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="flex flex-col group rounded-4xl bg-white p-2 cursor-pointer shadow-[0_6px_20px_0] shadow-gray-lighter"
+      className="flex flex-col h-full group rounded-4xl bg-white p-2 cursor-pointer shadow-[0_6px_20px_0] shadow-gray-lighter"
     >
       {post.image && (
         <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden">

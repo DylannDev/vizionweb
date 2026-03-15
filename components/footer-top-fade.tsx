@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 export function FooterTopFade() {
   const pathname = usePathname();
   const fadeRoutes = [
-    "/blog/",
+    // "/blog",
     "/cgv",
     "/politique-confidentialite",
     "/mentions-legales",
