@@ -90,6 +90,8 @@ export default function Footer() {
                               key={href}
                               href={href}
                               aria-label={label}
+                              target="_blank"
+                              rel="nofollow noreferrer"
                               className="bg-white p-2 rounded-md text-primary-blue hover:text-white hover:bg-primary-blue transition-all duration-300 ease-in-out"
                             >
                               <Icon className="size-5 " />

@@ -111,9 +111,9 @@ export function PortfolioCard({
         {link && (
           <div className="">
             <ArrowButton
-              // className="w-full"
               href={link}
               target="_blank"
+              rel="noopener"
               variant="blue"
               className="shadow-none"
               size="md"

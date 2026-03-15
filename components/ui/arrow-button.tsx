@@ -7,12 +7,14 @@ interface ArrowButtonProps extends Omit<ButtonProps, "children"> {
   children: React.ReactNode;
   href?: string;
   target?: string;
+  rel?: string;
 }
 
 export function ArrowButton({
   children,
   href,
   target,
+  rel,
   variant = "black",
   size = "lg",
   className,
@@ -51,7 +53,7 @@ export function ArrowButton({
 
   if (href) {
     return (
-      <Link href={href} target={target}>
+      <Link href={href} target={target} rel={rel}>
         {button}
       </Link>
     );

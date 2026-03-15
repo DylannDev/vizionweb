@@ -16,6 +16,7 @@ const CallButton = ({
     <ArrowButton
       href="https://cal.com/dylann/30min"
       target="_blank"
+      rel="noopener noreferrer"
       variant={variant}
       size={size}
       className={className}
