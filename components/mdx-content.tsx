@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { MdxCodeBlock } from "@/components/ui/mdx-code-block";
 
 const mdxComponents = {
   table: (props: React.ComponentProps<"table">) => (
@@ -9,6 +10,21 @@ const mdxComponents = {
       <table {...props} />
     </div>
   ),
+  pre: (props: React.ComponentProps<"pre">) => {
+    const child = props.children as React.ReactElement<{
+      className?: string;
+      children?: string;
+    }>;
+    if (child?.props) {
+      const className = child.props.className || "";
+      const language = className.replace("language-", "") || "text";
+      const code = typeof child.props.children === "string"
+        ? child.props.children.replace(/\n$/, "")
+        : "";
+      return <MdxCodeBlock language={language} code={code} />;
+    }
+    return <pre {...props} />;
+  },
 };
 
 function remarkStripTitle() {
