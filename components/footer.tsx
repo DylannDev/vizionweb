@@ -26,7 +26,7 @@ export default function Footer() {
       Icon: RiLinkedinFill,
     },
     {
-      href: "https://www.instagram.com/vizionweb",
+      href: "https://www.instagram.com/vizionweb_agence",
       label: "Instagram",
       Icon: RiInstagramFill,
     },
