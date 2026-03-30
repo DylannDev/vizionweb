@@ -39,7 +39,7 @@ export const portfolioProjects: Project[] = [
     badge: ["Site Vitrine", "Blog"],
     src: "/projets/hippokom.webp",
     link: "https://hippokomagency.fr",
-    testimonial: findTestimonial("Hippô’Kom"),
+    testimonial: findTestimonial("Hippô'Kom"),
   },
   {
     title: "Zen Lounge",
