@@ -26,6 +26,8 @@ export function PageHero({
             src="/pattern-vizion-1.svg"
             alt=""
             aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
             className="pointer-events-none absolute inset-0 w-full h-full object-cover [mask-image:radial-gradient(ellipse_at_top,black,transparent_80%)] sm:[mask-image:radial-gradient(ellipse_at_top_center,black,transparent_60%)]"
           />
           <div className="relative z-10 pt-36 pb-10 sm:pb-20">{children}</div>
