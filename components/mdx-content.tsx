@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
-import { MdxCodeBlock } from "@/components/ui/mdx-code-block";
+import { MdxCodeBlock } from "@/components/ui/mdx-code-block-loader";
 
 const mdxComponents = {
   table: (props: React.ComponentProps<"table">) => (

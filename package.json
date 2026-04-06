@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --webpack",
+    "analyze": "ANALYZE=true next build --webpack",
     "start": "next start",
     "lint": "next lint",
     "generate-blur": "node scripts/generate-blur.mjs"
@@ -41,6 +42,7 @@
     "defaults and fully supports es6-module"
   ],
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.2",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^20.19.11",
     "@types/react": "^19.1.12",
