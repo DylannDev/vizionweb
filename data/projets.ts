@@ -29,7 +29,7 @@ export const portfolioProjects: Project[] = [
       "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
     badge: ["Landing Page", "Blog", "Dashboard / CRM"],
     src: "/projets/investing.webp",
-    link: "https://amazonia-investing.com",
+    link: "https://amazoniainvesting.vercel.app/",
     testimonial: findTestimonial("Amazonia Investing"),
   },
   {

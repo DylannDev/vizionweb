@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "be124f3733b037fb8d859f275454ecd1c590759ef9ab184bea35ba1a0a38e14c"
     },
+    "cover-letter": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "computedHash": "3ac95c65245e20a21e23dd47569cf7dcb687f3425bcbf25e349d8dc64b924786"
+    },
     "linkedin-content": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
@@ -25,6 +30,16 @@
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "computedHash": "21dd05f970ba54406d7405f92240853f809d0fed09ef6ca2a9204abcdd21548a"
+    },
+    "resume-cover-letter": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "3fcf6f984dbd92aeed479dabdfc35cad30e29614f7d94d38b7a4d8d580ee8a60"
+    },
+    "tailored-resume-generator": {
+      "source": "composiohq/awesome-claude-skills",
+      "sourceType": "github",
+      "computedHash": "37ad72564c908b09bcccc8a34087bef06b12b4c38dc68d76cddba5afc588bd92"
     }
   }
 }
