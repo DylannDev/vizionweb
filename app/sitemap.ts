@@ -3,6 +3,7 @@ import { CITIES, COUNTRIES } from "@/data";
 import { blogPosts } from "@/data/blog";
 import { services } from "@/data/services";
 import { technos } from "@/data/technos";
+import { glossaryTerms } from "@/data/glossaire";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vizionweb.fr";
@@ -109,6 +110,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post ? new Date(post.date) : now,
       changeFrequency: "monthly",
       priority: 0.7,
+    });
+  }
+
+  // Glossaire hub
+  entries.push({
+    url: `${baseUrl}/glossaire`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  });
+
+  // Glossaire term pages
+  for (const term of glossaryTerms) {
+    entries.push({
+      url: `${baseUrl}/glossaire/${term.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
     });
   }
 
