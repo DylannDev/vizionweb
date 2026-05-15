@@ -7,14 +7,7 @@ import Typography from "@/components/typography";
 
 import IconIllustration from "@/components/ui/icon-illustration";
 import { ImQuotesRight } from "react-icons/im";
-import {
-  PiPenNibFill,
-  PiCodeFill,
-  PiHandshakeFill,
-  PiRocketLaunchFill,
-  PiShieldCheckFill,
-  PiLightningFill,
-} from "react-icons/pi";
+import { PiPenNibFill, PiCodeFill, PiHandshakeFill } from "react-icons/pi";
 import { PageHero } from "@/components/ui/page-hero";
 import {
   Breadcrumb,
@@ -25,77 +18,88 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import CallButton from "@/components/call-button";
+import { ServiceStack } from "@/components/service-detail/service-stack";
 
 export const metadata: Metadata = {
-  title: "À propos — Notre approche et notre expertise | Vizion Web",
+  title: "À propos : méthode, stack et expertise SaaS | Vizion Web",
   description:
-    "Découvrez l'approche, les valeurs et l'expertise technique de Vizion Web. Nous développons des applications web et sites sur-mesure pour startups et entreprises.",
+    "Vizion Web, agence produit basée à Montpellier. Méthode pour livrer un MVP en quelques semaines, expertise SaaS, applications métier et intégration IA. Devis sous 24h.",
   alternates: {
     canonical: "https://vizionweb.fr/a-propos",
   },
   openGraph: {
-    title: "À propos — Notre approche et notre expertise | Vizion Web",
+    title: "À propos : méthode, stack et expertise SaaS | Vizion Web",
     description:
-      "Solutions web sur-mesure en React/Next.js pour startups et entreprises. Découvrez notre méthode.",
+      "Méthode pour livrer un MVP en quelques semaines, expertise SaaS et apps métier sur-mesure. Stack Next.js et IA en production. Direct, sans intermédiaire.",
     url: "https://vizionweb.fr/a-propos",
     type: "website",
   },
 };
 
-const pillars = [
+const promiseParagraphs = [
   {
-    icon: PiPenNibFill,
-    title: "Design-driven",
-    description:
-      "Chaque projet commence par le design. Nous concevons des interfaces sur Figma, validées avec vous, avant d'écrire une seule ligne de code. Le résultat : un produit intuitif que vos utilisateurs adoptent sans effort.",
+    title: "Un MVP livré en quelques semaines",
+    content:
+      "Pas en six mois. Le cadrage prend une trentaine de minutes, le devis tombe sous 24 à 48 heures, et la première démo arrive à la fin de la première semaine. Les sprints courts forcent à arbitrer le superflu et à concentrer chaque jour sur ce qui apporte vraiment de la valeur côté utilisateur.",
   },
   {
-    icon: PiCodeFill,
-    title: "Code sur-mesure",
-    description:
-      "Pas de templates, pas de WordPress. Nous développons avec React, Next.js et TypeScript, les mêmes technologies utilisées par Netflix, Uber ou Airbnb. Votre projet est plus rapide, plus sécurisé et évolutif.",
+    title: "Un devis chiffré sous 24 à 48 heures",
+    content:
+      "Un appel de cadrage suffit pour vous renvoyer un périmètre, un planning et un prix fixe. Vous savez ce que vous payez avant de signer, et le périmètre tient jusqu'à la livraison. Aucune surprise sur la facture, aucun ajout caché.",
   },
   {
-    icon: PiHandshakeFill,
-    title: "Accompagnement complet",
-    description:
-      "Du premier appel au support post-lancement, nous sommes votre partenaire technique. Copywriting, design, développement, déploiement : vous avez un interlocuteur unique pour tout votre projet.",
+    title: "Un code 100% à vous dès le premier jour",
+    content:
+      "Le repository GitHub, le compte Vercel, la base Supabase, le domaine : tout est à votre nom. Vous reprenez la main avec votre équipe ou un autre prestataire sans avoir à renégocier la propriété du code, des données ou de l'infrastructure.",
+  },
+  {
+    title: "Un seul interlocuteur, du devis à la production",
+    content:
+      "Vous parlez à la personne qui code. Les décisions techniques et produit se prennent en temps réel, sans rond-point ni intermédiaire qui ralentit la boucle. Les démos hebdo gardent la direction calée semaine après semaine.",
   },
 ];
 
-const expertise = [
+const pillars = [
   {
-    icon: PiRocketLaunchFill,
-    title: "Applications web",
-    items: [
-      "MVP & Proof of Concept",
-      "SaaS multi-tenant",
-      "Outils métier & dashboards",
-      "Systèmes d'authentification",
-      "Intégrations paiement (Stripe)",
-    ],
+    icon: PiPenNibFill,
+    title: "Design avant le code",
+    description:
+      "Chaque projet démarre par les maquettes Figma, validées avec vous avant la première ligne de code. Vous voyez le produit avant qu'il existe. Modifications illimitées jusqu'à validation.",
   },
   {
-    icon: PiShieldCheckFill,
-    title: "Stack technique",
-    items: [
-      "React & Next.js",
-      "TypeScript",
-      "PostgreSQL & Prisma",
-      "Tailwind CSS",
-      "Vercel & AWS",
-    ],
+    icon: PiCodeFill,
+    title: "Stack moderne, code 100% à vous",
+    description:
+      "Next.js, TypeScript, Supabase, Vercel. Une stack qui suit dans la durée et qui encaisse les fonctionnalités complexes sans s'effondrer. Code source à vous à la livraison.",
   },
   {
-    icon: PiLightningFill,
-    title: "Compétences intégrées",
-    items: [
-      "UI/UX Design (Figma)",
-      "Copywriting conversion",
-      "SEO technique",
-      "Performance & Core Web Vitals",
-      "Responsive & accessibilité",
-    ],
+    icon: PiHandshakeFill,
+    title: "Direct, sans intermédiaire",
+    description:
+      "Vous parlez avec le développeur qui code. Devis chiffré sous 24h, planning précis à la semaine, démo en fin de chaque sprint. Les décisions techniques et produit se prennent en temps réel, sans rond-point.",
+  },
+];
+
+const approachPhases = [
+  {
+    title: "Cadrage produit",
+    description:
+      "Un appel de 30 minutes pour comprendre le problème métier et le contexte business. On en sort avec un périmètre clair, un devis chiffré et un planning sous 24 à 48h.",
+  },
+  {
+    title: "Design Figma",
+    description:
+      "Maquettes complètes du parcours principal, validées avec vous. Le produit prend forme avant le code, ce qui évite les retours en arrière coûteux en développement.",
+  },
+  {
+    title: "Sprints de développement",
+    description:
+      "Stack Next.js, Supabase, Vercel. Démos chaque vendredi, URLs de preview en continu. Vous voyez le produit grandir et donnez votre avis avant chaque jalon.",
+  },
+  {
+    title: "Mise en production et support",
+    description:
+      "Déploiement sur votre domaine, monitoring en place, support de 30 à 90 jours inclus. Au-delà, on continue ensemble ou votre équipe reprend la main proprement.",
   },
 ];
 
@@ -120,55 +124,41 @@ export default function AProposPage() {
         <Badge align="center">À propos</Badge>
         <Typography
           as="h1"
-          title="L'agence web qui conçoit votre produit de A à Z"
-          subtitle="Nous concevons et développons des applications web et sites sur-mesure pour les entreprises qui veulent un produit à la hauteur de leurs ambitions."
+          title="On livre des produits web, vite et bien"
+          subtitle="Agence produit pour startups et PME en transformation digitale. Devis sous 24h, code 100% à vous."
         />
         <div className="flex justify-center">
           <CallButton />
         </div>
       </PageHero>
 
-      {/* Notre mission */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-30%">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Texte */}
-            <div>
-              <Badge align="left">Notre mission</Badge>
-              <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
-                Une agence partenaire, pas un prestataire
-              </h2>
-              <div className="space-y-4 text-gray-dark text-base sm:text-lg">
-                <p>
-                  Chaque projet est conçu pour vos objectifs et votre marché.
-                  Pas de templates recyclés, pas de compromis. Du code
-                  sur-mesure, pensé pour durer et évoluer avec votre activité.
-                </p>
-                <p>
-                  Stratégie, design, copywriting, développement, déploiement :
-                  nous gérons tout. Un interlocuteur unique du début à la fin,
-                  un processus transparent, et un résultat qui génère de la
-                  valeur dès le premier jour.
-                </p>
-              </div>
-              <div className="flex justify-start mt-8">
-                <CallButton />
-              </div>
-            </div>
+      {/* Notre promesse : liste numérotée, structure Bordeaux */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-10%">
+        <div className="max-w-5xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-10 md:mb-14">
+            <Badge align="center">Notre promesse</Badge>
+            <h2 className="text-[22px] sm:text-[28px] md:text-5xl font-semibold text-primary-dark leading-tight mt-4">
+              Quatre engagements tenus à chaque projet
+            </h2>
+          </div>
 
-            {/* Mockup */}
-            <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
-              <Image
-                src="/mockup-1.webp"
-                alt="Exemple de projet livré par Vizion Web"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={getBlurDataURL("/mockup-1.webp")}
-                className="object-cover object-center p-3 bg-white rounded-[40px]"
-              />
-            </div>
+          <div className="divide-y divide-gray-lighter">
+            {promiseParagraphs.map((p, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 md:gap-8 py-8 lg:py-10 first:pt-0"
+              >
+                <h3 className="font-semibold text-balance text-xl lg:text-2xl text-primary-dark flex items-baseline gap-3">
+                  <span className="text-primary-blue font-bold shrink-0">
+                    0{i + 1}
+                  </span>
+                  <span>{p.title}</span>
+                </h3>
+                <div className="text-gray-dark leading-7">
+                  <p>{p.content}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -182,7 +172,7 @@ export default function AProposPage() {
               <div className="relative aspect-square overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
                 <Image
                   src="/founder.webp"
-                  alt="Dylann, fondateur de Vizion Web"
+                  alt="Fondateur de Vizion Web"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
@@ -195,35 +185,39 @@ export default function AProposPage() {
 
             {/* Texte */}
             <div className="flex flex-col gap-0 sm:gap-4 text-gray-dark">
-              <Badge align="left" className="w-fit">
-                Le fondateur
+              <Badge align="left" className="w-fit mb-0">
+                L'origine
               </Badge>
-              <h3 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
-                Pourquoi j'ai créé Vizion Web ?
+              <h3 className="text-[22px] sm:text-[28px] md:text-4xl font-semibold text-primary-dark leading-tight">
+                Pourquoi Vizion Web existe ?
               </h3>
 
               <div className="text-base sm:text-lg space-y-4">
                 <p>
-                  Développeur et designer depuis plus de 5 ans, j'ai créé Vizion
-                  Web pour proposer un modèle différent : une agence 100 %
-                  remote, sans structure lourde, qui s'entoure des meilleurs
-                  freelances pour chaque projet.
+                  Cinq ans de développement et de design produit avant de monter
+                  Vizion Web, avec le même constat sur chaque projet repris :
+                  trop d'intermédiaires, trop de tunnels qui s'étirent sur six
+                  mois pour ce qui devait tenir en trois semaines. Le modèle ici
+                  prend le contrepied. Une solo agency full remote, où vous
+                  parlez à la personne qui conçoit et qui code.
                 </p>
 
                 <p>
-                  Je pilote chaque mission de A à Z. Quand un projet demande une
-                  expertise pointue (design UI, SEO poussé, dev backend), je
-                  fais appel à des indépendants seniors avec qui je travaille
-                  régulièrement. Vous gardez un seul interlocuteur, avec une
-                  équipe complète derrière.
+                  Quand un projet demande une expertise pointue ou plus de
+                  mains, on s'appuie sur un réseau de freelances talentueux : un
+                  designer sur un parcours complexe, un dev pour un back-end
+                  complexe, un copywriter pour un site qui doit convertir.
+                  L'équipe se monte au besoin et se défait après livraison, sans
+                  couche d'intermédiaires à facturer. Vous gardez le même
+                  interlocuteur du devis au déploiement.
                 </p>
               </div>
 
-              <div className="relative px-6 py-6 sm:py-10 rounded-3xl mt-6 bg-background">
+              <div className="relative px-6 py-6 sm:py-10 rounded-3xl bg-background">
                 <ImQuotesRight className="absolute bottom-4 right-4 text-2xl sm:text-3xl text-primary-blue" />
                 <p className="text-base sm:text-lg font-semibold text-primary-dark relative z-10">
-                  "Mon objectif : vous donner accès à une équipe solide, sans la
-                  complexité et le coût d'une agence traditionnelle."
+                  "Un produit qui tourne en prod, livré en 3 semaines, sans
+                  surprise sur le devis, sans dépendance après la livraison."
                 </p>
               </div>
             </div>
@@ -231,16 +225,55 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Notre approche — 3 piliers */}
+      {/* Notre approche : dark bg, 4 phases (pattern expertises) */}
+      <section className="py-16 md:py-24 bg-primary-dark">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <Badge variant="blue" align="center">
+            Notre approche
+          </Badge>
+          <Typography
+            as="h2"
+            title="Du cadrage à la mise en production en 4 étapes"
+            subtitle="Un rythme calé sur ce que vous voyez à l'écran, pas sur des promesses dans un devis."
+            titleColor="text-white"
+            subtitleColor="text-gray-light"
+            titleSize="4xl"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            {approachPhases.map((phase, i) => (
+              <div key={i} className="bg-secondary-dark rounded-4xl p-6 h-full">
+                <div className="flex items-start gap-4">
+                  <span className="text-primary-blue font-bold text-2xl shrink-0 leading-none mt-1">
+                    0{i + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-white font-semibold text-xl">
+                      {phase.title}
+                    </h3>
+                    <p className="text-gray-light text-lg mt-1 leading-relaxed">
+                      {phase.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-10 md:mt-12">
+            <CallButton variant="blue" />
+          </div>
+        </div>
+      </section>
+
+      {/* Nos principes : 3 piliers */}
       <section className="py-16 md:py-24 bg-gradient-to-t from-background from-0% to-white to-95%">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Badge align="center">Notre approche</Badge>
-          <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-8 text-center">
-            Trois piliers pour des projets qui livrent des résultats
+          <Badge align="center">Nos principes</Badge>
+          <h2 className="text-[22px] sm:text-[28px] md:text-5xl font-semibold text-primary-dark leading-tight mt-4 mb-8 text-center">
+            Trois principes, lisibles dès le devis
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pillars.map((pillar, i) => (
+            {pillars.map((pillar) => (
               <div key={pillar.title} className="h-full flex">
                 <div className="h-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
                   <div className="h-full rounded-[32px] p-6 flex flex-col gap-4">
@@ -259,41 +292,8 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Expertise technique */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Badge align="center">Notre expertise</Badge>
-          <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-8 text-center">
-            Les technologies et compétences derrière chaque projet
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {expertise.map((block, i) => (
-              <div key={block.title} className="h-full w-full flex">
-                <div className="h-full w-full rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter bg-white p-3">
-                  <div className="h-full rounded-[32px] p-4 flex flex-col gap-4">
-                    <IconIllustration icon={block.icon} />
-                    <h3 className="font-semibold text-primary-dark text-xl">
-                      {block.title}
-                    </h3>
-                    <ul className="space-y-2 pl-1">
-                      {block.items.map((item) => (
-                        <li
-                          key={item}
-                          className="text-gray-dark text-lg flex items-center gap-2"
-                        >
-                          <span className="size-1.5 rounded-full bg-primary-blue shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Stack technique */}
+      <ServiceStack />
     </main>
   );
 }
