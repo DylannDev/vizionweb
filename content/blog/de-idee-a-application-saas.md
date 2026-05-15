@@ -49,6 +49,7 @@ Karim arrive avec une liste de 40 fonctionnalités. On les classe en trois colon
 - **Nice to have** : 22 fonctionnalités
 
 Les 6 fonctionnalités du MVP :
+
 1. Création de salons et de coiffeurs
 2. Planning hebdomadaire par salon
 3. Saisie des absences
@@ -137,17 +138,17 @@ Le passage de 99 euros fixe à une tarification par salon a doublé les conversi
 
 Voici les chiffres réels du projet sur les 6 premiers mois :
 
-| Poste | Coût |
-|-------|------|
-| Développement MVP | 14 000 euros |
-| Design et landing page | 2 500 euros |
-| Hébergement (6 mois) | 420 euros |
-| Outils (analytics, email, monitoring) | 360 euros |
-| Campagnes Ads (2 mois) | 1 000 euros |
-| Frais Stripe (6 mois) | 185 euros |
-| **Total** | **18 465 euros** |
+| Poste                                 | Coût             |
+| ------------------------------------- | ---------------- |
+| Développement MVP                     | 14 000 euros     |
+| Design et landing page                | 2 500 euros      |
+| Hébergement (6 mois)                  | 420 euros        |
+| Outils (analytics, email, monitoring) | 360 euros        |
+| Campagnes Ads (2 mois)                | 1 000 euros      |
+| Frais Stripe (6 mois)                 | 185 euros        |
+| **Total**                             | **18 465 euros** |
 
-Revenus sur la même période : environ 5 800 euros. On est loin du break-even. Et c'est normal. Un SaaS B2B de niche atteint généralement la rentabilité entre le mois 12 et le mois 18, à condition que le produit tient ses promesses et que l'acquisition client fonctionne.
+Revenus sur la même période : environ 5 800 euros. On est loin du break-even. Et c'est normal. Un SaaS de niche atteint généralement la rentabilité entre le mois 12 et le mois 18, à condition que le produit tient ses promesses et que l'acquisition client fonctionne.
 
 ### Leçon 5 : ce n'est pas un sprint, c'est un marathon
 

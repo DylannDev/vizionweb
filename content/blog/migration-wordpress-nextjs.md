@@ -98,7 +98,7 @@ Soyons transparents. La migration a un coût, et on perd certaines choses.
 
 ### Ce qu'on perd
 
-- **L'écosystème de plugins WordPress** : il n'y a pas de "WooCommerce pour Next.js". Les fonctionnalités e-commerce, formulaires, SEO doivent être développées ou intégrées via des services tiers (Stripe pour le paiement, Resend pour les emails, etc.)
+- **L'écosystème de plugins WordPress** : il n'y a pas de "WooCommerce pour Next.js". Les fonctionnalités e-commerce, formulaires, SEO doivent être développées ou intégrées via des services tiers (Stripe pour le paiement, services d'email transactionnel, etc.)
 - **La facilité d'édition WYSIWYG** : WordPress permet de modifier une page visuellement. Avec Next.js + CMS headless, l'interface d'édition est différente (et certains la trouvent moins intuitive au début)
 - **L'autonomie pour les modifications de structure** : déplacer un bloc, ajouter une section, changer la mise en page d'une page demande l'intervention d'un développeur. Sur WordPress avec Elementor, vous le faisiez vous-même
 

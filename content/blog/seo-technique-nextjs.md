@@ -20,7 +20,7 @@ Quelques chiffres pour situer. Les sites qui passent d'un rendu client pur à du
 
 ### La Metadata API de Next.js
 
-Depuis Next.js 13 et l'App Router, la gestion des métadonnées passe par la Metadata API. C'est propre, typé, et intégré au framework.
+Depuis Next.js et l'App Router, la gestion des métadonnées passe par la Metadata API. C'est propre, typé, et intégré au framework.
 
 Dans chaque fichier `layout.tsx` ou `page.tsx`, vous pouvez exporter un objet `metadata` :
 

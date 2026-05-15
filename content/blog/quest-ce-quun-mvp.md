@@ -1,12 +1,20 @@
-# Qu'est-ce qu'un MVP et pourquoi commencer par là ?
+# MVP : définition, méthode agile et exemples concrets en 2026
 
-Vous avez une idée de produit digital. Une application, une plateforme, un outil SaaS. Vous voyez déjà le résultat final dans votre tête, avec toutes les fonctionnalités, un design soigné et une expérience parfaite. Le problème ? Vouloir construire cette version complète d'un coup est la meilleure façon de perdre 6 mois et 50 000 euros sans savoir si quelqu'un veut réellement de votre produit.
+Vous avez une idée de produit digital — une application, une plateforme, un SaaS. Vous voyez déjà le résultat final, avec toutes les fonctionnalités, un design soigné, une expérience parfaite. Le problème : vouloir construire cette version complète d'un coup est la meilleure façon de perdre 6 mois et 50 000 euros sans savoir si quelqu'un veut réellement de votre produit. C'est exactement le problème que résout le **MVP**. Trois lettres qui ont sauvé des milliers de projets du naufrage.
 
-C'est là que le MVP entre en jeu. Trois lettres qui ont sauvé des milliers de projets du naufrage. Et si vous vous demandez comment passer concrètement [de l'idée à une application SaaS](/blog/de-idee-a-application-saas), tout commence par là.
+## MVP : définition simple en 1 phrase
 
-## Le MVP, c'est quoi exactement ?
+**MVP signifie Minimum Viable Product (en français : produit minimum viable).** C'est la version la plus réduite possible de votre produit qui contient uniquement les fonctionnalités nécessaires pour résoudre le problème principal de vos utilisateurs.
 
-MVP, ça veut dire Minimum Viable Product. En français : produit minimum viable. L'idée est simple. Vous construisez la version la plus réduite possible de votre produit, celle qui contient uniquement les fonctionnalités nécessaires pour résoudre le problème principal de vos utilisateurs.
+Pas la version rêvée. Pas la version parfaite. **La version qui marche et qui apporte déjà de la valeur** — qu'on peut mettre entre les mains de vrais utilisateurs pour valider l'hypothèse business avant d'investir le gros budget.
+
+> 💡 **Définition courte (à retenir)** : un MVP est le plus petit produit utilisable qui permet de tester l'hypothèse "des gens veulent payer pour résoudre ce problème".
+
+Le concept a été popularisé par Eric Ries dans son livre "The Lean Startup" en 2011. Depuis, il est devenu le standard pour lancer un produit digital. Et si vous vous demandez comment passer concrètement [de l'idée à une application SaaS](/blog/de-idee-a-application-saas), le MVP est la 1ère étape obligatoire.
+
+## Le MVP, c'est quoi exactement (et ce que ce n'est pas) ?
+
+MVP, ça veut dire Minimum Viable Product. En français : produit minimum viable. L'idée est simple : vous construisez la version la plus réduite possible de votre produit, celle qui contient uniquement les fonctionnalités nécessaires pour résoudre le problème principal de vos utilisateurs.
 
 Pas la version rêvée. Pas la version parfaite. La version qui marche et qui apporte déjà de la valeur.
 
@@ -55,6 +63,26 @@ Nick Swinmurn voulait vendre des chaussures en ligne en 1999. Au lieu de créer 
 Joel Gascoigne avait l'idée d'un outil pour programmer des publications sur les réseaux sociaux. Son MVP, encore plus minimal : une simple page web qui décrivait le produit avec un bouton "Plans & Pricing". Quand les visiteurs cliquaient, ils tombaient sur une page de tarifs. S'ils cliquaient pour acheter, un message leur demandait leur email en expliquant que le produit n'était pas encore prêt. Résultat : assez d'emails collectés pour confirmer que des gens paieraient pour ce service.
 
 Ces exemples ont un point commun. Aucun de ces entrepreneurs n'a construit le produit final en premier. Ils ont tous trouvé la façon la plus rapide et la moins coûteuse de valider leur hypothèse.
+
+## MVP en mode agile : pourquoi les deux vont ensemble
+
+**Un MVP s'inscrit naturellement dans une démarche agile.** Le principe d'un MVP — itérer vite, valider tôt, apprendre continuellement — est exactement celui de la méthode agile (Scrum, Kanban). Les deux concepts se renforcent mutuellement.
+
+### Le cycle MVP × agile en 4 étapes
+
+1. **Sprint 0 — Cadrage et priorisation** : on liste toutes les features rêvées, puis on classe en 3 colonnes (Vital / Utile / Bonus, voir plus bas). Le MVP = colonne 1 uniquement. C'est la base du backlog produit.
+2. **Sprints de 1 à 2 semaines** : chaque sprint livre 2-3 features de la colonne "Vital". À la fin du sprint, démo + ajustement. Pas de Big Bang final.
+3. **Lancement et collecte de feedback** : à la fin du dernier sprint MVP, le produit est mis entre les mains des premiers utilisateurs. On collecte les retours en continu (formulaire in-app, analytics, calls utilisateurs).
+4. **Itérations post-MVP** : on intègre les retours dans des sprints courts (2-4 semaines), on priorise par impact business. C'est ici que les colonnes "Utile" et "Bonus" deviennent éligibles, en fonction de ce que les vrais utilisateurs demandent.
+
+### Pourquoi le MVP en mode agile fonctionne
+
+- **Visibilité continue** : vous voyez l'avancement chaque semaine, pas après 6 mois de tunnel
+- **Pivots faciles** : si une hypothèse business est invalidée, vous changez de cap au sprint suivant, pas après tout avoir construit
+- **Budget maîtrisé** : vous pouvez arrêter à n'importe quel sprint si le ROI prévu n'est pas là
+- **Équipe alignée** : les sprints courts forcent les arbitrages entre dev, design et business chaque semaine
+
+> 💡 **À retenir** : un MVP livré en cycle waterfall (cahier des charges figé + 6 mois de dev tunnel) n'est pas vraiment un MVP. C'est juste un petit produit livré tard. Le vrai MVP **vit** dans l'itération.
 
 ## Comment définir votre MVP
 
@@ -130,7 +158,7 @@ Votre produit est validé, vos utilisateurs sont satisfaits, vos métriques sont
 
 Ce processus réduit le gaspillage et maximise vos chances de succès. Au lieu de parier 100 000 euros sur une intuition, vous investissez 15 000 euros pour valider, puis 30 000 euros pour améliorer, puis le reste pour grandir. A chaque étape, vous avez des données réelles pour guider vos décisions. Et quand votre SaaS atteint la phase de croissance, il sera temps de réfléchir à [comment fixer le prix de votre SaaS](/blog/fixer-prix-saas-strategie) pour maximiser votre rentabilité.
 
-Chez Vizion Web, on construit des MVPs avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. Découvrez notre [service MVP & Proof of Concept](/services/mvp-proof-of-concept) pour en savoir plus sur notre approche. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
+Chez Vizion Web, on construit des MVP avec un objectif simple : vous mettre sur le marché rapidement avec un produit solide. Découvrez notre [service MVP & Proof of Concept](/services/mvp-proof-of-concept) pour en savoir plus sur notre approche. On travaille ensemble pour identifier les fonctionnalités vitales, on développe en 2 à 8 semaines, et on itère en fonction des retours de vos vrais utilisateurs. Pas de devis gonflé pour un produit dont personne ne veut encore. Juste une approche pragmatique pour transformer votre idée en réalité, une étape à la fois.
 
 ## Questions fréquentes
 

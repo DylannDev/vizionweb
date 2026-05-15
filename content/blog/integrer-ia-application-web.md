@@ -1,12 +1,35 @@
-# Intégrer l'IA dans votre application web : cas pratiques pour PME
+# Intégrer l'IA et les APIs OpenAI dans votre application web : guide pratique pour PME
 
 Tout le monde parle d'intelligence artificielle. Votre fils vous a montré ChatGPT à Noël, votre comptable utilise un outil IA pour catégoriser ses factures, et votre concurrent a un chatbot sur son site. Vous vous dites que vous devriez "faire quelque chose avec l'IA" mais vous ne savez pas quoi, ni si ça vaut le coup pour votre taille d'entreprise.
 
-Cet article coupe à travers le bruit. Pas de promesses irréalistes, pas de "l'IA va remplacer tous vos employés". On parle de cas d'usage concrets, de coûts réels, et de limites qu'il faut connaître avant de se lancer.
+Cet article coupe à travers le bruit. Pas de promesses irréalistes, pas de "l'IA va remplacer tous vos employés". On parle de cas d'usage concrets, de coûts réels et de limites qu'il faut connaître avant de se lancer — y compris **comment utiliser concrètement les APIs OpenAI** (et leur alternative Claude d'Anthropic) dans votre application web ou SaaS.
+
+## Les APIs OpenAI : ce qu'il faut comprendre avant d'intégrer
+
+Avant de parler cas d'usage, posons les bases techniques. Les **APIs OpenAI** sont l'interface de programmation qui vous permet d'appeler les modèles OpenAI, modèle de raisonnement OpenAI ou DALL-E depuis votre application web. Concrètement : depuis votre app Next.js / Node.js, vous envoyez une requête HTTPS à `api.openai.com` avec un prompt, et vous recevez une réponse générée par le modèle.
+
+### Coût des APIs OpenAI (référence 2026)
+
+Le pricing OpenAI dépend du modèle utilisé et du volume de tokens (un token ≈ 4 caractères en français). Ordres de grandeur :
+
+- **OpenAI** (le plus utilisé) : ~5 $ / 1M tokens en input, ~15 $ / 1M tokens en output
+- **OpenAI version économique** (moins cher, pour tâches simples) : ~0.15 $ / 1M tokens input, ~0.60 $ / 1M tokens output
+- **modèle de raisonnement OpenAI** (raisonnement avancé) : ~15 $ / 1M tokens input, ~60 $ / 1M tokens output
+
+Pour une SaaS avec 100 utilisateurs actifs et un chatbot moyennement utilisé, la facture OpenAI typique est de **30 à 200 €/mois**.
+
+### APIs OpenAI vs API Claude (Anthropic) : quel choix ?
+
+Anthropic propose Claude, un modèle concurrent direct. Notre recommandation :
+
+- **Claude (Anthropic)** : meilleur sur le raisonnement long, le code, les tâches métier B2B où la qualité prime
+- **OpenAI** : meilleur sur les tâches multimodales (vision), un peu plus rapide en chat conversationnel
+
+En pratique, dans la plupart des intégrations IA pour PME, les deux APIs sont interchangeables et la décision se joue sur les écarts marginaux de qualité ou de prix sur le cas d'usage spécifique. Chez Vizion Web, on choisit souvent Claude pour les tâches B2B critiques (génération de documents, agents métier) et OpenAI pour les chats conversationnels et la vision.
 
 ## L'IA dans les applications web : au-delà du buzz
 
-L'IA dont on parle ici, ce sont les modèles de langage (GPT-4, Claude, Mistral) et les modèles spécialisés (vision, classification, recommandation). Ce ne sont pas des intelligences qui "pensent". Ce sont des outils statistiques très performants pour traiter du texte, des images et des données structurées.
+L'IA dont on parle ici, ce sont les modèles de langage (OpenAI, Claude, Mistral) et les modèles spécialisés (vision, classification, recommandation). Ce ne sont pas des intelligences qui "pensent". Ce sont des outils statistiques très performants pour traiter du texte, des images et des données structurées.
 
 Pour une PME, l'intérêt n'est pas de créer le prochain ChatGPT. C'est d'[automatiser des tâches répétitives](/blog/automatiser-business-outils-web), d'améliorer l'expérience client, ou de traiter des volumes de données qu'un humain ne peut pas gérer manuellement.
 
@@ -84,7 +107,7 @@ C'est le coût de conception, d'intégration de l'API IA dans votre application,
 
 ### Les coûts d'API (usage)
 
-Les modèles IA se paient à l'utilisation. GPT-4o coûte environ 2,50 dollars pour un million de tokens en entrée et 10 dollars pour un million en sortie. Claude 3.5 Sonnet est dans la même gamme. Pour une PME avec un volume modéré (quelques centaines de requêtes par jour), comptez 50 à 500 euros par mois.
+Les modèles IA se paient à l'utilisation. OpenAI coûte environ 2,50 dollars pour un million de tokens en entrée et 10 dollars pour un million en sortie. Claude est dans la même gamme. Pour une PME avec un volume modéré (quelques centaines de requêtes par jour), comptez 50 à 500 euros par mois.
 
 Le piège : sous-estimer le volume. Un chatbot populaire qui répond à 200 conversations par jour avec des échanges longs peut coûter 300 à 500 euros par mois rien qu'en API. Prévoyez une enveloppe et surveillez la consommation.
 
@@ -104,7 +127,7 @@ La parade : contraindre l'IA à ne répondre qu'à partir de vos données (techn
 
 ### La dépendance aux fournisseurs
 
-Votre chatbot tourne sur GPT-4 d'OpenAI. OpenAI décide de doubler ses prix. Ou de modifier son modèle et les réponses changent de qualité. Vous êtes dépendant d'un fournisseur externe pour une fonction critique de votre application.
+Votre chatbot tourne sur OpenAI d'OpenAI. OpenAI décide de doubler ses prix. Ou de modifier son modèle et les réponses changent de qualité. Vous êtes dépendant d'un fournisseur externe pour une fonction critique de votre application.
 
 La mitigation : architecturer votre système pour pouvoir changer de modèle (OpenAI, Anthropic, Mistral, modèles open source) sans tout refaire. Un bon développeur prévoit cette flexibilité dès le départ. C'est d'ailleurs un principe fondamental quand on conçoit une [application métier sur-mesure](/services/application-metier).
 

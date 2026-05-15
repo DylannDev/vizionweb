@@ -91,7 +91,7 @@ Pour une vente de 100 euros, PayPal prélève 3,25 euros. Contre 1,75 euro chez 
 
 GoCardless est spécialisé dans le prélèvement bancaire (SEPA Direct Debit). Pas de carte bancaire, pas de formulaire : le client donne son IBAN, autorise le prélèvement, et les paiements sont automatiques.
 
-**Idéal pour** : les abonnements, les paiements récurrents, les factures régulières entre professionnels. Un cabinet comptable qui facture ses clients mensuellement, un SaaS B2B avec des abonnements annuels, une salle de sport qui prélève ses adhérents.
+**Idéal pour** : les abonnements, les paiements récurrents, les factures régulières entre professionnels. Un cabinet comptable qui facture ses clients mensuellement, un SaaS avec des abonnements annuels, une salle de sport qui prélève ses adhérents.
 
 **L'avantage principal** : les frais. GoCardless facture entre 0,20 et 0,50 euro par transaction sur le plan standard, sans pourcentage. Sur un prélèvement de 500 euros, ça fait 0,50 euro au lieu de 7,75 euros chez Stripe (1,5% + 0,25) ou 14,85 euros chez PayPal (2,9% + 0,35). La différence est massive sur les montants élevés.
 
@@ -107,18 +107,18 @@ Mollie est un prestataire de paiement néerlandais qui monte en puissance. Inter
 
 ## Tableau comparatif complet
 
-| Critère | Stripe | PayPal | GoCardless | Mollie |
-|---------|--------|--------|------------|--------|
-| **Frais carte européenne** | 1,5% + 0,25 euro | 2,9% + 0,35 euro | N/A (SEPA uniquement) | 1,8% + 0,25 euro |
-| **Frais SEPA** | 0,35 euro | N/A | 0,20-0,50 euro | 0,25 euro |
-| **Frais mensuels** | 0 euro | 0 euro | 0 euro (plan standard) | 0 euro |
-| **Délai de versement** | 7 jours (modifiable à 2j) | Instantané (sur compte PayPal) | 3-5 jours ouvrés | 1-2 jours ouvrés |
-| **Intégration technique** | Excellente (API, SDK, docs) | Correcte (API améliorée) | Bonne (API, webhooks) | Très bonne (API, plugins) |
-| **Sans code** | Payment Links, Checkout | Boutons, facturation | Dashboard | Pages de paiement |
-| **Abonnements** | Natif (Stripe Billing) | Limité | Natif | Via plugin |
-| **Support** | Email, chat (lent) | Email, téléphone | Email, chat | Email, téléphone (FR) |
-| **Protection vendeur** | Bonne | Faible (favorise acheteurs) | Bonne | Bonne |
-| **Adapté pour** | Apps, SaaS, e-commerce | E-commerce B2C, marketplace | Abonnements, B2B | E-commerce Europe |
+| Critère                    | Stripe                      | PayPal                         | GoCardless             | Mollie                    |
+| -------------------------- | --------------------------- | ------------------------------ | ---------------------- | ------------------------- |
+| **Frais carte européenne** | 1,5% + 0,25 euro            | 2,9% + 0,35 euro               | N/A (SEPA uniquement)  | 1,8% + 0,25 euro          |
+| **Frais SEPA**             | 0,35 euro                   | N/A                            | 0,20-0,50 euro         | 0,25 euro                 |
+| **Frais mensuels**         | 0 euro                      | 0 euro                         | 0 euro (plan standard) | 0 euro                    |
+| **Délai de versement**     | 7 jours (modifiable à 2j)   | Instantané (sur compte PayPal) | 3-5 jours ouvrés       | 1-2 jours ouvrés          |
+| **Intégration technique**  | Excellente (API, SDK, docs) | Correcte (API améliorée)       | Bonne (API, webhooks)  | Très bonne (API, plugins) |
+| **Sans code**              | Payment Links, Checkout     | Boutons, facturation           | Dashboard              | Pages de paiement         |
+| **Abonnements**            | Natif (Stripe Billing)      | Limité                         | Natif                  | Via plugin                |
+| **Support**                | Email, chat (lent)          | Email, téléphone               | Email, chat            | Email, téléphone (FR)     |
+| **Protection vendeur**     | Bonne                       | Faible (favorise acheteurs)    | Bonne                  | Bonne                     |
+| **Adapté pour**            | Apps, SaaS, e-commerce      | E-commerce B2C, marketplace    | Abonnements, B2B       | E-commerce Europe         |
 
 ## Comment choisir la bonne solution
 

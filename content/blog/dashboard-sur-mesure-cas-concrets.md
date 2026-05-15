@@ -90,7 +90,7 @@ En 6 mois, le gaspillage alimentaire est passé de 10% en moyenne à 5,8%. Sur u
 
 ### Le contexte
 
-Un éditeur SaaS B2B avec 340 clients abonnés et un MRR (revenu mensuel récurrent) de 28 000 euros. L'outil proposait un dashboard client basique intégré à la plateforme, mais le suivi côté interne se faisait via des exports CSV et des tableaux croisés dynamiques.
+Un éditeur SaaS avec 340 clients abonnés et un MRR (revenu mensuel récurrent) de 28 000 euros. L'outil proposait un dashboard client basique intégré à la plateforme, mais le suivi côté interne se faisait via des exports CSV et des tableaux croisés dynamiques.
 
 ### Le problème
 
