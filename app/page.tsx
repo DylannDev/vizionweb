@@ -31,10 +31,27 @@ export default function Page() {
           url: "https://vizionweb.fr",
           logo: "https://vizionweb.fr/logo.svg",
           description:
-            "Agence web spécialisée dans le développement d'applications web sur-mesure (MVP, SaaS, outils métier) et de sites professionnels (landing pages, sites vitrines, sites avancés).",
+            "Agence web solo (Dylann, Montpellier) spécialisée dans le développement de SaaS, MVP et applications métier sur-mesure, avec intégration IA (OpenAI, Claude). Devis chiffré sous 24h. MVP livré en 3 semaines.",
+          knowsAbout: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Figma",
+            "Node.js",
+            "PostgreSQL",
+            "Supabase",
+            "OpenAI",
+            "Claude",
+            "Vercel",
+            "SaaS",
+            "MVP",
+            "Application métier",
+            "Intégration IA",
+          ],
           sameAs: [
             "https://www.linkedin.com/in/dylann-xavero-349765a4/",
-            "https://www.instagram.com/vizionweb",
+            "https://www.instagram.com/vizionweb_agence",
           ],
           contactPoint: [
             {

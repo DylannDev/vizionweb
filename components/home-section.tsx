@@ -23,16 +23,10 @@ const Testimonials = lazyVisible(
   "400px"
 );
 
-const HomeSection = ({
-  locationName,
-  preposition,
-}: {
-  locationName?: string;
-  preposition?: "à" | "en";
-}) => {
+const HomeSection = () => {
   return (
     <main>
-      <Hero locationName={locationName} preposition={preposition} />
+      <Hero />
       <ServicesHomeSection />
       <MiniPortfolio />
       <HighlightsSection />

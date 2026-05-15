@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PiCodeFill, PiPenNibFill } from "react-icons/pi";
 import { IconIllustration } from "@/components/ui/icon-illustration";
+import Badge from "@/components/ui/badge";
 import CallButton from "./call-button";
 import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banner";
 import { LogoCloud } from "./ui/logo-cloud";
@@ -10,66 +11,61 @@ import { portfolioProjects } from "@/data/projets";
 import { logos } from "@/data";
 import { PageHero } from "./ui/page-hero";
 
-interface HeroSEOProps {
-  locationName?: string;
-  preposition?: "à" | "en";
-}
-
-export function Hero({ locationName, preposition = "à" }: HeroSEOProps) {
+export function Hero() {
   return (
     <PageHero>
       <div className="relative flex flex-col gap-6 -mt-10 sm:m-0 items-center justify-center text-center z-10">
+        <Badge variant="black" className="mb-0">
+          Pour entrepreneurs, startups & PME ambitieuses
+        </Badge>
         <div className="">
           <h1 className="space-y-1 font-semibold text-balance max-w-5xl mx-auto text-5xl min-[820px]:text-6xl text-primary-dark">
-            {locationName ? (
-              `Agence de création de sites et applications web ${preposition} ${locationName}`
-            ) : (
-              <>
-                <span className="flex items-center justify-center gap-y-1 gap-x-3 sm:gap-4 flex-wrap">
-                  On conçoit
-                  <IconIllustration
-                    aria-hidden
-                    icon={PiPenNibFill}
-                    imgSize={16}
-                    size={45}
-                    className="sm:hidden"
-                  />
-                  <IconIllustration
-                    aria-hidden
-                    icon={PiPenNibFill}
-                    size={50}
-                    className="hidden sm:flex"
-                  />
-                  et développe
-                  <IconIllustration
-                    aria-hidden
-                    icon={PiCodeFill}
-                    imgSize={16}
-                    size={45}
-                    className="sm:hidden"
-                  />
-                  <IconIllustration
-                    aria-hidden
-                    icon={PiCodeFill}
-                    size={50}
-                    className="hidden sm:flex"
-                  />
-                  vos projets web sur-mesure
-                </span>
-              </>
-            )}
+            <span className="flex items-center justify-center gap-y-1 gap-x-3 sm:gap-4 flex-wrap">
+              On conçoit
+              <IconIllustration
+                aria-hidden
+                icon={PiPenNibFill}
+                imgSize={16}
+                size={45}
+                className="sm:hidden"
+              />
+              <IconIllustration
+                aria-hidden
+                icon={PiPenNibFill}
+                size={50}
+                className="hidden sm:flex"
+              />
+              et développe
+              <IconIllustration
+                aria-hidden
+                icon={PiCodeFill}
+                imgSize={16}
+                size={45}
+                className="sm:hidden"
+              />
+              <IconIllustration
+                aria-hidden
+                icon={PiCodeFill}
+                size={50}
+                className="hidden sm:flex"
+              />
+              vos SaaS & applications sur-mesure
+            </span>
           </h1>
         </div>
 
         <p className="text-base sm:text-xl text-gray-dark font-normal -mt-2 max-w-4xl mx-auto text-balance">
-          Site web, application métier ou SaaS à créer ? On le construit pour
-          vous, prêt à lancer en quelques semaines.
+          Votre SaaS prêt à encaisser, votre application métier prête à
+          automatiser. <br />
+          <span className="font-medium text-primary-dark">
+            MVP livré en 3 semaines. Devis sous 24h.
+          </span>
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <CallButton className="min-w-[200px]" />
           <Button variant="black" className="min-w-[200px]" asChild>
-            <Link href="/realisations">Voir nos réalisations</Link>
+            <Link href="/realisations">Voir les réalisations</Link>
           </Button>
         </div>
 

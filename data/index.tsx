@@ -36,9 +36,11 @@ export const COUNTRIES = [
 
 export const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/expertises", label: "Expertises" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/a-propos", label: "À propos" },
   { href: "/blog", label: "Blog" },
+  { href: "/glossaire", label: "Glossaire" },
 ];
 
 export const testimonials = [
@@ -110,22 +112,22 @@ export const testimonials = [
 export const faqs = [
   {
     q: "Combien coûte un projet web ?",
-    a: "Chaque projet est unique et nous établissons un devis sur-mesure après un appel découverte gratuit. Le budget dépend de la complexité : une landing page sera moins coûteuse qu'une application SaaS complète. Nous adaptons notre proposition à vos besoins et à votre enveloppe budgétaire. Réservez un appel pour obtenir un chiffrage précis.",
+    a: "Chaque projet est unique et on établit un devis sur-mesure après un appel découverte gratuit. Le budget dépend de la complexité : une landing page coûte moins qu'une application SaaS complète. On cale la proposition sur vos besoins et votre enveloppe. Réservez un appel pour obtenir un chiffrage précis.",
   },
   {
     q: "Quels sont vos délais de livraison ?",
-    a: "Cela dépend du type de projet. Une landing page : 2-3 semaines. Un site vitrine complet : 2-4 semaines. Une application web ou un MVP : 2-8 semaines. Nous vous donnons un planning précis dès le devis, avec des jalons clairs pour suivre l'avancement.",
+    a: "Ça dépend du type de projet. Une landing page : 2 à 3 semaines. Un site vitrine complet : 2 à 4 semaines. Une application web ou un MVP : 2 à 8 semaines. On vous donne un planning précis dès le devis, avec des jalons clairs pour suivre l'avancement.",
   },
   {
     q: "Quelle est votre spécialité technique ?",
-    a: "Nous sommes spécialisés en applications web modernes : MVP, SaaS, outils métier, et sites web avec fonctionnalités avancées. Notre stack technique (React, Next.js, TypeScript) nous permet de livrer des solutions performantes et évolutives.",
+    a: "On est spécialisés en applications web modernes : MVP, SaaS, outils métier et sites avec fonctionnalités avancées. Notre stack (Next.js, React, TypeScript, Supabase) permet de livrer vite et de faire évoluer le produit dans la durée sans accumuler de dette technique.",
   },
   {
     q: "Que se passe-t-il après la livraison ?",
-    a: "Chaque projet inclut une période de support (30 à 90 jours selon la prestation). Pendant cette période, nous corrigeons les bugs et répondons à vos questions. Au-delà, nous restons disponibles pour faire évoluer votre produit avec de nouvelles fonctionnalités ou des ajustements.",
+    a: "Chaque projet inclut une période de support (30 à 90 jours selon la prestation). Pendant cette période, on corrige les bugs et on répond à vos questions. Au-delà, on reste disponible pour faire évoluer votre produit : nouvelles fonctionnalités, ajustements, ou support à la demande.",
   },
   {
     q: "Est-ce que je suis propriétaire du projet ?",
-    a: "Oui, à 100 %. Le code source, le design et tous les contenus vous appartiennent. Vous recevez l'accès complet à votre projet dès la livraison. Vous êtes libre de le faire évoluer avec nous ou avec un autre prestataire.",
+    a: "Oui, à 100%. Le code source, le design et tous les contenus vous appartiennent. Vous recevez l'accès complet à votre projet dès la livraison. Vous êtes libre de le faire évoluer avec Vizion Web ou un autre prestataire.",
   },
 ];
