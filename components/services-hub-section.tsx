@@ -23,12 +23,10 @@ export function ServiceCategorySection({ category, index }: Props) {
             <ContentCard
               title={service.shortTitle}
               description={service.shortDescription}
-              iconSrc={service.iconSrc}
-              iconBg={service.iconBg}
+              icon={service.icon}
               watermarkVariant={i}
               href={`/services/${service.slug}`}
-              actionLabel="En savoir plus"
-              centered
+              actionLabel="Lancer mon projet"
             />
           </div>
         ))}

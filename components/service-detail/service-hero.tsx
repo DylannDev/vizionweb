@@ -8,7 +8,9 @@ export function ServiceHero({ service }: { service: Service }) {
   return (
     <div className="text-center">
       <Badge align="center">
-        {service.category === "apps" ? "Applications Web" : "Sites Web"}
+        {service.category === "produits-digitaux"
+          ? "Produits digitaux"
+          : "IA & Automatisation"}
       </Badge>
       <Typography
         as="h1"

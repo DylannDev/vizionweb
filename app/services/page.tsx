@@ -17,16 +17,16 @@ import {
 import FAQ from "@/components/faq";
 
 export const metadata: Metadata = {
-  title: "Nos Services — Applications Web & Sites sur-mesure | Vizion Web",
+  title: "Tous nos services | applications - IA - automatisation | Vizion Web",
   description:
-    "Découvrez nos services : MVP, SaaS, applications métier, landing pages, sites vitrines et sites avancés. Solutions sur-mesure en React/Next.js.",
+    "MVP, SaaS, application métier, e-commerce, dev web, UI/UX, IA générative, n8n. Devis chiffré sous 24h.",
   alternates: {
     canonical: "https://vizionweb.fr/services",
   },
   openGraph: {
-    title: "Nos Services — Applications Web & Sites sur-mesure | Vizion Web",
+    title: "Services : produits digitaux + IA & automatisation | Vizion Web",
     description:
-      "MVP, SaaS, applications métier, landing pages, sites vitrines et sites avancés. Solutions sur-mesure pour startups et entreprises.",
+      "MVP, SaaS, application métier, e-commerce, dev web, UI/UX, IA générative, automatisation n8n.",
     url: "https://vizionweb.fr/services",
     type: "website",
   },
@@ -55,8 +55,8 @@ export default function ServicesPage() {
         <Badge align="center">Services</Badge>
         <Typography
           as="h1"
-          title="Applications web et sites professionnels sur-mesure"
-          subtitle="Vous lancez un SaaS, vous avez besoin d'un outil métier ou d'un site qui convertit ? Nous concevons et développons votre projet de A à Z."
+          title="On conçoit et on développe vos produits digitaux sur-mesure"
+          subtitle="SaaS, MVP, application métier, e-commerce, intégration IA, automatisation. On mets tout en oeuvre pour passer d'une idée à un produit fini."
         />
         <div className="flex justify-center">
           <CallButton />

@@ -12,6 +12,13 @@ const sellingPoints = [
   "30-90 jours de support inclus",
 ];
 
+const FEATURED_SLUGS = [
+  "developpement-web",
+  "saas-sur-mesure",
+  "application-metier",
+  "ia-generative",
+] as const;
+
 interface ServicesHomeSectionProps {
   titleOverride?: string;
   subtitleOverride?: string;
@@ -36,32 +43,35 @@ export function ServicesHomeSection({
           Services
         </Badge>
         <Typography
-          variant="split"
-          title={titleOverride ?? "Les projets que nous réalisons"}
+          align="left"
+          title={titleOverride ?? "Nos terrains de jeu"}
           subtitle={
             subtitleOverride ??
-            "Applications web, SaaS, outils métier et sites professionnels. Chaque projet est développé sur-mesure et livré clé en main."
+            "Du SaaS sur-mesure à l'IA en production, on couvre toute la chaîne produit avec une approche orientée business."
           }
+          className="text-center md:text-left"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service, i) => (
-            <div
-              key={service.slug}
-              className="h-full flex max-sm:sticky top-[100px]"
-            >
-              <ContentCard
-                title={service.shortTitle}
-                description={service.shortDescription}
-                iconSrc={service.iconSrc}
-                iconBg={service.iconBg}
-                watermarkVariant={i}
-                href={`/services/${service.slug}`}
-                actionLabel="En savoir plus"
-                centered
-              />
-            </div>
-          ))}
+        <div className="grid sm:grid-cols-2 gap-4">
+          {FEATURED_SLUGS.map((slug, i) => {
+            const service = services.find((s) => s.slug === slug);
+            if (!service) return null;
+            return (
+              <div
+                key={service.slug}
+                className="h-full flex max-sm:sticky top-[100px]"
+              >
+                <ContentCard
+                  title={service.shortTitle}
+                  description={service.shortDescription}
+                  icon={service.icon}
+                  watermarkVariant={i}
+                  href={`/services/${service.slug}`}
+                  actionLabel="Lancer mon projet"
+                />
+              </div>
+            );
+          })}
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 sm:gap-y-3 mt-8 mb-6 sm:mt-12 sm:mb-10">

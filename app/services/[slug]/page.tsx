@@ -21,6 +21,8 @@ import { ServiceHero } from "@/components/service-detail/service-hero";
 import { ServiceProblemSolution } from "@/components/service-detail/service-problem-solution";
 import { ServiceIncluded } from "@/components/service-detail/service-included";
 import { ServiceTarget } from "@/components/service-detail/service-target";
+import { ServiceStack } from "@/components/service-detail/service-stack";
+import { ServiceResources } from "@/components/service-detail/service-resources";
 import { ServiceFaq } from "@/components/service-detail/service-faq";
 import dynamic from "next/dynamic";
 
@@ -95,10 +97,12 @@ export default async function ServiceDetailPage({
         </PageHero>
         <ServiceProblemSolution service={service} />
         <ServiceIncluded service={service} />
+        <ServiceStack />
         <ServiceTarget service={service} />
-        <div className="bg-gradient-to-t from-background from-0% to-white to-20%">
+        <div className="bg-white">
           <ProcessSteps />
         </div>
+        <ServiceResources service={service} />
         <ServiceFaq service={service} />
       </main>
 

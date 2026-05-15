@@ -69,7 +69,7 @@ import {
 
 // ── Types ────────────────────────────────────────────────────────
 
-export type ServiceCategory = "apps" | "sites";
+export type ServiceCategory = "produits-digitaux" | "ia-auto";
 
 export interface ServiceFaqItem {
   q: string;
@@ -112,6 +112,9 @@ export interface Service {
   faqs: ServiceFaqItem[];
   ctaTitle: string;
   ctaDescription: string;
+  resources?: string[];
+  resourcesTitle?: string;
+  resourcesSubtitle?: string;
 }
 
 export interface ServiceCategoryGroup {
@@ -125,186 +128,196 @@ export interface ServiceCategoryGroup {
 
 export const services: Service[] = [
   // ────────────────────────────────────────────
-  // CATÉGORIE : Applications Web
+  // CATÉGORIE : Produits digitaux (apps + sites custom)
   // ────────────────────────────────────────────
   {
-    slug: "mvp-proof-of-concept",
-    title: "MVP & Proof of Concept",
-    shortTitle: "MVP & PoC",
-    category: "apps",
+    slug: "mvp",
+    title: "Agence MVP : développement startup en 3 semaines",
+    shortTitle: "MVP",
+    category: "produits-digitaux",
     icon: PiRocketLaunchFill,
     iconSrc: "/icons/mvp.svg",
     iconBg: "bg-violet-500",
-    shortDescription:
-      "Validez votre idée rapidement avec un produit fonctionnel. Livré en 2-6 semaines, prêt à tester avec vos premiers utilisateurs.",
-    metaTitle: "Développement MVP & Proof of Concept sur-mesure | Vizion Web",
+    shortDescription: "Validez votre idée rapidement avec un produit testable.",
+    metaTitle: "Agence MVP : développement en 3 semaines | Vizion Web",
     metaDescription:
-      "Lancez votre produit minimum viable en 2 à 6 semaines. Code sur-mesure React/Next.js, prêt à tester et à scaler.",
-    heroTitle: "Validez votre idée avec un MVP fonctionnel",
+      "Agence MVP basée à Montpellier. Devis chiffré sous 24h, MVP livré en 3 semaines. React, Next.js, Supabase. Code 100% à vous.",
+    heroTitle: "Votre MVP livré en 3 semaines",
     heroSubtitle:
-      "Un produit fonctionnel livré en quelques semaines, prêt à être testé par de vrais utilisateurs. Vous validez votre marché avant d'investir massivement.",
+      "On développe l'application qui valide votre idée auprès de vos premiers utilisateurs. Stack moderne, code à vous, mise en production incluse.",
     problemTitle: "Votre idée mérite mieux qu'un PowerPoint",
     problemDescription:
-      "Vous avez une idée prometteuse, mais sans produit concret, impossible de convaincre des utilisateurs, des investisseurs ou même de valider vos hypothèses. Les cycles de développement classiques prennent des mois et coûtent cher.",
+      "Six mois de cycle agence, des budgets qui dérapent dès le premier devis. Pendant que vous validez votre projet, un concurrent peut le lancer. Un MVP, c'est un produit testable en 3 semaines avant d'investir dans une V1 complète.",
     problemPoints: [
       {
-        text: "Vous avez une idée mais aucun produit concret à montrer aux utilisateurs ou investisseurs",
+        text: "Une idée prometteuse, aucun produit testable à montrer aux utilisateurs ou aux investisseurs",
         icon: PiLightbulbFill,
       },
       {
-        text: "Vous hésitez à investir des dizaines de milliers d'euros sans validation marché",
-        icon: PiCurrencyDollarFill,
-      },
-      {
-        text: "Les délais de développement classiques sont trop longs pour votre timeline",
+        text: "Des devis d'agence à 6 mois pour valider une simple hypothèse marché",
         icon: PiHourglassFill,
       },
       {
-        text: "Vous ne savez pas quelles fonctionnalités prioriser pour un premier lancement",
+        text: "Un MVP no-code qui craque dès qu'on dépasse les 100 premiers utilisateurs",
+        icon: PiProhibitFill,
+      },
+      {
+        text: "Aucune visibilité sur ce que vos vrais utilisateurs vont penser du produit",
         icon: PiListBulletsFill,
       },
     ],
-    solutionTitle: "Un MVP fonctionnel en 2 à 6 semaines",
+    solutionTitle: "Un MVP fonctionnel livré en 3 semaines",
     solutionDescription:
-      "On commence par trier : quelles fonctionnalités sont vraiment nécessaires pour un premier test ? On conçoit l'interface, on développe, et vous avez un produit utilisable. Pas de superflu. Que l'essentiel pour confronter votre idée au terrain et itérer.",
+      "On cadre les 3 à 5 fonctionnalités clés, on développe avec une stack moderne, on déploie. Vos premiers utilisateurs peuvent ouvrir le produit, l'utiliser et payer. Le code est propre et prêt à évoluer en V1 complète.",
     solutionPoints: [
       {
-        text: "Cadrage stratégique pour identifier les fonctionnalités prioritaires",
+        text: "Cadrage strict en 30 minutes : périmètre, hypothèses critiques, stack, planning sprint par sprint",
         icon: PiTargetFill,
       },
       {
-        text: "Design UI/UX pensé pour la conversion et l'adoption",
+        text: "Design produit Figma orienté conversion et adoption utilisateur",
         icon: PiPenNibFill,
       },
       {
-        text: "Développement sur-mesure en React/Next.js, pensé pour évoluer",
+        text: "Développement sur-mesure en TypeScript, architecture pensée pour scaler à plusieurs milliers d'utilisateurs",
         icon: PiCodeFill,
       },
       {
-        text: "Déploiement rapide pour collecter des retours utilisateurs concrets",
+        text: "Mise en production rapide pour collecter de vrais retours utilisateurs en conditions réelles",
         icon: PiRocketLaunchFill,
       },
     ],
     included: [
       {
-        title: "Cadrage fonctionnel",
+        title: "Cadrage produit en 2 jours",
         description:
-          "Définition du périmètre, priorisation des fonctionnalités, roadmap claire",
+          "Périmètre, priorisation des fonctionnalités, roadmap et planning sprint par sprint",
       },
       {
-        title: "UI/UX Design sur Figma",
+        title: "Design UI/UX sur Figma",
         description:
-          "Maquettes haute fidélité, modifications illimitées jusqu'à validation",
+          "Maquettes haute fidélité, prototype interactif, modifications jusqu'à validation",
       },
       {
         title: "Développement sur-mesure",
-        description:
-          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
+        description: "Code propre et documenté, qui vous appartient à 100%",
       },
       {
-        title: "Base de données & hébergement",
+        title: "Auth & base de données",
         description:
-          "Stockage sécurisé de vos données, déploiement et mise en production inclus",
+          "Comptes utilisateurs, gestion des rôles, stockage sécurisé via Supabase",
+      },
+      {
+        title: "Déploiement & mise en production",
+        description:
+          "Hébergement Vercel, domaine personnalisé, monitoring de base inclus",
       },
       {
         title: "Tests & recette",
         description:
-          "Vérification complète avant mise en ligne, corrections incluses",
+          "Vérification complète avant livraison, corrections incluses",
       },
       {
         title: "Support 90 jours",
         description:
-          "Ajustements post-lancement et accompagnement pendant vos premiers retours utilisateurs",
+          "Ajustements post-lancement et accompagnement sur les premiers retours utilisateurs",
       },
     ],
-    deliveryTime: "2 à 8 semaines",
+    deliveryTime: "3 semaines",
     targetProfiles: [
       {
         title: "Startup early-stage",
         description:
-          "Vous cherchez à valider un concept avant une levée de fonds ou un premier go-to-market.",
+          "Vous voulez valider un concept avant une levée de fonds ou un premier go-to-market.",
         icon: PiRocketLaunchFill,
       },
       {
-        title: "Porteur de projet",
+        title: "Founder solo non-tech",
         description:
-          "Vous avez une idée d'application et besoin d'un prototype fonctionnel pour convaincre des partenaires.",
-        icon: PiLightbulbFill,
+          "Vous portez l'idée et le business mais cherchez un partenaire technique pour construire le produit.",
+        icon: PiUserFill,
       },
       {
-        title: "Entreprise qui innove",
+        title: "Entreprise innovante",
         description:
-          "Vous testez un nouveau service digital en interne ou pour vos clients.",
+          "Vous testez un nouveau service digital en interne ou pour vos clients sans mobiliser votre équipe IT.",
         icon: PiFlaskFill,
       },
     ],
     faqs: [
       {
-        q: "Quelle est la différence entre un MVP et un prototype ?",
-        a: "Un prototype est une maquette interactive sans vrai code derrière. Un MVP est un produit réel, fonctionnel, que vos utilisateurs peuvent utiliser. Nous développons des MVP : du vrai code, prêt à évoluer.",
+        q: "MVP ou prototype Figma : quelle différence ?",
+        a: "Un prototype Figma est une maquette cliquable, sans code ni données réelles. Un MVP est un produit en production avec un vrai backend, des comptes utilisateurs et la possibilité d'encaisser ou de stocker des données. Vous pouvez le donner à 50 utilisateurs et observer leur comportement.",
       },
       {
-        q: "Mon MVP pourra-t-il évoluer en produit complet ?",
-        a: "Oui, c'est prévu dès le départ. Le code est écrit en React/Next.js/TypeScript avec une architecture propre et documentée. Ajouter des fonctionnalités plus tard ne demande pas de tout réécrire.",
+        q: "Comment livrez-vous un MVP en 3 semaines ?",
+        a: "Trois leviers : cadrage strict pour ne garder que 3 à 5 fonctionnalités essentielles, stack moderne qui évite de réinventer la roue (Next.js, Supabase, Stripe), et un seul interlocuteur qui pilote le projet de bout en bout.",
       },
       {
-        q: "Combien de fonctionnalités peut contenir un MVP ?",
-        a: "Un bon MVP se concentre sur 3 à 5 fonctionnalités clés. Nous vous aidons à identifier lesquelles sont essentielles pour tester votre hypothèse marché.",
+        q: "Combien coûte un MVP ?",
+        a: "Chaque MVP est sur-mesure : pas de tarif standard. Le devis chiffré est envoyé sous 24h après un appel de cadrage de 30 minutes, en fonction du périmètre fonctionnel. Si votre projet sort du format 3 semaines, on vous le dit honnêtement et on propose un découpage en phases.",
       },
       {
-        q: "Quel est le délai de livraison ?",
-        a: "Entre 2 et 8 semaines selon la complexité. Nous définissons un planning précis dès le cadrage initial.",
+        q: "Mon MVP pourra-t-il évoluer en V1 complète ?",
+        a: "Oui, l'architecture est pensée pour ça dès le départ. Le code est écrit en TypeScript avec une structure modulaire, vous pouvez ajouter des fonctionnalités sans tout réécrire. Si vous internalisez l'équipe tech plus tard, le code est documenté et reprenable.",
       },
       {
-        q: "Que se passe-t-il après le lancement du MVP ?",
-        a: "90 jours de support sont inclus. Ensuite, nous pouvons vous accompagner sur l'évolution du produit (ajout de fonctionnalités, optimisations, V2) via un nouveau projet.",
+        q: "Le code m'appartient-il à 100 % ?",
+        a: "Oui. À la livraison, vous récupérez le repository GitHub, les accès Vercel, Supabase, Stripe et tous les services tiers. Aucune dépendance technique envers Vizion Web : vous pouvez faire évoluer le produit avec un autre prestataire sans friction.",
       },
     ],
-    ctaTitle: "Vous avez une idée ? Parlons-en.",
+    ctaTitle: "Prêt à transformer votre idée en MVP ?",
     ctaDescription:
-      "Réservez 30 minutes. On regarde ensemble si votre projet est prêt pour un MVP et on vous donne un plan d'action concret.",
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. Si le périmètre dépasse 3 semaines, on propose un découpage en phases.",
+    resources: [
+      "quest-ce-quun-mvp",
+      "de-idee-a-application-saas",
+      "cahier-des-charges-site-web",
+    ],
+    resourcesTitle: "Lancer son MVP",
+    resourcesSubtitle:
+      "Du cadrage à la mise en prod, les guides qui font gagner du temps.",
   },
 
   {
     slug: "saas-sur-mesure",
-    title: "SaaS sur-mesure",
-    shortTitle: "SaaS sur-mesure",
-    category: "apps",
+    title: "Développement SaaS & application web sur-mesure",
+    shortTitle: "SaaS",
+    category: "produits-digitaux",
     icon: PiCloudFill,
     iconSrc: "/icons/saas.svg",
     iconBg: "bg-blue-500",
-    shortDescription:
-      "Une application SaaS complète avec gestion utilisateurs, paiements et tableau de bord. De l'architecture à la mise en ligne.",
-    metaTitle: "Développement SaaS sur-mesure | Vizion Web",
+    shortDescription: "Lancez votre SaaS et encaissez vos premiers paiements.",
+    metaTitle: "Développement SaaS & application web sur-mesure | Vizion Web",
     metaDescription:
-      "Nous développons votre application SaaS complète en 3 à 8 semaines. Auth, paiements Stripe, multi-tenant, dashboard admin. Code sur-mesure React/Next.js.",
-    heroTitle: "Transformez votre idée validée en SaaS qui facture",
+      "Définition d'un SaaS et développement d'application web sur-mesure (app web) : architecture, paiements Stripe, dashboard admin, intégration IA. Livré en 4-8 sem.",
+    heroTitle: "Développement SaaS sur-mesure pour startups",
     heroSubtitle:
-      "Vous avez les clients, il vous manque le produit. On construit toute la partie technique et on vous livre un SaaS prêt à encaisser ses premiers paiements.",
+      "On transforme votre idée en SaaS prêt à encaisser ses premiers utilisateurs. Architecture pensée pour scaler à plusieurs milliers d'utilisateurs.",
     problemTitle: "Vous avez la demande, mais pas le produit pour y répondre",
     problemDescription:
-      "Vos premiers utilisateurs sont là, votre offre tient la route. Mais sans produit technique solide, impossible d'aller plus loin. Et les outils no-code vous freinent dès qu'il faut scaler.",
+      "Votre marché est validé, vos premiers prospects sont identifiés. Mais sans produit technique solide, impossible d'encaisser. Recruter un CTO prend six mois et les outils no-code plafonnent dès qu'il faut gérer paiements et rôles.",
     problemPoints: [
       {
-        text: "Vos premiers clients attendent, mais vous n'avez rien à leur vendre",
+        text: "Vos premiers clients sont prêts à payer, mais vous n'avez rien à leur vendre",
         icon: PiUsersFill,
       },
       {
-        text: "Recruter un CTO ou monter une équipe prend des mois que vous n'avez pas",
+        text: "Recruter un CTO ou monter une équipe technique prend des mois",
+        icon: PiHourglassFill,
+      },
+      {
+        text: "Les outils no-code craquent dès qu'il faut gérer paiements et rôles",
         icon: PiProhibitFill,
       },
       {
-        text: "Les outils no-code craquent dès qu'il faut gérer des paiements ou des rôles",
-        icon: PiGearSixFill,
-      },
-      {
-        text: "Chaque mois sans produit, c'est du revenu que vous laissez filer",
+        text: "Chaque mois sans produit en prod, c'est du revenu récurrent qui passe à côté",
         icon: PiChartLineDownFill,
       },
     ],
-    solutionTitle: "On transforme votre idée en produit prêt à facturer",
+    solutionTitle: "On transforme votre idée en SaaS qui facture",
     solutionDescription:
-      "En 3 à 8 semaines, on développe votre SaaS complet : inscription, paiements, gestion des comptes et tableau de bord inclus. Vous récupérez un produit fonctionnel, prêt à accueillir vos premiers clients payants.",
+      "On développe votre SaaS complet en 4 à 8 semaines : architecture multi-tenant, paiements Stripe, dashboard admin et intégration IA si pertinente. Le code est documenté, scalable et vous appartient à la livraison.",
     solutionPoints: [
       {
         text: "Un système de comptes et de rôles pour gérer vos utilisateurs dès le premier jour",
@@ -319,7 +332,7 @@ export const services: Service[] = [
         icon: PiChartBarFill,
       },
       {
-        text: "Une API connectée à vos outils existants (emailing, CRM, analytics)",
+        text: "Une API connectée à vos outils existants (emailing, CRM, analytics, IA)",
         icon: PiPlugsFill,
       },
     ],
@@ -387,72 +400,79 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        q: "Quelle stack technique utilisez-vous pour un SaaS ?",
-        a: "React et Next.js en frontend, avec TypeScript. Pour le backend et la base de données, nous utilisons PostgreSQL avec Prisma. Les paiements sont gérés via Stripe. Cette stack est la même que celle utilisée par des entreprises comme Vercel, Notion ou Linear.",
+        q: "Qu'est-ce qu'une application SaaS ?",
+        a: "Une application SaaS (Software as a Service) est un logiciel hébergé dans le cloud, accessible par abonnement via un navigateur, sans installation locale. Exemples : Slack, Notion, HubSpot. Une SaaS sur-mesure est développée spécifiquement pour votre marché ou votre besoin métier précis, par opposition à un SaaS générique.",
+      },
+      {
+        q: "Quelle stack technique utilisez-vous ?",
+        a: "React et Next.js en frontend avec TypeScript. PostgreSQL via Supabase en backend (auth, storage, realtime inclus). OpenAI ou Claude pour l'intégration IA. Stripe pour les paiements, Vercel pour le déploiement. Une stack éprouvée pour scaler de 10 à 100 000 utilisateurs sans tout réécrire.",
       },
       {
         q: "Pouvez-vous gérer le multi-tenant ?",
-        a: "Oui. Nous concevons l'architecture multi-tenant dès le départ si votre modèle le nécessite. Chaque client a ses données isolées tout en partageant la même infrastructure.",
+        a: "Oui. On conçoit l'architecture multi-tenant dès le départ si votre modèle le nécessite : chaque client a ses données strictement isolées tout en partageant la même infrastructure. C'est le mode standard pour une SaaS B2B.",
       },
       {
-        q: "Et si j'ai besoin de fonctionnalités supplémentaires après le lancement ?",
-        a: "90 jours de support sont inclus pour les ajustements. Pour de nouvelles fonctionnalités, on établit ensemble une roadmap et un devis pour les phases suivantes. Le code est structuré pour accueillir de nouvelles briques sans tout casser.",
+        q: "Combien coûte un SaaS sur-mesure ?",
+        a: "Chaque SaaS est sur-mesure : pas de tarif standard. Le pricing dépend du nombre de fonctionnalités, de la complexité métier (multi-tenant, rôles, intégrations API) et du niveau d'intégration IA souhaité. Devis chiffré envoyé sous 24h après un cadrage de 30 minutes.",
       },
       {
-        q: "Qui est propriétaire du code ?",
-        a: "Vous. Le code source, les accès serveur, les comptes Stripe : tout vous appartient à 100%. Aucune dépendance envers notre agence.",
-      },
-      {
-        q: "Quel est le délai de livraison ?",
-        a: "3 à 8 semaines selon la complexité. Nous pouvons aussi découper en phases (MVP → V2 → V3) pour un lancement progressif.",
+        q: "Le code m'appartient-il à 100 % ?",
+        a: "Oui. Le code source, les accès serveur, les comptes Stripe, Supabase et OpenAI vous appartiennent. Aucune dépendance envers notre agence : vous pouvez faire évoluer le produit avec un autre prestataire si vous le souhaitez.",
       },
     ],
-    ctaTitle: "Votre SaaS, on en parle ?",
+    ctaTitle: "Prêt à transformer votre idée en SaaS qui facture ?",
     ctaDescription:
-      "Réservez 30 minutes. On regarde votre projet, votre modèle, et on vous dit comment on peut le construire.",
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On vous dit comment construire votre SaaS en 4 à 8 semaines.",
+    resources: [
+      "fixer-prix-saas-strategie",
+      "application-sur-mesure-vs-saas",
+      "saas-vs-developpement-sur-mesure",
+    ],
+    resourcesTitle: "Lancer son SaaS",
+    resourcesSubtitle:
+      "Du modèle business à l'architecture, les bonnes décisions à prendre.",
   },
 
   {
     slug: "application-metier",
-    title: "Application métier",
+    title: "Application métier & logiciel sur-mesure",
     shortTitle: "Application métier",
-    category: "apps",
+    category: "produits-digitaux",
     icon: PiBriefcaseFill,
     iconSrc: "/icons/app-metier.svg",
     iconBg: "bg-amber-400",
-    shortDescription:
-      "Automatisez vos processus internes avec un outil de gestion pensé pour votre workflow. Gain de temps et réduction d'erreurs.",
-    metaTitle: "Développement d'application métier sur-mesure | Vizion Web",
+    shortDescription: "Un outil métier taillé pour vos process, pas l'inverse.",
+    metaTitle: "Logiciel sur-mesure & application métier B2B | Vizion Web",
     metaDescription:
-      "Nous développons des outils de gestion internes sur-mesure pour automatiser vos processus. Dashboard, workflows, intégrations. Livré en 2 à 8 semaines.",
-    heroTitle: "Automatisez vos processus avec un outil sur-mesure",
+      "Développement de logiciel sur-mesure et application métier pour PME : dashboards, ERP custom, automatisation, intégration IA. Livré en 4-8 semaines.",
+    heroTitle: "Logiciel sur-mesure & application métier pour PME",
     heroSubtitle:
-      "Fini les fichiers Excel et les copier-coller d'outils en outils. On développe l'application dont votre équipe a vraiment besoin.",
+      "On développe l'outil qui colle à vos process : dashboard de pilotage, ERP custom, workflows automatisés et intégration IA quand elle apporte de la valeur.",
     problemTitle:
-      "Les tableurs et outils génériques freinent votre productivité",
+      "Les tableurs et logiciels génériques freinent votre productivité",
     problemDescription:
-      "Votre équipe perd du temps sur des tâches manuelles et répétitives. Les fichiers Excel circulent par email, les données sont éparpillées, et les outils génériques ne correspondent jamais à 100% à vos besoins métier. Résultat : erreurs, lenteurs et frustration.",
+      "Votre équipe perd des heures sur des tâches répétitives. Les fichiers Excel circulent par e-mail, les données sont éparpillées entre cinq outils déconnectés, et les SaaS génériques ne couvrent jamais à 100 % votre métier.",
     problemPoints: [
       {
-        text: "Des processus manuels chronophages qui ralentissent votre équipe",
+        text: "Des process manuels chronophages qui ralentissent toute votre équipe",
         icon: PiClockFill,
       },
       {
-        text: "Des données éparpillées entre Excel, emails et outils déconnectés",
+        text: "Des données éparpillées entre Excel, e-mails et outils déconnectés",
         icon: PiFilesFill,
       },
       {
-        text: "Des outils génériques qui ne collent pas à votre façon de travailler",
+        text: "Des SaaS génériques qui ne collent qu'à 60 % de votre façon de travailler",
         icon: PiPuzzlePieceFill,
       },
       {
-        text: "Des erreurs humaines coûteuses sur les tâches répétitives",
+        text: "Des erreurs humaines coûteuses sur les tâches répétitives sans automatisation",
         icon: PiWarningFill,
       },
     ],
-    solutionTitle: "Un outil conçu pour votre façon de travailler",
+    solutionTitle: "Un logiciel métier conçu pour votre façon de travailler",
     solutionDescription:
-      "On développe une application taillée pour vos processus. Toutes vos données au même endroit, les tâches répétitives automatisées, et une connexion directe avec vos outils actuels. Votre équipe arrête de perdre du temps sur de la saisie manuelle.",
+      "On développe une application métier taillée pour vos workflows : dashboard centralisé, automatisations sur les tâches répétitives, intégrations directes avec votre stack (CRM, compta, RH, e-mail). IA intégrée sur les workflows qui le justifient.",
     solutionPoints: [
       {
         text: "Dashboard de pilotage avec les indicateurs qui comptent pour vous",
@@ -535,443 +555,811 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        q: "Peut-on connecter l'application à nos outils existants ?",
-        a: "Oui. Nous intégrons votre application avec vos outils actuels : CRM, logiciel de comptabilité, outils d'emailing, Google Workspace, etc. Si l'outil a une API, nous pouvons le connecter.",
+        q: "Logiciel sur-mesure, SaaS ou ERP : quelle différence ?",
+        a: "Un SaaS (Salesforce, HubSpot, Notion) est un logiciel partagé en abonnement, configurable mais pas vraiment personnalisable. Un ERP générique (SAP, Odoo) est un SaaS plus large couvrant plusieurs métiers. Un logiciel sur-mesure est développé spécifiquement pour une entreprise : il peut remplacer un SaaS qui ne suffit plus, compléter un ERP avec des modules métier ou couvrir un besoin niche que personne ne propose.",
       },
       {
-        q: "L'application est-elle accessible en mobilité ?",
-        a: "Oui. Toutes nos applications sont accessibles depuis un navigateur, sur tablette comme sur ordinateur.",
+        q: "Combien coûte un logiciel métier sur-mesure ?",
+        a: "Chaque logiciel métier est sur-mesure : pas de tarif standard. Le pricing dépend du nombre de modules, des intégrations tierces (CRM, compta, e-mail), de la complexité métier et du niveau d'intégration IA. Devis chiffré sous 24h après un cadrage de 30 minutes.",
       },
       {
-        q: "Combien d'utilisateurs peuvent utiliser l'application ?",
-        a: "Il n'y a pas de limite technique. L'architecture est conçue pour supporter votre équipe actuelle et sa croissance future.",
+        q: "Peut-on intégrer de l'IA dans le logiciel ?",
+        a: "Oui, c'est souvent là où le sur-mesure prend tout son sens. On intègre OpenAI ou Claude pour extraire des données de PDF (factures, contrats), classifier des e-mails, générer des brouillons de réponse, créer un agent de support N1 ou résumer des dossiers clients.",
       },
       {
-        q: "Que se passe-t-il si nos besoins évoluent ?",
-        a: "Le code est structuré pour accepter de nouvelles fonctionnalités. 90 jours de support sont inclus après le lancement. Pour des évolutions majeures, on vous propose un accompagnement continu sur devis.",
+        q: "Peut-on connecter le logiciel à nos outils existants ?",
+        a: "Oui. On intègre votre logiciel avec votre stack actuel : CRM (HubSpot, Pipedrive, Salesforce), comptabilité (Sage, Pennylane, Quickbooks), e-mail (Google Workspace, Microsoft 365), outils RH, e-commerce (Shopify, WooCommerce). Si l'outil expose une API ou un webhook, on peut le connecter.",
       },
       {
-        q: "Quel est le délai de livraison ?",
-        a: "2 à 8 semaines selon la complexité des workflows et des intégrations. Un planning détaillé est établi dès le cadrage.",
+        q: "Le logiciel est-il accessible sur mobile ?",
+        a: "Oui. Toutes les applications qu'on développe sont responsive et accessibles depuis un navigateur (desktop, tablette, mobile). Si vous avez besoin d'une vraie app mobile native (iOS/Android) en plus, on peut le faire en React Native sur le même backend.",
       },
     ],
-    ctaTitle: "Vos processus méritent mieux qu'un tableur.",
+    ctaTitle: "Prêt à remplacer Excel par un vrai outil métier ?",
     ctaDescription:
-      "Réservez 30 minutes. On regarde ensemble comment un outil sur-mesure peut faire gagner du temps à votre équipe.",
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On regarde vos process actuels et on vous dit si le sur-mesure est la bonne réponse.",
+    resources: [
+      "saas-pme-exemples-outils-metier",
+      "dashboard-sur-mesure-cas-concrets",
+      "crm-sur-mesure-vs-hubspot",
+    ],
+    resourcesTitle: "Lancer son logiciel métier",
+    resourcesSubtitle:
+      "Quand le sur-mesure est rentable et comment cadrer le projet.",
   },
 
   // ────────────────────────────────────────────
-  // CATÉGORIE : Sites Web Professionnels
+  // CATÉGORIE : Produits digitaux (suite) + IA & Automatisation
+  // ────────────────────────────────────────────
+  // ────────────────────────────────────────────
+  // Entry 2 — site-ecommerce
   // ────────────────────────────────────────────
   {
-    slug: "landing-page",
-    title: "Landing Page",
-    shortTitle: "Landing Page",
-    category: "sites",
-    icon: PiCursorClickFill,
-    iconSrc: "/icons/landing-page.svg",
+    slug: "site-ecommerce",
+    title: "Site e-commerce sur mesure : développement custom",
+    shortTitle: "Site e-commerce",
+    category: "produits-digitaux",
+    icon: PiShoppingCartFill,
+    iconSrc: "/icons/site-ecommerce.svg",
     iconBg: "bg-rose-400",
-    shortDescription:
-      "Une page web optimisée pour convertir vos visiteurs. Design moderne, copywriting efficace, livrée en 1-3 semaines.",
-    metaTitle: "Création de Landing Page optimisée conversion | Vizion Web",
+    shortDescription: "La boutique sur-mesure que Shopify ne sait pas faire.",
+    metaTitle: "Site e-commerce sur mesure : développement custom | Vizion Web",
     metaDescription:
-      "Nous créons des landing pages sur-mesure optimisées pour la conversion. Design, copywriting et développement. Livrée en 1 à 3 semaines.",
-    heroTitle: "Transformez vos visiteurs en clients dès le premier clic",
+      "Développement de site ecommerce sur mesure (catalogue B2B, marketplace, abonnement). Stack Next.js + Stripe. Devis sous 24h. Livraison 4 à 8 semaines.",
+    heroTitle: "Site e-commerce sur-mesure pour boutiques qui sortent du moule",
     heroSubtitle:
-      "Design sur-mesure, textes écrits pour convaincre, et un seul objectif, que vos visiteurs passent à l'action. Livrée en 1-3 semaines.",
-    problemTitle: "Votre page actuelle ne convertit pas assez",
+      "On développe votre boutique en ligne quand Shopify ou WooCommerce ne suivent plus : catalogue B2B, marketplace, abonnements, prix par client. Performant et SEO-ready à la mise en ligne.",
+    problemTitle: "Shopify ne fait pas tout, et vous le payez cher",
     problemDescription:
-      "Vous investissez dans la publicité ou le référencement, mais votre page ne transforme pas les visiteurs en clients. Le message est flou, le design ne rassure pas, et les visiteurs quittent la page sans agir. Chaque clic perdu, c'est du budget gaspillé.",
+      "Votre thème ne supporte pas votre catalogue, les apps externes empilent les abonnements mensuels, et chaque évolution demande un freelance qui découvre la plateforme. Au moment de scaler, la simplicité initiale devient un piège.",
     problemPoints: [
       {
-        text: "Vos campagnes publicitaires génèrent du trafic mais peu de conversions",
+        text: "Votre catalogue (variantes, prix par client, devis) ne rentre pas dans un thème standard",
+        icon: PiPuzzlePieceFill,
+      },
+      {
+        text: "Chaque fonctionnalité demande une app payante qui multiplie les abonnements mensuels",
+        icon: PiCurrencyDollarFill,
+      },
+      {
+        text: "Les performances Core Web Vitals plombent votre référencement et vos conversions",
         icon: PiChartLineDownFill,
       },
       {
-        text: "Votre message n'est pas assez clair ou percutant pour convaincre",
-        icon: PiMegaphoneFill,
-      },
-      {
-        text: "Le design actuel ne rassure pas suffisamment vos visiteurs",
+        text: "Votre marque ressemble à toutes les autres boutiques sous le même thème",
         icon: PiEyeSlashFill,
       },
-      {
-        text: "Vous n'avez pas de page dédiée pour vos offres ou votre acquisition",
-        icon: PiBrowserFill,
-      },
     ],
-    solutionTitle: "Une page conçue pour un seul objectif : convertir",
+    solutionTitle: "Une boutique custom qui colle à votre business",
     solutionDescription:
-      "On rédige les textes, on conçoit le design et on développe la page. Chaque élément (titre, arguments, preuves sociales, bouton d'action) est là pour une seule raison : pousser le visiteur à agir.",
+      "On développe votre site e-commerce sur-mesure : catalogue branché sur votre vraie source de données, paiements Stripe complets, back-office adapté à votre équipe. SEO propre à la mise en ligne.",
     solutionPoints: [
       {
-        text: "Copywriting persuasif adapté à votre cible et votre offre",
-        icon: PiPenNibFill,
+        text: "Catalogue produits flexible : variantes, prix B2B, stocks multi-entrepôts, devis sur mesure",
+        icon: PiListBulletsFill,
       },
       {
-        text: "Design sur-mesure qui renforce votre crédibilité",
-        icon: PiPaintBrushFill,
-      },
-      {
-        text: "Optimisation technique (vitesse, SEO, responsive)",
-        icon: PiLightningFill,
-      },
-      { text: "Parcours de conversion testé et validé", icon: PiTargetFill },
-    ],
-    included: [
-      {
-        title: "Copywriting de conversion",
-        description:
-          "Rédaction complète de la page : titres, arguments, CTA, preuves sociales",
-      },
-      {
-        title: "UI/UX Design Figma",
-        description: "Maquette haute fidélité avec modifications illimitées",
-      },
-      {
-        title: "Développement sur-mesure",
-        description:
-          "1-2 pages, design fidèle à la maquette, animations fluides",
-      },
-      {
-        title: "Responsive design",
-        description: "Optimisation parfaite sur mobile, tablette et desktop",
-      },
-      {
-        title: "SEO technique de base",
-        description: "Balises, structure, performance, Core Web Vitals",
-      },
-      {
-        title: "Support 30 jours",
-        description: "Ajustements et optimisations post-lancement",
-      },
-    ],
-    deliveryTime: "1 à 3 semaines",
-    targetProfiles: [
-      {
-        title: "Startup en acquisition",
-        description:
-          "Vous lancez des campagnes publicitaires et avez besoin d'une page qui maximise chaque clic.",
-        icon: PiCrosshairFill,
-      },
-      {
-        title: "Entreprise qui lance une offre",
-        description:
-          "Vous avez un nouveau produit ou service et besoin d'une page dédiée pour le promouvoir.",
-        icon: PiMegaphoneFill,
-      },
-      {
-        title: "Entrepreneur ou freelance",
-        description:
-          "Vous voulez une présence en ligne rapide et efficace pour générer des leads.",
-        icon: PiSuitcaseSimpleFill,
-      },
-    ],
-    faqs: [
-      {
-        q: "Quelle est la différence avec un template ?",
-        a: "Un template est générique. Notre landing page est conçue sur-mesure pour votre offre, votre cible et vos objectifs. Le copywriting, le design et le parcours de conversion sont pensés spécifiquement pour maximiser vos résultats.",
-      },
-      {
-        q: "Le copywriting est-il inclus ?",
-        a: "Oui. Nous rédigeons l'intégralité des textes de votre page : titres, arguments, appels à l'action, preuves sociales. Le tout est adapté à votre ton de marque et optimisé pour la conversion.",
-      },
-      {
-        q: "Puis-je modifier le contenu moi-même ensuite ?",
-        a: "Oui. Votre page est livrée avec un accès pour modifier les textes, images et contenus vous-même. Pour des ajustements de structure ou de design, il suffit de nous contacter pendant la période de support.",
-      },
-      {
-        q: "Quel est le délai de livraison ?",
-        a: "1 à 3 semaines, de la stratégie à la mise en ligne. Un planning précis est défini dès le départ.",
-      },
-    ],
-    ctaTitle: "Votre offre mérite une page à la hauteur.",
-    ctaDescription:
-      "Réservez 30 minutes. On analyse votre offre, votre cible, et on vous propose une approche de conversion adaptée.",
-  },
-
-  {
-    slug: "site-vitrine",
-    title: "Site Vitrine",
-    shortTitle: "Site Vitrine",
-    category: "sites",
-    icon: PiStorefrontFill,
-    iconSrc: "/icons/site-vitrine.svg",
-    iconBg: "bg-emerald-500",
-    shortDescription:
-      "Un site professionnel qui renforce votre crédibilité. 2-10+ pages, SEO optimisé, design sur-mesure.",
-    metaTitle: "Création de Site Vitrine professionnel sur-mesure | Vizion Web",
-    metaDescription:
-      "Nous créons des sites vitrines professionnels sur-mesure en React/Next.js. Design, copywriting, SEO. 2 à 4 semaines de livraison.",
-    heroTitle: "Un site vitrine qui donne envie de vous contacter",
-    heroSubtitle:
-      "Un site qui reflète la qualité de votre travail, qui rassure dès la première visite, et qui pousse vos visiteurs à vous contacter. Le tout bien référencé sur Google.",
-    problemTitle:
-      "Votre site actuel ne reflète pas la qualité de votre travail",
-    problemDescription:
-      "Quand un prospect cherche vos services en ligne, la première impression se fait en quelques secondes. Un site obsolète, lent ou mal conçu envoie le mauvais signal, même si votre expertise est excellente. Vos concurrents avec un meilleur site captent les clients à votre place.",
-    problemPoints: [
-      {
-        text: "Votre site est obsolète et ne reflète plus votre image professionnelle",
-        icon: PiClockCountdownFill,
-      },
-      {
-        text: "Les visiteurs quittent la page sans vous contacter",
-        icon: PiSignOutFill,
-      },
-      {
-        text: "Vous n'apparaissez pas (ou mal) dans les résultats de recherche Google",
-        icon: PiMagnifyingGlassFill,
-      },
-      {
-        text: "Votre site n'est pas adapté au mobile ou manque de performance",
-        icon: PiDeviceMobileFill,
-      },
-    ],
-    solutionTitle: "Un site conçu pour rassurer et convertir",
-    solutionDescription:
-      "On développe un site vitrine complet qui présente votre activité clairement et donne envie de vous contacter. Textes rédigés par nos soins, design sur-mesure, et un référencement Google soigné pour que vos prospects vous trouvent.",
-    solutionPoints: [
-      {
-        text: "Design sur-mesure aligné avec votre identité de marque",
-        icon: PiPaletteFill,
-      },
-      {
-        text: "Copywriting professionnel qui valorise votre expertise",
-        icon: PiNotePencilFill,
-      },
-      {
-        text: "SEO renforcé pour être visible sur les recherches locales et métier",
-        icon: PiTrendUpFill,
-      },
-      {
-        text: "Performance optimale sur tous les appareils",
-        icon: PiDevicesFill,
-      },
-    ],
-    included: [
-      {
-        title: "Copywriting professionnel",
-        description:
-          "Rédaction de l'ensemble des pages : accueil, services, à propos, contact",
-      },
-      {
-        title: "UI/UX Design Figma",
-        description: "Maquettes complètes avec modifications illimitées",
-      },
-      {
-        title: "Développement sur-mesure",
-        description:
-          "2-10+ pages, code qui vous appartient à 100%, animations et responsive",
-      },
-      {
-        title: "SEO renforcé",
-        description:
-          "Optimisation on-page complète, structure, balises, performance",
-      },
-      {
-        title: "CMS simple",
-        description:
-          "Interface d'administration pour modifier vos contenus en autonomie",
-      },
-      {
-        title: "Intégrations",
-        description:
-          "Formulaires de contact, Google Maps, réseaux sociaux, analytics",
-      },
-      {
-        title: "Support 30 jours",
-        description:
-          "Corrections, ajustements et accompagnement post-lancement",
-      },
-    ],
-    deliveryTime: "2 à 4 semaines",
-    targetProfiles: [
-      {
-        title: "Entreprise établie",
-        description:
-          "Vous avez une activité qui tourne et besoin d'un site à la hauteur de votre réputation.",
-        icon: PiBuildingsFill,
-      },
-      {
-        title: "Profession libérale",
-        description:
-          "Vous cherchez un site professionnel qui inspire confiance et génère des prises de contact.",
-        icon: PiStethoscopeFill,
-      },
-      {
-        title: "Artisan ou commerçant",
-        description:
-          "Vous voulez être visible en ligne et attirer des clients locaux.",
-        icon: PiMapPinFill,
-      },
-    ],
-    faqs: [
-      {
-        q: "Puis-je modifier le contenu moi-même ?",
-        a: "Oui. Votre site est livré avec un accès pour modifier les textes, images et contenus vous-même.",
-      },
-      {
-        q: "Le site sera-t-il bien référencé sur Google ?",
-        a: "Oui. Le SEO technique est intégré dès la conception : structure des balises, performance, vitesse de chargement, données structurées. Nous optimisons les bases pour que Google indexe et référence votre site correctement.",
-      },
-      {
-        q: "Combien de pages sont incluses ?",
-        a: "Le site vitrine comprend 2 à 8 pages et plus. Le nombre exact est défini lors du cadrage en fonction de vos besoins.",
-      },
-      {
-        q: "Quel est le délai de livraison ?",
-        a: "2 à 4 semaines de la conception à la mise en ligne.",
-      },
-    ],
-    ctaTitle: "Votre site actuel ne vous ressemble plus ?",
-    ctaDescription:
-      "Réservez 30 minutes. On fait le point sur votre site, votre marché, et on vous dit ce qu'il faut pour attirer plus de clients.",
-  },
-
-  {
-    slug: "site-web-avance",
-    title: "Site Web Avancé",
-    shortTitle: "Site Web Avancé",
-    category: "sites",
-    icon: PiGearFill,
-    iconSrc: "/icons/site-web-complet.svg",
-    iconBg: "bg-cyan-500",
-    shortDescription:
-      "Un site avec fonctionnalités métier spécifiques : espace membre, réservation, intégrations API. Sur-mesure de A à Z.",
-    metaTitle:
-      "Création de Site Web Avancé avec fonctionnalités sur-mesure | Vizion Web",
-    metaDescription:
-      "Nous développons des sites web avec fonctionnalités avancées : espace client, réservation, paiement en ligne, espace membre. Livré en 3 à 6 semaines.",
-    heroTitle:
-      "Un site web avec les fonctionnalités dont votre business a besoin",
-    heroSubtitle:
-      "Réservation en ligne, paiement, espace client, gestion de contenu : on intègre les fonctionnalités dont votre activité a besoin, directement dans votre site.",
-    problemTitle:
-      "Votre activité a des besoins qu'un simple site vitrine ne peut pas couvrir",
-    problemDescription:
-      "Vous avez besoin de plus qu'une vitrine en ligne. Prise de rendez-vous, paiement, espace client, réservations : ces fonctionnalités nécessitent du développement sur-mesure. Et les outils tout faits ne s'adaptent jamais vraiment à votre façon de travailler.",
-    problemPoints: [
-      {
-        text: "Vous gérez les réservations ou rendez-vous manuellement (téléphone, email)",
-        icon: PiCalendarXFill,
-      },
-      {
-        text: "Vos clients n'ont pas d'espace dédié pour suivre leurs commandes ou informations",
-        icon: PiUserCircleFill,
-      },
-      {
-        text: "Vous n'acceptez pas le paiement en ligne alors que vos clients le demandent",
+        text: "Paiements Stripe complets : cartes, SEPA, abonnements, paiement différé pour le B2B",
         icon: PiCreditCardFill,
       },
       {
-        text: "Les solutions standardisées ne correspondent pas à votre façon de travailler",
-        icon: PiPuzzlePieceFill,
-      },
-    ],
-    solutionTitle: "Des fonctionnalités sur-mesure intégrées à votre site",
-    solutionDescription:
-      "On développe votre site avec les fonctionnalités propres à votre activité. Réservation, espace client sécurisé, paiement en ligne, CMS avancé : chaque brique est codée sur-mesure pour coller à vos processus et faciliter la vie de vos clients.",
-    solutionPoints: [
-      {
-        text: "Fonctionnalités métier intégrées nativement à votre site",
-        icon: PiWrenchFill,
+        text: "Back-office sur mesure : votre équipe gère commandes et stock sans jongler entre 5 outils",
+        icon: PiChartBarFill,
       },
       {
-        text: "Espace client sécurisé pour vos utilisateurs",
-        icon: PiLockKeyFill,
-      },
-      {
-        text: "Paiement en ligne et gestion des transactions",
-        icon: PiWalletFill,
-      },
-      {
-        text: "CMS avancé pour gérer votre contenu en autonomie",
-        icon: PiArticleFill,
+        text: "Performance et SEO : Core Web Vitals optimisés, structure pensée pour Google",
+        icon: PiLightningFill,
       },
     ],
     included: [
       {
-        title: "Fonctionnalités sur-mesure",
+        title: "Cadrage business & UX",
         description:
-          "Réservation, paiement, espace client, espace membre, selon vos besoins",
+          "Analyse du parcours d'achat, modèle de pricing, logique catalogue",
       },
       {
-        title: "UI/UX Design Figma",
+        title: "Design Figma sur mesure",
         description:
-          "Interface complète, modifications illimitées jusqu'à validation",
+          "Identité visuelle adaptée à votre marque, fiches produits, tunnel d'achat",
       },
       {
-        title: "Développement sur-mesure",
+        title: "Développement front custom",
         description:
-          "Code qui vous appartient à 100%, architecture pensée pour évoluer",
+          "Boutique Next.js performante, responsive, optimisée Core Web Vitals",
       },
       {
-        title: "CMS avancé",
+        title: "Paiements & abonnements",
         description:
-          "Gestion de contenu poussée pour vos pages, blog, portfolio, etc.",
+          "Intégration Stripe complète : cartes, SEPA, abonnements, paiement différé B2B",
       },
       {
-        title: "Intégrations & API",
-        description: "Paiement (Stripe), emailing, calendrier, outils tiers",
+        title: "Catalogue & gestion produits",
+        description:
+          "Système de gestion adapté à votre logique métier (variantes, prix, stocks)",
       },
       {
-        title: "Formation complète",
+        title: "Back-office équipe",
         description:
-          "Formation de votre équipe sur l'utilisation de toutes les fonctionnalités",
+          "Interface dédiée pour gérer commandes, clients, expéditions, factures",
       },
       {
-        title: "Support 60 jours",
+        title: "SEO technique",
         description:
-          "Accompagnement post-lancement, corrections et ajustements",
+          "Sitemap, balises, données structurées produits, indexation propre",
+      },
+      {
+        title: "Support 90 jours",
+        description:
+          "Corrections post-lancement et accompagnement sur les premières ventes",
       },
     ],
-    deliveryTime: "3 à 6 semaines",
+    deliveryTime: "4 à 8 semaines",
     targetProfiles: [
       {
-        title: "Entreprise de services",
+        title: "Boutique B2B avec catalogue complexe",
         description:
-          "Vous avez besoin d'un système de réservation ou de prise de rendez-vous intégré à votre site.",
-        icon: PiCalendarCheckFill,
+          "Vos prix dépendent du client, votre catalogue a des centaines de variantes, vous gérez des devis.",
+        icon: PiBuildingsFill,
       },
       {
-        title: "Commerce ou e-commerce léger",
+        title: "Marketplace deux faces",
         description:
-          "Vous souhaitez vendre en ligne ou proposer des paiements sans passer par une marketplace.",
-        icon: PiShoppingCartFill,
-      },
-      {
-        title: "Organisation ou association",
-        description:
-          "Vous gérez des membres, des événements ou du contenu qui nécessite un espace dédié.",
+          "Vous mettez en relation vendeurs et acheteurs avec une logique de commissions et de paiements split.",
         icon: PiUsersThreeFill,
+      },
+      {
+        title: "Marque DTC qui veut sortir du lot",
+        description:
+          "Votre boutique doit traduire votre marque, pas ressembler à toutes les autres sous le même thème.",
+        icon: PiPaletteFill,
       },
     ],
     faqs: [
       {
-        q: "Quelles fonctionnalités pouvez-vous intégrer ?",
-        a: "Réservation en ligne, paiement (Stripe), espace client avec authentification, gestion de contenu avancée (blog, portfolio, catalogue), formulaires complexes, intégrations API tierces. Si vous avez un besoin spécifique, nous pouvons le développer.",
+        q: "Sur-mesure ou Shopify : quelle différence ?",
+        a: "Shopify est une plateforme SaaS hébergée : rapide à lancer mais limitée par son moteur, ses thèmes et son écosystème d'apps. Un site e-commerce sur-mesure est développé spécifiquement pour votre business : aucune limite produit, logique métier exacte, code à vous. Le sur-mesure devient pertinent quand Shopify coûte plus cher en apps qu'en abonnement, ou quand votre catalogue ne rentre pas.",
       },
       {
-        q: "Est-ce que c'est comme un e-commerce ?",
-        a: "Cela dépend de vos besoins. Nous pouvons intégrer du paiement en ligne pour des services ou des produits, mais pour un catalogue e-commerce complexe avec gestion de stocks, d'autres solutions sont plus adaptées. Nous vous conseillerons lors de l'appel découverte.",
+        q: "Combien coûte un site e-commerce sur-mesure ?",
+        a: "Chaque site e-commerce est sur-mesure : pas de tarif standard. Le pricing dépend du nombre de fonctionnalités, des intégrations (ERP, comptabilité), du volume de produits et de la complexité B2B (prix négociés, paiement différé). Devis chiffré sous 24h après cadrage.",
       },
       {
-        q: "Puis-je gérer le contenu moi-même ?",
-        a: "Pour les modifications ponctuelles de texte ou d'images, nous restons à votre disposition sans surcoût. Si vous avez besoin de modifications fréquentes, nous pouvons intégrer un système de gestion de contenu (CMS) en option, qui vous rendra totalement autonome sur les contenus textuels et visuels.",
+        q: "Pouvez-vous gérer le B2B (prix par client, paiement différé) ?",
+        a: "Oui. On implémente comptes B2B avec prix négociés, validation par administrateur, paiement à 30 ou 60 jours, génération automatique de factures et intégration avec votre comptabilité (Pennylane, Sage). C'est l'un des cas où Shopify atteint ses limites.",
       },
       {
-        q: "Le site sera-t-il sécurisé ?",
-        a: "Oui. Authentification sécurisée, chiffrement des données, protection CSRF, headers de sécurité : toutes les bonnes pratiques sont appliquées dès le développement.",
+        q: "Pouvez-vous gérer les abonnements et box mensuelles ?",
+        a: "Oui, via Stripe Billing. On gère renouvellements automatiques, pause d'abonnement, upgrade et downgrade de plan, et la logique de livraison récurrente côté logistique. Adapté pour box mensuelles, services en abonnement ou licences logicielles.",
       },
       {
-        q: "Quel est le délai de livraison ?",
-        a: "3 à 6 semaines selon la complexité des fonctionnalités. Un planning détaillé est défini dès le cadrage.",
+        q: "Pouvez-vous connecter le site à mon ERP ou ma compta ?",
+        a: "Oui. On intègre les ERP courants (Sage, Cegid, Odoo) et les outils de compta (Pennylane, Quickbooks). Les commandes remontent automatiquement, les stocks se synchronisent, les factures se génèrent sans saisie manuelle.",
       },
     ],
-    ctaTitle: "Votre site a besoin de plus qu'une vitrine ?",
+    ctaTitle: "Prêt à passer de Shopify à une vraie boutique sur-mesure ?",
     ctaDescription:
-      "Réservez 30 minutes. On fait le point sur les fonctionnalités dont vous avez besoin et on vous dit comment les intégrer.",
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On regarde votre catalogue, votre logique B2B et votre stack, et on vous dit si le sur-mesure tient la route économiquement.",
+    resources: [
+      "site-vitrine-vs-ecommerce",
+      "paiement-en-ligne-stripe-paypal",
+      "cout-site-internet",
+    ],
+    resourcesTitle: "Lancer sa boutique en ligne",
+    resourcesSubtitle:
+      "Du choix de stack au paiement B2B, les arbitrages qui comptent.",
+  },
+
+  // ────────────────────────────────────────────
+  // Entry 3 — developpement-web
+  // ────────────────────────────────────────────
+  {
+    slug: "developpement-web",
+    title: "Agence développement web sur mesure pour PME et startups",
+    shortTitle: "Développement web",
+    category: "produits-digitaux",
+    icon: PiCodeFill,
+    iconSrc: "/icons/developpement-web.svg",
+    iconBg: "bg-blue-500",
+    shortDescription:
+      "Tout le développement web sur-mesure pour startups et PME.",
+    metaTitle: "Agence développement web sur mesure | Vizion Web",
+    metaDescription:
+      "Agence développement web à Montpellier : applications internes, portails, dashboards, refontes d'apps legacy. Devis sous 24h. Livraison 2 à 8 semaines.",
+    heroTitle: "Agence de développement web sur-mesure",
+    heroSubtitle:
+      "SaaS, MVP, logiciel métier, application web : on conçoit et on développe vos produits digitaux sur-mesure. Code documenté, mise en production incluse.",
+    problemTitle: "Votre projet web ne rentre dans aucune case standard",
+    problemDescription:
+      "Portail client, dashboard interne, application métier custom, refonte d'app legacy ou MVP. Vous avez un besoin précis que les solutions packagées (templates, no-code, SaaS génériques) ne couvrent pas. Il faut un produit développé sur-mesure pour votre business.",
+    problemPoints: [
+      {
+        text: "Votre besoin demande une vraie authentification, des permissions et des intégrations API custom",
+        icon: PiShieldCheckFill,
+      },
+      {
+        text: "Les templates et thèmes ne couvrent pas votre logique métier ou vos workflows",
+        icon: PiPuzzlePieceFill,
+      },
+      {
+        text: "Vous voulez un produit qui tient en production et évolue avec votre business",
+        icon: PiRocketLaunchFill,
+      },
+      {
+        text: "Votre app legacy ralentit votre équipe et bloque vos évolutions produit",
+        icon: PiArrowsClockwiseFill,
+      },
+    ],
+    solutionTitle: "Tout le développement web sur-mesure, livré clé en main",
+    solutionDescription:
+      "Vizion Web couvre tout le développement web sur-mesure : SaaS, MVP, logiciel métier, portail client, dashboard, refonte d'app legacy.",
+    solutionPoints: [
+      {
+        text: "Cadrage rapide pour identifier le périmètre minimal qui apporte de la valeur",
+        icon: PiTargetFill,
+      },
+      {
+        text: "Authentification, rôles et permissions implémentés proprement",
+        icon: PiShieldCheckFill,
+      },
+      {
+        text: "Intégrations API avec vos outils existants (CRM, comptabilité, e-mail, paiement)",
+        icon: PiPlugsFill,
+      },
+      {
+        text: "Déploiement Vercel, monitoring, code source remis à la livraison",
+        icon: PiRocketLaunchFill,
+      },
+    ],
+    included: [
+      {
+        title: "Cadrage technique & fonctionnel",
+        description:
+          "Analyse du besoin, périmètre, choix d'architecture, planning sprint",
+      },
+      {
+        title: "Design UI/UX",
+        description:
+          "Maquettes Figma, prototype interactif, design system si projet long",
+      },
+      {
+        title: "Développement sur mesure",
+        description:
+          "Code TypeScript propre et documenté, qui vous appartient à 100%",
+      },
+      {
+        title: "Auth & gestion des rôles",
+        description:
+          "Comptes utilisateurs, rôles, permissions, sécurité par défaut",
+      },
+      {
+        title: "Intégrations API",
+        description:
+          "Connexion à vos outils existants (CRM, compta, e-mail, paiement)",
+      },
+      {
+        title: "Déploiement & monitoring",
+        description:
+          "Mise en production Vercel, domaine, monitoring de base, logs",
+      },
+      {
+        title: "Documentation technique",
+        description:
+          "README, schéma d'architecture, instructions d'onboarding pour la suite",
+      },
+      {
+        title: "Support 90 jours",
+        description:
+          "Corrections, ajustements et accompagnement post-livraison",
+      },
+    ],
+    deliveryTime: "2 à 8 semaines",
+    targetProfiles: [
+      {
+        title: "PME en transformation digitale",
+        description:
+          "Vous remplacez un outil interne vieillissant ou vous créez votre premier produit digital pour vos clients.",
+        icon: PiFactoryFill,
+      },
+      {
+        title: "Site pro avec fonctionnalités custom",
+        description:
+          "Votre activité demande plus qu'un site vitrine : espace client, paiement, dashboard, intégrations.",
+        icon: PiBrowserFill,
+      },
+      {
+        title: "Refonte d'app legacy",
+        description:
+          "Votre application interne actuelle est lente, instable, et personne ne veut la maintenir.",
+        icon: PiArrowsClockwiseFill,
+      },
+    ],
+    faqs: [
+      {
+        q: "Sur-mesure ou template WordPress : quelle différence ?",
+        a: "WordPress est rapide à mettre en place mais devient un boulet dès qu'on sort du blog ou du site vitrine : performance, sécurité, fonctionnalités custom. Le développement web sur-mesure est conçu pour votre besoin précis : code minimal, Lighthouse 90+, sécurité maîtrisée. Pertinent dès qu'il y a auth, paiement, données métier ou intégration API.",
+      },
+      {
+        q: "Combien coûte un projet web sur-mesure ?",
+        a: "Chaque projet est sur-mesure : pas de tarif standard. Le pricing dépend du périmètre fonctionnel (auth, paiement, dashboard, intégrations API), de la complexité métier et du volume de données. Devis chiffré sous 24h après un appel de cadrage.",
+      },
+      {
+        q: "Quels sont les délais de livraison ?",
+        a: "2 à 8 semaines selon le périmètre. Un site pro avec espace membre sort en 2 à 3 semaines. Un portail client avec dashboard et intégrations en 4 à 6 semaines. Une application interne complète en 6 à 8 semaines. Planning détaillé au cadrage.",
+      },
+      {
+        q: "Pouvez-vous reprendre un projet existant ?",
+        a: "Oui, sous conditions. On audite le code, on évalue la dette technique et on vous dit honnêtement si la reprise vaut le coup ou s'il vaut mieux refondre. Cas fréquents : projets WordPress lourds, prototypes no-code à industrialiser, apps legacy en PHP ou jQuery.",
+      },
+      {
+        q: "Le code m'appartient-il à 100 % ?",
+        a: "Oui. À la livraison, vous récupérez le repository GitHub, les accès Vercel, Supabase et tous les services tiers. Aucune dépendance technique : vous pouvez faire évoluer le projet en interne ou avec un autre prestataire sans friction.",
+      },
+    ],
+    ctaTitle: "Un projet web sur-mesure à concrétiser ?",
+    ctaDescription:
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. SaaS, MVP, application métier, refonte legacy : on vous dit ce qui tient en 2 à 8 semaines.",
+    resources: [
+      "creer-application-web-etapes",
+      "wordpress-vs-webflow-vs-sur-mesure",
+      "choisir-agence-web-criteres",
+    ],
+    resourcesTitle: "Lancer son projet web",
+    resourcesSubtitle:
+      "Du cahier des charges au choix d'agence, les guides utiles.",
+  },
+
+  // ────────────────────────────────────────────
+  // Entry 4 — ui-ux-design
+  // ────────────────────────────────────────────
+  {
+    slug: "ui-ux-design",
+    title: "Agence UX UI design : interfaces orientées conversion",
+    shortTitle: "UI/UX Design",
+    category: "produits-digitaux",
+    icon: PiPaletteFill,
+    iconSrc: "/icons/ui-ux-design.svg",
+    iconBg: "bg-purple-500",
+    shortDescription: "On conçoit l'interface qui convertit avant de coder.",
+    metaTitle: "Agence UX UI design Figma à Montpellier | Vizion Web",
+    metaDescription:
+      "Agence UX UI design : maquettes Figma, prototypes interactifs, design system. Conversion-first. Devis sous 24h. Livraison 2 à 6 semaines.",
+    heroTitle: "Agence UX UI design pour produits digitaux",
+    heroSubtitle:
+      "On conçoit votre interface en partant des objectifs business : maquettes Figma haute fidélité, prototype interactif cliquable et design system documenté pour vos prochains écrans.",
+    problemTitle:
+      "Une belle interface ne suffit plus, il faut qu'elle convertisse",
+    problemDescription:
+      "Votre produit a l'air sympa en screenshot mais le tunnel ne convertit pas, le parcours utilisateur a des trous, et chaque nouvel écran demande de tout redessiner.",
+    problemPoints: [
+      {
+        text: "Vos écrans sont jolis mais le tunnel d'inscription ou d'achat ne convertit pas",
+        icon: PiChartLineDownFill,
+      },
+      {
+        text: "Aucun design system : chaque nouvel écran réinvente boutons, formulaires et typographie",
+        icon: PiPuzzlePieceFill,
+      },
+      {
+        text: "Pas de prototype interactif pour tester le parcours avant de coder",
+        icon: PiCursorClickFill,
+      },
+      {
+        text: "Vos investisseurs voient un produit qui fait amateur en démo",
+        icon: PiEyeSlashFill,
+      },
+    ],
+    solutionTitle: "Du design Figma orienté business, pas juste joli",
+    solutionDescription:
+      "On conçoit votre interface en partant du parcours utilisateur et des objectifs de conversion. Maquettes haute fidélité, prototype interactif, design system documenté. Disponible en prestation seule ou inclus dans les projets de développement.",
+    solutionPoints: [
+      {
+        text: "Audit du parcours utilisateur et identification des points de friction",
+        icon: PiMagnifyingGlassFill,
+      },
+      {
+        text: "Maquettes Figma haute fidélité, modifications jusqu'à validation",
+        icon: PiPaintBrushFill,
+      },
+      {
+        text: "Prototype interactif cliquable pour tester avant de développer",
+        icon: PiCursorClickFill,
+      },
+      {
+        text: "Design system documenté : couleurs, typographie, composants réutilisables",
+        icon: PiPaletteFill,
+      },
+    ],
+    included: [
+      {
+        title: "Atelier UX & user research",
+        description:
+          "Compréhension de la cible, parcours utilisateur, objectifs de conversion",
+      },
+      {
+        title: "Wireframes basse fidélité",
+        description:
+          "Structure des écrans, hiérarchie de l'information, parcours validé avant le visuel",
+      },
+      {
+        title: "Maquettes UI haute fidélité",
+        description:
+          "Écrans finaux Figma, responsive desktop et mobile, modifications illimitées",
+      },
+      {
+        title: "Prototype interactif Figma",
+        description:
+          "Parcours cliquable pour tests utilisateurs et démos investisseurs",
+      },
+      {
+        title: "Design system documenté",
+        description:
+          "Composants réutilisables, tokens couleur et typo, guidelines d'usage",
+      },
+      {
+        title: "Handoff développeur",
+        description:
+          "Specs techniques, exports d'assets, documentation pour intégrer le design",
+      },
+    ],
+    deliveryTime: "2 à 6 semaines",
+    targetProfiles: [
+      {
+        title: "Startup en pre-MVP",
+        description:
+          "Vous voulez valider visuellement votre produit avec des prospects avant d'investir dans le développement.",
+        icon: PiRocketLaunchFill,
+      },
+      {
+        title: "PME qui refond son interface",
+        description:
+          "Votre application interne ou votre site pro a vieilli, vous voulez le moderniser sans tout recoder.",
+        icon: PiArrowsClockwiseFill,
+      },
+      {
+        title: "Founder qui pitch des investisseurs",
+        description:
+          "Vous avez besoin d'un prototype crédible pour vos rendez-vous de levée et vos demos clients.",
+        icon: PiHandshakeFill,
+      },
+    ],
+    faqs: [
+      {
+        q: "UX ou UI design : quelle différence ?",
+        a: "L'UX (User Experience) traite du parcours global et de la logique d'usage : qui sont vos utilisateurs, quelles tâches ils accomplissent, quelles frictions ils rencontrent. L'UI (User Interface) traite du visuel : couleurs, typographie, composants, animations. Un bon design produit gère les deux ensemble, sinon on obtient une interface jolie qui ne convertit pas, ou un parcours fonctionnel qui fait amateur.",
+      },
+      {
+        q: "Combien coûte un projet UX UI ?",
+        a: "Chaque projet est sur-mesure : pas de tarif standard. Le pricing dépend du périmètre (landing seule, MVP complet 10-20 écrans, refonte d'app complète), du nombre d'écrans et de la présence ou non d'un design system à construire. Devis chiffré sous 24h après cadrage.",
+      },
+      {
+        q: "Travaillez-vous uniquement sur Figma ?",
+        a: "Oui, Figma est l'outil de référence pour le design produit en 2026 : collaboration en temps réel, prototypes interactifs natifs, handoff développeur intégré. Si vous avez déjà des fichiers Sketch ou Adobe XD, on peut les migrer en début de projet.",
+      },
+      {
+        q: "Faut-il un design system avant de développer ?",
+        a: "Pour un MVP simple non, on peut démarrer avec des composants Tailwind standards. Pour une application qui va grandir (10+ écrans, plusieurs développeurs ou évolutions fréquentes), oui, le design system évite de redessiner et redévelopper les mêmes boutons et formulaires. On le construit en parallèle des premiers écrans.",
+      },
+      {
+        q: "Le design est-il livré avec les fichiers Figma ?",
+        a: "Oui. Vous récupérez le fichier Figma complet, organisé, avec accès en édition. Vous pouvez modifier vous-même, partager avec d'autres designers ou développeurs. Aucune dépendance envers Vizion Web pour les évolutions futures.",
+      },
+    ],
+    ctaTitle: "Une interface à concevoir ou à refondre ?",
+    ctaDescription:
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On regarde votre tunnel actuel et on vous dit ce qu'on peut livrer en 2 à 6 semaines.",
+    resources: [
+      "landing-page-qui-convertit",
+      "erreurs-conversion-site-web",
+      "tendances-web-design-2026",
+    ],
+    resourcesTitle: "Concevoir une interface qui convertit",
+    resourcesSubtitle:
+      "Les fondamentaux UX qui font la différence sur votre tunnel.",
+  },
+
+  // ────────────────────────────────────────────
+  // Entry 5 — ia-generative
+  // ────────────────────────────────────────────
+  {
+    slug: "ia-generative",
+    title: "Agence IA générative : intégration sur-mesure",
+    shortTitle: "IA générative",
+    category: "ia-auto",
+    icon: PiLightningFill,
+    iconSrc: "/icons/ia-generative.svg",
+    iconBg: "bg-emerald-500",
+    shortDescription:
+      "Intégrez l'IA générative directement dans votre produit.",
+    metaTitle: "Agence IA générative : agents IA sur-mesure | Vizion Web",
+    metaDescription:
+      "Agence IA générative à Montpellier : intégration OpenAI et Claude dans vos apps. Agents IA sur-mesure, RAG, extraction documents. Devis sous 24h.",
+    heroTitle: "Agence IA générative pour applications métier et SaaS",
+    heroSubtitle:
+      "On intègre OpenAI, Claude ou Mistral dans vos workflows : agents conversationnels, RAG sur votre base interne, extraction de PDF et classification automatique.",
+    problemTitle: "L'IA est partout, mais pas dans votre produit",
+    problemDescription:
+      "Vos concurrents annoncent des features IA toutes les semaines, votre équipe technique vous dit que c'est compliqué. Vous avez testé ChatGPT en interne mais le chemin du POC à la feature en production reste flou.",
+    problemPoints: [
+      {
+        text: "Vos concurrents lancent des features IA pendant que votre roadmap stagne",
+        icon: PiChartLineDownFill,
+      },
+      {
+        text: "Vos équipes utilisent ChatGPT en mode bricolage, sans intégration produit",
+        icon: PiProhibitFill,
+      },
+      {
+        text: "Vous ne savez pas quel modèle choisir entre OpenAI, Claude et Mistral",
+        icon: PiPuzzlePieceFill,
+      },
+      {
+        text: "Vos workflows répétitifs (support, qualif lead, extraction doc) coûtent cher en temps humain",
+        icon: PiClockFill,
+      },
+    ],
+    solutionTitle:
+      "Des features IA intégrées dans votre produit, pas plugées à côté",
+    solutionDescription:
+      "On intègre l'IA générative dans vos workflows : agent de support, classification automatique, extraction de données documentaires, génération de contenus. Choix du modèle selon le cas d'usage et le budget.",
+    solutionPoints: [
+      {
+        text: "Agents conversationnels avec RAG sur votre base de connaissance interne",
+        icon: PiUsersFill,
+      },
+      {
+        text: "Extraction de données structurées depuis PDF, factures, contrats, CV",
+        icon: PiFilesFill,
+      },
+      {
+        text: "Classification automatique de tickets, e-mails ou documents entrants",
+        icon: PiArrowsClockwiseFill,
+      },
+      {
+        text: "Génération de contenu intégrée à votre produit (résumés, brouillons, descriptions)",
+        icon: PiNotePencilFill,
+      },
+    ],
+    included: [
+      {
+        title: "Cadrage cas d'usage IA",
+        description:
+          "Identification du workflow, choix du modèle, estimation des coûts en production",
+      },
+      {
+        title: "Prompt engineering",
+        description:
+          "Conception et test des prompts, optimisation de la qualité des réponses",
+      },
+      {
+        title: "Intégration backend",
+        description:
+          "Appels API, gestion des erreurs, fallback, rate limiting, mise en cache",
+      },
+      {
+        title: "Interface utilisateur",
+        description:
+          "Composants UI adaptés au cas d'usage : chat, éditeur, dashboard, formulaire",
+      },
+      {
+        title: "RAG sur base interne",
+        description:
+          "Indexation vectorielle de vos documents, recherche sémantique, réponses sourcées",
+      },
+      {
+        title: "Monitoring & coûts",
+        description:
+          "Suivi des appels, alertes coût, dashboard d'usage par utilisateur ou organisation",
+      },
+      {
+        title: "Documentation & handoff",
+        description:
+          "Documentation des prompts, schéma technique, instructions pour faire évoluer la feature",
+      },
+    ],
+    deliveryTime: "3 à 8 semaines",
+    targetProfiles: [
+      {
+        title: "SaaS qui veut une feature IA",
+        description:
+          "Vous avez un produit en production et vous voulez ajouter une feature IA différenciante sans casser l'existant.",
+        icon: PiCloudFill,
+      },
+      {
+        title: "PME qui automatise un workflow texte",
+        description:
+          "Votre équipe passe des heures à classifier, résumer ou extraire des données dans des documents.",
+        icon: PiFactoryFill,
+      },
+      {
+        title: "Dirigeant qui prototype un agent IA interne",
+        description:
+          "Vous voulez tester un agent IA sur un cas d'usage métier avant de décider d'industrialiser.",
+        icon: PiUserFill,
+      },
+    ],
+    faqs: [
+      {
+        q: "Agent IA ou chatbot classique : quelle différence ?",
+        a: "Un chatbot classique fonctionne sur arbres de décision et règles : il répond à des questions prévues à l'avance. Un agent IA sur-mesure utilise un modèle de langage pour comprendre le contexte, raisonner et utiliser des outils (lire votre base de données, déclencher une action, créer un ticket). Il gère les questions imprévues mais demande un cadrage précis pour rester fiable.",
+      },
+      {
+        q: "Quel modèle choisir entre OpenAI, Claude et Mistral ?",
+        a: "Cela dépend du cas d'usage et des contraintes. Les modèles GPT d'OpenAI sont polyvalents et bien documentés. Claude excelle sur le raisonnement long et la qualité du code. Mistral est intéressant pour les contraintes de souveraineté européenne. On évalue ensemble selon votre cas, votre budget et vos contraintes de conformité.",
+      },
+      {
+        q: "Qu'est-ce que le RAG et quand est-il pertinent ?",
+        a: "RAG (Retrieval-Augmented Generation) consiste à donner au modèle accès à votre base documentaire au moment de répondre, plutôt que de lui apprendre vos données. Pertinent quand vos données changent souvent, quand vous voulez des réponses sourcées et quand vous voulez éviter le fine-tuning coûteux. Cas typique : agent de support qui répond depuis votre documentation interne.",
+      },
+      {
+        q: "Mes données restent-elles confidentielles ?",
+        a: "Oui, sous conditions. OpenAI et Anthropic n'utilisent pas par défaut les données API pour entraîner leurs modèles (à différencier des versions grand public ChatGPT et Claude.ai). Pour des contraintes plus strictes (santé, finance, secteur public), on peut basculer sur Mistral en hébergement européen ou des modèles auto-hébergés.",
+      },
+      {
+        q: "Comment gérez-vous le coût des appels IA en prod ?",
+        a: "Plusieurs leviers : choix du modèle adapté (pas besoin du modèle haut de gamme pour classifier des e-mails), mise en cache des réponses récurrentes, prompt engineering pour réduire les tokens, monitoring des appels avec alerte de seuil. On vous remet un dashboard de suivi des coûts à la livraison.",
+      },
+    ],
+    ctaTitle: "Une feature IA à intégrer dans votre produit ?",
+    ctaDescription:
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On regarde votre cas d'usage et vos contraintes, et on vous dit ce qu'on peut livrer en 3 à 8 semaines.",
+    resources: [
+      "integrer-ia-application-web",
+      "openai-vs-claude-api-quel-choisir",
+    ],
+    resourcesTitle: "Intégrer l'IA dans votre produit",
+    resourcesSubtitle:
+      "Choisir le bon modèle, gérer les coûts, livrer en production.",
+  },
+
+  // ────────────────────────────────────────────
+  // Entry 6 — workflow-n8n
+  // ────────────────────────────────────────────
+  {
+    slug: "workflow-n8n",
+    title: "Agence n8n : automatisation de workflows pour PME",
+    shortTitle: "Workflow n8n",
+    category: "ia-auto",
+    icon: PiArrowsClockwiseFill,
+    iconSrc: "/icons/workflow-n8n.svg",
+    iconBg: "bg-amber-400",
+    shortDescription: "Automatisez vos process internes avec n8n.",
+    metaTitle: "Agence n8n : automatisation workflows pour PME | Vizion Web",
+    metaDescription:
+      "Agence n8n à Montpellier : automatisation n8n pour PME. Sync CRM, alertes Slack, scoring lead, orchestration IA. Devis sous 24h. Livraison 1 à 4 semaines.",
+    heroTitle: "Agence n8n pour automatiser vos process internes",
+    heroSubtitle:
+      "On industrialise vos workflows avec n8n, l'alternative open-source à Zapier et Make : sync CRM, alertes Slack, scoring automatique de leads et orchestration IA.",
+    problemTitle: "Vos équipes copient-collent entre 5 outils tous les jours",
+    problemDescription:
+      "Lead saisi dans le CRM, recopié dans la compta, notification manuelle dans Slack, tâche créée dans Notion. Multipliez par 50 leads par semaine et 30 % du temps de votre équipe part en saisie. Zapier scale mal au volume, et vous ne possédez pas les workflows.",
+    problemPoints: [
+      {
+        text: "Vos équipes saisissent les mêmes données dans 3 ou 4 outils différents",
+        icon: PiFilesFill,
+      },
+      {
+        text: "Zapier ou Make coûtent plusieurs centaines d'euros par mois quand le volume monte",
+        icon: PiCurrencyDollarFill,
+      },
+      {
+        text: "Vos workflows critiques tournent dans un compte SaaS dont vous n'êtes pas propriétaire",
+        icon: PiLockKeyFill,
+      },
+      {
+        text: "Vos process internes ne sont pas documentés, juste des Zaps que personne ne maîtrise",
+        icon: PiWarningFill,
+      },
+    ],
+    solutionTitle: "Des workflows n8n auto-hébergés ou cloud, à vous",
+    solutionDescription:
+      "On conçoit, développe et déploie vos workflows n8n : sync CRM, alertes contextuelles, scoring lead, orchestration IA, scraping et enrichissement. Open-source, auto-hébergeable, vous restez propriétaire des workflows et des données.",
+    solutionPoints: [
+      {
+        text: "Sync bidirectionnelle entre CRM, comptabilité, e-mail et outils métier",
+        icon: PiArrowsClockwiseFill,
+      },
+      {
+        text: "Alertes Slack ou e-mail contextuelles : nouveau lead chaud, paiement en retard, anomalie",
+        icon: PiMegaphoneFill,
+      },
+      {
+        text: "Scraping web et enrichissement de données pour qualifier vos prospects",
+        icon: PiMagnifyingGlassFill,
+      },
+      {
+        text: "Orchestration IA : chaîner OpenAI ou Claude avec vos outils dans un workflow visuel",
+        icon: PiLightningFill,
+      },
+    ],
+    included: [
+      {
+        title: "Audit de vos process actuels",
+        description:
+          "Cartographie des tâches manuelles, identification des workflows à industrialiser",
+      },
+      {
+        title: "Choix d'hébergement",
+        description:
+          "n8n cloud officiel ou auto-hébergé sur votre serveur, selon vos contraintes",
+      },
+      {
+        title: "Conception des workflows",
+        description:
+          "Schéma de chaque workflow, gestion des erreurs, retries, alertes",
+      },
+      {
+        title: "Développement & connexions API",
+        description:
+          "Mise en place des nodes, intégrations CRM, comptabilité, e-mail, IA",
+      },
+      {
+        title: "Tests & mise en production",
+        description:
+          "Recette sur jeu de données, monitoring, déploiement progressif",
+      },
+      {
+        title: "Documentation & formation",
+        description:
+          "Guide d'utilisation, formation de votre équipe pour les évolutions courantes",
+      },
+      {
+        title: "Support 90 jours",
+        description:
+          "Corrections, ajustements et accompagnement post-livraison",
+      },
+    ],
+    deliveryTime: "1 à 4 semaines",
+    targetProfiles: [
+      {
+        title: "PME qui copie-colle entre 5 outils",
+        description:
+          "Vos équipes saisissent les mêmes infos dans plusieurs outils déconnectés et perdent du temps tous les jours.",
+        icon: PiBuildingsFill,
+      },
+      {
+        title: "Équipe ops qui veut industrialiser",
+        description:
+          "Vous avez des process formalisés mais exécutés à la main, vous cherchez à les automatiser sans embaucher un dev.",
+        icon: PiClipboardTextFill,
+      },
+      {
+        title: "Founder solo qui automatise le manuel",
+        description:
+          "Vous gérez tout seul et chaque heure de saisie est une heure que vous ne consacrez pas à votre business.",
+        icon: PiUserFill,
+      },
+    ],
+    faqs: [
+      {
+        q: "n8n, Zapier ou Make : lequel choisir ?",
+        a: "Zapier est le plus simple à prendre en main mais le plus cher au volume. Make (anciennement Integromat) offre plus de flexibilité et un meilleur rapport qualité-prix. n8n est open-source, auto-hébergeable, et propose la flexibilité la plus poussée (code custom, expressions JavaScript, intégrations IA natives). On choisit selon votre volume, vos contraintes de souveraineté et la complexité des workflows.",
+      },
+      {
+        q: "Combien coûte une mission n8n ?",
+        a: "Chaque mission est sur-mesure : pas de tarif standard. Le pricing dépend du nombre de workflows, de la complexité des intégrations (CRM, compta, IA) et de la stratégie de gestion d'erreurs. Hors coûts d'hébergement et d'API. Devis chiffré sous 24h après cadrage.",
+      },
+      {
+        q: "Cloud officiel ou auto-hébergé ?",
+        a: "Cloud officiel : plus simple, idéal pour démarrer et pour des volumes moyens. Auto-hébergé : moins cher au volume, contrôle complet sur les données, conformité RGPD plus simple à justifier. On vous oriente selon votre volume mensuel, vos contraintes de conformité et l'expertise interne pour la maintenance.",
+      },
+      {
+        q: "Peut-on intégrer l'IA dans les workflows n8n ?",
+        a: "Oui, c'est un cas d'usage très courant. n8n a des nodes natifs pour OpenAI, Anthropic et les modèles open-source. Cas typiques : classifier un e-mail entrant avec Claude puis le router vers le bon outil, générer un brouillon de réponse, extraire des données structurées d'un PDF reçu par e-mail.",
+      },
+      {
+        q: "Mon équipe pourra-t-elle modifier les workflows ?",
+        a: "Oui, c'est l'intérêt de n8n : l'interface visuelle permet à des profils non-développeurs de comprendre et d'ajuster les workflows. On forme votre équipe sur les évolutions courantes (ajouter une condition, modifier un destinataire) et on documente les workflows complexes.",
+      },
+    ],
+    ctaTitle: "Des process manuels à industrialiser ?",
+    ctaDescription:
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On cartographie vos workflows manuels et on vous dit ce qu'on peut livrer en 1 à 4 semaines.",
+    resources: [
+      "automatiser-business-outils-web",
+      "integrer-ia-application-web",
+    ],
+    resourcesTitle: "Automatiser vos workflows",
+    resourcesSubtitle: "Quels process automatiser et quels outils choisir.",
   },
 ];
 
@@ -992,18 +1380,17 @@ export function getAllServiceSlugs(): string[] {
 export function getServiceCategories(): ServiceCategoryGroup[] {
   return [
     {
-      id: "apps",
-      title: "Développement d'applications web",
-      description:
-        "MVP, SaaS et outils métier sur-mesure pour automatiser vos processus et faire grandir votre activité.",
-      services: getServicesByCategory("apps"),
+      id: "produits-digitaux",
+      title: "Produits digitaux",
+      description: "MVP, SaaS, logiciel métier, site e-commerce & apps web",
+      services: getServicesByCategory("produits-digitaux"),
     },
     {
-      id: "sites",
-      title: "Sites web professionnels",
+      id: "ia-auto",
+      title: "IA & Automatisation",
       description:
-        "Landing pages, sites vitrines et sites avancés pour renforcer votre visibilité et votre crédibilité.",
-      services: getServicesByCategory("sites"),
+        "IA intégrée dans vos workflows, et automatisation des process.",
+      services: getServicesByCategory("ia-auto"),
     },
   ];
 }
