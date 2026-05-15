@@ -5,17 +5,44 @@ export interface CitySEO {
   preposition: "à" | "en";
   meta: { title: string; description: string; canonical: string };
   hero: { headline: string; subheadline: string };
-  images: {
-    intro: { src: string; alt: string };
-    context: { src: string; alt: string };
+  localAccent: {
+    introMention: string;
+    ctaMention: string;
   };
-  localIntro: { title: string; paragraphs: string[] };
-  localContext: {
-    population?: string;
-    quartiersCles: string[];
-    zonesActivite: string[];
-    secteursDominants: string[];
-    specificites: string;
+  /**
+   * Paragraphes longs pour la section CityIntro.
+   * Chaque paragraphe a un titre h3 et un contenu.
+   * Si présent, remplace le rendu fallback basé sur localAccent.introMention.
+   */
+  introContent?: {
+    badge?: string;
+    title: string;
+    paragraphs: Array<{ title: string; content: string }>;
+  };
+  /**
+   * Section accordéon "Pourquoi travailler avec nous" (image à gauche).
+   */
+  valueProps?: {
+    badge?: string;
+    title: string;
+    points: Array<{ title: string; description: string }>;
+  };
+  /**
+   * Section accordéon "Cas d'usage / Domaines d'application" (image à droite).
+   * Sert à donner des exemples concrets de projets qu'on porte, différent du process.
+   */
+  useCases?: {
+    badge?: string;
+    title: string;
+    points: Array<{ title: string; description: string }>;
+  };
+  /**
+   * Section "Notre approche" sur fond sombre (4 phases).
+   */
+  approach?: {
+    title: string;
+    subtitle?: string;
+    phases: Array<{ title: string; description: string }>;
   };
   localFaqs: Array<{ question: string; answer: string }>;
   globalFaqIndices: number[];
@@ -37,29 +64,29 @@ function getLocalFaqs(
   preposition: "à" | "en",
   extra?:
     | { type: "paris" }
-    | { type: "domtom"; territoire: string; adj: string }
+    | { type: "domtom"; territoire: string; adj: string },
 ): Array<{ question: string; answer: string }> {
   const prep = `${preposition} ${cityName}`;
 
   const faqs: Array<{ question: string; answer: string }> = [
     {
       question: `Comment se passe la collaboration si vous n'êtes pas ${prep} ?`,
-      answer: `Tout se fait en visio et via des outils collaboratifs modernes. On démarre par un appel de cadrage détaillé, puis on avance par itérations avec des points réguliers. Vous avez accès en temps réel aux maquettes et aux environnements de développement pour suivre l'avancement. La distance n'a jamais été un frein pour nos clients.`,
+      answer: `Tout se fait en visio et via des outils collaboratifs modernes. On démarre par un appel de cadrage détaillé, puis on avance par sprints courts d'une semaine. Vous avez accès en temps réel aux maquettes Figma et à l'environnement de développement pour suivre l'avancement.`,
     },
     {
       question: `Pourquoi travailler avec vous plutôt qu'une agence basée ${prep} ?`,
-      answer: `Nous offrons la même expertise technique et la même réactivité qu'une agence locale, avec trois avantages : des tarifs généralement plus compétitifs (fonctionnement 100% remote), une spécialisation forte en applications web modernes (React, Next.js, TypeScript), et une vraie flexibilité dans nos méthodes de travail.`,
+      answer: `Vous obtenez la même expertise technique qu'une agence locale, avec trois avantages : tarifs plus compétitifs (fonctionnement 100% remote), spécialisation forte en SaaS, MVP et applications métier (React, Next.js, TypeScript, Supabase), et intégration IA (OpenAI, Claude). Si vous cherchez un template prêt à l'emploi ou du no-code, on n'est pas le bon partenaire.`,
     },
     {
       question: `Vous travaillez avec quel type d'entreprises ${prep} ?`,
-      answer: `Nous accompagnons principalement des startups en phase de lancement (MVP, SaaS) et des PME établies qui veulent digitaliser un processus métier ou refondre leur site web. Nos clients sont issus de secteurs variés : tech, services, retail, santé. Le point commun : ils cherchent une solution technique solide et sur-mesure, pas du template.`,
+      answer: `On accompagne principalement des startups en lancement (MVP, SaaS), des PME qui digitalisent un processus métier (dashboard, ERP custom, automatisation), et des dirigeants qui intègrent de l'IA dans leurs outils. Le point commun : ils veulent une solution sur-mesure, scalable, livrée en 3 semaines pour un MVP.`,
     },
   ];
 
   if (extra?.type === "domtom") {
     faqs.push({
       question: `Vous connaissez le marché ${extra.adj} ?`,
-      answer: `Oui, nous avons une expérience significative avec des clients en ${extra.territoire}, et nous comprenons les spécificités du marché local : besoins en digitalisation, contraintes budgétaires, et opportunités de niche. Nous sommes sensibles aux particularités culturelles et économiques des territoires d'outre-mer.`,
+      answer: `Oui, on accompagne des clients en ${extra.territoire} et on comprend les spécificités du marché : faible densité de prestataires tech qualifiés, besoins de digitalisation forte des PME, sites locaux souvent vieillissants. Une stack moderne (Next.js, Supabase, IA intégrée) crée un avantage concurrentiel direct.`,
     });
   }
 
@@ -76,67 +103,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de sites web et applications à Paris | Vizion Web",
+      title: "Agence web à Paris : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet, landing pages et applications SaaS pour les entreprises parisiennes. Développement sur-mesure, design et SEO inclus. Intervention 100% à distance.",
+        "Agence web à Paris : développement de SaaS, MVP en 3 semaines et applications métier sur-mesure. Devis chiffré sous 24h. Stack Next.js, Supabase, IA. 100% remote.",
       canonical: "https://vizionweb.fr/paris",
     },
     hero: {
-      headline:
-        "Sites et applications sur-mesure pour les entreprises de Paris",
+      headline: "Agence web à Paris : SaaS, MVP et applications métier",
       subheadline:
-        "Nous concevons des sites internet, landing pages et applications SaaS sur-mesure pour les entreprises parisiennes. Design, copywriting et SEO inclus. Livraison en 30 jours, intervention 100% à distance.",
+        "Vous lancez un SaaS, un MVP ou une app métier à Paris. Vous voulez un produit qui fonctionne en 3 semaines, pas 6 mois. On chiffre votre projet sous 24h, on conçoit, on développe, on livre. Solo, transparent, sans intermédiaire.",
     },
-    images: {
-      intro: {
-        src: "/cities/paris-intro.webp",
-        alt: "Tour Eiffel et skyline de Paris",
-      },
-      context: {
-        src: "/cities/paris-context.webp",
-        alt: "Quartier d'affaires de La Défense à Paris",
-      },
+    localAccent: {
+      introMention:
+        "Paris concentre l'écosystème tech le plus dense d'Europe continentale : Station F, Silicon Sentier, La Défense. Les founders et dirigeants parisiens y cherchent un partenaire technique qui livre vite et qui comprend l'enjeu produit, pas juste le code.",
+      ctaMention:
+        "Réservez un appel de 30 minutes. On cadre votre besoin, on chiffre une solution sur-mesure et on définit un planning. Sans engagement.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises parisiennes",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Paris concentre plus de 40% des startups françaises et des milliers de PME qui se battent pour capter l'attention en ligne. Un site générique ne suffit plus. Vos prospects comparent, jugent en 3 secondes, et passent au concurrent si votre site est lent ou mal conçu. Pour exister sur ce marché, il faut des outils numériques taillés pour la conversion : rapides, professionnels, pensés pour votre activité.",
-        "Vizion Web intervient à distance auprès des entreprises d'Île-de-France pour créer des sites internet, landing pages et applications web. Chaque projet est construit sur-mesure, sans template ni CMS limitant. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences parisiennes avec pignon sur rue, tout en gardant la même rigueur sur les livrables.",
-        "Une startup de Station F qui a besoin d'un MVP en 3 semaines, un cabinet du 8e qui refond son site vitrine, un commerce de Belleville qui lance la réservation en ligne : chaque projet démarre par un appel de cadrage, puis avance avec des points réguliers sur Figma et en visio. Pas besoin de se déplacer. Le résultat parle de lui-même.",
+        {
+          title: "Un marché parisien qui demande du produit",
+          content:
+            "Paris réunit la densité d'écosystème tech la plus forte d'Europe continentale. Les founders y construisent des SaaS B2B qui visent l'international, les scale-ups y industrialisent leurs outils, les corporates y ouvrent des chantiers produit en parallèle de leur SI legacy. Sur tous ces fronts, la demande va vers des équipes qui livrent du logiciel utile, pas vers des prestataires qui vendent du temps. On se positionne précisément sur cette attente produit, avec un format léger et un rythme de mise en marché tenu.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders post-amorçage que les directions métier de grands groupes qui veulent moderniser un back-office vieillissant sans relancer un appel d'offres à un million d'euros. Le point commun reste le même : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé à l'avance qui ne tient jamais face au terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Paris comme ailleurs. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la majorité des projets produit, sans déplacement à coordonner, sans agenda à caler entre quatre interlocuteurs, sans temps perdu en logistique de réunion.",
+        },
       ],
     },
-    localContext: {
-      population: "2,1 millions d'habitants (12,2M en Île-de-France)",
-      quartiersCles: [
-        "Le Sentier / Silicon Sentier (startups tech)",
-        "La Défense (grands comptes, consulting)",
-        "Opéra / 8e-9e (services, agences)",
-        "Bastille / 11e (commerces, restauration)",
-        "13e arrondissement (Station F, incubateurs)",
-      ],
-      zonesActivite: [
-        "Station F et les incubateurs du 13e",
-        "La Défense et le quartier d'affaires",
-        "Le Marais (e-commerce, mode, design)",
-        "Montmartre / Pigalle (tourisme, hôtellerie)",
-      ],
-      secteursDominants: [
-        "Tech et startups",
-        "Services aux entreprises",
-        "Tourisme et hôtellerie",
-        "Commerce et retail",
-        "Finance et assurance",
-      ],
-      specificites:
-        "Paris représente 30% du PIB national et compte plus de 500 000 entreprises. La concurrence digitale y est parmi les plus fortes d'Europe : 73% des consommateurs parisiens recherchent un prestataire en ligne avant tout contact. Un site performant n'est pas un luxe, c'est une condition de survie commerciale.",
-    },
-    localFaqs: getLocalFaqs("Paris", "à", { type: "paris" }),
+    localFaqs: getLocalFaqs("Paris", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web parisien commence ici",
+      text: "Lancez votre SaaS ou MVP à Paris",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% à distance, code 100% à vous.",
     },
     schema: {
       areaServed: "Paris, Île-de-France, France",
@@ -153,65 +166,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence web à Lyon — Sites et applications | Vizion Web",
+      title: "Agence web à Lyon : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises lyonnaises. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
+        "Agence web à Lyon : développement de SaaS, MVP en 3 semaines et applications métier sur-mesure. Devis chiffré sous 24h. Stack Next.js, Supabase, IA. 100% remote.",
       canonical: "https://vizionweb.fr/lyon",
     },
     hero: {
-      headline: "Sites web et applications conçus pour les entreprises de Lyon",
+      headline: "Agence web à Lyon : SaaS, MVP et applications métier",
       subheadline:
-        "Nous créons des sites internet, landing pages et applications SaaS sur-mesure pour les entreprises lyonnaises. Design, développement sur-mesure et copywriting inclus. Nous intervenons à distance dans toute la métropole.",
+        "Vous portez un projet SaaS, un MVP ou une app métier à Lyon. Vous voulez un produit livré en 3 semaines, chiffré en 48h, et un développeur qui parle business autant que tech. C'est ce que Vizion Web fait, en solo et en remote.",
     },
-    images: {
-      intro: {
-        src: "/cities/lyon-intro.webp",
-        alt: "Place Bellecour au cœur de Lyon",
-      },
-      context: {
-        src: "/cities/lyon-context.webp",
-        alt: "Quartier de la Confluence à Lyon",
-      },
+    localAccent: {
+      introMention:
+        "Lyon est le 2e pôle tech français : 2 500+ entreprises tech, FrenchTech One Lyon, éditeurs SaaS de Vaise, MedTech de Gerland. Les dirigeants lyonnais cherchent un partenaire qui livre vite, sans surcoût d'agence locale.",
+      ctaMention:
+        "30 minutes en visio pour cadrer votre projet, chiffrer une proposition sur-mesure et définir un planning clair.",
     },
-    localIntro: {
-      title: "Développement web sur-mesure pour les entreprises de Lyon",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Lyon est le deuxième pôle économique français. La métropole compte plus de 150 000 entreprises, entre grands groupes industriels de la chimie, éditeurs logiciels de Vaise et startups de la FrenchTech One Lyon. Sur ce marché dense, un site web lent ou mal conçu coûte des clients chaque jour. Les entreprises lyonnaises qui performent en ligne investissent dans des outils numériques adaptés à leur réalité.",
-        "Vizion Web intervient à distance auprès des entreprises de Lyon et sa métropole pour concevoir des sites internet, landing pages et applications web. Notre approche : design orienté conversion, développement sur-mesure, copywriting professionnel. Travailler à distance nous permet de servir aussi bien un client de la Part-Dieu qu'un autre à Écully ou Limonest, avec la même rapidité d'exécution et des tarifs allégés des frais de bureau.",
-        "Les éditeurs logiciels du quartier de Vaise nous confient leurs landing pages de génération de leads. Les cabinets de conseil de la Part-Dieu nous demandent des sites vitrines qui inspirent confiance. Les restaurateurs des pentes de la Croix-Rousse veulent un site qui remplit leurs réservations. À chaque métier, sa solution web.",
+        {
+          title: "Un marché lyonnais qui demande du produit",
+          content:
+            "Lyon est le deuxième pôle tech français, avec une concentration forte d'éditeurs SaaS B2B, de groupes industriels en transformation et d'acteurs MedTech qui ont besoin de logiciel métier solide. Les founders lyonnais cherchent un partenaire capable de tenir un rythme de release sur un marché concurrentiel. Les directions opérationnelles, elles, veulent moderniser leurs outils sans tomber dans un projet à un million d'euros. Sur ces deux profils, le format Vizion Web colle exactement à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui industrialisent leur SaaS que les directions métier qui veulent moderniser un back-office d'entreprise vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé à l'avance qui ne tient jamais face au retour terrain de vos premiers utilisateurs.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, depuis la région lyonnaise comme partout en France. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique de réunion.",
+        },
       ],
-    },
-    localContext: {
-      population: "522 000 habitants (1,7M dans la métropole)",
-      quartiersCles: [
-        "Part-Dieu (quartier d'affaires, tertiaire)",
-        "Confluence (innovation, médias, culture)",
-        "Vaise / Industrie (tech, éditeurs logiciels)",
-        "Presqu'île / Bellecour (commerces, luxe)",
-        "Gerland (biotech, sciences de la vie)",
-      ],
-      zonesActivite: [
-        "Lyon Part-Dieu (premier quartier d'affaires régional)",
-        "Confluence et le pôle Pixel (industries créatives)",
-        "Biodistrict de Gerland (biotech, pharma)",
-        "Techlid / Limonest (pôle tertiaire ouest)",
-      ],
-      secteursDominants: [
-        "Industrie et chimie",
-        "Sciences de la vie et santé",
-        "Numérique et édition logicielle",
-        "Gastronomie et tourisme",
-        "Finance et services aux entreprises",
-      ],
-      specificites:
-        "Lyon concentre des clusters comme Lyonbiopôle et Imaginove, et héberge plus de 2 500 entreprises tech dans la métropole. La ville combine puissance industrielle historique et un écosystème startup solide, ce qui crée une demande forte pour des sites web performants et des applications métier sur-mesure.",
     },
     localFaqs: getLocalFaqs("Lyon", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Un projet web pour votre entreprise lyonnaise ?",
+      text: "Votre projet SaaS ou MVP à Lyon",
       subtext:
-        "Réservez 30 minutes d'échange. On définit vos objectifs, on vous propose une solution chiffrée avec un planning clair.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% à distance, code 100% à vous.",
     },
     schema: {
       areaServed: "Lyon, Rhône, Auvergne-Rhône-Alpes, France",
@@ -228,66 +229,54 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence Web à Marseille — Sites & Applications | Vizion Web",
+      title: "Agence web à Marseille : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet, landing pages et applications web pour les entreprises de Marseille. Développement sur-mesure, design et copywriting inclus. Devis gratuit, intervention à distance.",
+        "Agence web à Marseille : SaaS, MVP en 3 semaines, applications métier. Euroméditerranée, FrenchTech Aix-Marseille. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/marseille",
     },
     hero: {
-      headline:
-        "Des sites et applications qui performent pour les entreprises marseillaises",
+      headline: "Agence web à Marseille : SaaS, MVP et applications métier",
       subheadline:
-        "Sites internet, landing pages et applications web développés sur-mesure pour les entreprises de Marseille et sa métropole. Design, copywriting et SEO inclus. Nous intervenons à distance.",
+        "Vous lancez un SaaS, un MVP ou une app métier à Marseille. On chiffre votre projet sous 24h, on livre un MVP en 3 semaines et on travaille en sprints courts. Solo, en remote, sans frais d'agence locale gonflés.",
     },
-    images: {
-      intro: {
-        src: "/cities/marseille-intro.webp",
-        alt: "Vieux-Port de Marseille au coucher du soleil",
-      },
-      context: {
-        src: "/cities/marseille-context.webp",
-        alt: "Panorama de Marseille depuis Notre-Dame de la Garde",
-      },
+    localAccent: {
+      introMention:
+        "Marseille devient un pôle tech sérieux : Euroméditerranée (3,5 Md€ d'investissement), FrenchTech Aix-Marseille, La Coque, The Camp. Les startups et PME locales cherchent un dev qui livre vite et qui comprend la réalité produit.",
+      ctaMention:
+        "30 minutes pour comprendre votre besoin produit et construire une proposition chiffrée sur-mesure.",
     },
-    localIntro: {
-      title: "Création web sur-mesure pour les entreprises de Marseille",
+    introContent: {
+      title:
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Marseille est la deuxième ville de France et le premier port de Méditerranée. Le quartier d'Euroméditerranée, plus grand projet de rénovation urbaine d'Europe du Sud, a attiré des centaines d'entreprises tertiaires et tech ces dernières années. En parallèle, le tourisme génère plus de 5 millions de visiteurs par an. Pour les entreprises marseillaises, la présence en ligne n'est plus optionnelle : c'est le premier point de contact avec vos futurs clients.",
-        "Vizion Web intervient à distance auprès des entreprises de Marseille et de sa métropole. Notre méthode : un design pensé pour convertir, un développement sur-mesure, et un copywriting professionnel qui parle à vos clients. Travailler sans bureau local nous permet de proposer des tarifs plus accessibles que les agences marseillaises traditionnelles, avec le même niveau d'exigence.",
-        "Les hôteliers du Vieux-Port nous confient leurs sites de réservation directe. Les startups de la Belle de Mai nous demandent des MVP rapides. Les prestataires B2B d'Euroméditerranée veulent des sites qui génèrent des leads qualifiés. Chaque projet est différent, mais notre process reste le même : cadrage, maquette, développement, livraison. Le tout piloté en visio et sur Figma.",
+        {
+          title: "Un marché marseillais qui demande du produit",
+          content:
+            "Marseille monte vite côté tech, portée par un tissu de startups méditerranéennes, un écosystème logistique et portuaire qui se digitalise, et des PME en transformation outillage. Les founders cherchent un partenaire technique qui avance au rythme de leur traction. Les directions opérationnelles veulent moderniser leurs outils sans embarquer dans un projet à un million d'euros pour deux cents utilisateurs. Sur ces deux profils, l'offre Vizion Web colle directement à la demande terrain.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders sortis d'amorçage que les directions métier qui veulent moderniser un back-office vieillissant côté logistique, port ou services. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au terrain réel de vos équipes.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Marseille comme ailleurs sur le pourtour méditerranéen. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique.",
+        },
       ],
-    },
-    localContext: {
-      population: "873 000 habitants (1,9M dans la métropole)",
-      quartiersCles: [
-        "Euroméditerranée (quartier d'affaires, innovation)",
-        "Vieux-Port / Canebière (tourisme, commerces)",
-        "Castellane / Prado (services, professions libérales)",
-        "La Joliette (logistique, tertiaire)",
-        "Belle de Mai (industries créatives, médias)",
-      ],
-      zonesActivite: [
-        "Euroméditerranée (tertiaire supérieur, tech)",
-        "Technopôle de Château-Gombert (recherche, deeptech)",
-        "Zone commerciale de Plan de Campagne (retail)",
-        "Grand Port Maritime de Marseille (logistique, commerce)",
-      ],
-      secteursDominants: [
-        "Commerce maritime et logistique",
-        "Tourisme et hôtellerie",
-        "Numérique et industries créatives",
-        "Services aux entreprises",
-        "Santé et recherche",
-      ],
-      specificites:
-        "Marseille combine économie portuaire historique et renouveau tertiaire porté par le projet Euroméditerranée (3,5 milliards d'euros d'investissement). Le coût de la vie inférieur de 20% à Paris attire de plus en plus de créateurs d'entreprises, ce qui intensifie la concurrence en ligne dans des secteurs clés comme le tourisme, la restauration et les services B2B.",
     },
     localFaqs: getLocalFaqs("Marseille", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web à Marseille, on en parle ?",
+      text: "Votre SaaS ou MVP à Marseille",
       subtext:
-        "30 minutes pour comprendre vos objectifs et construire une proposition adaptée à votre marché. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed:
@@ -305,66 +294,54 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence Web à Toulouse — Sites & Applications | Vizion Web",
+      title: "Agence web à Toulouse : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Toulouse. Design, développement sur-mesure et copywriting inclus. Intervention à distance, devis en 48h.",
+        "Agence web à Toulouse : SaaS, MVP en 3 semaines, apps métier. FrenchTech Toulouse, Aerospace Valley, IoT Valley. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/toulouse",
     },
     hero: {
-      headline:
-        "Sites web et applications sur-mesure pour les entreprises de Toulouse",
+      headline: "Agence web à Toulouse : SaaS, MVP et applications métier",
       subheadline:
-        "Du site vitrine à l'application SaaS, nous concevons des outils web sur-mesure pour les entreprises toulousaines. Design, développement sur-mesure et copywriting inclus. Nous intervenons à distance, partout dans la métropole.",
+        "Vous portez un projet SaaS, un MVP ou une app métier à Toulouse. Devis sous 24h, MVP livré en 3 semaines, code 100% à vous. Stack moderne, intégration IA si pertinent, sprints courts pour itérer vite.",
     },
-    images: {
-      intro: {
-        src: "/cities/toulouse-intro.webp",
-        alt: "Place du Capitole à Toulouse",
-      },
-      context: {
-        src: "/cities/toulouse-context.webp",
-        alt: "Vue panoramique de Toulouse",
-      },
+    localAccent: {
+      introMention:
+        "Toulouse est le 2e pôle de R&D français : Aerospace Valley, IoT Valley (350 entreprises Internet des Objets), FrenchTech Toulouse, Oncopole. Les sous-traitants industriels et startups locales cherchent des outils sur-mesure qui collent à leurs process.",
+      ctaMention:
+        "Un appel de 30 minutes pour cadrer votre besoin produit et chiffrer une solution adaptée.",
     },
-    localIntro: {
-      title: "Création web sur-mesure pour les entreprises toulousaines",
+    introContent: {
+      title:
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Toulouse est la quatrième ville de France et l'une des premières pour la création d'entreprises. L'écosystème aéronautique et spatial (Airbus, Thales, 1 200 sous-traitants), les biotechnologies de l'Oncopole et les startups de la French Tech Toulouse génèrent une demande forte en sites web et applications métier. Un site générique ne reflète pas le niveau d'exigence de ce marché.",
-        "Vizion Web intervient à distance auprès des entreprises de Toulouse et de sa métropole. Notre méthode : comprendre votre activité, concevoir un design orienté conversion, développer sur-mesure, livrer un produit fini avec copywriting et SEO inclus. Ce fonctionnement remote nous rend accessibles à Compans-Caffarelli comme à Blagnac ou Labège, sans surcoût lié à un bureau en centre-ville.",
-        "Un sous-traitant aéronautique de Colomiers a besoin d'un dashboard de suivi de production. Une startup de l'Innopole de Labège veut une landing page qui convertit en 3 semaines. Un restaurant du quartier Saint-Étienne cherche un site avec réservation intégrée. Chaque projet part de vos contraintes réelles, pas d'un template prédécoupé.",
+        {
+          title: "Un marché toulousain qui demande du produit",
+          content:
+            "Toulouse concentre un tissu rare en France : industrie aéronautique, sous-traitants techniques, éditeurs de software embarqué, SaaS B2B. Les founders y portent souvent des produits exigeants côté ingénierie. Les directions métier des sous-traitants industriels veulent moderniser des outils internes qui ont vieilli en silence depuis dix ans, sans embarquer dans un projet à un million d'euros. Sur ces deux profils, le format Vizion Web répond précisément à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui sortent d'incubation que les directions métier des PME industrielles qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain qui utilisent l'outil au quotidien.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Toulouse comme partout en France. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler quatre agendas pour un point d'une heure.",
+        },
       ],
-    },
-    localContext: {
-      population: "504 000 habitants (1,4M dans l'aire urbaine)",
-      quartiersCles: [
-        "Compans-Caffarelli (tertiaire, bureaux)",
-        "Labège / Innopole (technopole, startups)",
-        "Capitole / Centre-ville (commerces, services)",
-        "Saint-Étienne / Carmes (restauration, artisanat)",
-        "Blagnac / Colomiers (aéronautique, sous-traitance)",
-      ],
-      zonesActivite: [
-        "Aerospace Valley (aéronautique et spatial)",
-        "Toulouse Tech Transfer / Oncopole (biotech, santé)",
-        "French Tech Toulouse (startups numériques)",
-        "Zone de Basso Cambo (commerce, logistique)",
-      ],
-      secteursDominants: [
-        "Aéronautique et spatial (Airbus, Thales)",
-        "Technologies et numérique",
-        "Biotechnologies et santé",
-        "Services aux entreprises",
-        "Commerce et restauration",
-      ],
-      specificites:
-        "Deuxième pôle de recherche en France, Toulouse regroupe 120 000 emplois dans l'aéronautique et le spatial. La French Tech Toulouse et l'Innopole de Labège concentrent des centaines de startups numériques. Cette densité d'entreprises tech et industrielles crée un marché exigeant où la qualité du web reflète le sérieux du prestataire.",
     },
     localFaqs: getLocalFaqs("Toulouse", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Lancez votre projet web à Toulouse",
+      text: "Lancez votre SaaS ou MVP à Toulouse",
       subtext:
-        "Un appel de 30 minutes pour définir ensemble la solution adaptée à votre entreprise toulousaine.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Toulouse, Haute-Garonne, Occitanie, France",
@@ -381,66 +358,152 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence Web à Bordeaux — Sites & Applications | Vizion Web",
+      title: "Agence web Bordeaux : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Bordeaux. Développement sur-mesure, design et copywriting inclus. Livraison en 30 jours, intervention à distance.",
+        "Agence web à Bordeaux : SaaS, MVP en 3 semaines, apps métier. FrenchTech Bordeaux, Bassins à flot, Darwin. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/bordeaux",
     },
     hero: {
-      headline:
-        "Sites et applications sur-mesure pour les entreprises de Bordeaux",
+      headline: "Agence web à Bordeaux : SaaS, MVP et applications métier",
       subheadline:
-        "Landing pages, sites vitrines et applications SaaS développés sur-mesure pour les entreprises bordelaises. Design, copywriting et SEO inclus. Nous intervenons à distance dans toute la métropole.",
+        "Vizion Web est votre agence web sur Bordeaux et la métropole bordelaise pour le développement de SaaS, MVP et applications métier. Devis chiffré sous 24h, MVP livré en 3 semaines. Solo, remote, code 100% à vous.",
     },
-    images: {
-      intro: {
-        src: "/cities/bordeaux-intro.webp",
-        alt: "Architecture moderne de Bordeaux",
-      },
-      context: {
-        src: "/cities/bordeaux-context.webp",
-        alt: "Architecture de Bordeaux au coucher du soleil",
-      },
+    localAccent: {
+      introMention:
+        "Bordeaux est le 1er hub tech du sud-ouest : 35 000 emplois numérique, FrenchTech Bordeaux, Bassins à flot (250 entreprises numériques), Darwin Écosystème. La demande est forte côté SaaS et apps métier custom, peu côté simple vitrine.",
+      ctaMention:
+        "Réservez un appel de 30 minutes. On cadre, on chiffre, on définit un planning. Sans engagement.",
     },
-    localIntro: {
-      title: "Création web sur-mesure pour les entreprises bordelaises",
+    introContent: {
+      title:
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Bordeaux attire chaque année des milliers d'entrepreneurs. Depuis l'arrivée de la LGV en 2017, la métropole a gagné plus de 100 000 habitants et des dizaines de sièges sociaux. La filière numérique emploie 35 000 personnes, le quartier Euratlantique accueille des startups fintech, et les Chartrons concentrent les créatifs et e-commerçants. Dans ce marché concurrentiel, un site web générique ne suffit plus pour capter l'attention.",
-        "Vizion Web intervient à distance auprès des entreprises de Bordeaux et de sa métropole. Nous combinons design orienté conversion, développement sur-mesure, et copywriting professionnel. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences bordelaises avec pignon sur rue, tout en livrant des projets complets et sans compromis.",
-        "Un château du Médoc veut vendre son vin en ligne. Une startup fintech d'Euratlantique lance son MVP. Une agence immobilière du Triangle d'Or refond sa vitrine. Chaque projet part d'un appel de cadrage, avance sur Figma et en visio, et aboutit à un livrable prêt à convertir. Pas besoin d'être dans la même rue pour bien travailler ensemble.",
+        {
+          title: "Un marché bordelais qui demande du produit",
+          content:
+            "Bordeaux concentre un tissu actif de startups produit et de PME en transformation digitale. Les founders cherchent un partenaire technique capable d'avancer au rythme du marché. Les directions opérationnelles, elles, veulent moderniser leurs outils sans tomber dans un projet à un million d'euros pour 200 utilisateurs. Sur ces deux profils, on est en plein dedans.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui sortent d'incubation que les directions métier qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé à l'avance.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique.",
+        },
       ],
     },
-    localContext: {
-      population: "260 000 habitants (1,3M dans la métropole)",
-      quartiersCles: [
-        "Euratlantique (quartier d'affaires, innovation)",
-        "Les Chartrons (startups, créatifs, e-commerce)",
-        "Mériadeck (tertiaire, administrations)",
-        "Bassins à flot (nouvelles entreprises, coworking)",
-        "Centre-ville / Triangle d'Or (commerces, luxe)",
+    valueProps: {
+      title: "Pourquoi travailler avec Vizion Web sur votre projet bordelais",
+      points: [
+        {
+          title: "Un seul interlocuteur, du devis à la production",
+          description:
+            "Vous parlez au développeur qui code. Pas de chef de projet qui répète vos messages, pas de junior qui apprend sur votre projet. Les décisions techniques et produit se prennent en temps réel, sans rond-point ni intermédiaire qui ralentit la boucle.",
+        },
+        {
+          title: "Devis chiffré sous 24 à 48h",
+          description:
+            "Un appel de cadrage de 30 minutes suffit pour vous renvoyer un périmètre clair, un planning, et un prix fixe. Pas de devis vague à étages, pas de surprise en cours de route. Vous savez exactement ce que vous achetez avant de signer.",
+        },
+        {
+          title: "MVP livré en 3 semaines, pas en 6 mois",
+          description:
+            "Un produit utilisable dès la troisième semaine, prêt à recevoir vos premiers utilisateurs. La suite se construit par itérations courtes, sur ce que vous observez du terrain, pas sur des hypothèses cadrées à l'avance qui ne tiennent jamais 100%.",
+        },
+        {
+          title: "Code 100% à vous, sans dépendance technique",
+          description:
+            "Le repository GitHub, le compte Vercel, la base Supabase : tout est à votre nom dès le premier jour. Vous pouvez reprendre la main avec votre équipe ou changer de prestataire sans renégocier la propriété du code ou des données.",
+        },
+        {
+          title: "Stack moderne, faite pour évoluer",
+          description:
+            "Next.js, TypeScript, Supabase, Vercel : la stack qu'on retrouve aujourd'hui chez les SaaS qui montent en charge. Une stack qui vous suit dans la durée et qui encaisse les fonctionnalités complexes sans s'effondrer.",
+        },
+        {
+          title: "Intégration IA quand elle apporte de la valeur",
+          description:
+            "OpenAI, Claude, Whisper, embeddings, RAG : on intègre ces briques quand elles transforment l'usage, pas comme couche marketing. La couche serveur (validation, garde-fous, logs) compte autant que le modèle pour livrer un produit fiable en production.",
+        },
       ],
-      zonesActivite: [
-        "Bordeaux Euratlantique (gare TGV, tertiaire supérieur)",
-        "Bordeaux Technowest (incubateur, startups)",
-        "Zone aéronautique de Mérignac (aéronautique, défense)",
-        "Darwin Écosystème (économie alternative, créatifs)",
+    },
+    useCases: {
+      badge: "Cas d'usage",
+      title: "Les projets qu'on porte le mieux à Bordeaux",
+      points: [
+        {
+          title: "SaaS",
+          description:
+            "Plateforme accessible par abonnement, avec espaces clients, parcours d'inscription, facturation récurrente et tableau de bord par utilisateur. Cas typique : un éditeur qui veut atteindre ses premiers comptes payants, ou une scale-up qui sort un nouveau module à monétiser séparément.",
+        },
+        {
+          title: "Applications métier internes",
+          description:
+            "Outils sur-mesure pour vos équipes : pilotage commercial, suivi de production, gestion de planning, validation de devis ou de commandes. Remplace les Excel partagés et les Notion mal taggés qui freinent vos opérations sans que personne ne le mesure.",
+        },
+        {
+          title: "Site e-commerce custom",
+          description:
+            "Boutique en ligne sur-mesure quand Shopify ou WooCommerce coincent : catalogue complexe, tarification par client, intégration ERP, devis en ligne, paiements différés, espace revendeur. On bâtit autour de votre métier, pas autour des templates d'une plateforme.",
+        },
+        {
+          title: "Intégration IA dans un produit existant",
+          description:
+            "Ajout d'un copilote, d'un assistant conversationnel ou d'un moteur de recherche sémantique sur votre base documentaire. La fonctionnalité s'intègre dans l'app que vous avez déjà, sans tout refondre, avec les garde-fous serveur qui vont avec.",
+        },
+        {
+          title: "Migration depuis WordPress ou app legacy",
+          description:
+            "Refonte d'un site WordPress vieillissant ou d'une app legacy vers une stack qui scale, garde le SEO et reste évolutive. Migration progressive sans coupure, redirections gérées, transition transparente pour vos utilisateurs et pour Google.",
+        },
+        {
+          title: "MVP pour valider une idée",
+          description:
+            "Version minimale fonctionnelle d'un concept produit, livrée en 2 à 3 semaines pour tester avec de vrais utilisateurs avant l'investissement complet. Idéal pour valider une hypothèse marché, cadrer un projet plus large ou convaincre les premiers investisseurs.",
+        },
       ],
-      secteursDominants: [
-        "Vin et oenotourisme",
-        "Aéronautique et défense (Dassault, Thales)",
-        "Numérique et startups",
-        "Tourisme et hôtellerie",
-        "Immobilier et BTP",
+    },
+    approach: {
+      title: "Du cadrage à la mise en production en 4 étapes",
+      subtitle:
+        "Un rythme calé sur ce que vous voyez à l'écran, pas sur des promesses dans un devis.",
+      phases: [
+        {
+          title: "Cadrage produit",
+          description:
+            "Un appel de 30 minutes pour comprendre le problème métier et le contexte business. On en sort avec un périmètre clair, un devis chiffré et un planning sous 24 à 48h.",
+        },
+        {
+          title: "Design Figma",
+          description:
+            "Maquettes complètes du parcours principal, validées avec vous. Le produit prend forme avant le code, ce qui évite les retours en arrière coûteux en phase de développement.",
+        },
+        {
+          title: "Sprints de développement",
+          description:
+            "Stack Next.js, Supabase, Vercel. Démos chaque vendredi, URLs de preview en continu. Vous voyez le produit grandir et donnez votre avis avant chaque jalon.",
+        },
+        {
+          title: "Mise en production et support",
+          description:
+            "Déploiement sur votre domaine, monitoring en place, support de 30 à 90 jours inclus. Au-delà, on continue ensemble ou votre équipe reprend la main avec une codebase propre.",
+        },
       ],
-      specificites:
-        "Bordeaux conjugue patrimoine UNESCO et dynamisme économique. La LGV a mis Paris à 2h et accéléré l'arrivée d'entreprises nationales et internationales. Le numérique est le premier créateur d'emplois de la métropole, avec plus de 35 000 postes et une croissance annuelle supérieure à 10%.",
     },
     localFaqs: getLocalFaqs("Bordeaux", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web bordelais commence ici",
+      text: "Votre projet SaaS ou MVP à Bordeaux",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Bordeaux, Gironde, Nouvelle-Aquitaine, France",
@@ -457,64 +520,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de Sites Web & Applications à Lille | Vizion Web",
+      title: "Agence web à Lille : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet, landing pages et applications web pour les entreprises lilloises. Développement sur-mesure, design et SEO inclus. Intervention à distance, devis sous 48h.",
+        "Agence web à Lille : SaaS, MVP en 3 semaines, apps métier. EuraTechnologies, Plaine Images, Eurasanté. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/lille",
     },
     hero: {
-      headline:
-        "Sites et applications web sur-mesure pour les entreprises de Lille",
+      headline: "Agence web à Lille : SaaS, MVP et applications métier",
       subheadline:
-        "Vizion Web conçoit des sites internet, landing pages et applications SaaS sur-mesure pour les entreprises de la métropole lilloise. Design, copywriting et SEO inclus. Intervention 100% à distance.",
+        "Vous lancez un SaaS, un MVP ou une app métier à Lille. Devis sous 24h, MVP livré en 3 semaines, sprints courts pour itérer. Solo, remote, code 100% à vous, intégration IA possible.",
     },
-    images: {
-      intro: { src: "/cities/lille-intro.webp", alt: "Grand'Place de Lille" },
-      context: {
-        src: "/cities/lille-context.webp",
-        alt: "Rues historiques du Vieux-Lille",
-      },
+    localAccent: {
+      introMention:
+        "Lille concentre EuraTechnologies (300+ startups, plus grand incubateur d'Europe), Plaine Images et Eurasanté. La proximité Bruxelles-Londres en fait un nœud stratégique pour les SaaS européens.",
+      ctaMention:
+        "30 minutes pour échanger sur votre projet produit et construire une proposition chiffrée.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises lilloises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Lille est le centre économique des Hauts-de-France et une métropole connectée à trois capitales européennes en moins d'une heure. La MEL regroupe 1,2 million d'habitants, des géants de la grande distribution comme Auchan et Decathlon, un pôle e-commerce porté par OVHcloud et Showroomprivé, et plus de 300 startups accélérées par EuraTechnologies. Sur ce marché dense, un site lent ou générique vous coûte des clients chaque semaine.",
-        "Vizion Web intervient à distance auprès des entreprises lilloises pour créer des sites internet, landing pages et applications web sur-mesure. Chaque projet est développé sur-mesure, avec un design orienté conversion et du copywriting professionnel. Ce fonctionnement 100% remote nous permet de proposer des tarifs plus compétitifs qu'une agence avec des bureaux à Euralille, sans rien sacrifier sur la qualité des livrables.",
-        "Les e-commerçants de Roubaix nous confient leurs landing pages de conversion. Les startups d'EuraTechnologies nous demandent des MVP livrés en 3 semaines. Les prestataires du quartier Vauban refondent leur vitrine pour capter plus de leads. À chaque activité, une solution web calibrée sur vos objectifs.",
+        {
+          title: "Un marché lillois qui demande du produit",
+          content:
+            "Lille joue un rôle de hub frontalier entre Paris, Bruxelles et Londres, avec un tissu fort côté e-commerce, retail, SaaS santé et SaaS éducation. Les founders y portent des projets qui visent vite l'Europe du Nord. Les directions métier des distributeurs et industriels du Nord veulent moderniser des outils internes sans embarquer dans un projet à un million d'euros pour deux cents utilisateurs. Sur ces deux profils, le format Vizion Web répond directement à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders post-amorçage que les directions métier des retailers et industriels du Nord qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face aux retours du terrain, surtout sur des usages e-commerce ou supply à fort volume.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Lille comme partout en Europe du Nord. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique de réunion entre quatre interlocuteurs.",
+        },
       ],
-    },
-    localContext: {
-      population: "236 000 habitants (1,2M dans la MEL)",
-      quartiersCles: [
-        "EuraTechnologies (startups, numérique)",
-        "Euralille (tertiaire, quartier d'affaires)",
-        "Vieux-Lille (commerces, restauration haut de gamme)",
-        "Vauban / Esquermes (services, professions libérales)",
-        "Roubaix / Tourcoing (e-commerce, textile, industrie créative)",
-      ],
-      zonesActivite: [
-        "EuraTechnologies (troisième incubateur mondial)",
-        "Euralille (premier quartier d'affaires régional)",
-        "Plaine Images à Tourcoing (jeu vidéo, animation)",
-        "Zone de l'Union à Roubaix-Tourcoing (éco-quartier, entreprises)",
-      ],
-      secteursDominants: [
-        "Grande distribution et e-commerce (Auchan, Decathlon, OVHcloud)",
-        "Numérique et tech",
-        "Services aux entreprises",
-        "Textile et mode",
-        "Agroalimentaire",
-      ],
-      specificites:
-        "Lille est le berceau de la grande distribution française et un pôle e-commerce majeur avec les sièges d'OVHcloud et Showroomprivé. EuraTechnologies, classé parmi les meilleurs incubateurs au monde, a accéléré plus de 300 startups. La métropole attire aussi 120 000 étudiants par an, ce qui en fait un terrain fertile pour les projets numériques et les recrutements tech.",
     },
     localFaqs: getLocalFaqs("Lille", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web lillois commence ici",
+      text: "Votre SaaS ou MVP à Lille",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Lille, Nord, Hauts-de-France, France",
@@ -531,67 +583,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence Web à Nantes — Sites & Applications | Vizion Web",
+      title: "Agence web à Nantes : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Nantes et de sa métropole. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
+        "Agence web à Nantes : SaaS, MVP en 3 semaines, apps métier. FrenchTech Nantes (top 5 français), Île de Nantes. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/nantes",
     },
     hero: {
-      headline:
-        "Agence web à Nantes : des projets digitaux qui font la différence",
+      headline: "Agence web à Nantes : SaaS, MVP et applications métier",
       subheadline:
-        "Sites vitrines, landing pages et applications SaaS conçus et développés sur-mesure pour les entreprises nantaises. Technologies modernes, livrés avec design et copywriting.",
+        "Vous portez un projet SaaS, un MVP ou une app métier à Nantes. Devis chiffré sous 24h, MVP livré en 3 semaines. Solo, remote, code 100% à vous, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/nantes-intro.webp",
-        alt: "Machines de l'île de Nantes",
-      },
-      context: {
-        src: "/cities/nantes-context.webp",
-        alt: "Port de plaisance de Nantes",
-      },
+    localAccent: {
+      introMention:
+        "Nantes est dans le top 5 français des hubs tech : FrenchTech Nantes (1 200 startups), Île de Nantes, Quartier de la Création. Akeneo, iAdvize, Lengow sont nés ici : la culture SaaS y est dense.",
+      ctaMention:
+        "Un appel de 30 minutes pour cadrer votre besoin et chiffrer une solution adaptée à votre marché.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises nantaises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Nantes compte plus de 50 000 entreprises et une filière numérique de 30 000 emplois. Le quartier de la Création sur l'île de Nantes, la technopole Atlanpole et le pôle Euronantes attirent des startups et des PME qui ont besoin d'outils web performants pour recruter, vendre et se faire connaître. Un site générique ne suffit plus face à cette concurrence.",
-        "Vizion Web intervient à distance auprès des entreprises de Nantes et de sa métropole. Chaque projet est construit de zéro, avec un design conçu pour convertir et un copywriting qui parle à vos clients. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences nantaises avec pignon sur rue.",
-        "Une startup du Quartier de la Création prépare son lancement. Un cabinet du quartier Graslin refond son site vitrine. Un restaurateur du passage Pommeraye veut la réservation en ligne. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et aboutit à un livrable prêt à convertir.",
+        {
+          title: "Un marché nantais qui demande du produit",
+          content:
+            "Nantes figure dans le top 5 des hubs tech français, avec un tissu rare d'éditeurs SaaS B2B, de scale-ups produit et d'agences spécialisées qui maillent l'ouest. La culture produit y est dense, les founders savent ce qu'ils achètent et exigent un partenaire capable de tenir le rythme. Les directions métier des PME ligériennes veulent moderniser leurs outils sans tomber dans un projet à un million d'euros. Sur ces deux profils, le format Vizion Web répond à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui sortent d'amorçage que les directions métier qui veulent moderniser un back-office vieillissant côté logistique, retail ou services. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des premiers utilisateurs réels du produit.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Nantes comme partout dans le grand ouest. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler quatre agendas pour un point hebdo.",
+        },
       ],
-    },
-    localContext: {
-      population: "320 000 habitants (1M dans la métropole)",
-      quartiersCles: [
-        "Île de Nantes / Quartier de la Création (industries créatives, tech)",
-        "Euronantes (quartier d'affaires, services)",
-        "Centre-ville / Commerce (retail, professions libérales)",
-        "Chantenay / Bellevue (artisanat, nouvelles entreprises)",
-        "Saint-Herblain / Orvault (zones commerciales, tertiaire)",
-      ],
-      zonesActivite: [
-        "Quartier de la Création (design, numérique, médias)",
-        "Atlanpole (technopole, 400+ entreprises innovantes)",
-        "Euronantes (tertiaire supérieur, sièges sociaux)",
-        "Zone Atlantis à Saint-Herblain (commerce, services)",
-      ],
-      secteursDominants: [
-        "Industries créatives et numériques",
-        "Agroalimentaire (LU, BN, Fleury Michon)",
-        "Construction navale et nautisme",
-        "Services aux entreprises",
-        "Santé et biotechnologies",
-      ],
-      specificites:
-        "Nantes a été élue Capitale verte de l'Europe en 2013. La métropole est première en France pour la création nette d'emplois et affiche un coût du foncier inférieur à Lyon ou Bordeaux. Pour les entreprises qui s'y installent, un site web professionnel est souvent le premier levier d'acquisition clients.",
     },
     localFaqs: getLocalFaqs("Nantes", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web nantais commence ici",
+      text: "Votre SaaS ou MVP à Nantes",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Nantes, Loire-Atlantique, Pays de la Loire, France",
@@ -608,67 +646,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de Sites Web & Applications à Nice | Vizion Web",
+      title: "Agence web à Nice : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Nice et de la Côte d'Azur. Développement sur-mesure, design et SEO inclus. Intervention à distance, livraison en 30 jours.",
+        "Agence web à Nice et Sophia Antipolis : SaaS, MVP en 3 semaines, apps métier. 1ère technopole d'Europe. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/nice",
     },
     hero: {
-      headline:
-        "Sites web et applications performants pour les entreprises niçoises",
+      headline: "Agence web à Nice : SaaS, MVP et applications métier",
       subheadline:
-        "Nous concevons des solutions web sur-mesure pour les entreprises de Nice et de la Côte d'Azur. Landing pages, sites vitrines et apps SaaS livrés avec design, copywriting et SEO.",
+        "Vous lancez un SaaS, un MVP ou une app métier à Nice ou Sophia Antipolis. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, sprints courts, code 100% à vous. Solo, remote.",
     },
-    images: {
-      intro: {
-        src: "/cities/nice-intro.webp",
-        alt: "Promenade dans les rues de Nice",
-      },
-      context: {
-        src: "/cities/nice-context.webp",
-        alt: "Vue aérienne de Nice depuis la colline du Château",
-      },
+    localAccent: {
+      introMention:
+        "Sophia Antipolis est la 1ère technopole d'Europe (2 500 entreprises tech, 38 000 emplois). Densité forte de scientifiques, éditeurs SaaS et filiales R&D internationales (Amadeus, IBM, Air France-KLM).",
+      ctaMention:
+        "Réservez un appel de 30 minutes pour comprendre votre besoin produit et obtenir une proposition chiffrée.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises niçoises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Nice est la cinquième ville de France et le coeur économique de la Côte d'Azur. La métropole concentre 2 500 entreprises tech à Sophia Antipolis, un secteur hôtelier parmi les plus exigeants d'Europe, et un marché immobilier haut de gamme où l'image en ligne fait la différence. Les entreprises niçoises qui n'investissent pas dans un site professionnel perdent des clients au profit de concurrents mieux positionnés sur Google.",
-        "Vizion Web intervient à distance auprès des entreprises de Nice et des Alpes-Maritimes. Chaque projet est développé sur-mesure, avec un design premium et un copywriting professionnel. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences de la Promenade des Anglais, tout en gardant le même niveau d'exigence.",
-        "Un hôtel 4 étoiles du Negresco veut des réservations directes. Une startup de Sophia Antipolis lance son produit SaaS. Une agence immobilière du Carré d'Or refond sa vitrine pour une clientèle internationale. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et aboutit à un livrable prêt à convertir.",
+        {
+          title: "Un marché niçois qui demande du produit",
+          content:
+            "Nice et son arrière-pays concentrent un écosystème tech méditerranéen en croissance, avec une densité forte côté SaaS B2B, tourisme tech, filiales R&D internationales et services aux entreprises du sud-est. Les founders cherchent un partenaire capable de livrer un produit utilisable rapidement. Les directions métier des acteurs du tourisme, de l'événementiel ou des services veulent moderniser leurs outils sans embarquer dans un projet à un million d'euros. Sur ces deux profils, le format Vizion Web colle à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders post-amorçage que les directions métier des acteurs du tourisme, des services et du retail du sud-est qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Nice comme partout sur la côte d'Azur. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler les agendas entre plusieurs interlocuteurs.",
+        },
       ],
-    },
-    localContext: {
-      population: "342 000 habitants (540 000 dans la métropole)",
-      quartiersCles: [
-        "Carré d'Or / Promenade des Anglais (tourisme, luxe, hôtellerie)",
-        "Nice Éco-Vallée (innovation, développement durable)",
-        "Vieux-Nice (restauration, commerces, artisanat)",
-        "Sophia Antipolis (technopole, R&D, startups)",
-        "Arenas / Aéroport (tertiaire, logistique)",
-      ],
-      zonesActivite: [
-        "Sophia Antipolis (première technopole d'Europe, 2 500 entreprises)",
-        "Nice Éco-Vallée (développement urbain et économique)",
-        "CEEI Nice (incubateur de startups innovantes)",
-        "Zone franche urbaine de l'Ariane (TPE/PME)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie de luxe",
-        "Technologies et R&D (Sophia Antipolis)",
-        "Santé, biotech et medtech",
-        "Immobilier haut de gamme",
-        "Commerce international",
-      ],
-      specificites:
-        "Nice bénéficie de Sophia Antipolis, première technopole d'Europe (2 500 entreprises, 38 000 emplois). Cette combinaison entre tourisme haut de gamme et innovation technologique crée un marché où la qualité du site web est un marqueur de crédibilité. Les entreprises niçoises à clientèle internationale ont besoin d'un site multilingue, rapide et bien référencé.",
     },
     localFaqs: getLocalFaqs("Nice", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web niçois commence ici",
+      text: "Votre SaaS ou MVP à Nice",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France",
@@ -685,67 +709,54 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Agence Web à Strasbourg — Sites & Applications | Vizion Web",
+      title: "Agence web à Strasbourg : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Strasbourg et de l'Eurométropole. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
+        "Agence web à Strasbourg : SaaS, MVP en 3 semaines, apps métier. Parc d'Innovation Illkirch, FrenchTech Alsace. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/strasbourg",
     },
     hero: {
-      headline:
-        "Création de sites et applications web à Strasbourg, capitale européenne",
+      headline: "Agence web à Strasbourg : SaaS, MVP et applications métier",
       subheadline:
-        "Solutions digitales sur-mesure pour les entreprises strasbourgeoises : sites vitrines, landing pages et applications SaaS. Design, développement et SEO réunis dans chaque projet.",
+        "Vous portez un SaaS, un MVP ou une app métier transfrontalière à Strasbourg. Devis sous 24h, MVP en 3 semaines. Stack moderne, intégration IA, code 100% à vous. Remote, sprints courts.",
     },
-    images: {
-      intro: {
-        src: "/cities/strasbourg-intro.webp",
-        alt: "Cathédrale de Strasbourg",
-      },
-      context: {
-        src: "/cities/strasbourg-context.webp",
-        alt: "Quartier de la Petite France à Strasbourg",
-      },
+    localAccent: {
+      introMention:
+        "Strasbourg est le seul hub B2B franco-allemand de France : flux d'affaires permanent avec Karlsruhe, Stuttgart, Francfort. La demande locale est forte côté SaaS multilingues et portails B2B transfrontaliers.",
+      ctaMention:
+        "30 minutes pour échanger sur votre projet et vous proposer une solution adaptée à votre marché transfrontalier.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises strasbourgeoises",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Strasbourg est le siège du Parlement européen et la porte d'entrée vers les marchés allemand et suisse. L'Eurométropole rassemble 500 000 habitants, un pôle biotech de premier plan (BioValley) et plus de 30 000 travailleurs frontaliers. Cette position transfrontalière crée des besoins spécifiques : sites multilingues, référencement international, interfaces adaptées à une clientèle franco-allemande.",
-        "Vizion Web intervient à distance auprès des entreprises de Strasbourg et de l'Eurométropole. Chaque projet combine design professionnel, développement sur-mesure, et copywriting adapté à votre cible. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences strasbourgeoises, avec la même rigueur sur les livrables.",
-        "Une institution du quartier européen a besoin d'un portail multilingue. Une biotech d'Illkirch lance son site de recrutement. Un restaurateur de la Petite France veut des réservations en ligne pour sa clientèle touristique. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché strasbourgeois qui demande du produit",
+          content:
+            "Strasbourg occupe une position européenne unique en France, avec un tissu actif côté biotech, services aux entreprises et SaaS B2B qui exportent vers l'Allemagne et la Suisse. Les founders y portent souvent des projets multilingues à fort enjeu réglementaire. Les directions métier des PME du Grand Est veulent moderniser leurs outils internes sans embarquer dans un projet à un million d'euros pour deux cents utilisateurs. Sur ces deux profils, le format Vizion Web répond à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui industrialisent leur SaaS transfrontalier que les directions métier des PME alsaciennes qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain qui utilisent l'outil au quotidien.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Strasbourg comme partout dans le Grand Est. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à organiser des points entre interlocuteurs français et germanophones.",
+        },
       ],
-    },
-    localContext: {
-      population: "287 000 habitants (512 000 dans l'Eurométropole)",
-      quartiersCles: [
-        "Quartier Européen / Wacken (institutions, organisations internationales)",
-        "Presqu'île Malraux (numérique, startups, co-working)",
-        "Petite France / Grande Île (tourisme, commerces, patrimoine)",
-        "Espace Européen de l'Entreprise à Schiltigheim (tertiaire, PME)",
-        "Hautepierre / Cronenbourg (industrie, recherche)",
-      ],
-      zonesActivite: [
-        "Parc d'innovation d'Illkirch (biotech, santé)",
-        "Espace Européen de l'Entreprise (tertiaire, services)",
-        "CESCOM et incubateurs du centre (numérique, startups)",
-        "Port autonome de Strasbourg (logistique, industrie)",
-      ],
-      secteursDominants: [
-        "Institutions européennes et organisations internationales",
-        "Sciences de la vie et biotechnologies",
-        "Industrie (automobile, mécanique)",
-        "Tourisme et hôtellerie",
-        "Services transfrontaliers",
-      ],
-      specificites:
-        "Strasbourg se distingue par sa dimension internationale et transfrontalière. Le pôle BioValley, le parc d'innovation d'Illkirch et le marché du travail bilingue franco-allemand créent un écosystème où les entreprises ont besoin d'une présence web adaptée à plusieurs marchés simultanément.",
     },
     localFaqs: getLocalFaqs("Strasbourg", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web strasbourgeois commence ici",
+      text: "Votre SaaS ou MVP à Strasbourg",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Strasbourg, Bas-Rhin, Grand Est, France",
@@ -762,67 +773,53 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Création de Sites Web & Applications à Rennes | Vizion Web",
+      title: "Agence web à Rennes : SaaS, MVP & apps métier | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Rennes et de Bretagne. Développement sur-mesure, design et copywriting inclus. Intervention à distance, livraison en 30 jours.",
+        "Agence web à Rennes : SaaS, MVP en 3 semaines, apps métier. FrenchTech Rennes Saint-Malo, Cyber Campus, Atalante. Devis 24h. Stack Next.js, Supabase, IA.",
       canonical: "https://vizionweb.fr/rennes",
     },
     hero: {
-      headline:
-        "Votre agence web à Rennes pour des projets numériques ambitieux",
+      headline: "Agence web à Rennes : SaaS, MVP et applications métier",
       subheadline:
-        "Sites internet, landing pages et applications web développés sur-mesure pour les entreprises rennaises. Design, code et rédaction professionnelle inclus dans chaque projet.",
+        "Vous lancez un SaaS, un MVP ou une app métier à Rennes. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, sprints courts, code 100% à vous. Solo, remote, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/rennes-intro.webp",
-        alt: "Maisons à colombages du centre historique de Rennes",
-      },
-      context: {
-        src: "/cities/rennes-context.webp",
-        alt: "Hôtel de ville de Rennes",
-      },
+    localAccent: {
+      introMention:
+        "Rennes concentre le 1er pôle cybersécurité européen (Cyber Campus, 2 000 emplois) + FrenchTech Rennes Saint-Malo + Atalante (600 entreprises tech). Marché exigeant pour les apps B2B custom avec besoins sécurité.",
+      ctaMention:
+        "30 minutes pour cadrer votre besoin et construire une proposition technique adaptée.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises rennaises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Rennes concentre plus de 20 000 emplois dans le numérique et la cybersécurité. La technopole Atalante, la French Tech Rennes-Saint-Malo et un réseau d'écoles d'ingénieurs (ENS, INSA, ISTIC) alimentent un marché où la barre est haute en matière de qualité web. Pour se démarquer dans cet écosystème tech, un site générique ne suffit pas.",
-        "Vizion Web intervient à distance auprès des entreprises rennaises. Chaque projet associe design pensé pour convertir, développement sur-mesure, et copywriting professionnel. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences installées place de la République, tout en livrant des projets complets.",
-        "Une startup de Digital Square prépare son lancement produit. Un cabinet de la Courrouze refond son site vitrine. Un commerce de la rue Saint-Georges veut la commande en ligne. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et aboutit à un livrable prêt à convertir.",
+        {
+          title: "Un marché rennais qui demande du produit",
+          content:
+            "Rennes joue le rôle de hub tech du grand ouest, avec un tissu fort côté télécoms, cybersécurité, SaaS B2B et services numériques. Le marché local est exigeant côté logiciel métier, surtout sur les applications qui demandent un niveau de sécurité sérieux. Les founders cherchent un partenaire capable de livrer vite. Les directions métier des PME bretonnes veulent moderniser leurs outils sans embarquer dans un projet à un million d'euros. Sur ces deux profils, le format Vizion Web répond à la demande.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders post-amorçage que les directions métier des PME bretonnes qui veulent moderniser un back-office vieillissant côté agroalimentaire, services ou industrie. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, à Rennes comme partout dans le grand ouest. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler quatre agendas pour un point d'une heure.",
+        },
       ],
-    },
-    localContext: {
-      population: "222 000 habitants (460 000 dans la métropole)",
-      quartiersCles: [
-        "EuroRennes / Gare (quartier d'affaires, tertiaire)",
-        "Digital Square / Beaulieu (numérique, tech)",
-        "Centre-ville / République (commerces, services)",
-        "La Courrouze (écoquartier, nouvelles entreprises)",
-        "Villejean / Pontchaillou (santé, recherche, universités)",
-      ],
-      zonesActivite: [
-        "Rennes Atalante (technopole, 350+ entreprises)",
-        "Digital Square (campus numérique, French Tech)",
-        "Zone de la Route de Lorient (tertiaire, PME)",
-        "Chantepie / Cesson-Sévigné (tech, services)",
-      ],
-      secteursDominants: [
-        "Numérique et cybersécurité",
-        "Agroalimentaire (premier pôle français)",
-        "Télécommunications (Orange, pôle Images & Réseaux)",
-        "Santé et biotechnologies",
-        "Enseignement supérieur et recherche",
-      ],
-      specificites:
-        "Premier pôle de cybersécurité en France, Rennes est aussi l'un des principaux hubs numériques de l'ouest. La technopole Atalante regroupe 350 entreprises innovantes. Dans ce contexte, les entreprises rennaises qui veulent être prises au sérieux ont besoin d'un site à la hauteur de leur écosystème.",
     },
     localFaqs: getLocalFaqs("Rennes", "à"),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web rennais commence ici",
+      text: "Votre SaaS ou MVP à Rennes",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Rennes, Ille-et-Vilaine, Bretagne, France",
@@ -839,85 +836,72 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites Web & Applications Sur-Mesure à Montpellier | Vizion Web",
+      title: "Agence web Montpellier : SaaS, MVP & apps métier IA | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Montpellier. Développement sur-mesure, design et copywriting inclus. Intervention 100% à distance, livraison en 30 jours.",
+        "Agence web à Montpellier : SaaS, MVP en 3 semaines, apps métier avec IA. FrenchTech Méditerranée, BIC, MIBI. Devis chiffré sous 24h.",
       canonical: "https://vizionweb.fr/montpellier",
     },
     hero: {
-      headline:
-        "Sites et applications sur-mesure pour les entreprises de Montpellier",
+      headline: "Agence web à Montpellier : SaaS, MVP et applications métier",
       subheadline:
-        "Nous concevons des sites internet, landing pages et applications SaaS sur-mesure pour les entreprises montpelliéraines. Design, copywriting et SEO inclus. Intervention 100% à distance.",
+        "Vizion Web est basé à Montpellier. On conçoit et développe vos SaaS, MVP et apps métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Sprints courts, stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/montpellier-intro.webp",
-        alt: "Architecture du centre-ville de Montpellier",
-      },
-      context: {
-        src: "/cities/montpellier-context.webp",
-        alt: "Place de la Comédie à Montpellier",
-      },
+    localAccent: {
+      introMention:
+        "Montpellier est notre QG. On connaît bien l'écosystème : BIC (1er incubateur public de France), MIBI (200 entreprises santé/biotech), Cap Oméga, FrenchTech Méditerranée. Si vous préférez un café avant de cadrer un projet, c'est possible.",
+      ctaMention:
+        "Un appel de 30 minutes (visio ou café à Montpellier). On cadre, on chiffre, on définit un planning.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises montpelliéraines",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Montpellier connaît la plus forte croissance démographique de France depuis 20 ans. Le BIC a accompagné plus de 1 000 startups, le pôle Euromédecine concentre 200 entreprises de santé-biotech, et la French Tech Méditerranée attire chaque année de nouveaux acteurs du numérique et de l'IA. Dans ce marché en accélération, un site web générique ne suffit plus pour capter l'attention.",
-        "Vizion Web intervient à distance auprès des entreprises de Montpellier et de sa métropole. Chaque projet allie design orienté conversion, développement sur-mesure, et copywriting professionnel. Ce fonctionnement 100% remote nous permet de proposer des tarifs compétitifs par rapport aux agences montpelliéraines, tout en gardant la même exigence.",
-        "Une startup medtech du BIC prépare sa levée de fonds et a besoin d'un site crédible en 3 semaines. Un commerce de l'Écusson veut la commande en ligne. Un prestataire de la zone du Millénaire refond sa vitrine. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et aboutit à un livrable prêt à convertir.",
+        {
+          title: "Un marché montpelliérain qui demande du produit",
+          content:
+            "Montpellier concentre un tissu actif de startups produit côté health, biotech, agritech et SaaS B2B, doublé d'un écosystème de PME en transformation digitale qui maillent l'Occitanie. Les founders y portent souvent des projets à forte composante scientifique ou réglementaire. Les directions métier veulent moderniser leurs outils sans embarquer dans un projet à un million d'euros pour deux cents utilisateurs. Sur ces deux profils, le format Vizion Web colle directement à la demande du marché local.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders qui sortent d'incubation côté health, biotech ou agritech que les directions métier des PME régionales qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web a son siège à Montpellier mais fonctionne en remote intégral, y compris avec les clients locaux. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler des agendas pour un point d'une heure.",
+        },
       ],
-    },
-    localContext: {
-      population: "300 000 habitants (500 000 dans la métropole)",
-      quartiersCles: [
-        "Antigone / Port Marianne (tertiaire, services modernes)",
-        "L'Écusson / Centre historique (commerces, restauration)",
-        "Millénaire / Odysseum (pôle commercial et de loisirs)",
-        "Euromédecine (santé, biotech, université)",
-        "Castelnau-le-Lez / Jacou (zones d'activité résidentielles)",
-      ],
-      zonesActivite: [
-        "BIC de Montpellier (incubateur, startups innovantes)",
-        "Euromédecine / CHU (santé, recherche biomédicale)",
-        "French Tech Méditerranée (numérique, IA)",
-        "Parc Eurêka (technopole, 200+ entreprises)",
-      ],
-      secteursDominants: [
-        "Santé, biotech et medtech",
-        "Numérique et intelligence artificielle",
-        "Tourisme et oenotourisme",
-        "Enseignement supérieur et recherche",
-        "Commerce et services",
-      ],
-      specificites:
-        "Montpellier est un pôle d'excellence en santé et biotechnologies (200 entreprises, un CHU majeur) et se positionne sur l'IA et le numérique. Le faible coût de la vie par rapport à Paris ou Lyon attire des entrepreneurs qui veulent maximiser leur budget, y compris leur budget web.",
     },
     localFaqs: [
       {
         question: "Vous êtes basés à Montpellier ?",
         answer:
-          "Oui, notre agence est basée à Montpellier. Nous pouvons organiser des rencontres en personne si nécessaire, mais la plupart de nos clients montpelliérains préfèrent travailler en visio pour plus de flexibilité. Nous restons disponibles pour un café de cadrage initial si vous préférez nous rencontrer avant de démarrer.",
+          "Oui, Vizion Web est basé à Montpellier. La majorité des clients préfèrent travailler en visio (rapidité, flexibilité), mais on est dispo pour un café de cadrage initial sur Montpellier si vous préférez qu'on se rencontre avant de démarrer.",
       },
       {
         question:
-          "Pourquoi choisir Vizion Web plutôt qu'une autre agence montpelliéraine ?",
+          "Pourquoi Vizion Web plutôt qu'une autre agence montpelliéraine ?",
         answer:
-          "Nous sommes spécialisés en applications web modernes (React, Next.js, TypeScript), là où beaucoup d'agences locales se concentrent sur WordPress ou des CMS classiques. Notre force : des solutions techniques sur-mesure, évolutives, avec une vraie expertise en MVP et SaaS. Si vous cherchez du template ou du no-code, ce n'est pas notre approche.",
+          "On est spécialisés en SaaS, applications web modernes (React, Next.js, TypeScript, Supabase) et en intégration IA (OpenAI, Claude). Concrètement : solutions sur-mesure qui montent en charge, livraison MVP en 3 semaines, code 100% à vous. Si vous cherchez du template ou du no-code, on n'est pas l'option.",
       },
       {
         question:
           "Vous travaillez avec quel type d'entreprises à Montpellier ?",
         answer:
-          "Nous accompagnons principalement des startups en phase de lancement (MVP, SaaS) et des PME établies qui veulent digitaliser un processus métier ou refondre leur site web. Nos clients viennent de secteurs variés : tech, services, retail, santé. Le point commun : ils cherchent une solution technique solide et sur-mesure.",
+          "Principalement : startups MedTech / SaaS du BIC ou MIBI en phase de MVP/Series A, PME en transformation digitale qui ont besoin d'apps métier internes (dashboards, ERP custom, automatisations IA), et dirigeants qui intègrent de l'IA dans leurs outils.",
       },
     ],
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web montpelliérain commence ici",
+      text: "Votre SaaS ou MVP à Montpellier",
       subtext:
-        "Réservez un appel de 30 minutes. On analyse vos objectifs, on vous propose une solution chiffrée et un planning. Sans engagement, 100% à distance.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. Visio ou café sur Montpellier.",
     },
     schema: {
       areaServed: "Montpellier, Hérault, Occitanie, France",
@@ -926,7 +910,7 @@ const cities: CitySEO[] = [
   },
 
   // ─────────────────────────────────────────────
-  // 12. POINTE-À-PITRE
+  // 12. POINTE-À-PITRE (DOM-TOM : préserver KW "création site web" + "agence web")
   // ─────────────────────────────────────────────
   {
     slug: "pointe-a-pitre",
@@ -934,60 +918,47 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites & Applications Web à Pointe-à-Pitre | Vizion Web",
+      title: "Agence web & création site web à Pointe-à-Pitre | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Pointe-à-Pitre et de Guadeloupe. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
+        "Agence web à Pointe-à-Pitre et Guadeloupe : création site web, SaaS, applications métier. Devis chiffré sous 24h. Stack moderne Next.js. 100% remote.",
       canonical: "https://vizionweb.fr/pointe-a-pitre",
     },
     hero: {
-      headline:
-        "Votre agence web à Pointe-à-Pitre pour conquérir le marché guadeloupéen",
+      headline: "Agence web à Pointe-à-Pitre : SaaS, MVP et apps métier",
       subheadline:
-        "Sites internet, landing pages et applications web conçus pour les entreprises de Guadeloupe. Développement sur-mesure, design professionnel et copywriting adaptés au marché caribéen.",
+        "Vous lancez un projet web à Pointe-à-Pitre ou en Guadeloupe : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/guadeloupe-intro.webp",
-        alt: "Plage tropicale de Guadeloupe",
-      },
-      context: {
-        src: "/cities/guadeloupe-context.webp",
-        alt: "Eaux turquoise de Guadeloupe",
-      },
+    localAccent: {
+      introMention:
+        "Pointe-à-Pitre est le centre économique de la Guadeloupe : Port Autonome, Jarry (1 800 entreprises, plus grande zone d'activité Antilles-Guyane). Marché tech sous-équipé : opportunité directe pour qui investit dans des outils modernes.",
+      ctaMention:
+        "30 minutes en visio (on s'adapte au décalage horaire). On cadre, on chiffre une solution adaptée au marché antillais.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises de Guadeloupe",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Pointe-à-Pitre et la zone de Jarry concentrent la majorité de l'activité économique de la Guadeloupe. Pourtant, beaucoup d'entreprises locales n'ont pas de site web, ou utilisent des solutions obsolètes qui ne reflètent pas la qualité de leurs services. Dans un marché où les touristes (800 000 par an) planifient tout en ligne, cette absence de présence web est un manque à gagner direct.",
-        "Vizion Web intervient depuis la métropole auprès des entreprises guadeloupéennes. Chaque projet est développé sur-mesure, avec un design professionnel, un copywriting adapté au marché local et un SEO qui vous positionne sur Google. Ce fonctionnement à distance nous permet de proposer des tarifs compétitifs tout en livrant un niveau de qualité identique à nos projets métropolitains.",
-        "Un gîte de Deshaies veut des réservations directes (sans passer par Airbnb). Un artisan de Baie-Mahault a besoin d'une vitrine professionnelle. Un restaurant du Gosier veut capter les touristes en recherche active. Chaque projet démarre par un appel de cadrage (on s'adapte au décalage horaire), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché pointois qui demande du produit",
+          content:
+            "Pointe-à-Pitre concentre le tissu B2B le plus dense des Antilles : logistique, import-export, services aux entreprises, distribution. La plupart des sociétés tournent avec des outils vieillissants, des sites en ligne laissés à l'abandon ou des Excel partagés qui freinent la croissance. Les dirigeants qui veulent passer à l'étape suivante cherchent un partenaire produit capable de livrer une vraie application métier. Sur ce besoin précis, on est en plein dedans.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders guadeloupéens qui montent un projet régional caribéen que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé six mois à l'avance qui ne tient jamais la réalité du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la configuration des Antilles. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux qui prennent en compte le décalage horaire : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique.",
+        },
       ],
-    },
-    localContext: {
-      population:
-        "15 000 habitants (Pointe-à-Pitre), 390 000 habitants (Guadeloupe)",
-      quartiersCles: [
-        "Centre-ville de Pointe-à-Pitre (commerces, services)",
-        "Les Abymes / Raizet (zone résidentielle et commerciale)",
-        "Baie-Mahault / Jarry (zone industrielle et commerciale principale)",
-        "Gosier (tourisme, hôtellerie)",
-      ],
-      zonesActivite: [
-        "Zone industrielle de Jarry (première zone d'activité des Antilles)",
-        "Destrelland / Baie-Mahault (grande distribution, commerces)",
-        "Zone aéroportuaire de Raizet (logistique, services)",
-        "Marina de Bas-du-Fort (tourisme nautique)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie",
-        "Commerce et grande distribution",
-        "BTP et artisanat",
-        "Agriculture (banane, canne à sucre, rhum)",
-        "Services aux entreprises",
-      ],
-      specificites:
-        "Le marché guadeloupéen est compact mais en forte demande de digitalisation. Les entreprises qui investissent dans un site professionnel prennent une avance directe sur leurs concurrents encore absents du web. C'est particulièrement vrai dans le tourisme, où les voyageurs comparent et réservent en ligne avant même d'atterrir à Pôle Caraïbes.",
     },
     localFaqs: getLocalFaqs("Pointe-à-Pitre", "à", {
       type: "domtom",
@@ -996,13 +967,13 @@ const cities: CitySEO[] = [
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web guadeloupéen commence ici",
+      text: "Votre site web ou SaaS à Pointe-à-Pitre",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Pointe-à-Pitre, Guadeloupe, France",
-      geo: { latitude: 16.2411, longitude: -61.5331 },
+      geo: { latitude: 16.2415, longitude: -61.5328 },
     },
   },
 
@@ -1015,59 +986,47 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites & Applications Web à Fort-de-France | Vizion Web",
+      title: "Agence web & création site web à Fort-de-France | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Fort-de-France et de Martinique. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
+        "Agence web à Fort-de-France et Martinique : création site web, SaaS, applications métier. Devis chiffré sous 24h. Stack moderne Next.js. 100% remote.",
       canonical: "https://vizionweb.fr/fort-de-france",
     },
     hero: {
-      headline: "Création de sites et applications web à Fort-de-France",
+      headline: "Agence web à Fort-de-France : SaaS, MVP et apps métier",
       subheadline:
-        "Sites internet, landing pages et applications SaaS pour les entreprises martiniquaises. Développement sur-mesure, livré clé en main avec design et copywriting.",
+        "Vous portez un projet web à Fort-de-France ou en Martinique : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/martinique-intro.webp",
-        alt: "Baie du Vauclin en Martinique",
-      },
-      context: {
-        src: "/cities/martinique-context.webp",
-        alt: "Plage de palmiers en Martinique",
-      },
+    localAccent: {
+      introMention:
+        "Fort-de-France est la capitale économique de la Martinique : sièges régionaux, Port Autonome, zone du Lamentin (1ère zone d'activité). Marché compact mais peu équipé en outils numériques modernes : opportunité pour les entreprises qui investissent.",
+      ctaMention:
+        "30 minutes en visio (on s'adapte au décalage horaire). On cadre votre besoin produit, on chiffre.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises martiniquaises",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Fort-de-France concentre la majorité des entreprises de services, des commerces et des institutions de la Martinique. Pourtant, beaucoup d'entrepreneurs peinent à trouver un prestataire web capable de livrer un site rapide, professionnel et adapté à leur activité. Les solutions WordPress ou les templates ne suffisent plus face aux attentes des clients qui comparent en ligne avant de se déplacer.",
-        "Vizion Web intervient depuis la métropole auprès des entreprises martiniquaises. Chaque projet est développé sur-mesure, avec un objectif clair : générer des prises de contact, des réservations ou des ventes. Design, copywriting et SEO sont intégrés dès le départ. Ce fonctionnement à distance nous permet de proposer des tarifs compétitifs tout en livrant un niveau de qualité identique à nos projets métropolitains.",
-        "Un hôtel des Trois-Îlets veut des réservations directes sans passer par Booking. Un artisan du Lamentin a besoin d'une vitrine professionnelle. Un cabinet de conseil de Fort-de-France refond son site. Chaque projet démarre par un appel (on s'adapte au décalage horaire), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché foyalais qui demande du produit",
+          content:
+            "Fort-de-France concentre les sièges régionaux des Antilles, un tissu B2B varié (services, agro-industrie export, distribution, logistique portuaire) et une demande de modernisation forte côté PME. La plupart des outils internes datent d'une décennie, et les sites en ligne ressemblent à des vitrines figées qui ne génèrent ni leads ni efficacité. Les dirigeants qui veulent une vraie application métier ou un produit numérique cherchent un partenaire capable d'aller vite et droit, sans détour. C'est là qu'on intervient.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders martiniquais qui lancent un projet régional caribéen que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé en début de mission qui ne survit jamais aux premiers retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la configuration des Antilles. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux qui prennent en compte le décalage horaire : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu en logistique.",
+        },
       ],
-    },
-    localContext: {
-      population:
-        "78 000 habitants (Fort-de-France), 350 000 habitants (Martinique)",
-      quartiersCles: [
-        "Centre-ville / Bord de mer (commerces, services)",
-        "Didier / Bellevue (professions libérales)",
-        "La Pointe Simon (quartier d'affaires rénové)",
-        "Route de Balata (artisanat, bien-être)",
-      ],
-      zonesActivite: [
-        "Le Lamentin (zone commerciale et industrielle principale)",
-        "Pointe Simon / Centre d'affaires (tertiaire)",
-        "Zone de Californie (commerces, restauration)",
-        "Les Trois-Îlets / Pointe du Bout (tourisme, hôtellerie)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie",
-        "Commerce et distribution",
-        "BTP et artisanat",
-        "Services aux entreprises",
-        "Restauration et événementiel",
-      ],
-      specificites:
-        "Le marché martiniquais est compact mais concurrentiel. Les touristes planifient et réservent depuis leur téléphone avant d'arriver, et les habitants utilisent de plus en plus Google pour trouver un prestataire. Les entreprises qui investissent dans un site professionnel captent cette clientèle. Les autres la perdent au profit d'une page Facebook ou d'un concurrent mieux référencé.",
     },
     localFaqs: getLocalFaqs("Fort-de-France", "à", {
       type: "domtom",
@@ -1076,9 +1035,9 @@ const cities: CitySEO[] = [
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web martiniquais commence ici",
+      text: "Votre site web ou SaaS à Fort-de-France",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Fort-de-France, Martinique, France",
@@ -1095,98 +1054,66 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites Web & Applications à Cayenne, Guyane | Vizion Web",
+      title: "Agence web & création site web à Cayenne | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Cayenne et de Guyane. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
+        "Agence web à Cayenne et Guyane : création site web, SaaS, applications métier. Sous-traitance Centre Spatial Guyanais. Devis 24h. 100% remote.",
       canonical: "https://vizionweb.fr/cayenne",
     },
     hero: {
-      headline:
-        "Développement web sur-mesure à Cayenne pour les entreprises guyanaises",
+      headline: "Agence web à Cayenne : SaaS, MVP et apps métier",
       subheadline:
-        "Sites internet, landing pages et applications web professionnels pour les entreprises de Cayenne et de Guyane. Technologies modernes, design et copywriting adaptés au marché local.",
+        "Vous lancez un projet web à Cayenne ou en Guyane : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/guyane-intro.webp",
-        alt: "Cascade en forêt tropicale de Guyane",
-      },
-      context: {
-        src: "/cities/guyane-context.webp",
-        alt: "Forêt tropicale et rivière en Guyane",
-      },
+    localAccent: {
+      introMention:
+        "Cayenne est la capitale économique de la Guyane : spatial à Kourou (CSG, 1 200 emplois directs, 9 000 indirects), industries extractives, BTP. Faible densité de prestataires tech qualifiés : fenêtre ouverte pour des outils modernes.",
+      ctaMention:
+        "30 minutes en visio (décalage 4-5h, on s'adapte). On cadre votre besoin et on chiffre une solution adaptée.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises guyanaises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Cayenne est la capitale économique de la Guyane, un département en forte croissance porté par le spatial (Centre Spatial Guyanais de Kourou), l'exploitation aurifère et le tourisme vert. Pourtant, la présence web des entreprises guyanaises reste en retard : peu de sites professionnels, des solutions obsolètes, et un manque de prestataires locaux qualifiés en développement web.",
-        "Vizion Web intervient depuis la métropole pour combler ce manque. Chaque projet est développé sur-mesure, avec un design professionnel, un copywriting adapté à votre marché et un SEO qui vous positionne sur Google. Ce fonctionnement à distance nous permet de livrer un niveau de qualité identique à nos projets métropolitains, sans surcoût lié à la distance.",
-        "Un sous-traitant du Centre Spatial de Kourou a besoin d'un portail professionnel. Un lodge d'écotourisme à Cacao veut des réservations en ligne. Un commerce de Cayenne cherche plus de visibilité. Chaque projet démarre par un appel (on s'adapte au décalage horaire de 4 à 5h), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché cayennais qui demande du produit",
+          content:
+            "Cayenne concentre l'activité tertiaire de la Guyane autour des industries lourdes, du BTP, de la logistique et des services aux entreprises. Le tissu local est exigeant côté process opérationnels mais sous-équipé côté outils numériques. Les sous-traitants industriels et les PME en croissance cherchent des applications métier qui parlent à leur réalité : gestion de chantier, suivi logistique, pilotage commercial, automatisation de tâches répétitives. C'est exactement le type de problèmes qu'on prend en charge avec un partenaire produit dédié.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders guyanais qui montent un projet régional que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé six mois à l'avance qui ne tient jamais face aux premiers retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de la Guyane et au décalage horaire de quatre à cinq heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner.",
+        },
       ],
     },
-    localContext: {
-      population: "65 000 habitants (Cayenne), 300 000 habitants (Guyane)",
-      quartiersCles: [
-        "Centre-ville de Cayenne (commerces, administrations)",
-        "Rémire-Montjoly (résidentiel, services)",
-        "Matoury (zone commerciale, logistique)",
-        "Kourou (Centre Spatial, tourisme spatial)",
-      ],
-      zonesActivite: [
-        "Zone de Dégrad-des-Cannes (port, logistique, industrie)",
-        "Zone commerciale de Matoury (distribution, services)",
-        "Centre Spatial Guyanais à Kourou (aérospatial)",
-        "Zone artisanale de Cayenne (TPE, artisanat)",
-      ],
-      secteursDominants: [
-        "Spatial et aérospatial (CSG, ArianeGroup)",
-        "Commerce et distribution",
-        "BTP et construction",
-        "Tourisme vert et écotourisme",
-        "Pêche et agroalimentaire",
-      ],
-      specificites:
-        "Le Centre Spatial Guyanais représente 15% du PIB local et fait rayonner le territoire à l'international. L'économie guyanaise est portée par la démographie et les investissements publics. Le faible taux de digitalisation des entreprises locales crée une fenêtre d'opportunité : les entreprises qui investissent maintenant dans un site professionnel prennent une avance directe sur leurs concurrents.",
-    },
-    localFaqs: [
-      {
-        question:
-          "Comment se passe la collaboration si vous êtes basés en métropole ?",
-        answer:
-          "Tous nos projets se gèrent en visio avec des points réguliers. Vous avez accès en temps réel aux maquettes et aux environnements de développement pour suivre l'avancement. Et si besoin, nous pouvons organiser une rencontre en personne lors d'un passage de Dylann (fondateur) en Guyane.",
-      },
-      {
-        question: "Vous connaissez vraiment le marché guyanais ?",
-        answer:
-          "Oui, le fondateur de l'agence est originaire de Guyane, avec de la famille sur place et des passages réguliers sur le territoire. Nous comprenons les spécificités du marché local : les besoins en digitalisation, les contraintes budgétaires et les particularités culturelles et économiques du territoire. Nous tenons à contribuer au développement du digital sur le territoire guyanais.",
-      },
-      {
-        question:
-          "Pourquoi travailler avec vous plutôt qu'une agence locale à Cayenne ?",
-        answer:
-          "Nous offrons un double avantage : la proximité culturelle et la connaissance du territoire (origines guyanaises), combinées à une expertise technique pointue acquise en métropole (Développement d'applications modernes). Vous bénéficiez d'une qualité de livraison métropolitaine avec une vraie compréhension des enjeux guyanais.",
-      },
-      {
-        question: "Vous travaillez avec quel type d'entreprises à Cayenne ?",
-        answer:
-          "Nous accompagnons principalement des startups, PME guyanaises ou entrepreneurs qui veulent lancer un produit digital (MVP, SaaS) ou automatiser un processus métier. Nos clients viennent de secteurs variés : services, commerce, tourisme, santé. Le point commun : ils cherchent une solution technique fiable et adaptée au contexte local.",
-      },
-    ],
+    localFaqs: getLocalFaqs("Cayenne", "à", {
+      type: "domtom",
+      territoire: "Guyane",
+      adj: "guyanais",
+    }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web guyanais commence ici",
+      text: "Votre site web ou SaaS à Cayenne",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
-      areaServed: "Cayenne, Guyane, France",
-      geo: { latitude: 4.9372, longitude: -52.326 },
+      areaServed: "Cayenne, Guyane française, France",
+      geo: { latitude: 4.9333, longitude: -52.3333 },
     },
   },
 
   // ─────────────────────────────────────────────
-  // 15. SAINT-DENIS (La Réunion)
+  // 15. SAINT-DENIS (RÉUNION)
   // ─────────────────────────────────────────────
   {
     slug: "saint-denis",
@@ -1194,60 +1121,48 @@ const cities: CitySEO[] = [
     type: "city",
     preposition: "à",
     meta: {
-      title: "Sites & Applications Web à Saint-Denis, Réunion | Vizion Web",
+      title:
+        "Agence web & création site web à Saint-Denis (Réunion) | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Saint-Denis et de La Réunion. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole.",
+        "Agence web à Saint-Denis de La Réunion : création site web, SaaS, applications métier. Technopôle, FrenchTech Run'Up. Devis 24h. 100% remote.",
       canonical: "https://vizionweb.fr/saint-denis",
     },
     hero: {
-      headline: "Votre partenaire web à Saint-Denis pour le marché réunionnais",
+      headline: "Agence web à Saint-Denis (Réunion) : SaaS, MVP et apps métier",
       subheadline:
-        "Sites internet, landing pages et applications web développés sur-mesure pour les entreprises de La Réunion. Design premium, copywriting et SEO inclus dans chaque projet.",
+        "Vous portez un projet web à Saint-Denis de La Réunion : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/reunion-intro.webp",
-        alt: "Piton de la Fournaise à La Réunion",
-      },
-      context: {
-        src: "/cities/reunion-context.webp",
-        alt: "Cascade et montagne à La Réunion",
-      },
+    localAccent: {
+      introMention:
+        "Saint-Denis est la capitale économique de La Réunion (870 000 habitants, marché captif océan Indien). Le Technopôle concentre les startups numériques locales et la FrenchTech Run'Up. Marché plus mature qu'aux Antilles côté tech mais encore en sous-équipement vs métropole.",
+      ctaMention:
+        "30 minutes en visio (décalage 3-4h, on s'adapte). On cadre votre besoin produit et on chiffre.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises réunionnaises",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "Saint-Denis est la plus grande ville de l'outre-mer français et le coeur économique de La Réunion. Le chef-lieu concentre les sièges sociaux, les administrations et une part croissante de startups numériques. Avec 40% de la population sous 25 ans et un taux d'équipement smartphone parmi les plus élevés de France, les Réunionnais achètent et comparent en ligne. Les entreprises sans site professionnel perdent cette clientèle.",
-        "Vizion Web intervient depuis la métropole auprès des entreprises réunionnaises. Chaque projet est développé sur-mesure, avec un design mobile-first (70% du trafic à La Réunion se fait sur mobile), un copywriting adapté au contexte local et un SEO ciblé. Le décalage horaire de 2 à 3h est facile à gérer : les points projet se planifient en fin de matinée heure de La Réunion.",
-        "Un hôtel de Saint-Gilles-les-Bains veut des réservations directes. Un prestataire BTP de Saint-Pierre a besoin d'une vitrine crédible. Une startup du Technopôle de Saint-Denis lance son produit. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché dionysien qui demande du produit",
+          content:
+            "Saint-Denis concentre l'essentiel de l'activité économique réunionnaise : services aux entreprises, distribution, tourisme, agro-industrie, écosystème numérique en croissance. Le marché est plus mature qu'aux Antilles côté digital, avec des founders qui visent l'océan Indien et des PME qui veulent vraiment moderniser leurs outils internes. Sur ces deux profils, la demande dépasse l'offre locale en prestataires capables de livrer du produit. On adresse cette demande de front.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders réunionnais qui montent un SaaS pour l'océan Indien que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé six mois à l'avance qui ne tient jamais face à la réalité du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la position de La Réunion et au décalage horaire de trois à quatre heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni logistique inutile.",
+        },
       ],
-    },
-    localContext: {
-      population:
-        "155 000 habitants (Saint-Denis), 870 000 habitants (La Réunion)",
-      quartiersCles: [
-        "Centre-ville / Barachois (commerces, services, tourisme)",
-        "Sainte-Clotilde (zone commerciale, résidentiel)",
-        "Le Chaudron (quartier populaire, commerces de proximité)",
-        "Technopôle de Saint-Denis (numérique, innovation)",
-        "Le Moufia (université, enseignement supérieur)",
-      ],
-      zonesActivite: [
-        "Technor / Technopôle de Saint-Denis (tech, innovation)",
-        "Zone commerciale de Sainte-Clotilde (distribution, services)",
-        "Zone artisanale du Chaudron (TPE, artisanat)",
-        "Le Port (zone industrialo-portuaire, logistique)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie",
-        "Commerce et grande distribution",
-        "BTP et aménagement",
-        "Agriculture (canne à sucre, vanille, rhum)",
-        "Numérique et services",
-      ],
-      specificites:
-        "La Réunion est le département d'outre-mer le plus peuplé (870 000 habitants) et le plus dynamique économiquement. L'insularité crée un marché captif où la visibilité en ligne est un facteur clé de succès. Pour les entreprises réunionnaises, un site rapide et bien référencé est le moyen le plus direct de capter la clientèle locale et touristique.",
     },
     localFaqs: getLocalFaqs("Saint-Denis", "à", {
       type: "domtom",
@@ -1256,18 +1171,18 @@ const cities: CitySEO[] = [
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web réunionnais commence ici",
+      text: "Votre site web ou SaaS à Saint-Denis",
       subtext:
-        "Réservez un appel de 30 minutes (décalage horaire facile à gérer). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Saint-Denis, La Réunion, France",
-      geo: { latitude: -20.8823, longitude: 55.4504 },
+      geo: { latitude: -20.8789, longitude: 55.4481 },
     },
   },
 
   // ─────────────────────────────────────────────
-  // 16. GUADELOUPE (territory)
+  // 16. GUADELOUPE (territoire : préserver KW "agence web guadeloupe" + "création site web guadeloupe")
   // ─────────────────────────────────────────────
   {
     slug: "guadeloupe",
@@ -1275,60 +1190,47 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Création de Sites & Applications en Guadeloupe | Vizion Web",
+      title: "Agence web & création site web en Guadeloupe | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Guadeloupe. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
+        "Agence web en Guadeloupe : création site web, SaaS, applications métier sur-mesure. Stack moderne Next.js, intégration IA. Devis chiffré sous 24h. 100% remote.",
       canonical: "https://vizionweb.fr/guadeloupe",
     },
     hero: {
-      headline:
-        "Des sites web et applications sur-mesure pour les entreprises de Guadeloupe",
+      headline: "Agence web en Guadeloupe : SaaS, MVP et apps métier",
       subheadline:
-        "Landing pages, sites vitrines et applications SaaS développés avec des technologies modernes pour les entrepreneurs guadeloupéens. Design, copywriting et référencement inclus.",
+        "Vous portez un projet web en Guadeloupe : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/guadeloupe-intro.webp",
-        alt: "Plage tropicale de Guadeloupe",
-      },
-      context: {
-        src: "/cities/guadeloupe-context.webp",
-        alt: "Eaux turquoise de Guadeloupe",
-      },
+    localAccent: {
+      introMention:
+        "La Guadeloupe (400 000 habitants) concentre Jarry (plus grande zone d'activité Antilles-Guyane, 1 800 entreprises) et le Port Autonome. Marché peu équipé en outils numériques modernes : opportunité directe pour les entreprises qui investissent.",
+      ctaMention:
+        "30 minutes en visio (on s'adapte au décalage horaire). On cadre votre besoin produit, on chiffre une solution adaptée au marché antillais.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises guadeloupéennes",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "La Guadeloupe accueille 800 000 visiteurs par an, et la grande majorité d'entre eux planifient leur séjour en ligne. Pourtant, beaucoup d'entreprises locales n'ont pas de site web ou utilisent des solutions dépassées. Un hébergement sans site propre dépend d'Airbnb (et de ses commissions). Un restaurant sans vitrine en ligne perd les touristes qui recherchent sur Google. Ce décalage entre l'offre locale et les habitudes numériques des clients est une opportunité pour ceux qui investissent maintenant.",
-        "Vizion Web intervient depuis la métropole pour créer des sites internet et applications web adaptés au marché guadeloupéen. Chaque projet est développé sur-mesure, avec un design orienté conversion, un copywriting professionnel et un SEO local ciblé. Ce fonctionnement à distance nous permet de livrer un niveau de qualité identique à nos projets métropolitains, sans surcoût lié à la distance.",
-        "Un gîte de Deshaies veut ses propres réservations en ligne. Une entreprise BTP de Baie-Mahault a besoin d'une vitrine crédible pour décrocher des marchés publics. Un restaurant de Sainte-Anne cherche à capter les touristes en recherche active. Chaque projet démarre par un appel (on s'adapte au décalage horaire), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché guadeloupéen qui demande du produit",
+          content:
+            "La Guadeloupe rassemble un tissu B2B dense : import-export, logistique, distribution, services aux entreprises, agro-industrie, tourisme professionnel. Le marché tourne encore largement sur des outils internes vieillissants et des sites en ligne laissés à l'abandon. Les dirigeants qui veulent franchir un cap cherchent un partenaire produit capable de livrer une vraie application métier, pas un site générique de plus. Sur ces besoins précis, on est en plein dedans, avec des projets calibrés pour le rythme antillais.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders guadeloupéens qui montent un projet caribéen que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé en début de mission qui finit toujours par déraper face aux retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de l'archipel guadeloupéen. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux qui prennent en compte le décalage horaire : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni logistique inutile.",
+        },
       ],
-    },
-    localContext: {
-      population: "390 000 habitants",
-      quartiersCles: [
-        "Pointe-à-Pitre / Les Abymes (pôle économique principal)",
-        "Baie-Mahault / Jarry (zone industrielle et commerciale)",
-        "Basse-Terre (administration, services publics)",
-        "Sainte-Anne / Saint-François (tourisme, hôtellerie)",
-        "Le Gosier (tourisme, restauration)",
-      ],
-      zonesActivite: [
-        "Zone de Jarry (première zone d'activité des Antilles françaises)",
-        "Zone de Destrelland (grande distribution, commerces)",
-        "Port autonome de la Guadeloupe (commerce maritime)",
-        "Zones touristiques du sud Grande-Terre (hôtellerie, loisirs)",
-      ],
-      secteursDominants: [
-        "Tourisme balnéaire et culturel",
-        "Commerce et grande distribution",
-        "Agriculture d'exportation (banane, rhum)",
-        "BTP et construction",
-        "Services aux entreprises et aux particuliers",
-      ],
-      specificites:
-        "Premier département d'outre-mer pour le tourisme (800 000 visiteurs par an), la Guadeloupe dépend fortement de la consommation intérieure et du tourisme. Dans ces deux secteurs, la présence web est un facteur de différenciation direct : les entreprises avec un site professionnel captent les clients que leurs concurrents sans site laissent passer.",
     },
     localFaqs: getLocalFaqs("Guadeloupe", "en", {
       type: "domtom",
@@ -1337,9 +1239,9 @@ const cities: CitySEO[] = [
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web guadeloupéen commence ici",
+      text: "Votre site web ou SaaS en Guadeloupe",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Guadeloupe, France",
@@ -1348,7 +1250,7 @@ const cities: CitySEO[] = [
   },
 
   // ─────────────────────────────────────────────
-  // 17. MARTINIQUE (territory)
+  // 17. MARTINIQUE
   // ─────────────────────────────────────────────
   {
     slug: "martinique",
@@ -1356,60 +1258,47 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Création de Sites & Applications Web en Martinique | Vizion Web",
+      title: "Agence web & création site web en Martinique | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Martinique. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
+        "Agence web en Martinique : création site web, SaaS, applications métier sur-mesure. Stack moderne Next.js. Devis chiffré sous 24h. 100% remote.",
       canonical: "https://vizionweb.fr/martinique",
     },
     hero: {
-      headline:
-        "Agence web en Martinique : des sites et applications qui font la différence",
+      headline: "Agence web en Martinique : SaaS, MVP et apps métier",
       subheadline:
-        "Développement web sur-mesure pour les entreprises martiniquaises. Sites vitrines, landing pages et applications SaaS livrés avec design, copywriting et optimisation SEO.",
+        "Vous portez un projet web en Martinique : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/martinique-intro.webp",
-        alt: "Baie du Vauclin en Martinique",
-      },
-      context: {
-        src: "/cities/martinique-context.webp",
-        alt: "Plage de palmiers en Martinique",
-      },
+    localAccent: {
+      introMention:
+        "La Martinique (360 000 habitants) concentre Fort-de-France et le Lamentin (1ère zone d'activité). Tissu B2B local solide (services aux entreprises, logistique, agro-industrie export). Faible densité de prestataires tech qualifiés.",
+      ctaMention:
+        "30 minutes en visio (on s'adapte au décalage horaire). On cadre votre besoin produit et on chiffre.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises martiniquaises",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "La Martinique compte 350 000 habitants et un marché où le bouche-à-oreille se fait de plus en plus en ligne. Le rhum AOC martiniquais s'exporte, les touristes planifient leur séjour sur Google, et les habitants comparent les prestataires sur leur téléphone. Dans ce contexte, un site web professionnel n'est plus un luxe : c'est le socle de la crédibilité pour toute entreprise qui veut grandir.",
-        "Vizion Web intervient depuis la métropole pour créer des sites et applications web adaptés au marché martiniquais. Chaque projet est développé sur-mesure (pas de WordPress ni de templates), avec un design pensé pour convertir, un copywriting professionnel et un SEO local optimisé. Ce fonctionnement à distance nous permet de livrer un niveau de qualité identique à nos projets métropolitains.",
-        "Une distillerie du nord veut vendre son rhum en ligne au-delà de l'île. Un hôtel des Trois-Îlets cherche des réservations directes sans passer par Booking. Un artisan du Lamentin a besoin d'une vitrine crédible. Chaque projet démarre par un appel (on s'adapte au décalage horaire), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché martiniquais qui demande du produit",
+          content:
+            "La Martinique réunit un tissu B2B solide autour des services aux entreprises, de la logistique, de l'agro-industrie d'export et de la distribution. Le marché reste compact, mais la demande de modernisation est réelle côté outils internes et applications métier. Beaucoup d'entreprises locales font tourner des process avec des Excel partagés ou des logiciels qui n'évoluent plus depuis dix ans. Les dirigeants qui veulent passer à l'étape suivante cherchent un partenaire produit capable d'aller vite et de livrer du concret.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders martiniquais qui ciblent le bassin caribéen que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé en début de mission qui ne survit jamais aux premiers retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de la Martinique. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux qui prennent en compte le décalage horaire : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni logistique inutile à gérer.",
+        },
       ],
-    },
-    localContext: {
-      population: "350 000 habitants",
-      quartiersCles: [
-        "Fort-de-France centre (commerces, services, administration)",
-        "Le Lamentin (zone industrielle et commerciale)",
-        "Les Trois-Îlets (tourisme, hôtellerie)",
-        "Le Robert / Le François (agriculture, pêche)",
-        "Schoelcher (résidentiel, université)",
-      ],
-      zonesActivite: [
-        "Zone industrielle du Lamentin (principale zone d'activité)",
-        "Zone touristique des Trois-Îlets (hôtels, loisirs)",
-        "Centre d'affaires de Pointe Simon (tertiaire)",
-        "Zone artisanale de Rivière-Salée (TPE, artisanat)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie-restauration",
-        "Agriculture et agroalimentaire (rhum, banane)",
-        "Commerce et distribution",
-        "BTP et artisanat",
-        "Services et professions libérales",
-      ],
-      specificites:
-        "La Martinique se distingue par son label Rhum AOC (unique en France) et par un tourisme qui se réinvente autour de la culture créole et de la gastronomie. Le marché local est compact et concurrentiel : les entreprises avec un site professionnel et un bon référencement local captent les clients en premier. Les autres dépendent du bouche-à-oreille et des réseaux sociaux.",
     },
     localFaqs: getLocalFaqs("Martinique", "en", {
       type: "domtom",
@@ -1418,9 +1307,9 @@ const cities: CitySEO[] = [
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web martiniquais commence ici",
+      text: "Votre site web ou SaaS en Martinique",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "Martinique, France",
@@ -1429,7 +1318,7 @@ const cities: CitySEO[] = [
   },
 
   // ─────────────────────────────────────────────
-  // 18. GUYANE (territory)
+  // 18. GUYANE (territoire : préserver KW "agence web guyane" pos 14)
   // ─────────────────────────────────────────────
   {
     slug: "guyane",
@@ -1437,170 +1326,125 @@ const cities: CitySEO[] = [
     type: "territory",
     preposition: "en",
     meta: {
-      title: "Agence Web en Guyane — Sites & Applications | Vizion Web",
+      title: "Agence web & création site web en Guyane | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de Guyane. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
+        "Agence web en Guyane : création site web, SaaS, applications métier. Sous-traitance Centre Spatial Guyanais. Devis 24h. Stack moderne. 100% remote.",
       canonical: "https://vizionweb.fr/guyane",
     },
     hero: {
-      headline:
-        "Développement web professionnel pour les entreprises de Guyane",
+      headline: "Agence web en Guyane : SaaS, MVP et apps métier",
       subheadline:
-        "Sites internet, landing pages et applications SaaS développés sur-mesure pour le marché guyanais. Technologies modernes, design premium et SEO local intégrés.",
+        "Vous portez un projet web en Guyane (Cayenne, Kourou, Saint-Laurent-du-Maroni) : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/guyane-intro.webp",
-        alt: "Cascade en forêt tropicale de Guyane",
-      },
-      context: {
-        src: "/cities/guyane-context.webp",
-        alt: "Forêt tropicale et rivière en Guyane",
-      },
+    localAccent: {
+      introMention:
+        "La Guyane française (300 000 habitants, en forte croissance) combine spatial à Kourou (CSG : 1 200 emplois directs, 9 000 indirects), industries extractives et services tertiaires de Cayenne. Très faible densité de prestataires tech qualifiés.",
+      ctaMention:
+        "30 minutes en visio (décalage 4-5h, on s'adapte). On cadre votre besoin, on chiffre une solution adaptée au contexte guyanais.",
     },
-    localIntro: {
-      title:
-        "Création de sites web et applications pour les entreprises guyanaises",
+    introContent: {
+      title: "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "La Guyane connaît une croissance démographique parmi les plus fortes de France et reçoit des investissements massifs dans les infrastructures. Pourtant, la présence digitale des entreprises guyanaises reste en retard par rapport à la métropole : sites absents ou dépassés, dépendance aux réseaux sociaux, manque de visibilité sur Google. Ce décalage crée une fenêtre d'opportunité pour les entreprises qui investissent maintenant dans un site professionnel.",
-        "Vizion Web intervient depuis la métropole pour créer des sites et applications web adaptés au marché guyanais. Chaque projet est développé sur-mesure, avec un design adapté à votre image, un copywriting qui parle à vos clients et un SEO local ciblé. Ce fonctionnement à distance nous permet de livrer un niveau de qualité que peu de prestataires locaux peuvent proposer, sans surcoût.",
-        "Un lodge d'écotourisme à Cacao veut des réservations en ligne. Un sous-traitant du Centre Spatial de Kourou a besoin d'un portail professionnel. Un commerce de Saint-Laurent-du-Maroni cherche plus de visibilité. Chaque projet démarre par un appel (on s'adapte au décalage horaire de 4 à 5h), avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché guyanais qui demande du produit",
+          content:
+            "La Guyane combine une économie portée par l'industrie spatiale, les industries extractives, le BTP, la logistique et les services tertiaires en croissance. Le marché est en pleine montée mais reste sous-équipé en outils numériques modernes côté entreprises. Les sous-traitants industriels et les PME en développement cherchent des applications métier qui correspondent à leur réalité opérationnelle : suivi de chantier, pilotage logistique, gestion commerciale, automatisation de tâches répétitives. C'est exactement le type de problèmes qu'on prend en charge.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders guyanais qui montent un projet régional que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé en début de mission qui finit toujours par dériver face aux retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de la Guyane et au décalage horaire de quatre à cinq heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner.",
+        },
       ],
     },
-    localContext: {
-      population: "300 000 habitants",
-      quartiersCles: [
-        "Cayenne centre (commerces, administration, services)",
-        "Rémire-Montjoly (résidentiel, professions libérales)",
-        "Matoury (zone commerciale, logistique)",
-        "Kourou (spatial, tourisme scientifique)",
-        "Saint-Laurent-du-Maroni (commerce frontalier, services)",
-      ],
-      zonesActivite: [
-        "Zone de Dégrad-des-Cannes (port, industrie)",
-        "Centre Spatial Guyanais de Kourou (aérospatial)",
-        "Zone commerciale de Matoury-Cogneau (distribution)",
-        "Zone d'activité de Pariacabo à Kourou (sous-traitance spatiale)",
-      ],
-      secteursDominants: [
-        "Spatial et aérospatial",
-        "BTP et aménagement du territoire",
-        "Commerce et distribution",
-        "Exploitation forestière et minière",
-        "Tourisme vert et écotourisme",
-      ],
-      specificites:
-        "Plus grand département français (83 000 km2), la Guyane combine forêt amazonienne et haute technologie spatiale. Son économie est portée par la démographie et les investissements publics. Le faible taux de digitalisation des entreprises locales signifie qu'un site professionnel et bien référencé vous place immédiatement devant vos concurrents absents du web.",
-    },
-    localFaqs: [
-      {
-        question:
-          "Comment se passe la collaboration si vous êtes basés en métropole ?",
-        answer:
-          "Tous nos projets se gèrent en visio avec des points réguliers. Vous avez accès en temps réel aux maquettes et aux environnements de développement pour suivre l'avancement. Et si besoin, nous pouvons organiser une rencontre en personne lors d'un passage de Dylann (fondateur) en Guyane.",
-      },
-      {
-        question: "Vous connaissez vraiment le marché guyanais ?",
-        answer:
-          "Oui, le fondateur de l'agence est originaire de Guyane, avec de la famille sur place et des passages réguliers sur le territoire. Nous comprenons les spécificités du marché local : les besoins en digitalisation, les contraintes budgétaires et les particularités culturelles et économiques du territoire. Nous tenons à contribuer au développement du digital sur le territoire guyanais.",
-      },
-      {
-        question:
-          "Pourquoi travailler avec vous plutôt qu'une agence locale en Guyane ?",
-        answer:
-          "Nous offrons un double avantage : la proximité culturelle et la connaissance du territoire (origines guyanaises), combinées à une expertise technique pointue acquise en métropole (Développement d'applications modernes). Vous bénéficiez d'une qualité de livraison métropolitaine avec une vraie compréhension des enjeux guyanais.",
-      },
-      {
-        question: "Vous travaillez avec quel type d'entreprises en Guyane ?",
-        answer:
-          "Nous accompagnons principalement des startups, PME guyanaises ou entrepreneurs qui veulent lancer un produit digital (MVP, SaaS) ou automatiser un processus métier. Nos clients viennent de secteurs variés : services, commerce, tourisme, santé. Le point commun : ils cherchent une solution technique fiable et adaptée au contexte local.",
-      },
-    ],
+    localFaqs: getLocalFaqs("Guyane", "en", {
+      type: "domtom",
+      territoire: "Guyane",
+      adj: "guyanais",
+    }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web guyanais commence ici",
+      text: "Votre site web ou SaaS en Guyane",
       subtext:
-        "Réservez un appel de 30 minutes (on s'adapte au décalage horaire). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
-      areaServed: "Guyane, France",
-      geo: { latitude: 4.9372, longitude: -52.326 },
+      areaServed: "Guyane française, France",
+      geo: { latitude: 3.9339, longitude: -53.1258 },
     },
   },
 
   // ─────────────────────────────────────────────
-  // 19. LA RÉUNION (territory)
+  // 19. LA RÉUNION
   // ─────────────────────────────────────────────
   {
     slug: "la-reunion",
     name: "La Réunion",
     type: "territory",
-    preposition: "à",
+    preposition: "en",
     meta: {
-      title: "Création de Sites & Applications à La Réunion | Vizion Web",
+      title: "Agence web & création site web à La Réunion | Vizion Web",
       description:
-        "Sites internet et applications web pour les entreprises de La Réunion. Développement sur-mesure, design et SEO inclus. Intervention à distance depuis la métropole, livraison en 30 jours.",
+        "Agence web à La Réunion : création site web, SaaS, applications métier. Technopôle, FrenchTech Run'Up. Devis chiffré sous 24h. 100% remote.",
       canonical: "https://vizionweb.fr/la-reunion",
     },
     hero: {
-      headline: "Sites internet et applications web sur-mesure à La Réunion",
+      headline: "Agence web à La Réunion : SaaS, MVP et apps métier",
       subheadline:
-        "Nous concevons des solutions digitales performantes pour les entreprises réunionnaises. Du site vitrine au SaaS, chaque projet est développé sur-mesure avec design, copywriting et SEO intégrés.",
+        "Vous portez un projet web à La Réunion : SaaS, MVP ou application métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Stack moderne, intégration IA si pertinent.",
     },
-    images: {
-      intro: {
-        src: "/cities/reunion-intro.webp",
-        alt: "Piton de la Fournaise à La Réunion",
-      },
-      context: {
-        src: "/cities/reunion-context.webp",
-        alt: "Cascade et montagne à La Réunion",
-      },
+    localAccent: {
+      introMention:
+        "La Réunion (870 000 habitants) est le DOM-TOM le plus peuplé et le plus connecté. Marché captif océan Indien, 40% de population sous 25 ans, taux d'équipement smartphone parmi les plus élevés de France. Technopôle Saint-Denis et FrenchTech Run'Up.",
+      ctaMention:
+        "30 minutes en visio (décalage 3-4h, on s'adapte). On cadre votre besoin produit, on chiffre une solution adaptée.",
     },
-    localIntro: {
+    introContent: {
       title:
-        "Création de sites web et applications pour les entreprises réunionnaises",
+        "Agence produit pour startups et PME en transformation digitale",
       paragraphs: [
-        "La Réunion compte 870 000 habitants et un taux d'équipement smartphone parmi les plus élevés de France. Plus de 70% du trafic web se fait sur mobile, et les Réunionnais comparent, achètent et réservent en ligne. Au-delà du tourisme et de l'agriculture, l'île développe des filières d'avenir : énergies renouvelables, numérique, économie bleue. Pour les entreprises de l'île, un site web performant n'est plus optionnel.",
-        "Vizion Web intervient depuis la métropole pour créer des sites et applications web adaptés au marché réunionnais. Chaque projet est développé sur-mesure, avec un design mobile-first, un copywriting adapté au contexte local et un SEO ciblé. Le décalage horaire de 2 à 3h est facile à gérer, et ce fonctionnement à distance nous permet de proposer des tarifs compétitifs.",
-        "Un hôtel de Saint-Gilles-les-Bains veut des réservations directes sans passer par Booking. Un artisan de Saint-Paul a besoin d'une vitrine crédible. Une startup du Technopôle de Saint-Denis lance son application. Chaque projet démarre par un appel de cadrage, avance sur Figma et en visio, et se livre clé en main.",
+        {
+          title: "Un marché réunionnais qui demande du produit",
+          content:
+            "La Réunion est le territoire d'outre-mer le plus mature côté tech : population jeune, taux d'équipement mobile élevé, écosystème numérique structuré et marché captif qui rayonne sur l'océan Indien. La demande dépasse l'offre côté prestataires capables de livrer du produit. Les founders qui visent l'océan Indien et les PME qui veulent moderniser leurs outils internes cherchent un partenaire capable d'aller vite et droit. C'est exactement le terrain sur lequel on intervient.",
+        },
+        {
+          title: "Trois engagements simples, tenus à chaque projet",
+          content:
+            "Notre modèle tient sur trois engagements simples : un MVP livré en quelques semaines, un devis chiffré sous 24 à 48 heures, un code 100% à vous dès le premier jour. Le cadrage va à l'essentiel, les démos arrivent chaque semaine, et vous récupérez un produit que vous pouvez faire évoluer avec votre équipe ou un autre prestataire quand vous le souhaitez.",
+        },
+        {
+          title: "Founders et directions métier, même posture produit",
+          content:
+            "On accompagne autant les founders réunionnais qui montent un SaaS pour l'océan Indien que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé six mois à l'avance qui ne survit jamais aux premiers retours du terrain.",
+        },
+        {
+          title: "Une collaboration full remote, où que vous soyez",
+          content:
+            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de La Réunion et au décalage horaire de trois à quatre heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni logistique inutile.",
+        },
       ],
     },
-    localContext: {
-      population: "870 000 habitants",
-      quartiersCles: [
-        "Saint-Denis centre (chef-lieu, services, administrations)",
-        "Saint-Pierre (pôle économique du sud, commerces)",
-        "Saint-Paul / Le Port (logistique, industrie, commerce)",
-        "Saint-Gilles-les-Bains (tourisme balnéaire, hôtellerie)",
-        "Le Tampon / Saint-Louis (agriculture, services)",
-      ],
-      zonesActivite: [
-        "Technopôle de Saint-Denis (numérique, innovation)",
-        "ZAC 2000 au Port (industrie, logistique)",
-        "Zone commerciale de Savanna à Saint-Paul (distribution)",
-        "Pôle d'activités de Pierrefonds à Saint-Pierre (tertiaire, PME)",
-      ],
-      secteursDominants: [
-        "Tourisme et hôtellerie-restauration",
-        "Commerce et grande distribution",
-        "BTP et aménagement",
-        "Agriculture et agroalimentaire (canne, vanille, rhum)",
-        "Énergies renouvelables et développement durable",
-      ],
-      specificites:
-        "La Réunion combine insularité et dynamisme économique : PIB en croissance régulière, population jeune très connectée, et un objectif d'autonomie énergétique à horizon 2030. L'écosystème numérique autour du Technopôle de Saint-Denis grandit vite. Pour les entreprises réunionnaises, un site rapide et bien référencé est le moyen le plus direct de capter la clientèle locale et touristique.",
-    },
-    localFaqs: getLocalFaqs("La Réunion", "à", {
+    localFaqs: getLocalFaqs("La Réunion", "en", {
       type: "domtom",
       territoire: "La Réunion",
       adj: "réunionnais",
     }),
     globalFaqIndices: [0, 1, 2],
     cta: {
-      text: "Votre projet web réunionnais commence ici",
+      text: "Votre site web ou SaaS à La Réunion",
       subtext:
-        "Réservez un appel de 30 minutes (décalage horaire facile à gérer). On analyse vos objectifs, on vous propose une solution chiffrée. Sans engagement.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
     },
     schema: {
       areaServed: "La Réunion, France",

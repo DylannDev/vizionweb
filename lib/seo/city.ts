@@ -35,7 +35,7 @@ export function buildCityServiceSchema(city: CitySEO) {
       "Développement SaaS",
       "Landing pages",
     ],
-    priceRange: "2000€ - 30000€+",
+    priceRange: "$$$",
   };
 }
 

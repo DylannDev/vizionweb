@@ -1,46 +1,64 @@
-import Image from "next/image";
 import type { CitySEO } from "@/data/cities";
 import Badge from "@/components/ui/badge";
-import { getBlurDataURL } from "@/lib/blur";
-
 
 interface CityIntroProps {
   city: CitySEO;
 }
 
+function getIntroContent(city: CitySEO) {
+  if (city.introContent) {
+    return {
+      badge:
+        city.introContent.badge ??
+        `Agence web ${city.preposition} ${city.name}`,
+      title: city.introContent.title,
+      paragraphs: city.introContent.paragraphs,
+    };
+  }
+  return {
+    badge: `Agence web ${city.preposition} ${city.name}`,
+    title: "SaaS, MVP et apps métier livrés en 3 semaines",
+    paragraphs: [
+      {
+        title: "Le contexte local",
+        content: city.localAccent.introMention,
+      },
+    ],
+  };
+}
+
 export function CityIntro({ city }: CityIntroProps) {
+  const intro = getIntroContent(city);
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-background from-0% to-white to-10%">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Texte */}
-          <div>
-              <Badge align="left">
-                Agence web {city.preposition} {city.name}
-              </Badge>
-              <h2 className="text-[22px] sm:text-[28px] font-semibold text-primary-dark leading-tight mt-4 mb-6">
-                {city.localIntro.title}
-              </h2>
-            <div className="space-y-4 text-gray-dark text-base sm:text-lg">
-              {city.localIntro.paragraphs.map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
+        {/* Header centré */}
+        <div className="text-center mb-10 md:mb-14">
+          <Badge align="center">{intro.badge}</Badge>
+          <h2 className="text-[22px] sm:text-[28px] md:text-5xl font-semibold text-primary-dark leading-tight mt-4">
+            {intro.title}
+          </h2>
+        </div>
 
-          {/* Image */}
-            <div className="relative aspect-square sm:aspect-video lg:aspect-[3/4] overflow-hidden rounded-[40px] shadow-[0_4px_20px_0] shadow-gray-lighter">
-              <Image
-                src={city.images.intro.src}
-                alt={city.images.intro.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={getBlurDataURL(city.images.intro.src)}
-                className="object-cover object-center p-3 bg-white rounded-[40px]"
-              />
+        {/* Liste divisée — texte sur toute la largeur */}
+        <div className="divide-y divide-gray-lighter">
+          {intro.paragraphs.map((p, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4 md:gap-8 py-8 lg:py-10 first:pt-0"
+            >
+              <h3 className="font-semibold text-balance text-xl lg:text-2xl text-primary-dark flex items-baseline gap-3">
+                <span className="text-primary-blue font-bold shrink-0">
+                  0{i + 1}
+                </span>
+                <span>{p.title}</span>
+              </h3>
+              <div className="text-gray-dark leading-7">
+                <p>{p.content}</p>
+              </div>
             </div>
+          ))}
         </div>
       </div>
     </section>
