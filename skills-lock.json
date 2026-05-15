@@ -11,6 +11,12 @@
       "sourceType": "github",
       "computedHash": "3ac95c65245e20a21e23dd47569cf7dcb687f3425bcbf25e349d8dc64b924786"
     },
+    "humanizer": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "skillPath": "skills/humanizer/SKILL.md",
+      "computedHash": "34a38e6acc60d4529612d41ffe740bca0060d3c5e89e2a0d24ae795f67157fbb"
+    },
     "linkedin-content": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
