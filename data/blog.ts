@@ -14,7 +14,10 @@ export type BlogCategory =
   | "fonctionnalites"
   | "sites-et-conversion"
   | "technique"
-  | "tendances";
+  | "ia"
+  | "automatisation"
+  | "tendances"
+  | "comparatif";
 
 export const blogCategories: Record<
   BlogCategory,
@@ -22,27 +25,46 @@ export const blogCategories: Record<
 > = {
   "lancer-son-projet": {
     label: "Lancer son projet",
-    description: "Budget, cahier des charges et premiers pas pour votre projet web",
+    description:
+      "Budget, cahier des charges et premiers pas pour votre projet web",
   },
   applications: {
     label: "Applications & SaaS",
-    description: "Créer, lancer et faire évoluer une application web ou un SaaS",
+    description:
+      "Créer, lancer et faire évoluer une application web ou un SaaS",
   },
   fonctionnalites: {
     label: "Fonctionnalités web",
-    description: "Réservation, paiement, espace client et outils métier intégrés",
+    description:
+      "Réservation, paiement, espace client et outils métier intégrés",
   },
   "sites-et-conversion": {
     label: "Sites & Conversion",
-    description: "Créer un site qui attire des visiteurs et les transforme en clients",
+    description:
+      "Créer un site qui attire des visiteurs et les transforme en clients",
   },
   technique: {
     label: "Technique & Performance",
     description: "SEO, performance, frameworks et hébergement",
   },
+  ia: {
+    label: "IA",
+    description:
+      "Intégrer OpenAI, Claude ou Mistral dans vos applications métier ou SaaS",
+  },
+  automatisation: {
+    label: "Automatisation",
+    description:
+      "Automatiser vos process internes avec n8n, Zapier ou des workflows custom",
+  },
   tendances: {
     label: "Tendances & Innovation",
-    description: "IA, design et nouvelles pratiques du web",
+    description: "Design, nouvelles pratiques et évolutions du web",
+  },
+  comparatif: {
+    label: "Comparatifs",
+    description:
+      "Comparatifs honnêtes pour vous aider à choisir entre deux solutions",
   },
 };
 
@@ -100,8 +122,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "site-ne-genere-pas-clients",
-    title:
-      "Pourquoi votre site ne génère pas de clients (et comment corriger)",
+    title: "Pourquoi votre site ne génère pas de clients (et comment corriger)",
     description:
       "Les raisons les plus fréquentes pour lesquelles un site web ne convertit pas, et le plan d'action concret pour transformer vos visiteurs en prospects.",
     date: "2025-12-28",
@@ -202,9 +223,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "quest-ce-quun-mvp",
-    title: "Qu'est-ce qu'un MVP et pourquoi commencer par là ?",
+    title: "MVP : définition, méthode agile et exemples concrets en 2026",
     description:
-      "Ce qu'est un MVP, pourquoi c'est la meilleure façon de lancer un produit digital et comment définir le périmètre de votre version minimale.",
+      "MVP (Minimum Viable Product) : définition simple, méthode agile, exemples concrets (Airbnb, Dropbox, Buffer) et budget. Le guide complet pour lancer ton produit.",
     date: "2026-01-17",
     category: "lancer-son-projet",
     readingTime: "9 min",
@@ -212,8 +233,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "react-vs-vue-vs-angular",
-    title:
-      "React vs Vue vs Angular : quel framework pour votre projet web ?",
+    title: "React vs Vue vs Angular : quel framework pour votre projet web ?",
     description:
       "Comparaison objective de React, Vue et Angular pour vous aider à choisir le bon framework selon votre projet, votre équipe et vos ambitions.",
     date: "2026-01-19",
@@ -243,8 +263,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "espace-client-site-web",
-    title:
-      "Espace client sur votre site web : pourquoi et comment l'intégrer",
+    title: "Espace client sur votre site web : pourquoi et comment l'intégrer",
     description:
       "Pourquoi intégrer un espace client à votre site web, ce qu'il doit contenir et comment le mettre en place sans exploser le budget.",
     date: "2026-01-25",
@@ -264,8 +283,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "paiement-en-ligne-stripe-paypal",
-    title:
-      "Paiement en ligne sur votre site : Stripe, PayPal ou autre ?",
+    title: "Paiement en ligne sur votre site : Stripe, PayPal ou autre ?",
     description:
       "Comparaison de Stripe, PayPal et des alternatives pour intégrer le paiement en ligne sur votre site. Frais, fonctionnalités et recommandations.",
     date: "2026-01-29",
@@ -296,8 +314,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "crm-sur-mesure-vs-hubspot",
-    title:
-      "CRM sur-mesure vs Hubspot/Salesforce : quand développer le vôtre",
+    title: "CRM sur-mesure vs Hubspot/Salesforce : quand développer le vôtre",
     description:
       "Quand un CRM sur-mesure devient plus rentable que HubSpot ou Salesforce. Critères de décision, coûts comparés et cas concrets.",
     date: "2026-02-04",
@@ -307,11 +324,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "integrer-ia-application-web",
-    title: "Intégrer l'IA dans votre application web : cas pratiques",
+    title:
+      "Intégrer l'IA et les APIs OpenAI dans votre application web : guide pratique",
     description:
-      "Cas pratiques d'intégration de l'intelligence artificielle dans des applications web : chatbots, recommandations, automatisation et analyse de données.",
+      "Comment intégrer l'IA (OpenAI, Claude) dans une application web pour PME : APIs OpenAI, cas d'usage concrets (chatbot, classification, extraction), coûts réels.",
     date: "2026-02-06",
-    category: "tendances",
+    category: "ia",
     readingTime: "10 min",
     image: "/blog/integrer-l-ia-dans-votre-app.webp",
   },
@@ -341,7 +359,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Comment des outils web internes sur-mesure peuvent automatiser vos tâches répétitives, réduire les erreurs et libérer du temps pour votre équipe.",
     date: "2026-02-14",
-    category: "fonctionnalites",
+    category: "automatisation",
     readingTime: "10 min",
     image: "/blog/automatiser-business.webp",
   },
@@ -354,6 +372,36 @@ export const blogPosts: BlogPost[] = [
     category: "tendances",
     readingTime: "10 min",
     image: "/blog/tendances-webdesign.webp",
+  },
+  {
+    slug: "next-js-vs-wordpress-pour-le-seo",
+    title: "Next.js vs WordPress pour le SEO : quel choix en 2026 ?",
+    description:
+      "Comparatif honnête Next.js vs WordPress pour le SEO : Core Web Vitals, sécurité, coûts et cas d'usage. Le verdict par profil de projet.",
+    date: "2026-05-03",
+    category: "comparatif",
+    readingTime: "11 min",
+    image: "/blog/next-vs-wordpress.webp",
+  },
+  {
+    slug: "openai-vs-claude-api-quel-choisir",
+    title: "OpenAI vs Claude : quel modèle choisir en 2026 ?",
+    description:
+      "Comparatif OpenAI vs Claude : pricing, qualité du code, multimodalité, contexte long. Le verdict par cas d'usage.",
+    date: "2026-05-03",
+    category: "ia",
+    readingTime: "11 min",
+    image: "/blog/claude-vs-chatgpt.webp",
+  },
+  {
+    slug: "saas-vs-developpement-sur-mesure",
+    title: "SaaS vs application sur-mesure : quel choix pour votre outil ?",
+    description:
+      "SaaS générique ou sur-mesure : comparatif coûts, délais, propriété et scalabilité. Les seuils chiffrés pour décider sans hésiter.",
+    date: "2026-05-03",
+    category: "comparatif",
+    readingTime: "11 min",
+    image: "/blog/saas-vs-app-custom.webp",
   },
 ];
 
