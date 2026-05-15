@@ -12,6 +12,7 @@ const badgeVariants = cva(
         black:
           "bg-gradient-to-b from-primary-dark to-secondary-dark text-white border border-primary-dark shadow-secondary-dark/40",
         blue: "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border border border-primary-blue text-white shadow-primary-blue/40",
+        red: "bg-gradient-to-b from-red-800 to-red-500 border-red-600 shadow-red-500/40 text-white",
         transparent:
           "bg-transparent border border-gray-light text-gray-dark shadow-none",
       },
@@ -19,11 +20,12 @@ const badgeVariants = cva(
     defaultVariants: {
       variant: "white",
     },
-  }
+  },
 );
 
 export interface BadgeProps
-  extends React.HTMLAttributes<HTMLSpanElement>,
+  extends
+    React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {
   align?: "left" | "center";
   uppercase?: boolean;
@@ -44,7 +46,7 @@ export function Badge({
         alignmentClass,
         uppercase ? "uppercase" : "capitalize",
 
-        className
+        className,
       )}
       {...props}
     />

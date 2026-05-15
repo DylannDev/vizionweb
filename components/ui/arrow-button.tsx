@@ -24,7 +24,7 @@ export function ArrowButton({
     <Button
       variant={variant}
       size={size}
-      className={cn(size === "lg" ? "pl-6 pr-3" : "pl-5 pr-2.5", className)}
+      className={cn(size === "lg" ? "pl-6 pr-4" : "pl-5 pr-2.5", className)}
       {...props}
     >
       {children}
@@ -34,7 +34,7 @@ export function ArrowButton({
           "flex items-center justify-center rounded-md",
           variant === "white"
             ? "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border"
-            : "bg-white"
+            : "bg-white",
         )}
       >
         <ArrowRight
@@ -44,7 +44,7 @@ export function ArrowButton({
             "group-hover:-rotate-45 transition-all duration-300 ease-in-out",
             variant === "white" && "text-white",
             variant === "black" && "text-primary-dark",
-            variant === "blue" && "text-primary-blue"
+            variant === "blue" && "text-primary-blue",
           )}
         />
       </span>

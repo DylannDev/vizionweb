@@ -7,6 +7,8 @@ import {
 } from "react-icons/ri";
 import { COUNTRIES, navLinks } from "@/data";
 import { CITIES } from "@/data";
+import { services } from "@/data/services";
+import { technos } from "@/data/technos";
 import { FooterTopFade } from "./footer-top-fade";
 import { FooterCta } from "./footer-cta";
 
@@ -38,6 +40,20 @@ export default function Footer() {
   ];
 
   const allLocations = [...CITIES, ...COUNTRIES];
+
+  const technoOrder = [
+    "agence-react",
+    "agence-next-js",
+    "agence-typescript",
+    "agence-nodejs",
+    "agence-openai",
+    "agence-claude-api",
+    "agence-supabase",
+    "agence-n8n",
+  ];
+  const orderedTechnos = technoOrder
+    .map((slug) => technos.find((t) => t.slug === slug))
+    .filter((t): t is NonNullable<typeof t> => Boolean(t));
   return (
     <>
       <FooterTopFade />
@@ -82,7 +98,7 @@ export default function Footer() {
                   </div>
 
                   <div className="text-sm text-gray-light">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-10 items-start">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto_auto_auto] gap-10 items-start">
                       <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-2">
                           {socialLinks.map(({ href, label, Icon }) => (
@@ -120,6 +136,40 @@ export default function Footer() {
                               href={l.href}
                             >
                               {l.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </nav>
+
+                      <nav aria-label="Services" className="">
+                        <div className="flex flex-col gap-2 text-base transition-all duration-150 ease-in-out">
+                          <div className="text-white font-semibold mb-2">
+                            Services
+                          </div>
+                          {services.map((s) => (
+                            <Link
+                              className="hover:text-white"
+                              key={s.slug}
+                              href={`/services/${s.slug}`}
+                            >
+                              {s.shortTitle}
+                            </Link>
+                          ))}
+                        </div>
+                      </nav>
+
+                      <nav aria-label="Expertises" className="">
+                        <div className="flex flex-col gap-2 text-base transition-all duration-150 ease-in-out">
+                          <div className="text-white font-semibold mb-2">
+                            Technologies
+                          </div>
+                          {orderedTechnos.map((t) => (
+                            <Link
+                              className="hover:text-white"
+                              key={t.slug}
+                              href={`/${t.slug}`}
+                            >
+                              {t.technoName}
                             </Link>
                           ))}
                         </div>

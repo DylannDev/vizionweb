@@ -43,3 +43,6 @@ next-env.d.ts
 # claude
 .claude/
 .agents/
+
+# seo-actions reports (local-only, archived in vizionweb-seo)
+/seo-actions/

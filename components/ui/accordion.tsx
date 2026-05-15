@@ -9,27 +9,39 @@ export const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & {
     bgColor?: string;
+    iconBgClass?: string;
   }
->(({ className = "", bgColor = "bg-white", children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="m-0">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={`group cursor-pointer ${bgColor} rounded-3xl flex w-full items-center justify-between p-5 text-left text-lg sm:text-xl font-semibold text-primary-dark focus:outline-none transition-colors ${className}`}
-      {...props}
-    >
-      {children}
-      <span
-        aria-hidden
-        className="relative ml-3 flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-b from-primary-blue-dark to-primary-blue-border flex items-center justify-center"
+>(
+  (
+    {
+      className = "",
+      bgColor = "bg-white",
+      iconBgClass = "bg-gradient-to-b from-primary-blue-dark to-primary-blue-border",
+      children,
+      ...props
+    },
+    ref,
+  ) => (
+    <AccordionPrimitive.Header className="m-0">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={`group cursor-pointer ${bgColor} rounded-3xl flex w-full items-center justify-between p-5 text-left text-lg sm:text-xl font-semibold text-primary-dark focus:outline-none transition-colors ${className}`}
+        {...props}
       >
-        {/* Vertical bar: rotates to horizontal then fades when open */}
-        <span className="absolute w-[2px] h-3.5 bg-white transition-all duration-300 ease-in-out group-data-[state=open]:rotate-90 group-data-[state=open]:opacity-0" />
-        {/* Horizontal bar: always visible */}
-        <span className="absolute w-3.5 h-[2px] bg-white" />
-      </span>
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
+        {children}
+        <span
+          aria-hidden
+          className={`relative ml-3 flex-shrink-0 w-8 h-8 rounded-lg ${iconBgClass} flex items-center justify-center`}
+        >
+          {/* Vertical bar: rotates to horizontal then fades when open */}
+          <span className="absolute w-[2px] h-3.5 bg-white transition-all duration-300 ease-in-out group-data-[state=open]:rotate-90 group-data-[state=open]:opacity-0" />
+          {/* Horizontal bar: always visible */}
+          <span className="absolute w-3.5 h-[2px] bg-white" />
+        </span>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  ),
+);
 AccordionTrigger.displayName = "AccordionTrigger";
 
 export const AccordionContent = React.forwardRef<

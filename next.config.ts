@@ -15,6 +15,32 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "randomuser.me", pathname: "/**" },
     ],
   },
+  // Redirections 301 — Phase B refonte massive 2026-05-03
+  // Préservent le SEO juice des anciens slugs services
+  async redirects() {
+    return [
+      {
+        source: "/services/mvp-proof-of-concept",
+        destination: "/services/mvp",
+        permanent: true,
+      },
+      {
+        source: "/services/landing-page",
+        destination: "/services/developpement-web",
+        permanent: true,
+      },
+      {
+        source: "/services/site-vitrine",
+        destination: "/services/developpement-web",
+        permanent: true,
+      },
+      {
+        source: "/services/site-web-avance",
+        destination: "/services/developpement-web",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);

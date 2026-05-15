@@ -28,8 +28,10 @@ type FontWeight =
   | "semibold"
   | "bold";
 
-interface TypographyProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
+interface TypographyProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   align?: "left" | "center" | "right";
@@ -43,6 +45,7 @@ interface TypographyProps
   subtitleColor?: string;
   titleMaxWidth?: string;
   subtitleMaxWidth?: string;
+  noMargin?: boolean;
 }
 
 export function Typography({
@@ -59,6 +62,7 @@ export function Typography({
   subtitleColor = "text-gray-dark",
   titleMaxWidth = "max-w-3xl",
   subtitleMaxWidth = "max-w-2xl",
+  noMargin = false,
   className = "",
   ...props
 }: TypographyProps) {
@@ -126,12 +130,20 @@ export function Typography({
     }
   }
 
+  const alignAutoMargin =
+    align === "left"
+      ? "mr-auto"
+      : align === "right"
+        ? "ml-auto"
+        : "mx-auto";
+
   const titleEl = title ? (
     <TitleTag
       className={cn(
-        "font-heading tracking-tight text-balance mx-auto",
+        "font-heading tracking-tight text-balance",
+        alignAutoMargin,
         titleMaxWidth,
-        titleColor
+        titleColor,
       )}
       style={{
         fontFamily: "var(--font-family-heading)",
@@ -149,9 +161,9 @@ export function Typography({
       className={cn(
         "text-balance",
         getSubtitleSizeClass(subtitleSize),
-        variant === "stacked" && `${subtitleMaxWidth} mx-auto`,
+        variant === "stacked" && `${subtitleMaxWidth} ${alignAutoMargin}`,
         variant === "split" && "md:text-right",
-        subtitleColor
+        subtitleColor,
       )}
       style={{
         fontFamily: "var(--font-family-sans)",
@@ -166,7 +178,11 @@ export function Typography({
   if (variant === "split") {
     return (
       <div
-        className={cn("mb-8 sm:mb-12 text-center md:text-left", className)}
+        className={cn(
+          !noMargin && "mb-8 sm:mb-12",
+          "text-center md:text-left",
+          className,
+        )}
         {...props}
       >
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-start">
@@ -180,10 +196,11 @@ export function Typography({
   return (
     <div
       className={cn(
-        "space-y-3 sm:space-y-6 mb-8 sm:mb-12",
+        "space-y-1 sm:space-y-2",
+        !noMargin && "mb-8 sm:mb-12",
         align === "center" && "text-center",
         align === "right" && "text-right",
-        className
+        className,
       )}
       {...props}
     >

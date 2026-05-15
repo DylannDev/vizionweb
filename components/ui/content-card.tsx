@@ -1,7 +1,9 @@
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { IconIllustration } from "./icon-illustration";
 
 const watermarkVariants = [
   "scale-125 rotate-12",
@@ -21,6 +23,8 @@ interface ContentCardProps {
   iconSrc?: string;
   iconBg?: string;
   watermarkVariant?: number;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  logoSrc?: string;
   image?: string;
   imageAlt?: string;
   badges?: string[];
@@ -40,6 +44,8 @@ export function ContentCard({
   iconSrc,
   iconBg = "bg-violet-500",
   watermarkVariant = 0,
+  icon: PhosphorIcon,
+  logoSrc,
   image,
   imageAlt,
   badges,
@@ -52,13 +58,15 @@ export function ContentCard({
   reverse = false,
   className,
 }: ContentCardProps) {
+  const isPhosphorOnly = (!!PhosphorIcon || !!logoSrc) && !iconSrc && !image;
+  const phosphorBlock = isPhosphorOnly && null;
   const iconBlock = iconSrc && (
     <div
       className={cn(
         "relative rounded-3xl overflow-hidden flex items-center justify-center",
         layout === "horizontal"
           ? "aspect-video md:w-2/5 shrink-0 md:aspect-square"
-          : "aspect-video"
+          : "aspect-video",
       )}
     >
       <div className={cn("absolute inset-0 opacity-50", iconBg)} />
@@ -71,7 +79,7 @@ export function ContentCard({
         loading="eager"
         className={cn(
           "absolute inset-0 w-full h-full object-cover pointer-events-none opacity-20",
-          watermarkVariants[watermarkVariant % watermarkVariants.length]
+          watermarkVariants[watermarkVariant % watermarkVariants.length],
         )}
       />
       <Image
@@ -82,7 +90,7 @@ export function ContentCard({
         sizes="300px"
         loading="lazy"
         className={cn(
-          "relative z-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] w-full h-full max-h-[50%]"
+          "relative z-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] w-full h-full max-h-[50%]",
         )}
       />
     </div>
@@ -108,17 +116,17 @@ export function ContentCard({
       className={cn(
         "flex flex-col justify-between gap-3 flex-1",
         layout === "horizontal" ? "py-2 px-4 md:py-4" : "pt-4 px-3 pb-3",
-        centered && "text-center"
+        centered && "text-center",
       )}
     >
       <div className="space-y-3 flex-1">
         <h3
           className={cn(
             "font-semibold",
-            iconSrc && "text-xl",
+            (iconSrc || PhosphorIcon) && "text-xl",
             hover
               ? "text-primary-dark group-hover:text-primary-blue transition-colors duration-300"
-              : "text-primary-dark"
+              : "text-primary-dark",
           )}
         >
           {title}
@@ -130,7 +138,7 @@ export function ContentCard({
         <span
           className={cn(
             "inline-flex items-center gap-2 mt-1 text-sm font-semibold text-primary-blue",
-            centered && "justify-center"
+            centered && "justify-center",
           )}
         >
           {actionLabel}
@@ -158,22 +166,82 @@ export function ContentCard({
     </div>
   );
 
-  const card = (
+  const phosphorCard = isPhosphorOnly && (
+    <div
+      className={cn(
+        "h-full w-full group shadow-[0_4px_20px_0] shadow-gray-lighter bg-white rounded-[40px] p-3",
+        hover && "cursor-pointer",
+        className,
+      )}
+    >
+      <div className="h-full rounded-[32px] p-6 flex flex-col gap-4">
+        {logoSrc ? (
+          <div className="size-12 flex items-center justify-center">
+            <Image
+              src={logoSrc}
+              alt={`Logo ${title}`}
+              width={48}
+              height={48}
+              className="size-12 object-contain"
+            />
+          </div>
+        ) : (
+          <IconIllustration
+            icon={
+              PhosphorIcon as React.ComponentType<React.SVGProps<SVGSVGElement>>
+            }
+            variant="blue"
+            size={42}
+            radius="rounded-xl"
+          />
+        )}
+        <div className="flex-1 flex flex-col gap-2">
+          <h3
+            className={cn(
+              "font-semibold text-2xl",
+              hover
+                ? "text-primary-dark group-hover:text-primary-blue transition-colors duration-300"
+                : "text-primary-dark",
+            )}
+          >
+            {title}
+          </h3>
+          <p className="text-lg text-gray-dark">{description}</p>
+        </div>
+        {actionLabel ? (
+          <span className="inline-flex items-center gap-2 mt-1 text-sm font-semibold text-primary-blue h-6">
+            {actionLabel}
+            <span className="size-6 flex items-center justify-center rounded-md bg-gradient-to-b from-primary-blue-dark to-primary-blue-border">
+              <ArrowRight
+                className="size-3.5 text-white group-hover:-rotate-45 transition-all duration-300 ease-in-out"
+                strokeWidth={2.5}
+              />
+            </span>
+          </span>
+        ) : (
+          <span aria-hidden className="block mt-1 h-6" />
+        )}
+      </div>
+    </div>
+  );
+
+  const card = phosphorCard || (
     <div
       className={cn(
         "rounded-4xl bg-white p-2 h-full w-full group shadow-[0_4px_20px_0] shadow-gray-lighter",
         layout === "horizontal"
           ? cn(
               "flex flex-col md:flex-row md:items-stretch md:max-h-[230px] lg:max-h-[300px] overflow-hidden",
-              reverse && "md:flex-row-reverse"
+              reverse && "md:flex-row-reverse",
             )
           : "flex flex-col",
         hover && "cursor-pointer",
-        className
+        className,
       )}
     >
       {imageBlock}
       {iconBlock}
+      {phosphorBlock}
       {textBlock}
     </div>
   );

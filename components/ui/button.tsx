@@ -17,18 +17,19 @@ const buttonVariants = cva(
       },
       size: {
         md: "h-12 px-5 text-base sm:text-base [&>svg]:text-base",
-        lg: "h-13 sm:h-14.5 px-5 sm:px-6 rounded-xl [&>svg]:text-lg",
+        lg: "h-13 sm:h-14.5 px-6 rounded-xl [&>svg]:text-lg",
       },
     },
     defaultVariants: {
       variant: "blue",
       size: "lg",
     },
-  }
+  },
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   IconLeft?: React.ReactNode;
@@ -47,7 +48,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       ...props
     },
-    ref
+    ref,
   ) => {
     const Comp = asChild ? (Slot as any) : "button";
 
@@ -76,7 +77,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {IconRight}
       </Comp>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

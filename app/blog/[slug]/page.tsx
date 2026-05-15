@@ -24,8 +24,9 @@ import { PageHero } from "@/components/ui/page-hero";
 import Script from "next/script";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CalendarDays, Clock } from "lucide-react";
+import { CalendarDays, Clock, ArrowRight } from "lucide-react";
 import Badge from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import RelatedArticles from "@/components/related-articles";
 
 export function generateStaticParams() {
@@ -135,31 +136,40 @@ export default async function BlogPostPage({
             </h1>
           </header>
 
-          {post.image && (
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={1200}
-              height={630}
-              sizes="(min-width: 1100px) 1100px, 100vw"
-              placeholder="blur"
-              blurDataURL={getBlurDataURL(post.image)}
-              className="w-full rounded-3xl md:rounded-4xl object-cover aspect-[4/3] sm:aspect-video mt-6 max-w-[1100px] mx-auto"
-              priority
-            />
-          )}
+          {post.image && (() => {
+            const blurDataURL = getBlurDataURL(post.image);
+            return (
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={1200}
+                height={630}
+                sizes="(min-width: 1100px) 1100px, 100vw"
+                {...(blurDataURL
+                  ? { placeholder: "blur" as const, blurDataURL }
+                  : {})}
+                className="w-full rounded-3xl md:rounded-4xl object-cover aspect-[4/3] sm:aspect-video mt-6 max-w-[1100px] mx-auto"
+                priority
+              />
+            );
+          })()}
         </PageHero>
 
         <article className="max-w-[1000px] mx-auto px-5 sm:px-8">
           <MDXContent file={`blog/${post.slug}.md`} stripTitle />
 
           <footer className="pt-8 pb-16 mt-8 border-b border-gray-lighter">
-            <Link
-              href="/blog"
-              className="text-sm font-medium text-secondary-dark hover:text-gray-dark transition-colors"
+            <Button
+              variant="blue"
+              size="md"
+              className="h-auto py-1.5 px-4 text-xs sm:text-sm shadow-none hover:shadow-none"
+              asChild
             >
-              &larr; Retour au blog
-            </Link>
+              <Link href="/blog">
+                <ArrowRight className="size-4 rotate-180" />
+                Retour au blog
+              </Link>
+            </Button>
           </footer>
         </article>
 

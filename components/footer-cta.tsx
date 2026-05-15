@@ -8,6 +8,7 @@ import { LogoCloud } from "./ui/logo-cloud";
 import { portfolioProjects } from "@/data/projets";
 import { getService } from "@/data/services";
 import { getCity } from "@/data/cities";
+import { technos } from "@/data/technos";
 import { logos } from "@/data";
 
 const ctaByPath: Record<string, { title: string; description: string }> = {
@@ -15,6 +16,11 @@ const ctaByPath: Record<string, { title: string; description: string }> = {
     title: "Vous ne savez pas quelle offre choisir ?",
     description:
       "Réservez 30 minutes. On fait le point sur votre besoin et on vous oriente vers la solution la plus adaptée.",
+  },
+  "/expertises": {
+    title: "Un projet qui touche à l'une de ces technos ?",
+    description:
+      "En 30 minutes, on cadre votre projet et on chiffre sous 24h. On regarde si le couple techno + cas d'usage est pertinent pour votre besoin.",
   },
   "/a-propos": {
     title: "Envie de travailler ensemble ?",
@@ -44,10 +50,18 @@ function getCtaContent(pathname: string) {
     }
   }
 
+  // Techno detail pages (/agence-*)
+  const rootSlug = pathname.replace("/", "");
+  if (rootSlug.startsWith("agence-") && !rootSlug.includes("/")) {
+    const techno = technos.find((t) => t.slug === rootSlug);
+    if (techno) {
+      return { title: techno.cta.title, description: techno.cta.description };
+    }
+  }
+
   // City pages (/<slug>)
-  const citySlug = pathname.replace("/", "");
-  if (citySlug && !citySlug.includes("/")) {
-    const city = getCity(citySlug);
+  if (rootSlug && !rootSlug.includes("/")) {
+    const city = getCity(rootSlug);
     if (city) {
       return { title: city.cta.text, description: city.cta.subtext };
     }
