@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { CITIES, COUNTRIES } from "@/data";
 import { blogPosts } from "@/data/blog";
 import { services } from "@/data/services";
+import { technos } from "@/data/technos";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vizionweb.fr";
@@ -61,6 +62,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
     priority: 0.7,
   });
+
+  // Expertises hub
+  entries.push({
+    url: `${baseUrl}/expertises`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  });
+
+  // Pages techno
+  for (const techno of technos) {
+    entries.push({
+      url: `${baseUrl}/${techno.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    });
+  }
 
   // City/country pages
   for (const path of dynamicRoutes) {
