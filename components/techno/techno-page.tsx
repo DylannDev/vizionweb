@@ -29,9 +29,9 @@ interface TechnoPageProps {
 }
 
 const technoProjectsMap: Record<string, string[]> = {
-  "agence-next-js": ["Get Easy", "Amazonia Investing"],
+  "agence-next-js": ["Get Easy", "Zen Lounge"],
   "agence-react": ["Get Easy", "Zen Lounge"],
-  "agence-supabase": ["Get Easy", "Amazonia Investing"],
+  "agence-supabase": ["Get Easy", "Zen Lounge"],
   "agence-openai": [],
   "agence-claude-api": [],
   "agence-n8n": [],

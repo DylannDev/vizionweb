@@ -5,7 +5,7 @@ import Typography from "./typography";
 import CallButton from "./call-button";
 import { ProjectMarquee } from "./ui/project-marquee";
 import { LogoCloud } from "./ui/logo-cloud";
-import { portfolioProjects } from "@/data/projets";
+import { marqueeProjects } from "@/data/projets";
 import { getService } from "@/data/services";
 import { getCity } from "@/data/cities";
 import { technos } from "@/data/technos";
@@ -86,10 +86,7 @@ export function FooterCta() {
             </div>
           </div>
           <ProjectMarquee
-            projects={portfolioProjects.map((p) => ({
-              title: p.title,
-              src: p.src,
-            }))}
+            projects={marqueeProjects}
             className="relative z-10 mt-10"
           />
           <div className="relative z-10 mt-8">

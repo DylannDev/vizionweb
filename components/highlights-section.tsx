@@ -27,7 +27,6 @@ const projectItems = portfolioProjects.slice(0, 6);
 
 const projectIcons: Record<string, { src: string }> = {
   "Get Easy": { src: "/projects-icons/get-easy-1.svg" },
-  "Amazonia Investing": { src: "/projects-icons/investing.svg" },
   "Hippô'Kom": { src: "/projects-icons/hippokom.svg" },
   "Zen Lounge": { src: "/projects-icons/zen.svg" },
   "Eden Glass": { src: "/projects-icons/eden-glass.svg" },

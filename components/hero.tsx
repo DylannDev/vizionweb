@@ -7,7 +7,7 @@ import CallButton from "./call-button";
 import CustomerSatisfactionBanner from "@/components/customer-satisfaction-banner";
 import { LogoCloud } from "./ui/logo-cloud";
 import { ProjectMarquee } from "./ui/project-marquee";
-import { portfolioProjects } from "@/data/projets";
+import { marqueeProjects } from "@/data/projets";
 import { logos } from "@/data";
 import { PageHero } from "./ui/page-hero";
 
@@ -76,10 +76,7 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto">
         <ProjectMarquee
-          projects={portfolioProjects.map((p) => ({
-            title: p.title,
-            src: p.src,
-          }))}
+          projects={marqueeProjects}
           className="relative z-10 mt-5 sm:mt-10 mx-4 md:mx-8"
         />
       </div>

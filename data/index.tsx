@@ -4,7 +4,7 @@ export const logos = [
   { src: "/logos/hippokom.svg", alt: "Hippo'kom Agency" },
   { src: "/logos/chefkit.svg", alt: "ChefKit SaaS" },
   { src: "/logos/mrkicks.svg", alt: "Mr. Kicks" },
-  { src: "/logos/investing.svg", alt: "Amazonian Investing" },
+  { src: "/logos/investing.svg", alt: "Amazonia Investing" },
   { src: "/logos/pygmalion.svg", alt: "Pygmalion Conseil" },
   { src: "/logos/zenlounge.svg", alt: "Zen Lounge" },
 ];
@@ -44,13 +44,6 @@ export const navLinks = [
 ];
 
 export const testimonials = [
-  {
-    text: "Avec Vizion Web, on a enfin une landing page efficace et un dashboard sur-mesure simple à utiliser pour gérer nos investisseurs. Vizion Web a su transformer une idée complexe en outil efficace.",
-    image: "lory.webp",
-    name: "Lory Othily",
-    role: "CEO Amazonia Investing",
-    rating: 5,
-  },
   {
     text: "J'avais besoin d'un site vitrine moderne qui reflète l'identité de mon agence. Dylann a tout de suite compris l'univers que je voulais et le résultat a dépassé mes attentes.",
     image: "aurelie.jpg",

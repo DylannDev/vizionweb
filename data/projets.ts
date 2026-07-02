@@ -24,15 +24,6 @@ export const portfolioProjects: Project[] = [
     testimonial: findTestimonial("Get Easy"),
   },
   {
-    title: "Amazonia Investing",
-    subtitle:
-      "Landing page performante couplée à un blog éducatif et un dashboard CRM. Résultat : un outil complet pour informer, convertir et gérer les investisseurs au même endroit.",
-    badge: ["Landing Page", "Blog", "Dashboard / CRM"],
-    src: "/projets/investing.webp",
-    link: "https://amazoniainvesting.vercel.app/",
-    testimonial: findTestimonial("Amazonia Investing"),
-  },
-  {
     title: "Hippô'Kom",
     subtitle:
       "Site vitrine élégant et moderne pour une agence de communication. Design inspiré de l'univers marin, pensé pour refléter leur identité et attirer de nouveaux clients.",
@@ -76,4 +67,11 @@ export const portfolioProjects: Project[] = [
   //   src: "/projets/chefkit.webp",
   //   testimonial: findTestimonial("Restaurateur"),
   // },
+];
+
+// Visuels affichés dans les bandes défilantes (hero, footer, villes).
+// Uniquement décoratif : titre + image, sans fiche projet ni avis client.
+export const marqueeProjects: { title: string; src: string }[] = [
+  ...portfolioProjects.map((p) => ({ title: p.title, src: p.src })),
+  { title: "Amazonia Investing", src: "/projets/investing.webp" },
 ];
