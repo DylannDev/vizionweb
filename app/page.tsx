@@ -31,7 +31,7 @@ export default function Page() {
           url: "https://vizionweb.fr",
           logo: "https://vizionweb.fr/logo.svg",
           description:
-            "Agence web solo (Dylann, Montpellier) spécialisée dans le développement de SaaS, MVP et applications métier sur-mesure, avec intégration IA (OpenAI, Claude). Devis chiffré sous 24h. MVP livré en 3 semaines.",
+            "Agence web basée en Guyane et toujours présente à Montpellier, spécialisée dans le développement de SaaS, MVP et applications métier sur-mesure, avec intégration IA (OpenAI, Claude). Devis chiffré sous 24h. MVP livré en 3 semaines.",
           knowsAbout: [
             "React",
             "Next.js",

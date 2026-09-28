@@ -54,7 +54,12 @@ export function PortfolioCard({
           sizes="(min-width: 900px) 50vw, calc(100vw - 2rem)"
           placeholder="blur"
           blurDataURL={getBlurDataURL(src)}
-          className="object-cover object-top-left min-[900px]:object-center rounded-3xl"
+          className={cn(
+            "object-cover rounded-3xl",
+            testimonial
+              ? "object-top-left min-[900px]:object-center"
+              : "object-top"
+          )}
         />
       </div>
 

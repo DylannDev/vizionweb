@@ -11,11 +11,39 @@ import { marqueeProjects } from "@/data/projets";
 import { logos } from "@/data";
 import { PageHero } from "./ui/page-hero";
 
+const heroMarqueeProjects = [...marqueeProjects];
+
+function moveProjectAfter(title: string, precedingTitle: string) {
+  const projectIndex = heroMarqueeProjects.findIndex(
+    (project) => project.title === title
+  );
+  if (projectIndex === -1) return;
+
+  const [project] = heroMarqueeProjects.splice(projectIndex, 1);
+  const precedingIndex = heroMarqueeProjects.findIndex(
+    (item) => item.title === precedingTitle
+  );
+  heroMarqueeProjects.splice(precedingIndex + 1, 0, project);
+}
+
+moveProjectAfter("Rollie (Marketplace)", "Zen Lounge");
+moveProjectAfter("Rollie (Logiciel)", "Get Easy");
+
 export function Hero() {
   return (
     <PageHero>
       <div className="relative flex flex-col gap-6 -mt-10 sm:m-0 items-center justify-center text-center z-10">
-        <Badge variant="black" className="mb-0">
+        <Badge
+          variant="black"
+          className="mb-0 max-w-full whitespace-nowrap px-2 py-2 text-[clamp(9px,2.8vw,14px)] leading-none sm:px-3 sm:py-1.5 sm:text-sm sm:leading-normal"
+        >
+          <span
+            aria-hidden="true"
+            className="relative mr-2 inline-flex size-2 align-middle"
+          >
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-blue opacity-75" />
+            <span className="relative inline-flex size-2 rounded-full bg-primary-blue" />
+          </span>
           Pour entrepreneurs, startups & PME ambitieuses
         </Badge>
         <div className="">
@@ -76,7 +104,7 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto">
         <ProjectMarquee
-          projects={marqueeProjects}
+          projects={heroMarqueeProjects}
           className="relative z-10 mt-5 sm:mt-10 mx-4 md:mx-8"
         />
       </div>

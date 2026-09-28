@@ -93,6 +93,30 @@ function getLocalFaqs(
   return faqs;
 }
 
+function getGuyaneFaqs(place: "Cayenne" | "Guyane") {
+  const local = place === "Cayenne" ? "à Cayenne" : "en Guyane";
+  return [
+    {
+      question:
+        place === "Cayenne"
+          ? "Êtes-vous en Guyane pour un projet à Cayenne ?"
+          : "Êtes-vous sur place en Guyane ?",
+      answer:
+        "Oui, Vizion Web est basée en Guyane. Selon votre localisation, nous pouvons nous rencontrer pour cadrer le projet. Les maquettes, les sprints et les démonstrations restent accessibles en ligne pour suivre l'avancement facilement.",
+    },
+    {
+      question: `Pourquoi choisir Vizion Web pour un projet ${local} ?`,
+      answer:
+        "Vous travaillez avec un interlocuteur présent en Guyane, spécialisé dans les sites sur-mesure, SaaS, MVP et applications métier. Nous cadrons le besoin avec vous, développons avec React et Next.js lorsque c'est pertinent et vous remettons le code à la livraison.",
+    },
+    ...getLocalFaqs(place, place === "Cayenne" ? "à" : "en", {
+      type: "domtom",
+      territoire: "Guyane",
+      adj: "guyanais",
+    }).slice(2),
+  ];
+}
+
 const cities: CitySEO[] = [
   // ─────────────────────────────────────────────
   // 1. PARIS
@@ -838,19 +862,19 @@ const cities: CitySEO[] = [
     meta: {
       title: "Agence web Montpellier : SaaS, MVP & apps métier IA | Vizion Web",
       description:
-        "Agence web à Montpellier : SaaS, MVP en 3 semaines, apps métier avec IA. FrenchTech Méditerranée, BIC, MIBI. Devis chiffré sous 24h.",
+        "Agence web toujours présente à Montpellier : SaaS, MVP en 3 semaines et applications métier avec IA. Pied à terre sur place, devis chiffré sous 24h.",
       canonical: "https://vizionweb.fr/montpellier",
     },
     hero: {
       headline: "Agence web à Montpellier : SaaS, MVP et applications métier",
       subheadline:
-        "Vizion Web est basé à Montpellier. On conçoit et développe vos SaaS, MVP et apps métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Sprints courts, stack moderne, intégration IA si pertinent.",
+        "Vizion Web conserve un pied à terre à Montpellier. On conçoit et développe vos SaaS, MVP et apps métier sur-mesure. Devis chiffré sous 24h, MVP livré en 3 semaines. Sprints courts, stack moderne, intégration IA si pertinent.",
     },
     localAccent: {
       introMention:
-        "Montpellier est notre QG. On connaît bien l'écosystème : BIC (1er incubateur public de France), MIBI (200 entreprises santé/biotech), Cap Oméga, FrenchTech Méditerranée. Si vous préférez un café avant de cadrer un projet, c'est possible.",
+        "Vizion Web garde un pied à terre à Montpellier et connaît bien l'écosystème local : BIC, MIBI, Cap Oméga et FrenchTech Méditerranée. Si vous préférez vous rencontrer avant de cadrer un projet, c'est possible lors de nos passages sur place.",
       ctaMention:
-        "Un appel de 30 minutes (visio ou café à Montpellier). On cadre, on chiffre, on définit un planning.",
+        "Un appel de 30 minutes en visio, ou une rencontre à Montpellier quand nous sommes sur place. On cadre, on chiffre et on définit un planning.",
     },
     introContent: {
       title:
@@ -872,17 +896,17 @@ const cities: CitySEO[] = [
             "On accompagne autant les founders qui sortent d'incubation côté health, biotech ou agritech que les directions métier des PME régionales qui veulent moderniser un back-office vieillissant. Le point commun reste un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets avancent par itérations courtes, validées chaque semaine, plutôt que par un cahier des charges figé qui ne tient jamais face au retour des équipes terrain.",
         },
         {
-          title: "Une collaboration full remote, où que vous soyez",
+          title: "Une agence toujours présente à Montpellier",
           content:
-            "Vizion Web a son siège à Montpellier mais fonctionne en remote intégral, y compris avec les clients locaux. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner ni temps perdu à caler des agendas pour un point d'une heure.",
+            "Vizion Web est basée en Guyane et conserve un pied à terre à Montpellier. Nous pouvons nous rencontrer lors de nos passages sur place pour cadrer votre projet. Entre ces rendez-vous, vous suivez les maquettes Figma, les sprints d'une semaine et les démonstrations en visio. Vous gardez le même interlocuteur à chaque étape.",
         },
       ],
     },
     localFaqs: [
       {
-        question: "Vous êtes basés à Montpellier ?",
+        question: "Peut-on travailler avec Vizion Web à Montpellier ?",
         answer:
-          "Oui, Vizion Web est basé à Montpellier. La majorité des clients préfèrent travailler en visio (rapidité, flexibilité), mais on est dispo pour un café de cadrage initial sur Montpellier si vous préférez qu'on se rencontre avant de démarrer.",
+          "Oui. Vizion Web conserve un pied à terre à Montpellier et accompagne les entreprises locales. Nous pouvons organiser une rencontre lors de nos passages sur place. Le suivi du projet se fait aussi en visio, avec des points réguliers et des maquettes partagées.",
       },
       {
         question:
@@ -901,7 +925,7 @@ const cities: CitySEO[] = [
     cta: {
       text: "Votre SaaS ou MVP à Montpellier",
       subtext:
-        "Devis chiffré sous 24h. MVP livré en 3 semaines. Visio ou café sur Montpellier.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. Visio ou rencontre à Montpellier selon nos disponibilités sur place.",
     },
     schema: {
       areaServed: "Montpellier, Hérault, Occitanie, France",
@@ -1056,7 +1080,7 @@ const cities: CitySEO[] = [
     meta: {
       title: "Agence web & création site web à Cayenne | Vizion Web",
       description:
-        "Agence web à Cayenne et Guyane : création site web, SaaS, applications métier. Sous-traitance Centre Spatial Guyanais. Devis 24h. 100% remote.",
+        "Agence web présente en Guyane : création de sites web, SaaS et applications métier à Cayenne. Rencontre sur place possible. Devis chiffré sous 24h.",
       canonical: "https://vizionweb.fr/cayenne",
     },
     hero: {
@@ -1068,7 +1092,7 @@ const cities: CitySEO[] = [
       introMention:
         "Cayenne est la capitale économique de la Guyane : spatial à Kourou (CSG, 1 200 emplois directs, 9 000 indirects), industries extractives, BTP. Faible densité de prestataires tech qualifiés : fenêtre ouverte pour des outils modernes.",
       ctaMention:
-        "30 minutes en visio (décalage 4-5h, on s'adapte). On cadre votre besoin et on chiffre une solution adaptée.",
+        "30 minutes en visio ou une rencontre en Guyane selon votre localisation. On cadre votre besoin et on chiffre une solution adaptée.",
     },
     introContent: {
       title: "Agence produit pour startups et PME en transformation digitale",
@@ -1089,22 +1113,18 @@ const cities: CitySEO[] = [
             "On accompagne autant les founders guyanais qui montent un projet régional que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé six mois à l'avance qui ne tient jamais face aux premiers retours du terrain.",
         },
         {
-          title: "Une collaboration full remote, où que vous soyez",
+          title: "Un interlocuteur présent en Guyane",
           content:
-            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de la Guyane et au décalage horaire de quatre à cinq heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner.",
+            "Vizion Web est basée en Guyane. Nous pouvons nous rencontrer à Cayenne ou ailleurs sur le territoire selon votre localisation pour cadrer le projet. Ensuite, vous suivez les maquettes Figma, les sprints d'une semaine et les démonstrations en visio. Les rendez-vous en personne restent possibles quand ils apportent quelque chose au projet.",
         },
       ],
     },
-    localFaqs: getLocalFaqs("Cayenne", "à", {
-      type: "domtom",
-      territoire: "Guyane",
-      adj: "guyanais",
-    }),
+    localFaqs: getGuyaneFaqs("Cayenne"),
     globalFaqIndices: [0, 1, 2],
     cta: {
       text: "Votre site web ou SaaS à Cayenne",
       subtext:
-        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. Présents en Guyane, code 100% à vous.",
     },
     schema: {
       areaServed: "Cayenne, Guyane française, France",
@@ -1328,7 +1348,7 @@ const cities: CitySEO[] = [
     meta: {
       title: "Agence web & création site web en Guyane | Vizion Web",
       description:
-        "Agence web en Guyane : création site web, SaaS, applications métier. Sous-traitance Centre Spatial Guyanais. Devis 24h. Stack moderne. 100% remote.",
+        "Agence web présente en Guyane : création de sites web, SaaS et applications métier. Rencontre sur place possible. Devis chiffré sous 24h.",
       canonical: "https://vizionweb.fr/guyane",
     },
     hero: {
@@ -1340,7 +1360,7 @@ const cities: CitySEO[] = [
       introMention:
         "La Guyane française (300 000 habitants, en forte croissance) combine spatial à Kourou (CSG : 1 200 emplois directs, 9 000 indirects), industries extractives et services tertiaires de Cayenne. Très faible densité de prestataires tech qualifiés.",
       ctaMention:
-        "30 minutes en visio (décalage 4-5h, on s'adapte). On cadre votre besoin, on chiffre une solution adaptée au contexte guyanais.",
+        "30 minutes en visio ou une rencontre en Guyane selon votre localisation. On cadre votre besoin et on chiffre une solution adaptée.",
     },
     introContent: {
       title: "Agence produit pour startups et PME en transformation digitale",
@@ -1361,22 +1381,18 @@ const cities: CitySEO[] = [
             "On accompagne autant les founders guyanais qui montent un projet régional que les directions opérationnelles qui veulent moderniser un back-office vieillissant. Le point commun : un besoin de produit utilisable rapidement, sans tunnel de six mois ni dette technique qui s'accumule. Les projets se construisent par itérations courtes, validées chaque semaine en visio, plutôt que par un cahier des charges figé en début de mission qui finit toujours par dériver face aux retours du terrain.",
         },
         {
-          title: "Une collaboration full remote, où que vous soyez",
+          title: "Un interlocuteur présent en Guyane",
           content:
-            "Vizion Web fonctionne en remote intégral, ce qui colle bien à la géographie de la Guyane et au décalage horaire de quatre à cinq heures avec la métropole. Maquettes Figma partagées en direct, sprints d'une semaine, démos hebdo en visio sur des créneaux adaptés : vous voyez l'avancement à chaque étape et vous arbitrez sans attendre. Le format remote rend la collaboration plus rapide que le présentiel sur la grande majorité des projets produit, sans déplacement à coordonner.",
+            "Vizion Web est basée en Guyane. Nous pouvons nous rencontrer selon votre localisation pour cadrer le projet ou faire un point important. Entre ces rendez-vous, vous suivez les maquettes Figma, les sprints d'une semaine et les démonstrations en visio. Vous savez où en est votre projet à chaque étape.",
         },
       ],
     },
-    localFaqs: getLocalFaqs("Guyane", "en", {
-      type: "domtom",
-      territoire: "Guyane",
-      adj: "guyanais",
-    }),
+    localFaqs: getGuyaneFaqs("Guyane"),
     globalFaqIndices: [0, 1, 2],
     cta: {
       text: "Votre site web ou SaaS en Guyane",
       subtext:
-        "Devis chiffré sous 24h. MVP livré en 3 semaines. 100% remote, code 100% à vous.",
+        "Devis chiffré sous 24h. MVP livré en 3 semaines. Présents en Guyane, code 100% à vous.",
     },
     schema: {
       areaServed: "Guyane française, France",

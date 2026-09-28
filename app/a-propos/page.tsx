@@ -23,7 +23,7 @@ import { ServiceStack } from "@/components/service-detail/service-stack";
 export const metadata: Metadata = {
   title: "À propos : méthode, stack et expertise SaaS | Vizion Web",
   description:
-    "Vizion Web, agence produit basée à Montpellier. Méthode pour livrer un MVP en quelques semaines, expertise SaaS, applications métier et intégration IA. Devis sous 24h.",
+    "Vizion Web, agence produit présente en Guyane et à Montpellier. Méthode pour livrer un MVP en quelques semaines, expertise SaaS, applications métier et intégration IA. Devis sous 24h.",
   alternates: {
     canonical: "https://vizionweb.fr/a-propos",
   },
@@ -198,8 +198,9 @@ export default function AProposPage() {
                   Vizion Web, avec le même constat sur chaque projet repris :
                   trop d'intermédiaires, trop de tunnels qui s'étirent sur six
                   mois pour ce qui devait tenir en trois semaines. Le modèle ici
-                  prend le contrepied. Une solo agency full remote, où vous
-                  parlez à la personne qui conçoit et qui code.
+                  prend le contrepied. Une agence solo présente en Guyane, avec
+                  un pied à terre à Montpellier, où vous parlez directement à la
+                  personne qui conçoit et qui code.
                 </p>
 
                 <p>

@@ -141,7 +141,7 @@ export const services: Service[] = [
     shortDescription: "Validez votre idée rapidement avec un produit testable.",
     metaTitle: "Agence MVP : développement en 3 semaines | Vizion Web",
     metaDescription:
-      "Agence MVP basée à Montpellier. Devis chiffré sous 24h, MVP livré en 3 semaines. React, Next.js, Supabase. Code 100% à vous.",
+      "Agence MVP présente en Guyane et à Montpellier. Devis chiffré sous 24h, MVP livré en 3 semaines. React, Next.js, Supabase. Code 100% à vous.",
     heroTitle: "Votre MVP livré en 3 semaines",
     heroSubtitle:
       "On développe l'application qui valide votre idée auprès de vos premiers utilisateurs. Stack moderne, code à vous, mise en production incluse.",

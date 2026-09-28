@@ -4,7 +4,7 @@ import { join, extname } from "path";
 
 const PUBLIC_DIR = "public";
 const OUTPUT = "data/blur-data.json";
-const EXTENSIONS = new Set([".webp", ".jpg", ".jpeg", ".png"]);
+const EXTENSIONS = new Set([".webp", ".jpg", ".jpeg", ".png", ".avif"]);
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
